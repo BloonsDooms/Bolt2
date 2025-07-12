@@ -1,6 +1,9 @@
 {
 	"replace": false,
 	"values": [
-		"animated_java:shutter/zzzzzzzz/load"
+		"animated_java:shutter/zzzzzzzz/load",
+		"game:map/register_maps",
+		"item_structures:zprivate/init",
+		"#bs.load:load"
 	]
 }

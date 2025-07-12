@@ -1,0 +1,1 @@
+$tag @s[$(spectatorBoundingBox)] add in_spec_area

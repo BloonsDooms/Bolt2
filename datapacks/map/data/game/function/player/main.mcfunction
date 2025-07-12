@@ -19,7 +19,7 @@ execute as @s[scores={intro_cutscene_time=1}] run title @s times 0 10 10
 execute as @s[scores={intro_cutscene_time=1}] run title @s title {"translate":"\u0001","font":"title"}
 execute as @s[scores={intro_cutscene_time=1..9}] run tp @s 244 -36 -225 -115 25
 
-execute as @s[scores={intro_cutscene_time=10}] run summon block_display 244 -35 -225 {teleport_duration:60,Rotation:[-115F,25F],Tags:["intro_start","new"]}
+execute as @s[scores={intro_cutscene_time=10}] run summon block_display 244 -35 -225 {teleport_duration:59,Rotation:[-115F,25F],Tags:["intro_start","new"]}
 execute as @s[scores={intro_cutscene_time=10}] run scoreboard players operation @e[tag=intro,tag=new,limit=1] ID = @s ID
 #execute as @s[scores={intro_cutscene_time=10}] run tag @e[tag=intro_start] remove my_intro
 #execute as @s[scores={intro_cutscene_time=10}] run tag @e remove me
@@ -145,11 +145,6 @@ attribute @s minecraft:movement_speed base set 0.1
 execute if score .tmi .data matches 1 if score .tmi_fog .data matches 2 run effect give @s[tag=!lobby,gamemode=adventure] blindness 2 0 true
 execute if score .tmi .data matches 1 if score .tmi_fog .data matches 2 run attribute @s[tag=!lobby,gamemode=adventure] minecraft:movement_speed base set 0.14
 
-attribute @s[tag=crossbow_waiting] minecraft:movement_speed base set 0.078
-
-attribute @s minecraft:camera_distance base set 0
-attribute @s[tag=lobby] minecraft:camera_distance base set 4
-
 #items
 tag @s remove item_head
 tag @s remove item_chest
@@ -166,15 +161,15 @@ clear @s[tag=!lobby,tag=!item_chest] leather_chestplate
 clear @s[tag=!lobby,tag=!item_legs] leather_leggings
 clear @s[tag=!lobby,tag=!item_feet] leather_boots
 
-execute as @s[tag=!item_chest] if score .mode .data = .6 .num run item replace entity @s[team=red] armor.chest with leather_chestplate[trim={material:"minecraft:netherite",pattern:"minecraft:silence",show_in_tooltip:false},dyed_color=16711680,unbreakable={show_in_tooltip:false},attribute_modifiers=[{id:"armor",type:"armor",amount:0,operation:"add_multiplied_base",slot:"any"}]]
-execute as @s[tag=!item_chest] unless score .mode .data = .6 .num run item replace entity @s[team=red] armor.chest with leather_chestplate[dyed_color=16711680,unbreakable={show_in_tooltip:false},attribute_modifiers=[{id:"armor",type:"armor",amount:0,operation:"add_multiplied_base",slot:"any"}]]
-execute as @s[tag=!item_chest] run item replace entity @s[team=blue] armor.chest with leather_chestplate[dyed_color=22015,unbreakable={show_in_tooltip:false},attribute_modifiers=[{id:"armor",type:"armor",amount:0,operation:"add_multiplied_base",slot:"any"}]]
+execute as @s[tag=!item_chest] if score .mode .data = .6 .num run item replace entity @s[team=red] armor.chest with leather_chestplate[trim={material:"minecraft:netherite",pattern:"minecraft:silence",},dyed_color=16711680,unbreakable={},attribute_modifiers=[{id:"armor",type:"armor",amount:0,operation:"add_multiplied_base",slot:"any"}]]
+execute as @s[tag=!item_chest] unless score .mode .data = .6 .num run item replace entity @s[team=red] armor.chest with leather_chestplate[dyed_color=16711680,unbreakable={},attribute_modifiers=[{id:"armor",type:"armor",amount:0,operation:"add_multiplied_base",slot:"any"}]]
+execute as @s[tag=!item_chest] run item replace entity @s[team=blue] armor.chest with leather_chestplate[dyed_color=22015,unbreakable={},attribute_modifiers=[{id:"armor",type:"armor",amount:0,operation:"add_multiplied_base",slot:"any"}]]
 
-execute as @s[tag=!item_legs] run item replace entity @s[team=red] armor.legs with leather_leggings[dyed_color=16711680,unbreakable={show_in_tooltip:false},attribute_modifiers=[{id:"armor",type:"armor",amount:0,operation:"add_multiplied_base",slot:"any"}]]
-execute as @s[tag=!item_legs] run item replace entity @s[team=blue] armor.legs with leather_leggings[dyed_color=22015,unbreakable={show_in_tooltip:false},attribute_modifiers=[{id:"armor",type:"armor",amount:0,operation:"add_multiplied_base",slot:"any"}]]
+execute as @s[tag=!item_legs] run item replace entity @s[team=red] armor.legs with leather_leggings[dyed_color=16711680,unbreakable={},attribute_modifiers=[{id:"armor",type:"armor",amount:0,operation:"add_multiplied_base",slot:"any"}]]
+execute as @s[tag=!item_legs] run item replace entity @s[team=blue] armor.legs with leather_leggings[dyed_color=22015,unbreakable={},attribute_modifiers=[{id:"armor",type:"armor",amount:0,operation:"add_multiplied_base",slot:"any"}]]
 
-execute as @s[tag=!item_feet] run item replace entity @s[team=red] armor.feet with leather_boots[dyed_color=16711680,unbreakable={show_in_tooltip:false},attribute_modifiers=[{id:"armor",type:"armor",amount:0,operation:"add_multiplied_base",slot:"any"}]]
-execute as @s[tag=!item_feet] run item replace entity @s[team=blue] armor.feet with leather_boots[dyed_color=22015,unbreakable={show_in_tooltip:false},attribute_modifiers=[{id:"armor",type:"armor",amount:0,operation:"add_multiplied_base",slot:"any"}]]
+execute as @s[tag=!item_feet] run item replace entity @s[team=red] armor.feet with leather_boots[dyed_color=16711680,unbreakable={},attribute_modifiers=[{id:"armor",type:"armor",amount:0,operation:"add_multiplied_base",slot:"any"}]]
+execute as @s[tag=!item_feet] run item replace entity @s[team=blue] armor.feet with leather_boots[dyed_color=22015,unbreakable={},attribute_modifiers=[{id:"armor",type:"armor",amount:0,operation:"add_multiplied_base",slot:"any"}]]
 
 #reload
 tag @s[scores={no_quiver_arrow=160..}] add arrow_hit

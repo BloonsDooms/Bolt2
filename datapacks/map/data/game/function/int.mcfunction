@@ -153,6 +153,13 @@ scoreboard objectives add track_total_crates dummy
 scoreboard objectives add track_total_ctf_walls dummy
 scoreboard objectives add track_total_games dummy
 scoreboard objectives add track_shot_head dummy
+scoreboard objectives add stats_deaths dummy
+scoreboard objectives add no_cap dummy
+scoreboard objectives add has_lev dummy
+scoreboard objectives add stats_ger_kills dummy
+scoreboard objectives add stats_trap_kills dummy
+scoreboard objectives add has_lev dummy
+
 
 scoreboard objectives add code_1 dummy
 scoreboard objectives add code_2 dummy
@@ -169,6 +176,12 @@ scoreboard objectives add ID.turret dummy
 scoreboard objectives add turretCooldown dummy
 scoreboard objectives add turretTimer dummy
 #> End viral zone
+
+#> Smart Guy zone
+scoreboard objectives add macro_counter dummy
+#> End Smart Guy Zone
+
+scoreboard objectives add wallHeight dummy
 
 scoreboard objectives add timer dummy
 
@@ -412,6 +425,7 @@ scoreboard players set .range4 .data 0
 
 #
 scoreboard objectives add .num dummy
+scoreboard players set .-1 .num -1
 scoreboard players set .0 .num 0
 scoreboard players set .1 .num 1
 scoreboard players set .2 .num 2

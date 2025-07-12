@@ -7,3 +7,8 @@ execute if score .map_screen .data = .12 .num run clone 334 -54 -249 333 -35 -22
 execute if score .map_screen .data = .10 .num run clone 339 -54 -249 338 -35 -223 265 -54 -249 masked force
 execute if score .map_screen .data = .14 .num run clone 343 -54 -249 344 -35 -223 265 -54 -249 masked force
 execute if score .map_screen .data = .15 .num run clone 347 -54 -249 348 -35 -223 265 -54 -249 masked force
+
+# not sure this is used at all anymore, but needs to be ported to new system.
+# might make sense to clone twice, once to full menu and then again for transition
+
+# turns out thats exactly what it does smh

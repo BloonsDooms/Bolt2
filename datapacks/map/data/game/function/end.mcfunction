@@ -4,6 +4,9 @@ stopsound @a * minecraft:music.dragon
 #
 gamerule reducedDebugInfo false
 
+# bandaid fix
+data modify storage maps:active settings.tickingScript set value ""
+
 #
 execute as @e[tag=crate] at @s run function game:game/infected/crates/despawn
 
@@ -140,8 +143,6 @@ scoreboard players set @a zoomies 0
 scoreboard players set @a bow_throw 0
 
 scoreboard players set @a crossbowTime 1
-
-tag @a remove crossbow_waiting
 
 #
 effect clear @a blindness

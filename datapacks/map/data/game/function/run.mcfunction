@@ -139,8 +139,11 @@ execute as @e[type=giant,scores={dead_head=1..}] run function game:menu/p_displa
 #team count
 function game:game/team_dif
 
-#spawns
+#spawns - REWORK
 function game:game/spawns
+execute as @a run function game:map/bounding_box
+
+function game:map/tick_script with storage maps:active settings
 
 #
 execute as @e[tag=cutscene] at @s run function game:cutscene/main
@@ -333,20 +336,14 @@ scoreboard players add @a crossbowTime 0
 
 clear @a[scores={crossbowTime=..0}] crossbow[custom_name={"text":"Crossbow [Active]","italic":false,"color":"gray"},custom_data={trigger:0b}]
 
-execute as @a[tag=playing] if items entity @s weapon.mainhand crossbow[minecraft:charged_projectiles=[{id:"minecraft:arrow",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}}],custom_data={trigger:1b}] run function game:items/crossbow/load
-execute as @a[tag=playing] if items entity @s weapon.mainhand crossbow[minecraft:charged_projectiles=[{id:"minecraft:arrow",count:1,components:{"minecraft:custom_model_data":{strings:["2"]}}}],custom_data={trigger:1b}] run function game:items/crossbow/load
-
-execute as @a[tag=playing,tag=crossbow_waiting] unless items entity @s weapon.mainhand crossbow[custom_data={trigger:2b}] run function game:items/crossbow/unload
-execute as @a[tag=playing,tag=crossbow_waiting] unless items entity @s weapon.mainhand crossbow[custom_data={trigger:2b}] run function game:items/crossbow/unload
-
-execute as @a[tag=playing,tag=crossbow_waiting,scores={crossbowUse=1..}] if items entity @s weapon.mainhand crossbow[custom_data={trigger:2b}] run function game:items/crossbow/activate
-execute as @a[tag=playing,tag=crossbow_waiting,scores={crossbowUse=1..}] if items entity @s weapon.mainhand crossbow[custom_data={trigger:2b}] run function game:items/crossbow/activate
+execute as @a[tag=playing] if items entity @s weapon.mainhand crossbow[minecraft:charged_projectiles=[{id:"minecraft:arrow",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}}],custom_data={trigger:1b}] run function game:items/crossbow/activate
+execute as @a[tag=playing] if items entity @s weapon.mainhand crossbow[minecraft:charged_projectiles=[{id:"minecraft:arrow",count:1,components:{"minecraft:custom_model_data":{strings:["2"]}}}],custom_data={trigger:1b}] run function game:items/crossbow/activate
 
 scoreboard players add @a[scores={crossbowReload=1..}] crossbowReload 1
 scoreboard players set @a[scores={crossbowUse=1..}] crossbowReload 1
 execute as @a[scores={crossbowReload=2..}] if items entity @s weapon.mainhand crossbow run tag @s add reloadCross
 execute as @a[scores={crossbowReload=2..}] if items entity @s weapon.mainhand crossbow[charged_projectiles=[{id:"minecraft:arrow",count:1}]] run tag @s remove reloadCross
-execute as @a[tag=reloadCross] if items entity @s weapon.mainhand crossbow[custom_data={trigger:0b}] run item replace entity @s weapon.mainhand with crossbow[custom_name={"text":"Crossbow [Active]","italic":false,"color":"gray"},unbreakable={show_in_tooltip:false},charged_projectiles=[{id:"minecraft:arrow",count:1}],custom_data={trigger:0b}] 1
+execute as @a[tag=reloadCross] if items entity @s weapon.mainhand crossbow[custom_data={trigger:0b}] run item replace entity @s weapon.mainhand with crossbow[custom_name={"text":"Crossbow [Active]","italic":false,"color":"gray"},unbreakable={},charged_projectiles=[{id:"minecraft:arrow",count:1}],custom_data={trigger:0b}] 1
 scoreboard players set @a[tag=reloadCross] crossbowReload 0
 
 tag @a remove reloadCross

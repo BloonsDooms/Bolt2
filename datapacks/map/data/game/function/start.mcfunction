@@ -201,20 +201,22 @@ scoreboard players set .TrapKills .metric 0
 scoreboard players set .Kills .metric 0
 
 #
-kill @e[tag=cutscene]
 
-execute if score .map .data = .1 .num run summon armor_stand -84 -55 21 {NoGravity:1,Rotation:[-90F,0F],Marker:0,Invisible:1,Tags:["cutscene","intro","rev"]}
-execute if score .map .data = .2 .num run summon armor_stand -166 -52 -122 {NoGravity:1,Rotation:[90F,0F],Marker:0,Invisible:1,Tags:["cutscene","intro"]}
-execute if score .map .data = .3 .num run summon armor_stand -222.5 -54 13 {NoGravity:1,Rotation:[-90F,0F],Marker:0,Invisible:1,Tags:["cutscene","intro","rev"]}
-execute if score .map .data = .5 .num run summon armor_stand -327 -54 -72 {NoGravity:1,Rotation:[90F,0F],Marker:0,Invisible:1,Tags:["cutscene","intro"]}
-execute if score .map .data = .6 .num run summon armor_stand -387 -44 16 {NoGravity:1,Rotation:[90F,0F],Marker:0,Invisible:1,Tags:["cutscene","intro"]}
-execute if score .map .data = .10 .num run summon armor_stand -245.0 -46.5 -432 {NoGravity:1,Rotation:[-90F,0F],Marker:0,Invisible:1,Tags:["cutscene","intro","rev"]}
-execute if score .map .data = .12 .num run summon armor_stand 8 -51.5 -300 {NoGravity:1,Rotation:[90F,0F],Marker:0,Invisible:1,Tags:["cutscene","intro"]}
-execute if score .map .data = .13 .num run summon armor_stand -28 -36 231 {NoGravity:1,Rotation:[90F,0F],Marker:0,Invisible:1,Tags:["cutscene","intro"]}
-execute if score .map .data = .14 .num run summon armor_stand -515 -19 -303 {NoGravity:1,Rotation:[-90F,0F],Marker:0,Invisible:1,Tags:["cutscene","intro","rev"]}
-execute if score .map .data = .15 .num run summon armor_stand -435 -35 197 {NoGravity:1,Rotation:[90F,0F],Marker:0,Invisible:1,Tags:["cutscene","intro"]}
+function game:map/cutscene with storage maps:active settings
+#kill @e[tag=cutscene]
 
-#execute unless entity @e[tag=cutscene] run summon armor_stand -68 -53 21 {Rotation:[90F,0F],Marker:1,Invisible:1,Tags:["cutscene","intro"]}
+#execute if score .map .data = .1 .num run summon armor_stand -84 -55 21 {NoGravity:1b,Rotation:[-90F,0F],Marker:0b,Invisible:1b,Tags:["cutscene","intro","rev"]}
+#execute if score .map .data = .2 .num run summon armor_stand -166 -52 -122 {NoGravity:1b,Rotation:[90F,0F],Marker:0b,Invisible:1b,Tags:["cutscene","intro"]}
+#execute if score .map .data = .3 .num run summon armor_stand -142.5 6 382 {NoGravity:1b,Rotation:[-90F,0F],Marker:0b,Invisible:1b,Tags:["cutscene","intro","rev"]}
+#execute if score .map .data = .5 .num run summon armor_stand -327 -54 -72 {NoGravity:1b,Rotation:[90F,0F],Marker:0b,Invisible:1b,Tags:["cutscene","intro"]}
+#execute if score .map .data = .6 .num run summon armor_stand -387 -44 16 {NoGravity:1b,Rotation:[90F,0F],Marker:0b,Invisible:1b,Tags:["cutscene","intro"]}
+#execute if score .map .data = .10 .num run summon armor_stand -245.0 -46.5 -432 {NoGravity:1b,Rotation:[-90F,0F],Marker:0b,Invisible:1b,Tags:["cutscene","intro","rev"]}
+#execute if score .map .data = .12 .num run summon armor_stand 8 -51.5 -300 {NoGravity:1b,Rotation:[90F,0F],Marker:0b,Invisible:1b,Tags:["cutscene","intro"]}
+#execute if score .map .data = .13 .num run summon armor_stand -28 -36 231 {NoGravity:1b,Rotation:[90F,0F],Marker:0b,Invisible:1b,Tags:["cutscene","intro"]}
+#execute if score .map .data = .14 .num run summon armor_stand -515 -19 -303 {NoGravity:1b,Rotation:[-90F,0F],Marker:0b,Invisible:1b,Tags:["cutscene","intro","rev"]}
+#execute if score .map .data = .15 .num run summon armor_stand -435 -35 197 {NoGravity:1b,Rotation:[90F,0F],Marker:0b,Invisible:1b,Tags:["cutscene","intro"]}
+
+#execute unless entity @e[tag=cutscene] run smmon armor_stand -68 -53 21 {Rotation:[90F,0F],Marker:1,Invisible:1,Tags:["cutscene","intro"]}
 
 scoreboard players set @a cutscene 1
 scoreboard players set @a cutscene_time 80
@@ -231,7 +233,8 @@ scoreboard players set .CrossKills .stats 15
 scoreboard players set .GrenadeKills .stats 4
 scoreboard players set .WallKills .stats 5
 
-execute if score .map .data matches 3 run scoreboard players set .WallKills .stats 1000
+#execute if score .map .data matches 3 run scoreboard players set .WallKills .stats 1000
+execute if data storage maps:active {settings:{disabledItems:["walls"]}} run scoreboard players set .WallKills .stats 1000
 
 execute if score .mode .data = .6 .num run scoreboard players set .CrossKills .stats 1000
 execute if score .mode .data = .6 .num run scoreboard players set .GrenadeKills .stats 1000

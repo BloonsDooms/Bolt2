@@ -35,11 +35,14 @@ setblock -165 -52 -157 minecraft:hanging_roots
 setblock -166 -52 -158 minecraft:hanging_roots
 setblock -170 -51 -157 minecraft:hanging_roots
 
+
+# load script
 fill -173 -55 -98 -170 -59 -98 gravel replace air
 fill -170 -55 -146 -173 -59 -146 gravel replace air
 
 fill -176 -59 -137 -175 -56 -136 gravel replace air
 fill -175 -59 -107 -176 -56 -108 gravel replace air
+# load script
 
 execute if score .mode .data = .1 .num run summon armor_stand -169 -60 -150 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,equipment:{head:{id:"minecraft:blue_banner",count:1}},Tags:["blueflag","flag"]}
 execute if score .mode .data = .1 .num run summon armor_stand -169 -60 -94 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,equipment:{head:{id:"minecraft:red_banner",count:1}},Tags:["redflag","flag"]}

@@ -1,61 +1,193 @@
 {
   "advancements:root_5": {
     "criteria": {
-      "warrior": "2025-04-13 00:24:42 -0500"
+      "warrior": "2025-04-13 01:24:42 -0400"
     },
     "done": true
   },
   "advancements:root_4": {
     "criteria": {
-      "warrior": "2025-04-13 00:24:42 -0500"
+      "warrior": "2025-04-13 01:24:42 -0400"
     },
     "done": true
   },
   "advancements:root_6": {
     "criteria": {
-      "warrior": "2025-04-13 00:24:42 -0500"
+      "warrior": "2025-04-13 01:24:42 -0400"
     },
     "done": true
   },
   "advancements:root_1": {
     "criteria": {
-      "warrior": "2025-04-13 00:24:42 -0500"
+      "warrior": "2025-04-13 01:24:42 -0400"
     },
     "done": true
   },
   "advancements:root_3": {
     "criteria": {
-      "warrior": "2025-04-13 00:24:42 -0500"
+      "warrior": "2025-04-13 01:24:42 -0400"
     },
     "done": true
   },
   "advancements:root_2": {
     "criteria": {
-      "warrior": "2025-04-13 00:24:42 -0500"
+      "warrior": "2025-04-13 01:24:42 -0400"
     },
     "done": true
   },
   "advancements:root_9": {
     "criteria": {
-      "warrior": "2025-04-13 00:24:42 -0500"
+      "warrior": "2025-04-13 01:24:42 -0400"
     },
     "done": true
   },
   "advancements:lobby/fish": {
     "criteria": {
-      "ted": "2025-04-13 02:08:46 -0500"
+      "ted": "2025-04-13 03:08:46 -0400"
     },
     "done": true
   },
   "advancements:general/start": {
     "criteria": {
-      "tinyt": "2025-04-13 02:29:53 -0500"
+      "tinyt": "2025-04-13 03:29:53 -0400"
     },
     "done": true
   },
   "advancements:ctf/flag": {
     "criteria": {
-      "tinyt": "2025-04-13 02:30:45 -0500"
+      "tinyt": "2025-04-13 03:30:45 -0400"
+    },
+    "done": true
+  },
+  "advancements:general/win": {
+    "criteria": {
+      "win": "2025-05-29 01:39:21 -0400"
+    },
+    "done": true
+  },
+  "advancements:general/play_tmi": {
+    "criteria": {
+      "tinyt": "2025-05-29 01:44:00 -0400"
+    },
+    "done": true
+  },
+  "advancements:general/play10": {
+    "criteria": {
+      "tinyt": "2025-06-01 17:23:35 -0400"
+    },
+    "done": true
+  },
+  "advancements:ctf/wall20": {
+    "criteria": {
+      "tinyt": "2025-06-01 17:39:32 -0400"
+    },
+    "done": true
+  },
+  "advancements:ctf/killstreak1": {
+    "criteria": {
+      "elo1": "2025-06-08 17:48:06 -0400"
+    },
+    "done": true
+  },
+  "advancements:ctf/killstreak2": {
+    "criteria": {
+      "elo1": "2025-06-08 17:48:08 -0400"
+    },
+    "done": true
+  },
+  "advancements:ctf/killstreak3": {
+    "criteria": {
+      "elo1": "2025-06-08 17:48:09 -0400"
+    },
+    "done": true
+  },
+  "advancements:general/kills1": {
+    "criteria": {
+      "kills1": "2025-06-08 17:48:13 -0400"
+    },
+    "done": true
+  },
+  "advancements:ctf/cross": {
+    "criteria": {
+      "tinyt": "2025-06-08 17:48:45 -0400"
+    },
+    "done": true
+  },
+  "advancements:ctf/height": {
+    "criteria": {
+      "tinyt": "2025-06-08 17:50:20 -0400"
+    },
+    "done": true
+  },
+  "advancements:ctf/breakwall": {
+    "criteria": {
+      "tinyt": "2025-06-16 00:37:54 -0400"
+    },
+    "done": true
+  },
+  "advancements:lobby/target1": {
+    "criteria": {
+      "elo1": "2025-06-22 13:41:46 -0400"
+    },
+    "done": true
+  },
+  "advancements:lobby/ted": {
+    "criteria": {
+      "ted": "2025-06-28 15:27:22 -0400"
+    },
+    "done": true
+  },
+  "advancements:general/play_tar": {
+    "criteria": {
+      "tinyt": "2025-06-29 16:32:49 -0400"
+    },
+    "done": true
+  },
+  "advancements:target/cross": {
+    "criteria": {
+      "can": "2025-06-29 16:34:20 -0400"
+    },
+    "done": true
+  },
+  "advancements:target/sniper": {
+    "criteria": {
+      "can": "2025-06-29 16:46:53 -0400"
+    },
+    "done": true
+  },
+  "advancements:target/ger": {
+    "criteria": {
+      "can": "2025-06-29 16:58:46 -0400"
+    },
+    "done": true
+  },
+  "advancements:target/score60": {
+    "criteria": {
+      "can": "2025-06-29 16:59:21 -0400"
+    },
+    "done": true
+  },
+  "advancements:collection/target_code": {
+    "criteria": {
+      "can": "2025-07-04 16:05:13 -0400"
+    },
+    "done": true
+  },
+  "advancements:target/score75": {
+    "criteria": {
+      "can": "2025-07-04 16:05:13 -0400"
+    },
+    "done": true
+  },
+  "advancements:collection/target": {
+    "criteria": {
+      "can": "2025-07-04 16:05:13 -0400"
+    },
+    "done": true
+  },
+  "advancements:target/break50": {
+    "criteria": {
+      "can": "2025-07-04 16:05:13 -0400"
     },
     "done": true
   },

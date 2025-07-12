@@ -11,7 +11,7 @@ execute as @s[scores={t=3}] run tag @a remove head_show
 execute as @s[scores={t=1}] run kill @e[tag=head,type=armor_stand]
 execute as @s[scores={t=81}] run kill @e[tag=head,type=armor_stand]
 
-execute as @s[scores={t=3},tag=!rev] run function game:game/mapstart
+#execute as @s[scores={t=3},tag=!rev] run function game:game/mapstart
 
 execute as @s[scores={t=3},tag=!rev] run summon minecraft:armor_stand ^2 ^2.06 ^5 {NoBasePlate:1b,Rotation:[240F,0F],Tags:["head","red"],NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,DisabledSlots:4144959,Small:1b,equipment:{feet:{id:"minecraft:leather_boots",count:1,components:{"minecraft:dyed_color":16711680}},legs:{id:"minecraft:leather_leggings",count:1,components:{"minecraft:dyed_color":16711680}},chest:{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:dyed_color":16711680}}}}
 execute as @s[scores={t=9},tag=!rev] run summon minecraft:armor_stand ^3 ^2.11 ^4.9 {NoBasePlate:1b,Rotation:[235F,0F],Tags:["head","red"],NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,DisabledSlots:4144959,Small:1b,equipment:{feet:{id:"minecraft:leather_boots",count:1,components:{"minecraft:dyed_color":16711680}},legs:{id:"minecraft:leather_leggings",count:1,components:{"minecraft:dyed_color":16711680}},chest:{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:dyed_color":16711680}}}}
@@ -169,7 +169,11 @@ execute as @s[scores={t=64}] run tellraw @a [{"text":"\n"}]
 
 #
 execute as @s[scores={t=99}] run scoreboard players set .cutscene_running .data 0
-execute as @s[scores={t=99}] run function game:game/mapstart
+#execute as @s[scores={t=99}] run function game:game/mapstart
+
+execute as @s[scores={t=99}] store result score generatorCount macro_counter run data get storage maps:active gens
+execute as @s[scores={t=99}] run scoreboard players set generatorCounter macro_counter 0
+execute as @s[scores={t=99}] run function game:map/item_generator with storage maps:active gens[0]
 
 execute if score .mode .data = .7 .num as @s[scores={t=99}] run function game:game/spawn_targets
 #execute if score .mode .data = .7 .num if score .map .data = .1 .num as @s[scores={t=99}] run function game:game/spawn_targets

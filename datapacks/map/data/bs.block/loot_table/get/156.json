@@ -1,0 +1,58 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "alternatives",
+          "children": [
+            {
+              "type": "loot_table",
+              "value": "bs.block:get/55",
+              "functions": [
+                {
+                  "function": "set_custom_data",
+                  "tag": "{\"_\":{4:\"attached=false,\"},properties:{attached:\"false\"}}"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "location_check",
+                  "predicate": {
+                    "block": {
+                      "state": {
+                        "attached": "false"
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "loot_table",
+              "value": "bs.block:get/55",
+              "functions": [
+                {
+                  "function": "set_custom_data",
+                  "tag": "{\"_\":{4:\"attached=true,\"},properties:{attached:\"true\"}}"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "location_check",
+                  "predicate": {
+                    "block": {
+                      "state": {
+                        "attached": "true"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

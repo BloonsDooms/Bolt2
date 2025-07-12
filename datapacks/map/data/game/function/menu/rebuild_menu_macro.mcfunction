@@ -1,0 +1,1 @@
+$function game:menu/rebuild_menu with storage maps:list maps[$(map_id)]

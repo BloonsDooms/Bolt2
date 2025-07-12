@@ -1,0 +1,1 @@
+$function game:map/load_map with storage maps:list maps[$(mapID)]
