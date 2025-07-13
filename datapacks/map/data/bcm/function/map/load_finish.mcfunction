@@ -1,5 +1,3 @@
-# remove load point
-kill @e[type=marker,tag=start_point]
 # y offset
 # deprecated: load at save area pos1
 #execute as @e[type=marker,tag=render_box,tag=save] at @s run tp ~ ~.9 ~

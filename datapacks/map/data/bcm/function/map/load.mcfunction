@@ -26,3 +26,4 @@ function bcm:start_timer
 
 # load
 function item_structures:load
+kill @n[type=marker,tag=start_point]
