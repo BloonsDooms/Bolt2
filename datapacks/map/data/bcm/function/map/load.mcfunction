@@ -25,5 +25,6 @@ execute if score .print_messages item_structures matches 1 if score .l calc matc
 function bcm:start_timer
 
 # load
+scoreboard players set .print_messages item_structures 1
 function item_structures:load
 kill @n[type=marker,tag=start_point]

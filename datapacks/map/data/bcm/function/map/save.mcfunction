@@ -75,6 +75,7 @@ tag @n[type=marker,tag=render_box,tag=save,tag=pos2] add end_point
 function bcm:start_timer
 
 # save blocks
+scoreboard players set .print_messages item_structures 1
 function item_structures:save
 tag @e[type=marker,tag=render_box,tag=save] remove start_point
 tag @e[type=marker,tag=render_box,tag=save] remove end_point
