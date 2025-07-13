@@ -1,3 +1,69 @@
 {
-  "DataVersion": 3953
+  "advancements:ctf/elo1": {
+    "criteria": {
+      "elo1": "2025-07-12 20:26:25 -0500"
+    },
+    "done": true
+  },
+  "advancements:ctf/elo2": {
+    "criteria": {
+      "elo2": "2025-07-12 20:26:25 -0500"
+    },
+    "done": true
+  },
+  "advancements:ctf/elo3": {
+    "criteria": {
+      "elo3": "2025-07-12 20:26:25 -0500"
+    },
+    "done": true
+  },
+  "advancements:ctf/elo3_code": {
+    "criteria": {
+      "can": "2025-07-12 20:26:25 -0500"
+    },
+    "done": true
+  },
+  "advancements:root_5": {
+    "criteria": {
+      "warrior": "2025-07-12 20:26:25 -0500"
+    },
+    "done": true
+  },
+  "advancements:root_4": {
+    "criteria": {
+      "warrior": "2025-07-12 20:26:25 -0500"
+    },
+    "done": true
+  },
+  "advancements:root_6": {
+    "criteria": {
+      "warrior": "2025-07-12 20:26:25 -0500"
+    },
+    "done": true
+  },
+  "advancements:root_1": {
+    "criteria": {
+      "warrior": "2025-07-12 20:26:25 -0500"
+    },
+    "done": true
+  },
+  "advancements:root_3": {
+    "criteria": {
+      "warrior": "2025-07-12 20:26:25 -0500"
+    },
+    "done": true
+  },
+  "advancements:root_2": {
+    "criteria": {
+      "warrior": "2025-07-12 20:26:25 -0500"
+    },
+    "done": true
+  },
+  "advancements:root_9": {
+    "criteria": {
+      "warrior": "2025-07-12 20:26:25 -0500"
+    },
+    "done": true
+  },
+  "DataVersion": 4438
 }

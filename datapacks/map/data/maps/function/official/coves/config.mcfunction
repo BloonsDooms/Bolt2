@@ -16,9 +16,7 @@ data merge storage maps:active {settings:{\
     spectatorBoundingBox:"x=-361,y=-1,z=-608,dx=-42,dy=21,dz=-72",\
     spectatorJoinLocation:"-369 11 -644 90 0",\
     \
-    introCutscenePosition:"-373 9 -644",\
-    introCutsceneAngle: "90F, 0f",\
-    introCutsceneFlipped: false,\
+    introCutscene:"-373 9 -644 90 0",\
     \
     tickingScript: "official/coves/scripts/tick",\
     \

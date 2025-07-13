@@ -23,10 +23,6 @@ data modify storage maps:active settings.spectatorBoundingBox set from storage b
 data modify storage maps:active settings.spectatorBoundingBoxOrigin set from storage bcm map.save.start
 data modify storage maps:active settings.spectatorJoinLocation set from storage bcm map.intro_camera
 
-# DIFFERENT: position and rotation stored as one string, no flipped tag
-# this requires either:
-# (1) rewriting the map editor code to force the intro cutscene into one of 2 angles (easier, less customizable), or
-# (2) rewriting the intro cutscene code to render from any angle (harder, more customizable)
 data modify storage maps:active settings.introCutscene set from storage bcm map.intro_camera
 
 # no tickingScript
