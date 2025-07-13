@@ -60,7 +60,7 @@ data modify storage maps:active spawn.infectionInvulnTime set value 40
 
 ## objectives
 data modify storage maps:active objectives.redFlag set from storage bcm map.red_flag
-data modify storage maps:active objesctives.blueFlag set from storage bcm map.blue_flag
+data modify storage maps:active objectives.blueFlag set from storage bcm map.blue_flag
 # no infection generator (always at blue flag)
 
 
