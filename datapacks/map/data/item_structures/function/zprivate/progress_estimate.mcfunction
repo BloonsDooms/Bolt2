@@ -14,5 +14,5 @@ execute store result bossbar progress value run scoreboard players set value vec
 
 bossbar set progress name {text:"Load Progress (gets faster over time)",color:"green"}
 # run this if you want to see it
-#bossbar set progress visible true
+execute if score .print_messages item_structures matches 1 run bossbar set progress visible true
 bossbar set progress players @a

@@ -85,5 +85,5 @@ scoreboard players operation .l calc /= .save_blocks/s calc
 scoreboard players operation .s calc = .l calc
 scoreboard players operation .l calc /= #60 calc
 scoreboard players operation .s calc %= #60 calc
-execute if score .l calc matches 0 run tellraw @s ["estimated time to save: ",{score:{name:".s",objective:"calc"}},"s @ 20tps"]
-execute if score .l calc matches 1.. run tellraw @s ["estimated time to save: ",{score:{name:".l",objective:"calc"}},"m ",{score:{name:".s",objective:"calc"}},"s @ 20tps"]
+execute if score .print_messages item_structures matches 1 if score .l calc matches 0 run tellraw @s ["estimated time to save: ",{score:{name:".s",objective:"calc"}},"s @ 20tps"]
+execute if score .print_messages item_structures matches 1 if score .l calc matches 1.. run tellraw @s ["estimated time to save: ",{score:{name:".l",objective:"calc"}},"m ",{score:{name:".s",objective:"calc"}},"s @ 20tps"]
