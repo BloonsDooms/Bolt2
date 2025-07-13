@@ -37,12 +37,12 @@
     "function": "minecraft:set_name",
     "entity": "this",
     "name": {
-      "text":"Item Structure",
+      "text":"Use an anvil to name this map!",
       "italic":false,
-      "color":"aqua",
+      "color":"red",
       "bold":true
     },
-    "target": "custom_name"
+    "target": "item_name"
   },
   {
     "function": "minecraft:copy_custom_data",
@@ -54,6 +54,20 @@
       {
         "source": "save",
         "target": "structure",
+        "op": "merge"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_custom_data",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "minecraft:bcm"
+    },
+    "ops": [
+      {
+        "source": "map",
+        "target": "bleps_map",
         "op": "merge"
       }
     ]

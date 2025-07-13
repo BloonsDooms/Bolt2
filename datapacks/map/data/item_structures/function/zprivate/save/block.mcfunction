@@ -1,3 +1,7 @@
+## bleps
+execute if block ~ ~ ~ #bcm:special run function bcm:map/save/special_block
+
+## original function
 # block -> int @ save.stack
 # same as previous block?
 execute store result score different commands run function item_structures:zprivate/save/block_get
