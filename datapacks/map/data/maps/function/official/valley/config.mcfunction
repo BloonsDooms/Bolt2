@@ -14,9 +14,7 @@ data merge storage maps:active {settings:{\
     spectatorBoundingBox:"x=-406,y=-5,z=195,dx=46,dy=31,dz=-99",\
     spectatorJoinLocation:"-371 11 144 90 0",\
     \
-    introCutscenePosition:"-360 13 144",\
-    introCutsceneAngle: "90F, 0f",\
-    introCutsceneFlipped: false,\
+    introCutscene:"-360 13 144 90 0",\
     \
     tickingScript: "official/valley/scripts/tick",\
     \

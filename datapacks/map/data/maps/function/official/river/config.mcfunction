@@ -17,9 +17,7 @@ data merge storage maps:active {settings:{\
     spectatorBoundingBox:"x=-95,y=-4,z=-337,dx=-65,dy=28,dz=-97",\
     spectatorJoinLocation:"-142 8 382 -90 0",\
     \
-    introCutscenePosition:"-134 2 -383",\
-    introCutsceneAngle: "-90F, 0f",\
-    introCutsceneFlipped: true,\
+    introCutscene:"-134 2 -383 -90 0",\
     \
     tickingScript: "",\
     \
