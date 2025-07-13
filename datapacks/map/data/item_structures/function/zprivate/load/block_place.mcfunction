@@ -3,7 +3,7 @@
 execute store result storage item_structures macro.index short 1 run scoreboard players get block_id commands
 function item_structures:zprivate/load/block_place_lookup with storage item_structures macro
 # nbt
-execute if data block ~ ~ ~ {} run data modify block ~ ~ ~ {} merge from storage item_structures load.nbts[0]
+execute if data block ~ ~ ~ {} if block ~ ~ ~ #bcm:nbt_allowed run data modify block ~ ~ ~ {} merge from storage item_structures load.nbts[0]
 execute if data block ~ ~ ~ {} run data remove storage item_structures load.nbts[0]
 # remove entry
 data remove storage item_structures load.blocks[0]
