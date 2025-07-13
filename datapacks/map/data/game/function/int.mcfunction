@@ -370,6 +370,8 @@ scoreboard objectives add bow_texture_place dummy
 scoreboard objectives add bow_throw minecraft.dropped:minecraft.bow
 
 scoreboard objectives add golden_apple minecraft.used:minecraft.golden_apple
+scoreboard objectives add generator_duration dummy
+scoreboard objectives add generator_warmup dummy
 
 scoreboard objectives add crouch minecraft.custom:minecraft.sneak_time
 

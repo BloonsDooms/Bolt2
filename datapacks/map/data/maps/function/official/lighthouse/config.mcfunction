@@ -48,8 +48,8 @@ data merge storage maps:active {objectives:{\
 
 # List of item generators on the map, stored as x, y, z, facing.
 data merge storage maps:active {gens:[\
-    {pos:"-413 2 378", rotation:90},\
-    {pos:"-357 2 384", rotation:-90},\
+    {pos:"-413 2 378", rotation:90, generator_duration:45, generator_warmup:5},\
+    {pos:"-357 2 384", rotation:-90, generator_duration:45, generator_warmup:5},\
 ]}
 
 

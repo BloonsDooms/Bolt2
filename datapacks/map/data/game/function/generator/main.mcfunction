@@ -1,4 +1,4 @@
-scoreboard players set @s[tag=!old] t2 5
+scoreboard players operation @s[tag=!old] t2 = @s generator_warmup
 scoreboard players set @s[tag=!old] t 0
 scoreboard players set @s[tag=!old] t3 0
 tag @s add old
@@ -21,15 +21,22 @@ scoreboard players add @s[tag=next] t 1
 execute if data storage maps:active settings.disabledItems[0] as @s[tag=next,scores={t=2}] at @s run scoreboard players add @s[tag=next] t 1
 scoreboard players set @s[tag=next,scores={t=4..}] t 1
 
-scoreboard players set @s[tag=next,scores={t=0}] t2 45
-scoreboard players set @s[tag=next,scores={t=1}] t2 45
-scoreboard players set @s[tag=next,scores={t=2}] t2 45
-scoreboard players set @s[tag=next,scores={t=3}] t2 45
+#scoreboard players set @s[tag=next,scores={t=0}] t2 45
+#scoreboard players set @s[tag=next,scores={t=1}] t2 45
+#scoreboard players set @s[tag=next,scores={t=2}] t2 45
+#scoreboard players set @s[tag=next,scores={t=3}] t2 45
 
-scoreboard players set @s[tag=next,scores={t=0},tag=long] t2 70
-scoreboard players set @s[tag=next,scores={t=1},tag=long] t2 70
-scoreboard players set @s[tag=next,scores={t=2},tag=long] t2 70
-scoreboard players set @s[tag=next,scores={t=3},tag=long] t2 70
+#scoreboard players set @s[tag=next,scores={t=0},tag=long] t2 70
+#scoreboard players set @s[tag=next,scores={t=1},tag=long] t2 70
+#scoreboard players set @s[tag=next,scores={t=2},tag=long] t2 70
+#scoreboard players set @s[tag=next,scores={t=3},tag=long] t2 70
+
+scoreboard players operation @s[tag=next,scores={t=0}] t2 = @s generator_duration
+scoreboard players operation @s[tag=next,scores={t=1}] t2 = @s generator_duration
+scoreboard players operation @s[tag=next,scores={t=2}] t2 = @s generator_duration
+scoreboard players operation @s[tag=next,scores={t=3}] t2 = @s generator_duration
+
+
 
 data merge entity @s[scores={t3=0..3}] {CustomName:{"text":"⬜ ⬜ ⬜"}}
 data merge entity @s[scores={t3=4..7}] {CustomName:{"text":"⬛ ⬜ ⬜"}}

@@ -52,8 +52,8 @@ data merge storage maps:active {objectives:{\
 
 # List of item generators on the map, stored as x, y, z, facing.
 data merge storage maps:active {gens:[\
-    {pos:"-140 2 -348", rotation:0},\
-    {pos:"-114 2 -418", rotation:180},\
+    {pos:"-140 2 -348", rotation:0, generator_duration:45, generator_warmup:5},\
+    {pos:"-114 2 -418", rotation:180, generator_duration:45, generator_warmup:5},\
 ]}
 
 # targets, generated with /function game:map/builder/targets {x_min, x_max, etc.}
