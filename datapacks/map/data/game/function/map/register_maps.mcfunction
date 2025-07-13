@@ -22,4 +22,7 @@ summon marker 16.5 -63.5 -492.5 {Tags:["map_icon_builder"]}
 
 execute store result storage macro map_id int 1 run scoreboard players set .map_icon_counter .data 0
 execute store result score .map_count .data run data get storage maps:list maps
+
+scoreboard players set .print_messages item_structures 0
+
 execute as @e[tag=map_icon_builder] at @s run function game:menu/rebuild_menu_macro with storage macro
