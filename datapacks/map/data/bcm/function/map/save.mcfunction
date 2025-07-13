@@ -76,6 +76,8 @@ function bcm:start_timer
 
 # save blocks
 function item_structures:save
+tag @e[type=marker,tag=render_box,tag=save] remove start_point
+tag @e[type=marker,tag=render_box,tag=save] remove end_point
 
 # time estimate (after saving begins for volume calculation)
 scoreboard players operation .l calc = system vect_x
