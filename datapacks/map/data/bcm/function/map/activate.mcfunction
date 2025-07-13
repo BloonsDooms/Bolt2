@@ -11,6 +11,7 @@ data modify storage maps:active gens set value {}
 
 ## origin
 # all other coordinates are saved relative to this point unless stated otherwise
+# UUID for entitiy at origin: fd8107bb-c1fa-4ddf-b8fe-d1087da4ff6f & UUID:[I;-41875525,-1040560673,-1191259896,2107965295]
 data modify storage maps:active origin set from storage bcm map.load_point
 execute unless data storage bcm map.load_point run say activating UNSAVED map - only use briefly for testing, and REMEMBER TO SAVE!
 execute unless data storage bcm map.load_point run data modify storage maps:active origin set from storage bcm map.save.start
@@ -63,7 +64,7 @@ data modify storage maps:active spawn.infectionInvulnTime set value 40
 
 ## objectives
 data modify storage maps:active objectives.redFlag set from storage bcm map.red_flag
-data modify storage maps:active objectives.blueFlag set from storage bcm map.blue_flag
+data modify storage maps:active objesctives.blueFlag set from storage bcm map.blue_flag
 # no infection generator (always at blue flag)
 
 

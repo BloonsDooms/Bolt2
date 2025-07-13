@@ -7,6 +7,9 @@ gamerule reducedDebugInfo false
 # bandaid fix
 data modify storage maps:active settings.tickingScript set value ""
 
+# kill map origin entity, preferably before it unloads.
+kill fd8107bb-c1fa-4ddf-b8fe-d1087da4ff6f
+
 #
 execute as @e[tag=crate] at @s run function game:game/infected/crates/despawn
 

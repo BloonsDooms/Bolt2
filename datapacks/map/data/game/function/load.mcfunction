@@ -9,6 +9,9 @@ gamemode adventure @a
 
 execute store result storage macro mapID int 1 run scoreboard players get .map .data
 function game:map/map_from_id with storage macro
+# REWORK
+data modify storage maps:active origin set value "0 0 0"
+function game:map/summon_origin_entity with storage maps:active
 
 execute store result score .blue_spawn_box macro_counter run data get storage maps:active spawn.blueSpawnBoundingBox
 execute store result score .red_spawn_box macro_counter run data get storage maps:active spawn.redSpawnBoundingBox
