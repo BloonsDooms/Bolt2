@@ -1,4 +1,3 @@
-scoreboard objectives add set_bcm_settings trigger
 scoreboard objectives add set_render_box trigger
 scoreboard players add display.save set_render_box 0
 scoreboard players add display.spawn set_render_box 0
