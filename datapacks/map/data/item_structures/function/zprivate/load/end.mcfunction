@@ -1,6 +1,6 @@
-#title @a times 10 80 10
-#title @a title {"text":"Structure Loaded","color":"green"}
-#title @a subtitle {"text":"Hope you like it :D","color":"gray"}
+execute if score .print_messages item_structures matches 1 run title @a times 10 80 10
+execute if score .print_messages item_structures matches 1 run title @a title {"text":"Structure Loaded","color":"green"}
+execute if score .print_messages item_structures matches 1 run title @a subtitle {"text":"Hope you like it :D","color":"gray"}
 kill @e[tag=loader]
 
 bossbar set progress visible false

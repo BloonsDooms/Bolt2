@@ -27,3 +27,5 @@ setblock 69420 0 69420 yellow_shulker_box
 scoreboard objectives add bsc dummy
 #function item_structures:setup_blocks_list
 #function item_structures:setup_index_list
+
+scoreboard players add .print_messages item_structures 0
