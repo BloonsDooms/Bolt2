@@ -7,11 +7,10 @@ data remove storage maps:active {}
 # introCutscene is where the cutscene takes place, it is stored as x, y, z, facing.
 # wallHeight is max y level that walls can go to. Effectively this is the highest y level the player can stand at with walls.
 # disabledItems disables items in CTF, currently only supports walls.
-
 data merge storage maps:active {settings:{\
     loadingBox:"-365.5 -2.0 144.5",\
     \
-    spectatorBoundingBox:"x=-406,y=-5,z=195,dx=46,dy=31,dz=-99",\
+    spectatorBoundingBox:{area:"dx=46,dy=31,dz=-99",origin:"-406. -5. 195."},\
     spectatorJoinLocation:"-371 11 144 90 0",\
     \
     introCutscene:"-360 13 144 90 0",\
@@ -28,8 +27,8 @@ data merge storage maps:active {settings:{\
 # Spawn, the bounding box is used for invlun time and afk detection.
 # The bounding box is x, y, z, dx, dy, dz. IE., a position and a volume
 data merge storage maps:active {spawn:{\
-    blueSpawnBoundingBox:[{area:"x=-374,y=8,z=105,dx=15,dy=10,dz=-10"}],\
-    redSpawnBoundingBox:[{area:"x=-374,y=8,z=185,dx=15,dy=10,dz=10"}],\
+    blueSpawnBoundingBox:[{area:"dx=15,dy=10,dz=-10",origin:"-374. 8. 105."}],\
+    redSpawnBoundingBox:[{area:"dx=15,dy=10,dz=10",origin:"-374. 8. 185."}],\
     \
     blueSpawn:"-368.5 8 98.5 20 0",\
     redSpawn:"-368.5 8 190.5 160 0",\

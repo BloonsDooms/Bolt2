@@ -2,7 +2,7 @@
 tag @s remove in_spec_area
 
 #
-function game:map/spec_box with storage maps:active settings
+function game:map/spec_box with storage maps:active settings.spectatorBoundingBox
 #execute if score .map .data = .1 .num as @s[x=-54,y=-62,z=-16,dx=-37,dy=30,dz=76] run tag @s add in_spec_area
 #execute if score .map .data = .2 .num as @s[x=-154,y=-62,z=-86,dx=-42,dy=21,dz=-72] run tag @s add in_spec_area
 #execute if score .map .data = .3 .num as @s[x=-112,y=-2,z=354,dx=-49,dy=23,dz=59] run tag @s add in_spec_area

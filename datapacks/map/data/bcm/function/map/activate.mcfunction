@@ -19,8 +19,8 @@ execute unless data storage bcm map.load_point run data modify storage maps:acti
 
 ## settings
 # DIFFERENT: bounding box origin
-data modify storage maps:active settings.spectatorBoundingBox set from storage bcm map.save.area
-data modify storage maps:active settings.spectatorBoundingBoxOrigin set from storage bcm map.save.start
+data modify storage maps:active settings.spectatorBoundingBox.area set from storage bcm map.save.area
+data modify storage maps:active settings.spectatorBoundingBox.origin set value "~ ~ ~"
 data modify storage maps:active settings.spectatorJoinLocation set from storage bcm map.intro_camera
 
 data modify storage maps:active settings.introCutscene set from storage bcm map.intro_camera
@@ -46,10 +46,12 @@ execute store result storage maps:active settings.mapSize.z2 int 1 run scoreboar
 
 ## spawn
 # DIFFERENT: bounding box origin
-data modify storage maps:active spawn.redSpawnBoundingBox set from storage bcm map.red_spawn.area
-data modify storage maps:active spawn.redSpawnBoundingBoxOrigin set from storage bcm map.red_spawn.start
-data modify storage maps:active spawn.blueSpawnBoundingBox set from storage bcm map.blue_spawn.area
-data modify storage maps:active spawn.blueSpawnBoundingBoxOrigin set from storage bcm map.blue_spawn.start
+data modify storage maps:active spawn.redSpawnBoundingBox set value [{}]
+data modify storage maps:active spawn.redSpawnBoundingBox[0].area set from storage bcm map.red_spawn.area
+data modify storage maps:active spawn.redSpawnBoundingBox[0].origin set from storage bcm map.red_spawn.start
+data modify storage maps:active spawn.blueSpawnBoundingBox set value [{}]
+data modify storage maps:active spawn.blueSpawnBoundingBox[0].area set from storage bcm map.blue_spawn.area
+data modify storage maps:active spawn.blueSpawnBoundingBox[0].origin set from storage bcm map.blue_spawn.start
 
 data modify storage maps:active spawn.redSpawn set from storage bcm map.red_spawnpoint
 data modify storage maps:active spawn.blueSpawn set from storage bcm map.blue_spawnpoint

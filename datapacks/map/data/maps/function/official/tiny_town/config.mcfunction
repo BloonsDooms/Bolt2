@@ -13,7 +13,7 @@ data remove storage maps:active {}
 data merge storage maps:active {settings:{\
     loadingBox:"-368.5 -1 -385.5 0 0",\
     \
-    spectatorBoundingBox:"x=-405,y=-9,z=-410,dx=41,dy=28,dz=47",\
+    spectatorBoundingBox:{area:"dx=41,dy=28,dz=47",origin:"-405. -9. -410."},\
     spectatorJoinLocation:"-374 8 -385 90 0",\
     \
     introCutscene:"-393 2.5 -386 -90 0",\
@@ -31,8 +31,8 @@ data merge storage maps:active {settings:{\
 # Spawn, the bounding box is used for invlun time and afk detection.    official/valley/scripts/tick
 # The bounding box is x, y, z, dx, dy, dz. IE., a position and a volume
 data merge storage maps:active {spawn:{\
-    redSpawnBoundingBox:[{area:"x=-374,y=9,z=-410,dx=-5,dy=-10,dz=4.5"}],\
-    blueSpawnBoundingBox:[{area:"x=-374,y=9,z=-362,dx=-5,dy=-10,dz=-4.5"}],\
+    redSpawnBoundingBox:[{area:"x=-374,y=9,z=-410,dx=-5,dy=-10,dz=4.5",origin:"-374. 9. -410."}],\
+    blueSpawnBoundingBox:[{area:"x=-374,y=9,z=-362,dx=-5,dy=-10,dz=-4.5",origin:"-374. 9. -362."}],\
     \
     blueSpawn:"-376.5 4 -362.5 180 0",\
     redSpawn:"-376.5 4 -408.5 0 0",\

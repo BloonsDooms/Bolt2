@@ -13,7 +13,7 @@ data remove storage maps:active {}
 data merge storage maps:active {settings:{\
     loadingBox:"-358.5 2 -644.5",\
     \
-    spectatorBoundingBox:"x=-361,y=-1,z=-608,dx=-42,dy=21,dz=-72",\
+    spectatorBoundingBox:{area:"dx=-42,dy=21,dz=-72",origin:"-361. -1. -608."},\
     spectatorJoinLocation:"-369 11 -644 90 0",\
     \
     introCutscene:"-373 9 -644 90 0",\
@@ -30,8 +30,8 @@ data merge storage maps:active {settings:{\
 # Spawn, the bounding box is used for invlun time and afk detection.
 # The bounding box is x, y, z, dx, dy, dz. IE., a position and a volume
 data merge storage maps:active {spawn:{\
-    blueSpawnBoundingBox:[{area:"z=0,y=0,x=0,dz=0,dy=0,dx=0"}],\
-    redSpawnBoundingBox:[{area:"z=0,y=0,x=0,dz=0,dy=0,dx=0"}],\
+    blueSpawnBoundingBox:[{area:"dz=0,dy=0,dx=0",origin:"0 0 0"}],\
+    redSpawnBoundingBox:[{area:"dz=0,dy=0,dx=0",origin:"0 0 0"}],\
     \
     blueSpawn:"-395.5 7 -673.5 -45 0",\
     redSpawn:"-395.5 7 -613.5 -135 0",\
