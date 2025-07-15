@@ -9,8 +9,8 @@ execute store result storage bcm macro.z int 1 run scoreboard players operation 
 function bcm:xyz_string with storage bcm macro
 
 # get generator settings
-execute store result storage bcm tmp.time short 1 run scoreboard players get @s bcm_generator_time
-execute store result storage bcm tmp.warmup short 1 run scoreboard players get @s bcm_generator_warmup
+execute store result storage bcm tmp.generator_duration short 1 run scoreboard players get @s bcm_generator_time
+execute store result storage bcm tmp.generator_warmup short 1 run scoreboard players get @s bcm_generator_warmup
 
 # get rotation
 execute store result storage bcm tmp.rotation float 1 run data get entity @s Rotation[0]
