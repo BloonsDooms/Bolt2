@@ -177,9 +177,14 @@ scoreboard objectives add turretCooldown dummy
 scoreboard objectives add turretTimer dummy
 #> End viral zone
 
-#> Smart Guy zone
+#> DUMB Guy zone
 scoreboard objectives add macro_counter dummy
-#> End Smart Guy Zone
+#> End DUMB Guy Zone
+
+#> shuba zone because AIDEN FORGOT!
+scoreboard objectives add generator_duration dummy
+scoreboard objectives add generator_warmup dummy
+#> end shuba zone
 
 scoreboard objectives add wallHeight dummy
 
