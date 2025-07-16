@@ -1,3 +1,4 @@
+## loads map structure from bcm maps[-1] with LNW corner at ~ ~ ~
 # create load point
 summon marker ~ ~ ~ {Tags:[start_point]}
 execute store result storage bcm macro.x int 1 run data get entity @n[type=marker,tag=start_point] Pos[0]
@@ -26,5 +27,6 @@ function bcm:start_timer
 
 # load
 scoreboard players set .print_messages item_structures 1
+data modify storage item_structures save set from storage bcm maps[-1].structure
 function item_structures:load
 kill @n[type=marker,tag=start_point]
