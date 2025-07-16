@@ -2,6 +2,7 @@
 scoreboard players set .can_save_map calc 1
 
 # all areas set?
+data modify storage bcm map.save.start set from storage bcm abs.save.start
 execute unless score .save select_area matches 3 store success score .can_save_map calc run function bcm:fail/tellraw {input:'"Failed to save map: No save area set"'}
 execute unless score .red_spawn select_area matches 3 store success score .can_save_map calc run function bcm:fail/tellraw {input:'"Failed to save map: No red spawn area set"'}
 execute unless score .blue_spawn select_area matches 3 store success score .can_save_map calc run function bcm:fail/tellraw {input:'"Failed to save map: No blue spawn area set"'}

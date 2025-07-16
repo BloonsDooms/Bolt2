@@ -19,10 +19,15 @@ data modify storage bcm tmp.registry set value {\
     mapAuthors:[{selector:"@e[type=pig]"}],\
     mapSize:2,\
     mapModes:["ctf","infection","targets","tmi"],\
-    mapPack:"item"\
+    MapIcon:{blocks:[I;425984,163841,2,1,3,196609,1212416,98305,3,1,3,1,2,1,2,131073,1212416,163841,2,1,3,196609,1212416,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,753664,163841,3,131073,4,851969,4,131073,3,262145,3,1,3,196609,4,65537,4,131073,4,196609,4,65537,4,1,4,65537,4,196609,3,1,3,262145,3,131073,4,65537,4,131073,4,196609,4,262145,4,131073,3,589825,4,65537,4,131073,4,196609,4,262145,4,524289,2,1,3,131073,4,65537,4,131073,4,196609,4,262145,4,131073,3,1,2,196609,3,1,3,1,2,1,2,65537,4,851969,4,65537,2,1,2,1,3,1,3,196609,2,1,3,131073,4,65537,4,393217,4,131073,4,65537,4,131073,3,1,2,524289,4,65537,4,393217,4,131073,4,65537,4,524289,2,196609,4,65537,4,393217,4,262145,4,196609,2,327681,2,1,2,65537,4,65537,4,393217,4,262145,4,65537,2,1,2,327681,2,196609,4,851969,4,196609,2,131073,1736704,32769,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,98305,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,98305,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,1802241,1736704],index:["air","black_concrete","ochre_froglight[axis=x,]","pearlescent_froglight[axis=x,]","white_concrete","mud"],size:[2,21,27]},\
+    isItemMap:true\
 }
-execute if data entity @s SelectedItem.components."minecraft:custom_name" run data modify storage bcm map.name set from entity @s SelectedItem.components."minecraft:custom_name"
-# copy random-map icon (solid black)
-data modify storage bcm tmp.registry.MapIcon set from storage maps:list maps[0].MapIcon
+execute if data entity @s SelectedItem.components."minecraft:custom_name" run data modify storage bcm tmp.registry.mapName set from entity @s SelectedItem.components."minecraft:custom_name"
 data modify storage bcm maps append from storage bcm tmp
 data remove storage bcm tmp
+
+# REWORK - very inefficient: rebuilds entire map registry every time an item map is added
+function game:map/register_maps
+
+# remove map item to prevent importing it twice - maybe rework?
+item replace entity @s weapon.mainhand with air
