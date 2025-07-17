@@ -184,6 +184,7 @@ scoreboard objectives add macro_counter dummy
 #> shuba zone because AIDEN FORGOT!
 scoreboard objectives add generator_duration dummy
 scoreboard objectives add generator_warmup dummy
+scoreboard players set .enabled select_area 1
 #> end shuba zone
 
 scoreboard objectives add wallHeight dummy
