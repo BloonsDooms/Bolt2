@@ -55,6 +55,7 @@ execute store result storage bcm map.max_wall_height int 0.01 run scoreboard pla
 function bcm:map/save/relative with storage bcm map.save
 
 # flags
+execute as @e[type=block_display,tag=flag] at @s run setblock ~ ~ ~ air
 execute as @n[type=block_display,tag=red_flag] at @s run function bcm:map/save/flag {color:"red"}
 execute as @n[type=block_display,tag=blue_flag] at @s run function bcm:map/save/flag {color:"blue"}
 
