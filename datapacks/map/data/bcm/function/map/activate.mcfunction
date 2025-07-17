@@ -19,6 +19,8 @@ data modify storage maps:active origin set from storage bcm map.load_point
 
 
 ## settings
+data modify storage maps:active loadingBox set from storage maps:active origin
+
 # DIFFERENT: bounding box origin
 data modify storage maps:active settings.spectatorBoundingBox.area set from storage bcm map.save.area
 data modify storage maps:active settings.spectatorBoundingBox.origin set value "~ ~ ~"
