@@ -4,4 +4,4 @@ execute if score .l calc matches 32 run function bcm:place/blue_spawnpoint
 execute if score .l calc matches 33 run function bcm:place/intro_camera
 execute if score .l calc matches 34 run function bcm:dialog/render_box
 execute if score .l calc matches 35 run function bcm:dialog/pos_and_rot
-execute if score .l calc matches 36 run function #item_structures:import
+execute if score .l calc matches 36 run function bcm:map/import
