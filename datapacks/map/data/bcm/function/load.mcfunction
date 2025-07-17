@@ -8,6 +8,7 @@ scoreboard players add display.wall_height set_render_box 0
 scoreboard players add display.camera set_render_box 0
 scoreboard objectives add set_pos_and_rot trigger
 scoreboard objectives add set_item_generator trigger
+scoreboard objectives add existing_map_response trigger
 
 scoreboard objectives add calc dummy
 scoreboard players set #-1 calc -1
