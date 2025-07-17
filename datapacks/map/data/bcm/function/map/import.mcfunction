@@ -1,16 +1,23 @@
+## get map data
 # validate item
 execute unless data entity @s SelectedItem.components."minecraft:custom_data".bleps_map run return run function bcm:fail/title {title:'"FAILED to import"',subtitle:'"This isn\'t a custom bleps map item!"'}
-
 # bleps-specific map data
 data modify storage bcm map set from entity @s SelectedItem.components."minecraft:custom_data".bleps_map
-
 # blocks
 function item_structures:import
 
-# save map to array
+
+## save map to array
 data remove storage bcm tmp
+# bleps-specific
 data modify storage bcm tmp.map set from storage bcm map
+# convert targets data
+data remove storage bcm tmp.map.targets
+data remove storage bcm tmp_target
+execute if data storage bcm map.targets[] run function bcm:map/import_targets
+# blocks
 data modify storage bcm tmp.structure set from storage item_structures save
+# registry
 data modify storage bcm tmp.registry set value {\
     mapName:"Unnamed Map",\
     mapColor:"white",\
@@ -23,11 +30,13 @@ data modify storage bcm tmp.registry set value {\
     isItemMap:true\
 }
 execute if data entity @s SelectedItem.components."minecraft:custom_name" run data modify storage bcm tmp.registry.mapName set from entity @s SelectedItem.components."minecraft:custom_name"
+# add to array
 data modify storage bcm maps append from storage bcm tmp
 data remove storage bcm tmp
 
+
+## post-import stuff
 # REWORK - very inefficient: rebuilds entire map registry every time an item map is added
 function game:map/register_maps
-
 # remove map item to prevent importing it twice - maybe rework?
 item replace entity @s weapon.mainhand with air

@@ -25,5 +25,7 @@ execute if score .m calc matches 0 if score .s calc matches 0 run data modify st
 execute if score .m calc matches 0 run data modify storage bcm timer.m set value ""
 execute if score .m calc matches 1.. run data modify storage bcm timer.m set value [{score:{name:".s",objective:"calc"}},"m "]
 
+execute if score .m calc matches 0 if score .s calc matches 0 if score .ms calc matches 0 run data modify storage bcm timer.ms set value "less than 1 tick"
+
 # reset worldborder
 worldborder set 59999968

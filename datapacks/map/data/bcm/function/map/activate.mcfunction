@@ -70,3 +70,7 @@ data modify storage maps:active objectives.blueFlag set from storage bcm map.blu
 ## gens
 # DIFFERENT: time between items and warmup delay
 data modify storage maps:active gens set from storage bcm map.generators
+
+
+## targets
+data modify storage maps:active targets set from storage bcm map.targets
