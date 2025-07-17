@@ -3,10 +3,10 @@
 # editor doesn't have disabled items or invulnerability times
 
 # you can't directly set/delete root objects
-data modify storage maps:active settings set value {}
-data modify storage maps:active spawn set value {}
-data modify storage maps:active objectives set value {}
-data modify storage maps:active gens set value {}
+data remove storage maps:active settings
+data remove storage maps:active spawn
+data remove storage maps:active objectives
+data remove storage maps:active gens
 data remove storage maps:active targets
 
 
