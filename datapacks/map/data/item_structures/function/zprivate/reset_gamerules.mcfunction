@@ -1,1 +1,0 @@
-execute if score #sendFeedback item_structures matches 1 run gamerule sendCommandFeedback true

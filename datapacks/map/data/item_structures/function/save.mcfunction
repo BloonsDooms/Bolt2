@@ -35,8 +35,4 @@ kill @e[tag=positioner]
 title @s times 10 200 10
 execute if score .print_messages item_structures matches 1 run title @s actionbar ["",{"text":"Corner: (","color":"dark_gray"},{"score":{"name":"#x1","objective":"vect_x"},"color":"yellow"},{"text":","},{"score":{"name":"#y1","objective":"vect_y"},"color":"blue"},{"text":","},{"score":{"name":"#z1","objective":"vect_z"},"color":"red"},{"text":")","color":"dark_gray"},{"text":" Size: (","color":"dark_gray"},{"score":{"name":"system","objective":"vect_x"},"color":"gold"},{"text":","},{"score":{"name":"system","objective":"vect_y"},"color":"dark_blue"},{"text":","},{"score":{"name":"system","objective":"vect_z"},"color":"dark_red"},{"text":")","color":"dark_gray"}]
 
-execute store result score #sendFeedback item_structures run gamerule sendCommandFeedback
-gamerule sendCommandFeedback false
-schedule function item_structures:zprivate/reset_gamerules 1t
-
 function item_structures:zprivate/menu/sound

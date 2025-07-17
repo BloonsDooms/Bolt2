@@ -8,8 +8,4 @@ title @s times 10 80 10
 title @s title {"text":"Item Exported","color":"gold"}
 title @s subtitle [{"text":"Save item with ","color":"gray"},{keybind:"key.saveToolbarActivator"},"+<slot>"]
 
-execute store result score #sendFeedback item_structures run gamerule sendCommandFeedback
-gamerule sendCommandFeedback false
-schedule function item_structures:zprivate/reset_gamerules 1t
-
 function item_structures:zprivate/menu/sound

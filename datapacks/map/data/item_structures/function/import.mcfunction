@@ -6,8 +6,4 @@ title @s subtitle {"text":"Imported from hand Item","color":"gray"}
 execute unless data entity @s SelectedItem.components."minecraft:custom_data".structure run title @s title {"text":"FAILED Imported","color":"dark_green"}
 execute unless data entity @s SelectedItem.components."minecraft:custom_data".structure run title @s subtitle {"text":"This isnt an item structure!","color":"gray"}
 
-execute store result score #sendFeedback item_structures run gamerule sendCommandFeedback
-gamerule sendCommandFeedback false
-schedule function item_structures:zprivate/reset_gamerules 1t
-
 function item_structures:zprivate/menu/sound
