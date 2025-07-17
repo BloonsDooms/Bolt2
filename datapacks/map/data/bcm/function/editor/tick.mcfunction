@@ -18,4 +18,4 @@ execute as @a[scores={set_item_generator=-1}] at @s run function bcm:trigger/ite
 execute as @a[scores={set_item_generator=..-2}] at @s run function bcm:trigger/item_generator_cancel
 
 # editor area boundaries
-execute as @a[gamemode=creative,tag=in_map_editor] at @s run function bcm:editor/boundary
+execute as @a[gamemode=creative,tag=in_map_editor,tag=!bypass_editor_boundary] at @s run function bcm:editor/boundary
