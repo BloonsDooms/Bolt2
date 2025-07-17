@@ -1,11 +1,11 @@
-## loads map structure from bcm maps[-1] with LNW corner at ~ ~ ~
+## loads map structure from bcm maps[$(index)] with LNW corner at ~ ~ ~
 # create load point
 summon marker ~ ~ ~ {Tags:[start_point]}
 execute store result storage bcm macro.x int 1 run data get entity @n[type=marker,tag=start_point] Pos[0]
 execute store result storage bcm macro.y int 1 run data get entity @n[type=marker,tag=start_point] Pos[1]
 execute store result storage bcm macro.z int 1 run data get entity @n[type=marker,tag=start_point] Pos[2]
 function bcm:xyz_string_abs with storage bcm macro
-data modify storage bcm maps[-1].map.load_point set from storage bcm tmp.pos
+$data modify storage bcm maps[$(index)].map.load_point set from storage bcm tmp.pos
 data remove storage bcm tmp
 # y offset
 # deprecated: load at save area pos1
@@ -27,6 +27,6 @@ function bcm:start_timer
 
 # load
 scoreboard players set .print_messages item_structures 1
-data modify storage item_structures save set from storage bcm maps[-1].structure
+$data modify storage item_structures save set from storage bcm maps[$(index)].structure
 function item_structures:load
 kill @n[type=marker,tag=start_point]

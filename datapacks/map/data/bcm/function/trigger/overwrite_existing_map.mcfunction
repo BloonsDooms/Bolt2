@@ -17,4 +17,5 @@ function item_structures:import
 function bcm:map/constructor
 
 ## overwrite existing map
-function bcm:map/overwrite with storage bcm tmp.registry
+data modify storage bcm macro.mapName set from storage bcm tmp.registry.mapName
+function bcm:map/overwrite with storage bcm macro
