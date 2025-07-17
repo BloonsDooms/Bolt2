@@ -19,3 +19,4 @@ execute as @a[scores={set_item_generator=..-2}] at @s run function bcm:trigger/i
 
 # editor area boundaries
 execute as @a[gamemode=creative,tag=in_map_editor,tag=!bypass_editor_boundary] at @s run function bcm:editor/boundary
+tag @e[type=interaction] remove tmp_tped

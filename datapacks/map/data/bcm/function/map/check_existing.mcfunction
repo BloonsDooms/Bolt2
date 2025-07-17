@@ -1,0 +1,1 @@
+$return run execute if data storage maps:list maps[{mapName:"$(mapName)"}]
