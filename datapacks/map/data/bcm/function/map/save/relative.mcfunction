@@ -5,7 +5,7 @@ execute store result score .x1 calc run data get entity @n[type=marker,tag=tmp] 
 execute store result score .y1 calc run data get entity @n[type=marker,tag=tmp] Pos[1] 1000
 execute store result score .z1 calc run data get entity @n[type=marker,tag=tmp] Pos[2] 1000
 $execute positioned $(start) run kill @n[type=marker,tag=tmp]
-$tellraw @a "\nstart = $(start)"
+#$tellraw @a "\nstart = $(start)"
 
 data remove storage bcm macro
 
