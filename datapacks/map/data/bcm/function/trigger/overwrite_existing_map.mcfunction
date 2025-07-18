@@ -1,3 +1,4 @@
+scoreboard players reset @s existing_map_response
 # assert player is still holding the map item
 #
 # this should never fail, unless:
