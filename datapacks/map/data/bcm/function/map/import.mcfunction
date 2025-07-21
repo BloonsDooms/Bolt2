@@ -3,11 +3,13 @@
 execute unless data entity @s SelectedItem.components."minecraft:custom_data".bleps_map run return run function bcm:fail/title {title:'"FAILED to import"',subtitle:'"This isn\'t a custom bleps map item!"'}
 # map has name?
 execute unless data entity @s SelectedItem.components."minecraft:custom_name" run return run function bcm:fail/title {title:'"FAILED to import"',subtitle:'"Your map needs a name!"'}
-# if map w/ same name, prompt user to overwrite
+# name matches another map?
 data modify storage bcm macro.mapName set from entity @s SelectedItem.components."minecraft:custom_name"
 execute store result score .map_exists calc run function bcm:map/check_existing with storage bcm macro
+# if item map w/ same name, prompt user to overwrite
 execute if score .map_exists calc matches 1 run return run function bcm:dialog/overwrite_existing_map
-
+# if non-item map w/ same name, throw error
+execute if score .map_exists calc matches 2 run return run function bcm:fail/title {title:'"FAILED to import"',subtitle:'"Can\'t overwrite non-item map"'}
 
 ## get map data
 # bleps-specific map data
