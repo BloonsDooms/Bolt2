@@ -1,3 +1,5 @@
+scoreboard players set .is_busy item_structures 0
+
 kill @e[tag=saver]
 kill @e[tag=loader]
 
