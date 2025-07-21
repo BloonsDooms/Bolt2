@@ -12,6 +12,7 @@ execute unless items entity @s weapon.mainhand netherite_ingot[minecraft:custom_
 # bleps-specific map data
 data modify storage bcm map set from entity @s SelectedItem.components."minecraft:custom_data".bleps_map
 # blocks
+scoreboard players set .print_messages item_structures 0
 function item_structures:import
 
 ## new map object

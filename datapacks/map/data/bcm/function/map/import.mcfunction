@@ -14,6 +14,7 @@ execute if score .map_exists calc matches 1 run return run function bcm:dialog/o
 data modify storage bcm map set from entity @s SelectedItem.components."minecraft:custom_data".bleps_map
 data remove storage bcm map.load_point
 # blocks
+scoreboard players set .print_messages item_structures 0
 function item_structures:import
 
 
@@ -34,6 +35,7 @@ scoreboard players set limit commands 54000
 # find map icon slot
 scoreboard players operation .i calc = .map_count .data
 scoreboard players remove .i calc 1
+forceload add 16 -493
 summon marker 16.5 -63.5 -492.5 {Tags:["start_point"]}
 execute as @n[type=marker,tag=start_point] at @s run function bcm:map/tp_2
 # place blocks

@@ -1,3 +1,4 @@
+execute unless loaded ~2 ~ ~ run forceload add ~2 ~
 tp @s ~2 ~ ~
 scoreboard players remove .i calc 1
 
