@@ -11,6 +11,7 @@ execute if score .map_exists calc matches 1 run return run function bcm:dialog/o
 # if non-item map w/ same name, throw error
 execute if score .map_exists calc matches 2 run return run function bcm:fail/title {title:'"FAILED to import"',subtitle:'"Can\'t overwrite official or non-item maps"'}
 
+
 ## get map data
 # bleps-specific map data
 data modify storage bcm map set from entity @s SelectedItem.components."minecraft:custom_data".bleps_map
