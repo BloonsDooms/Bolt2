@@ -24,11 +24,6 @@ data modify storage maps:list maps append from storage bcm tmp.registry
 data remove storage bcm tmp
 
 
-## post-import stuff
-# REWORK - very inefficient: rebuilds entire map registry every time an item map is added
-#function game:map/register_maps
-
-
 ## place map
 # UUID is 1 less than origin entity
 forceload add 544 32
