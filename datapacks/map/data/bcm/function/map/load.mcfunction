@@ -5,7 +5,8 @@ execute store result storage bcm macro.x int 1 run data get entity @n[type=marke
 execute store result storage bcm macro.y int 1 run data get entity @n[type=marker,tag=start_point] Pos[1]
 execute store result storage bcm macro.z int 1 run data get entity @n[type=marker,tag=start_point] Pos[2]
 function bcm:xyz_string_abs with storage bcm macro
-$data modify storage bcm maps[{registry:{mapName:"$(mapName)"}}].map.load_point set from storage bcm tmp.pos
+$scoreboard players set .new item_structures $(new)
+$execute if score .new item_structures matches 1 run data modify storage bcm maps[{registry:{mapName:"$(mapName)"}}].map.load_point set from storage bcm tmp.pos
 data remove storage bcm tmp
 # y offset
 # deprecated: load at save area pos1
@@ -29,4 +30,4 @@ function bcm:start_timer
 #scoreboard players set .print_messages item_structures 1
 $data modify storage item_structures save set from storage bcm maps[{registry:{mapName:"$(mapName)"}}].structure
 function item_structures:load
-execute as @n[type=marker,tag=start_point] at @s run function bcm:unload_and_kill
+kill @n[type=marker,tag=start_point]

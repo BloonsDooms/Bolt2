@@ -46,7 +46,7 @@ scoreboard players set .print_messages item_structures 0
 data modify storage item_structures save set from storage bcm tmp.registry.MapIcon
 function item_structures:load
 # cleanup
-execute as @n[type=marker,tag=start_point] at @s run function bcm:unload_and_kill
+kill @n[type=marker,tag=start_point]
 data remove storage bcm tmp
 scoreboard players operation limit commands = #limit_old commands
 
@@ -55,4 +55,5 @@ scoreboard players operation limit commands = #limit_old commands
 # UUID is 1 less than active map origin entity
 tag fd8107bb-c1fa-4ddf-b8fe-d1087da4ff6e add tp_map_placer
 scoreboard players set .print_messages item_structures 1
+data modify storage bcm macro.new set value true
 execute at fd8107bb-c1fa-4ddf-b8fe-d1087da4ff6e run function bcm:map/load with storage bcm macro
