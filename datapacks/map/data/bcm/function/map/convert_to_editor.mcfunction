@@ -1,0 +1,1 @@
+$return run function bcm:fail/tellraw {input:'"ERROR: can\'t edit $(mapName) because it is an official (non-item) map, and shuba has not written the code to do this."'}
