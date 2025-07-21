@@ -181,11 +181,11 @@ scoreboard objectives add turretTimer dummy
 scoreboard objectives add macro_counter dummy
 #> End DUMB Guy Zone
 
-#> shuba zone because AIDEN FORGOT!
+#> woman zone
 scoreboard objectives add generator_duration dummy
 scoreboard objectives add generator_warmup dummy
 scoreboard players set .enabled select_area 1
-#> end shuba zone
+#> end woman zone
 
 scoreboard objectives add wallHeight dummy
 

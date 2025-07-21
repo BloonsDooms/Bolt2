@@ -36,3 +36,8 @@ scoreboard objectives add place_object_egg minecraft.used:minecraft.panda_spawn_
 
 scoreboard objectives add bcm_generator_time dummy
 scoreboard objectives add bcm_generator_warmup dummy
+
+# map placer
+# UUID is 1 less than active map origin entity
+execute unless entity fd8107bb-c1fa-4ddf-b8fe-d1087da4ff6e run forceload add 544 32
+execute unless entity fd8107bb-c1fa-4ddf-b8fe-d1087da4ff6e run summon marker 544 0 32 {UUID:[I;-41875525,-1040560673,-1191259896,2107965294]}

@@ -9,6 +9,3 @@ execute unless entity @n[type=marker,tag=tp_map_placer] run return 1
 execute store result score .z calc run data get storage item_structures save.size[2]
 execute store result storage bcm macro.z int 1 run scoreboard players add .z calc 64
 execute as fd8107bb-c1fa-4ddf-b8fe-d1087da4ff6e at @s run function bcm:map/tp_placer with storage bcm macro
-
-# REWORK - rebuilds entire map registry, but here i only need it to place 1 map icon
-function game:map/register_maps
