@@ -26,7 +26,7 @@ data remove storage bcm tmp
 
 ## place map
 # UUID is 1 less than origin entity
-forceload add 544 32
+execute unless entity fd8107bb-c1fa-4ddf-b8fe-d1087da4ff6e run forceload add 544 32
 execute unless entity fd8107bb-c1fa-4ddf-b8fe-d1087da4ff6e run summon marker 544 0 32 {UUID:[I;-41875525,-1040560673,-1191259896,2107965294]}
 scoreboard players set .print_messages item_structures 1
 execute at fd8107bb-c1fa-4ddf-b8fe-d1087da4ff6e run function bcm:map/load with storage bcm macro
