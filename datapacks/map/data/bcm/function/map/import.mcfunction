@@ -43,7 +43,7 @@ scoreboard players set .print_messages item_structures 0
 data modify storage item_structures save set from storage bcm tmp.registry.MapIcon
 function item_structures:load
 # cleanup
-kill @n[type=marker,tag=start_point]
+execute as @n[type=marker,tag=start_point] at @s run function bcm:unload_and_kill
 data remove storage bcm tmp
 scoreboard players operation limit commands = #limit_old commands
 

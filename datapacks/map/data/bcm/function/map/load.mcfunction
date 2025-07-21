@@ -29,4 +29,4 @@ function bcm:start_timer
 #scoreboard players set .print_messages item_structures 1
 $data modify storage item_structures save set from storage bcm maps[{registry:{mapName:"$(mapName)"}}].structure
 function item_structures:load
-kill @n[type=marker,tag=start_point]
+execute as @n[type=marker,tag=start_point] at @s run function bcm:unload_and_kill
