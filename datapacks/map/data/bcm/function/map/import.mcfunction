@@ -12,6 +12,7 @@ execute if score .map_exists calc matches 1 run return run function bcm:dialog/o
 ## get map data
 # bleps-specific map data
 data modify storage bcm map set from entity @s SelectedItem.components."minecraft:custom_data".bleps_map
+data remove storage bcm map.load_point
 # blocks
 function item_structures:import
 
