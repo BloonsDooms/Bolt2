@@ -1,3 +1,5 @@
+scoreboard players set .is_busy item_structures 1
+
 scoreboard players set @s commands 0
 
 execute store result score system vect_x run data get storage item_structures load.size[0]

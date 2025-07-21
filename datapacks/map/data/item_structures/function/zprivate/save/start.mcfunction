@@ -1,3 +1,5 @@
+scoreboard players set .is_busy item_structures 1
+
 scoreboard players set @s commands 0
 data remove storage minecraft:item_structures save
 

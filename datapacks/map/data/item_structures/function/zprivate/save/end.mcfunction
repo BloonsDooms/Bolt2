@@ -1,3 +1,5 @@
+scoreboard players set .is_busy item_structures 0
+
 execute if score .print_messages item_structures matches 1 run title @a times 10 80 10
 execute if score .print_messages item_structures matches 1 run title @a title {"text":"Structure Saved","color":"yellow"}
 execute if score .print_messages item_structures matches 1 run title @a subtitle {"text":"Ready for transfer!","color":"gray"}
