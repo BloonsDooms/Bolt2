@@ -1,2 +1,1 @@
-$forceload remove ~ ~ ~$(x) ~$(z)
-forceload add ~ ~
+$forceload remove ~-$(x) ~-$(z) ~ ~
