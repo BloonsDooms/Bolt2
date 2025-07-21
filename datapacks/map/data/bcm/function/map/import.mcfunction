@@ -9,7 +9,7 @@ execute store result score .map_exists calc run function bcm:map/check_existing 
 # if item map w/ same name, prompt user to overwrite
 execute if score .map_exists calc matches 1 run return run function bcm:dialog/overwrite_existing_map
 # if non-item map w/ same name, throw error
-execute if score .map_exists calc matches 2 run return run function bcm:fail/title {title:'"FAILED to import"',subtitle:'"Can\'t overwrite non-item map"'}
+execute if score .map_exists calc matches 2 run return run function bcm:fail/title {title:'"FAILED to import"',subtitle:'"Can\'t overwrite official or non-item maps"'}
 
 ## get map data
 # bleps-specific map data
