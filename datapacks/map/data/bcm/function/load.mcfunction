@@ -23,7 +23,7 @@ scoreboard players set #1000 calc 1000
 # @ 5k blocks: 12500 blocks/s
 # @ 500k blocks: 12000 blocks/s
 # @ 6M blocks: 11300 blocks/s
-scoreboard players set .save_blocks/s calc 12000
+scoreboard players set .save_blocks/s calc 11000
 
 # load rate changes wildly -> inaccurate load ETA
 # @ 47k entries (500k): 11000 entries/s
