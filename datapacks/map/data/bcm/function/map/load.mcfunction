@@ -1,17 +1,12 @@
 ## loads map structure called mapName from bcm maps[] with LNW corner at ~ ~ ~
-# create load point
+# summon load point marker
 summon marker ~ ~ ~ {Tags:[start_point]}
-execute store result storage bcm macro.x int 1 run data get entity @n[type=marker,tag=start_point] Pos[0]
-execute store result storage bcm macro.y int 1 run data get entity @n[type=marker,tag=start_point] Pos[1]
-execute store result storage bcm macro.z int 1 run data get entity @n[type=marker,tag=start_point] Pos[2]
-function bcm:xyz_string_abs with storage bcm macro
+
+# set load point if new map
 $scoreboard players set .new item_structures $(new)
-$execute if score .new item_structures matches 1 run data modify storage bcm maps[{registry:{mapName:"$(mapName)"}}].map.load_point set from storage bcm tmp.pos
-data remove storage bcm tmp
+$execute if score .new item_structures matches 1 as @n[type=marker,tag=start_point] run function bcm:map/set_load_point {mapName:"$(mapName)"}
+
 # y offset
-# deprecated: load at save area pos1
-#execute as @e[type=marker,tag=render_box,tag=save] at @s run tp ~ ~-.9 ~
-#tag @n[type=marker,tag=render_box,tag=save,tag=pos1] add start_point
 execute as @e[type=marker,tag=start_point] at @s run tp ~ ~-.9 ~
 
 # time estimate
