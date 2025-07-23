@@ -1,1 +1,1 @@
-$tp @s $(tp)
+$tp @s $(pos)

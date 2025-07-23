@@ -7,35 +7,38 @@ $function game:map/load_map with storage maps:list maps[{mapName:"$(mapName)"}]
 
 
 ## save area
-# from load point & structure size
+# pos 1 (~ ~ ~)
 summon marker ~ ~ ~ {Tags:["map_editor","pos1","render_box","save","init"]}
-execute store result score .x1 calc run data get entity @n[type=marker,tag=map_editor,tag=init] Pos[0]
-execute store result score .y1 calc run data get entity @n[type=marker,tag=map_editor,tag=init] Pos[1]
-execute store result score .z1 calc run data get entity @n[type=marker,tag=map_editor,tag=init] Pos[2]
+execute store result score .x1 calc run data get entity @n[type=marker,tag=pos1,tag=init] Pos[0]
+execute store result score .y1 calc run data get entity @n[type=marker,tag=pos1,tag=init] Pos[1]
+execute store result score .z1 calc run data get entity @n[type=marker,tag=pos1,tag=init] Pos[2]
+# pos 2 (from structure size)
+summon marker ~ ~ ~ {Tags:["map_editor","pos2","render_box","save","init"]}
 execute store result storage bcm macro.x int 1 run data get storage item_structures save.size[0] .999999999
 execute store result storage bcm macro.y int 1 run data get storage item_structures save.size[1] .999999999
 execute store result storage bcm macro.z int 1 run data get storage item_structures save.size[2] .999999999
-data modify storage bcm macro.command set value 'summon marker ~ ~ ~ {Tags:["map_editor","pos2","render_box","save","init"]}'
-function bcm:run_relative with storage bcm macro
-
-
-## single-point eggless objects
-summon marker ~ ~ ~ {Tags:[tmp]}
+function bcm:xyz_string with storage bcm macro
+execute as @n[type=marker,tag=pos2,tag=init] at @s run function bcm:tp with storage bcm tmp
+data remove storage bcm tmp
 data remove storage bcm macro
 
+## single-point eggless objects
+# TODO: make bcm:tp_convert
+summon marker ~ ~ ~ {Tags:[tmp]}
+
 # intro camera
-data modify storage bcm macro.tp set from storage maps:active settings.introCutscene
-execute as @n[type=marker,tag=tmp] at @s run function bcm:tp with storage bcm macro
+data modify storage bcm macro.pos set from storage maps:active settings.introCutscene
+execute as @n[type=marker,tag=tmp] at @s run function bcm:tp_convert with storage bcm macro
 execute as @n[type=marker,tag=tmp] at @s run function bcm:place/intro_camera
 
 # red spawnpoint
-data modify storage bcm macro.tp set from storage maps:active spawn.redSpawn
-execute as @n[type=marker,tag=tmp] at @s run function bcm:tp with storage bcm macro
+data modify storage bcm macro.pos set from storage maps:active spawn.redSpawn
+execute as @n[type=marker,tag=tmp] at @s run function bcm:tp_convert with storage bcm macro
 execute as @n[type=marker,tag=tmp] at @s run function bcm:place/red_spawnpoint
 
 # blue spawnpoint
-data modify storage bcm macro.tp set from storage maps:active spawn.blueSpawn
-execute as @n[type=marker,tag=tmp] at @s run function bcm:tp with storage bcm macro
+data modify storage bcm macro.pos set from storage maps:active spawn.blueSpawn
+execute as @n[type=marker,tag=tmp] at @s run function bcm:tp_convert with storage bcm macro
 execute as @n[type=marker,tag=tmp] at @s run function bcm:place/blue_spawnpoint
 
 kill @n[type=marker,tag=tmp]
@@ -60,8 +63,8 @@ summon block_display ~ ~ ~ {\
   },\
   view_range:0f\
 }
-data modify storage bcm macro.tp set from storage maps:active objectives.redFlag
-execute as @n[type=block_display,tag=red_flag,tag=init] at @s run function bcm:tp with storage bcm macro
+data modify storage bcm macro.pos set from storage maps:active objectives.redFlag
+execute as @n[type=block_display,tag=red_flag,tag=init] at @s run function bcm:tp_convert with storage bcm macro
 
 # blue flag (entity data copied from bcm:give/place/blue_flag)
 summon block_display ~ ~ ~ {\
@@ -81,8 +84,8 @@ summon block_display ~ ~ ~ {\
   },\
   view_range:0f\
 }
-data modify storage bcm macro.tp set from storage maps:active objectives.blueFlag
-execute as @n[type=block_display,tag=blue_flag,tag=init] at @s run function bcm:tp with storage bcm macro
+data modify storage bcm macro.pos set from storage maps:active objectives.blueFlag
+execute as @n[type=block_display,tag=blue_flag,tag=init] at @s run function bcm:tp_convert with storage bcm macro
 
 
 ## generators
