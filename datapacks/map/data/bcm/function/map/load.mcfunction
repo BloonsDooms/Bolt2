@@ -15,19 +15,19 @@ data remove storage bcm tmp
 execute as @e[type=marker,tag=start_point] at @s run tp ~ ~-.9 ~
 
 # time estimate
+$data modify storage item_structures save set from storage bcm maps[{registry:{mapName:"$(mapName)"}}].structure
 execute store result score .l calc run data get storage minecraft:item_structures save.blocks
 scoreboard players operation .l calc /= .load_entries/s calc
 scoreboard players operation .s calc = .l calc
 scoreboard players operation .l calc /= #60 calc
 scoreboard players operation .s calc %= #60 calc
-execute if score .print_messages item_structures matches 1 if score .l calc matches 0 run tellraw @s ["estimated time to load: ",{score:{name:".s",objective:"calc"}},"s @ 20tps"]
-execute if score .print_messages item_structures matches 1 if score .l calc matches 1.. run tellraw @s ["estimated time to load: ",{score:{name:".l",objective:"calc"}},"m ",{score:{name:".s",objective:"calc"}},"s @ 20tps"]
+execute if score .print_messages item_structures matches 1 if score .l calc matches 0 run tellraw @s ["estimated time to load: ",{score:{name:".s",objective:"calc"}},"s"]
+execute if score .print_messages item_structures matches 1 if score .l calc matches 1.. run tellraw @s ["estimated time to load: ",{score:{name:".l",objective:"calc"}},"m ",{score:{name:".s",objective:"calc"}},"s"]
 
 # timer
 function bcm:start_timer
 
 # load
 #scoreboard players set .print_messages item_structures 1
-$data modify storage item_structures save set from storage bcm maps[{registry:{mapName:"$(mapName)"}}].structure
 function item_structures:load
 kill @n[type=marker,tag=start_point]
