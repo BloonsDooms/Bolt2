@@ -5,8 +5,8 @@ scoreboard players set .print_messages item_structures 1
 # if no map, throw error
 $execute if score .map_exists calc matches 0 run return run function bcm:fail/tellraw {input:'"ERROR: couldn\'t find map named \\"$(mapName)\\""'}
 
-# if item map, load as is
-$execute if score .map_exists calc matches 1 run function bcm:map/load {mapName:"$(mapName)",new:false}
+# if item map, edit as is
+$execute if score .map_exists calc matches 1 run function bcm:map/edit/item {mapName:"$(mapName)"}
 
-# if non-item map, convert data
-$execute if score .map_exists calc matches 2 run function bcm:map/convert_to_editor {mapName:"$(mapName)"}
+# if non-item map, convert data to edit
+$execute if score .map_exists calc matches 2 run function bcm:map/edit/official {mapName:"$(mapName)"}

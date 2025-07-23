@@ -1,22 +1,20 @@
-## place map
+## begin placing copy
+# copies map structure, mapName, and origin to item_structures save
 $function bcm:map/load_official {mapName:"$(mapName)"}
 
 
 ## get map config data
+# writes to maps:active {}
 $function game:map/load_map with storage maps:list maps[{mapName:"$(mapName)"}]
 
 
+## get absolute to relative
+execute summon marker run function bcm:map/edit/official/abs_to_rel
+
+
 ## save area
-# pos 1 (~ ~ ~)
+# pos 1 (~ ~ ~), get absolute to relative
 summon marker ~ ~ ~ {Tags:["map_editor","pos1","render_box","save","init"]}
-execute store result storage bcm abs_to_rel.x int -1 store result storage bcm forceload.x int 1 run data get entity @n[type=marker,tag=pos1,tag=init] Pos[0]
-execute store result storage bcm abs_to_rel.y int -1 run data get entity @n[type=marker,tag=pos1,tag=init] Pos[1]
-execute store result storage bcm abs_to_rel.z int -1 store result storage bcm forceload.z int 1 run data get entity @n[type=marker,tag=pos1,tag=init] Pos[2]
-function bcm:xyz_string with storage bcm abs_to_rel
-data modify storage bcm abs_to_rel.pos set from storage bcm tmp.pos
-data remove storage bcm tmp
-# TODO: fix race condition - move forceload to earlier call, then wait until chunks are loaded before calling this function (/forceload is not instant)
-function item_structures:zprivate/forceload with storage bcm forceload
 # pos 2 (from structure size)
 summon marker ~ ~ ~ {Tags:["map_editor","pos2","render_box","save","init"]}
 execute store result storage bcm macro.x int 1 run data get storage item_structures save.size[0] .999999999
@@ -27,26 +25,24 @@ execute as @n[type=marker,tag=pos2,tag=init] run function bcm:tp with storage bc
 data remove storage bcm tmp
 data remove storage bcm macro
 
+
 ## single-point eggless objects
 summon marker ~ ~ ~ {Tags:[tmp]}
 
 # intro camera
 data modify storage bcm macro.pos set from storage maps:active settings.introCutscene
-execute as @n[type=marker,tag=tmp] run function bcm:tp with storage bcm macro
-execute as @n[type=marker,tag=tmp] run function bcm:tp with storage bcm abs_to_rel
-execute as @n[type=marker,tag=tmp] run function bcm:place/intro_camera
+execute as @n[type=marker,tag=tmp] run function bcm:map/edit/official/tp_convert with storage bcm macro
+execute as @n[type=marker,tag=tmp] at @s run function bcm:place/intro_camera
 
 # red spawnpoint
 data modify storage bcm macro.pos set from storage maps:active spawn.redSpawn
-execute as @n[type=marker,tag=tmp] run function bcm:tp with storage bcm macro
-execute as @n[type=marker,tag=tmp] run function bcm:tp with storage bcm abs_to_rel
-execute as @n[type=marker,tag=tmp] run function bcm:place/red_spawnpoint
+execute as @n[type=marker,tag=tmp] run function bcm:map/edit/official/tp_convert with storage bcm macro
+execute as @n[type=marker,tag=tmp] at @s run function bcm:place/red_spawnpoint
 
 # blue spawnpoint
 data modify storage bcm macro.pos set from storage maps:active spawn.blueSpawn
-execute as @n[type=marker,tag=tmp] run function bcm:tp with storage bcm macro
-execute as @n[type=marker,tag=tmp] run function bcm:tp with storage bcm abs_to_rel
-execute as @n[type=marker,tag=tmp] run function bcm:place/blue_spawnpoint
+execute as @n[type=marker,tag=tmp] run function bcm:map/edit/official/tp_convert with storage bcm macro
+execute as @n[type=marker,tag=tmp] at @s run function bcm:place/blue_spawnpoint
 
 kill @n[type=marker,tag=tmp]
 
@@ -71,8 +67,7 @@ summon block_display ~ ~ ~ {\
   view_range:0f\
 }
 data modify storage bcm macro.pos set from storage maps:active objectives.redFlag
-execute as @n[type=block_display,tag=red_flag,tag=init] run function bcm:tp with storage bcm macro
-execute as @n[type=block_display,tag=red_flag,tag=init] run function bcm:tp with storage bcm abs_to_rel
+execute as @n[type=block_display,tag=red_flag,tag=init] run function bcm:map/edit/official/tp_convert with storage bcm macro
 
 # blue flag (entity data copied from bcm:give/place/blue_flag)
 summon block_display ~ ~ ~ {\
@@ -93,15 +88,15 @@ summon block_display ~ ~ ~ {\
   view_range:0f\
 }
 data modify storage bcm macro.pos set from storage maps:active objectives.blueFlag
-execute as @n[type=block_display,tag=blue_flag,tag=init] run function bcm:tp with storage bcm macro
-execute as @n[type=block_display,tag=blue_flag,tag=init] run function bcm:tp with storage bcm abs_to_rel
+execute as @n[type=block_display,tag=blue_flag,tag=init] run function bcm:map/edit/official/tp_convert with storage bcm macro
+
+# flags are saved 1 block below banner
+execute as @e[type=block_display,tag=flag,tag=init] at @s run tp ~ ~1 ~
 
 
 ## generators
 # do similar thing as flags but recursive loop through gens array
 
 
-## clean up
-function item_structures:zprivate/forceunload with storage bcm forceload
-data remove storage bcm forceload
+## cleanup
 data remove storage bcm abs_to_rel

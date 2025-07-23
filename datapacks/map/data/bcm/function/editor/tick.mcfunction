@@ -5,9 +5,11 @@ scoreboard players set @a place_object_egg 0
 # rightclick
 execute as @a[gamemode=creative] if predicate {condition:"minecraft:entity_properties",entity:"this",predicate:{effects:{"minecraft:luck":{}}}} at @s run function bcm:rightclick
 
-# delete objects if their block is destroyed
-execute if score .enabled select_area matches 1 as @e[type=block_display,tag=map_editor,tag=place,tag=generator] at @s if block ^ ^ ^1 #air run setblock ~ ~ ~ air destroy
-execute if score .enabled select_area matches 1 as @e[type=block_display,tag=map_editor,tag=place] at @s if block ~ ~ ~ #air run function bcm:place/delete
+# delete objects when their block is destroyed, if:
+# (1) we're currently ticking map editor objects (.enabled), and
+# (2) we weren't specifically told not to do this (.hard)
+execute unless score .hard select_area matches 1 if score .enabled select_area matches 1 as @e[type=block_display,tag=map_editor,tag=place,tag=generator] at @s if block ^ ^ ^1 #air run setblock ~ ~ ~ air destroy
+execute unless score .hard select_area matches 1 if score .enabled select_area matches 1 as @e[type=block_display,tag=map_editor,tag=place] at @s if block ~ ~ ~ #air run function bcm:place/delete
 
 # trigger
 execute as @a[scores={set_render_box=1..}] run function bcm:trigger/render_box

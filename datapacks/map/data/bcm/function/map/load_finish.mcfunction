@@ -2,6 +2,10 @@
 function bcm:end_timer
 execute if score .print_messages item_structures matches 1 run tellraw @a ["final time: ",{nbt:"timer.m",storage:"bcm",interpret:true},{nbt:"timer.s",storage:"bcm",interpret:true},{nbt:"timer.ms",storage:"bcm",interpret:true}]
 
+execute if score .hard select_area matches 1 as @e[type=block_display,tag=red_flag] at @s run setblock ~ ~ ~ red_banner
+execute if score .hard select_area matches 1 as @e[type=block_display,tag=blue_flag] at @s run setblock ~ ~ ~ blue_banner
+scoreboard players set .hard select_area 0
+
 ## all code past this command only runs if new map
 execute unless entity @n[type=marker,tag=tp_map_placer] run return 1
 

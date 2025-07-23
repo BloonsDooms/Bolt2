@@ -6,6 +6,9 @@ $data modify storage item_structures save set from storage bcm official_map_stru
 
 
 ## begin placing map
+# do not remove map editor objects
+scoreboard players set .hard select_area 1
+
 # y offset
 summon marker ~ ~-.9 ~ {Tags:[start_point]}
 
