@@ -1,5 +1,7 @@
 ## begin placing copy
 # copies map structure, mapName, and origin to item_structures save
+# do not remove map editor objects
+scoreboard players set .hard select_area 1
 $function bcm:map/load_official {mapName:"$(mapName)"}
 
 
@@ -96,7 +98,7 @@ execute as @e[type=block_display,tag=flag,tag=init] at @s run tp ~ ~1 ~
 
 ## generators
 data modify storage bcm map.generators set from storage maps:active gens
-execute if data storage bcm map.generators[] run function bcm:place/generator_auto_loop
+execute if data storage bcm map.generators[] run function bcm:place/generator_official_loop
 
 
 ## cleanup

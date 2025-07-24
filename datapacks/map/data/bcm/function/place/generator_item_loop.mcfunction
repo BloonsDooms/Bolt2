@@ -13,7 +13,7 @@ summon block_display ~ ~ ~ {\
   },\
   view_range:0f\
 }
-execute as @n[type=block_display,tag=init] at @s run function bcm:place/generator_auto with storage bcm map.generators[-1]
-data remove storage bcm map.generators[-1]
+execute as @n[type=block_display,tag=init] at @s run function bcm:place/generator_item with storage bcm map.tmp_generators[-1]
+data remove storage bcm map.tmp_generators[-1]
 
-execute if data storage bcm map.generators[] run function bcm:place/generator_auto_loop
+execute if data storage bcm map.tmp_generators[] run function bcm:place/generator_item_loop
