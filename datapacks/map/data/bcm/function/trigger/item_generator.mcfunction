@@ -1,7 +1,7 @@
 ## parse input right to left
 # input format: <time>789<warmup>
 tag @s add this
-execute as @e[type=block_display,tag=generator,tag=editing] at @s if function bcm:owned_by_this run tag @s add this
+execute as @e[type=block_display,tag=generator,tag=editing] at @s if function bcm:util/is_owned_by_this run tag @s add this
 
 # warmup: [0,180] - unknown length 1 to 3 digits, followed by 789
 scoreboard players set .l set_item_generator 0

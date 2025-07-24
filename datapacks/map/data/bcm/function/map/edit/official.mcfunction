@@ -22,8 +22,8 @@ summon marker ~ ~ ~ {Tags:["map_editor","pos2","render_box","save","init"]}
 execute store result storage bcm macro.x int 1 run data get storage item_structures save.size[0] .999999999
 execute store result storage bcm macro.y int 1 run data get storage item_structures save.size[1] .999999999
 execute store result storage bcm macro.z int 1 run data get storage item_structures save.size[2] .999999999
-function bcm:xyz_string with storage bcm macro
-execute as @n[type=marker,tag=pos2,tag=init] run function bcm:tp with storage bcm tmp
+function bcm:util/xyz_string with storage bcm macro
+execute as @n[type=marker,tag=pos2,tag=init] run function bcm:util/tp with storage bcm tmp
 data remove storage bcm tmp
 data remove storage bcm macro
 

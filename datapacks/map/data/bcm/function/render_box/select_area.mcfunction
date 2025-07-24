@@ -29,7 +29,7 @@ execute if score .x1 calc > .x2 calc store result storage bcm tmp.start.x double
 execute if score .y1 calc > .y2 calc store result storage bcm tmp.start.y double .01 run scoreboard players operation .y1 calc >< .y2 calc
 execute if score .z1 calc > .z2 calc store result storage bcm tmp.start.z double .01 run scoreboard players operation .z1 calc >< .z2 calc
 execute as @e[type=block_display,tag=correct_type] run function bcm:render_box/1 with storage bcm tmp.start
-function bcm:xyz_string_abs with storage bcm tmp.start
+function bcm:util/xyz_string_abs with storage bcm tmp.start
 $data modify storage bcm abs.$(type).start set from storage bcm tmp.pos
 
 # size

@@ -19,7 +19,7 @@ execute if score .l calc matches 0 run tellraw @s ["estimated time to load: ",{s
 execute if score .l calc matches 1.. run tellraw @s ["estimated time to load: ",{score:{name:".l",objective:"calc"}},"m ",{score:{name:".s",objective:"calc"}},"s"]
 
 # timer
-function bcm:start_timer
+function bcm:util/start_timer
 
 # load
 scoreboard players set .print_messages item_structures 1

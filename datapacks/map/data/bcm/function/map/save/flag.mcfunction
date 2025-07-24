@@ -7,7 +7,7 @@ scoreboard players remove .y calc 1
 execute store result storage bcm macro.x int 1 run scoreboard players operation .x calc -= .x1 calc
 execute store result storage bcm macro.y int 1 run scoreboard players operation .y calc -= .y1 calc
 execute store result storage bcm macro.z int 1 run scoreboard players operation .z calc -= .z1 calc
-function bcm:xyz_string with storage bcm macro
+function bcm:util/xyz_string with storage bcm macro
 
 # save
 $data modify storage bcm map.$(color)_flag set from storage bcm tmp.pos

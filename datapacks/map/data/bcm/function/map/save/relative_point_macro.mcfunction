@@ -14,6 +14,6 @@ execute store result storage bcm macro.y double 0.001 run scoreboard players ope
 execute store result storage bcm macro.z double 0.001 run scoreboard players operation .z calc -= .z1 calc
 
 # stringify
-function bcm:xyz_rot_string with storage bcm macro
+function bcm:util/xyz_rot_string with storage bcm macro
 #$tellraw @a ["abs = $(abs)\nbcm map.$(to) = ",{nbt:"tmp.pos",storage:"bcm"}]
 $data modify storage bcm map.$(to) set from storage bcm tmp.pos

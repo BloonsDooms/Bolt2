@@ -1,5 +1,5 @@
 # time
-function bcm:end_timer
+function bcm:util/end_timer
 execute if score .print_messages item_structures matches 1 run tellraw @a ["final time: ",{nbt:"timer.m",storage:"bcm",interpret:true},{nbt:"timer.s",storage:"bcm",interpret:true},{nbt:"timer.ms",storage:"bcm",interpret:true}]
 
 execute if score .hard select_area matches 1 as @e[type=block_display,tag=red_flag] at @s run setblock ~ ~ ~ red_banner

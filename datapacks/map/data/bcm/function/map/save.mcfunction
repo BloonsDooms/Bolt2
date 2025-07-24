@@ -75,7 +75,7 @@ tag @n[type=marker,tag=render_box,tag=save,tag=pos1] add start_point
 tag @n[type=marker,tag=render_box,tag=save,tag=pos2] add end_point
 
 # timer
-function bcm:start_timer
+function bcm:util/start_timer
 
 # save blocks
 scoreboard players set .print_messages item_structures 1

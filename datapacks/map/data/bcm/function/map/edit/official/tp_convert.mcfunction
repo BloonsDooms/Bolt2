@@ -4,4 +4,4 @@
 $tp @s $(pos)
 
 # absolute -> relative
-execute at @s run function bcm:tp with storage bcm abs_to_rel
+execute at @s run function bcm:util/tp with storage bcm abs_to_rel

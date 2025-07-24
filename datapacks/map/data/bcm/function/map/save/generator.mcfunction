@@ -6,7 +6,7 @@ execute store result score .z calc run data get entity @s Pos[2]
 execute store result storage bcm macro.x int 1 run scoreboard players operation .x calc -= .x1 calc
 execute store result storage bcm macro.y int 1 run scoreboard players operation .y calc -= .y1 calc
 execute store result storage bcm macro.z int 1 run scoreboard players operation .z calc -= .z1 calc
-function bcm:xyz_string with storage bcm macro
+function bcm:util/xyz_string with storage bcm macro
 
 # get generator settings
 execute store result storage bcm tmp.generator_duration short 1 run scoreboard players get @s bcm_generator_time

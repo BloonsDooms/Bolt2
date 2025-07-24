@@ -18,8 +18,8 @@ summon marker ~ ~ ~ {Tags:["map_editor","pos2","render_box","save","init"]}
 execute store result storage bcm macro.x int 1 run data get storage item_structures save.size[0] .999999999
 execute store result storage bcm macro.y int 1 run data get storage item_structures save.size[1] .999999999
 execute store result storage bcm macro.z int 1 run data get storage item_structures save.size[2] .999999999
-function bcm:xyz_string with storage bcm macro
-execute as @n[type=marker,tag=pos2,tag=init] run function bcm:tp with storage bcm tmp
+function bcm:util/xyz_string with storage bcm macro
+execute as @n[type=marker,tag=pos2,tag=init] run function bcm:util/tp with storage bcm tmp
 data remove storage bcm tmp
 data remove storage bcm macro
 
@@ -29,17 +29,17 @@ summon marker ~ ~ ~ {Tags:[tmp]}
 
 # intro camera
 data modify storage bcm macro.pos set from storage bcm map.intro_camera
-execute as @n[type=marker,tag=tmp] run function bcm:tp with storage bcm macro
+execute as @n[type=marker,tag=tmp] run function bcm:util/tp with storage bcm macro
 execute as @n[type=marker,tag=tmp] at @s run function bcm:place/intro_camera
 
 # red spawnpoint
 data modify storage bcm macro.pos set from storage bcm map.red_spawnpoint
-execute as @n[type=marker,tag=tmp] run function bcm:tp with storage bcm macro
+execute as @n[type=marker,tag=tmp] run function bcm:util/tp with storage bcm macro
 execute as @n[type=marker,tag=tmp] at @s run function bcm:place/red_spawnpoint
 
 # blue spawnpoint
 data modify storage bcm macro.pos set from storage bcm map.blue_spawnpoint
-execute as @n[type=marker,tag=tmp] run function bcm:tp with storage bcm macro
+execute as @n[type=marker,tag=tmp] run function bcm:util/tp with storage bcm macro
 execute as @n[type=marker,tag=tmp] at @s run function bcm:place/blue_spawnpoint
 
 kill @n[type=marker,tag=tmp]
@@ -65,7 +65,7 @@ summon block_display ~ ~ ~ {\
   view_range:0f\
 }
 data modify storage bcm macro.pos set from storage bcm map.red_flag
-execute as @n[type=block_display,tag=red_flag,tag=init] run function bcm:tp with storage bcm macro
+execute as @n[type=block_display,tag=red_flag,tag=init] run function bcm:util/tp with storage bcm macro
 
 # blue flag (entity data copied from bcm:give/place/blue_flag)
 summon block_display ~ ~ ~ {\
@@ -86,7 +86,7 @@ summon block_display ~ ~ ~ {\
   view_range:0f\
 }
 data modify storage bcm macro.pos set from storage bcm map.blue_flag
-execute as @n[type=block_display,tag=blue_flag,tag=init] run function bcm:tp with storage bcm macro
+execute as @n[type=block_display,tag=blue_flag,tag=init] run function bcm:util/tp with storage bcm macro
 
 # flags are saved 1 block below banner
 execute as @e[type=block_display,tag=flag,tag=init] at @s run tp ~ ~1 ~
