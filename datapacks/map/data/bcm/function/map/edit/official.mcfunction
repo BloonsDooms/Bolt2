@@ -95,7 +95,8 @@ execute as @e[type=block_display,tag=flag,tag=init] at @s run tp ~ ~1 ~
 
 
 ## generators
-# do similar thing as flags but recursive loop through gens array
+data modify storage bcm map.generators set from storage maps:active gens
+execute if data storage bcm map.generators[] run function bcm:place/generator_auto_loop
 
 
 ## cleanup
