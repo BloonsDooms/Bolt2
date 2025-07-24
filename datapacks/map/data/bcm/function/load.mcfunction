@@ -1,11 +1,11 @@
 scoreboard objectives add set_render_box trigger
-scoreboard players set display.save set_render_box 1
-scoreboard players set display.spawn set_render_box 1
-scoreboard players set display.spawnpoint set_render_box 1
-scoreboard players set display.flags set_render_box 1
-scoreboard players set display.gens set_render_box 1
-scoreboard players set display.wall_height set_render_box 1
-scoreboard players set display.camera set_render_box 1
+execute unless score display.save set_render_box matches 0 run scoreboard players set display.save set_render_box 1
+execute unless score display.spawn set_render_box matches 0 run scoreboard players set display.spawn set_render_box 1
+execute unless score display.spawnpoint set_render_box matches 0 run scoreboard players set display.spawnpoint set_render_box 1
+execute unless score display.flags set_render_box matches 0 run scoreboard players set display.flags set_render_box 1
+execute unless score display.gens set_render_box matches 0 run scoreboard players set display.gens set_render_box 1
+execute unless score display.wall_height set_render_box matches 0 run scoreboard players set display.wall_height set_render_box 1
+execute unless score display.camera set_render_box matches 0 run scoreboard players set display.camera set_render_box 1
 scoreboard objectives add set_pos_and_rot trigger
 scoreboard objectives add set_item_generator trigger
 scoreboard objectives add existing_map_response trigger
