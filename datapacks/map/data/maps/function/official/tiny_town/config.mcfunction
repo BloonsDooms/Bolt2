@@ -31,8 +31,8 @@ data merge storage maps:active {settings:{\
 # Spawn, the bounding box is used for invlun time and afk detection.    official/valley/scripts/tick
 # The bounding box is x, y, z, dx, dy, dz. IE., a position and a volume
 data merge storage maps:active {spawn:{\
-    redSpawnBoundingBox:[{area:"x=-374,y=9,z=-410,dx=-5,dy=-10,dz=4.5",origin:"-374. 9. -410."}],\
-    blueSpawnBoundingBox:[{area:"x=-374,y=9,z=-362,dx=-5,dy=-10,dz=-4.5",origin:"-374. 9. -362."}],\
+    redSpawnBoundingBox:[{area:"dx=-5,dy=-10,dz=4.5",origin:"-374. 9. -410."}],\
+    blueSpawnBoundingBox:[{area:"dx=-5,dy=-10,dz=-4.5",origin:"-374. 9. -362."}],\
     \
     blueSpawn:"-376.5 4 -362.5 180 0",\
     redSpawn:"-376.5 4 -408.5 0 0",\
