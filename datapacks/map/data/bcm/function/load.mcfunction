@@ -30,7 +30,7 @@ scoreboard players set .save_blocks/s calc 11000
 # load rate changes wildly -> inaccurate load ETA
 # @ 47k entries (500k): 11000 entries/s
 # @ 190k entries (6M): 4000 entries/s
-scoreboard players set .load_entries/s calc 7000
+scoreboard players set .load_entries/s calc 4000
 
 scoreboard objectives add select_area dummy
 scoreboard objectives add place_object dummy
