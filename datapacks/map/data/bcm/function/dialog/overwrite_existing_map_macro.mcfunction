@@ -1,4 +1,4 @@
-$dialog show @s {\
+$return run dialog show @s {\
   "type": "minecraft:confirmation",\
   "title": [\
     "",\
@@ -37,4 +37,3 @@ $dialog show @s {\
     }\
   }\
 }
-return 1
