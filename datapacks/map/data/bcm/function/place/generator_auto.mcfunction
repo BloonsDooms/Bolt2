@@ -1,9 +1,15 @@
 tag @s remove init
 
 # position
-$tp @s $(pos)
+$execute if entity @s[tag=tmp_official_map] function bcm:map/edit/official/tp_convert {pos:"$(pos)"}
+$tp @s[tag=!tmp_official_map] $(pos)
+tag @s remove tmp_official_map
 
-# rotation
+# times
+$scoreboard players set @s bcm_generator_time $(generator_duration)
+$scoreboard players set @s bcm_generator_warmup $(generator_warmup)
+
+# rotation & sign
 $scoreboard players set .r calc $(rotation)
 scoreboard players operation .r calc /= #90 calc
 scoreboard players operation .r calc %= #4 calc
@@ -14,7 +20,3 @@ execute if score .r calc matches 3 at @s positioned ~1 ~ ~ run function bcm:plac
 
 # visibility state
 execute store result entity @s view_range float 1 run scoreboard players get display.gens set_render_box
-
-# times
-$scoreboard players set @s bcm_generator_time $(generator_duration)
-$scoreboard players set @s bcm_generator_warmup $(generator_warmup)

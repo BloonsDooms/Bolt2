@@ -4,7 +4,7 @@ execute if score .print_messages item_structures matches 1 run tellraw @a ["fina
 
 execute if score .hard select_area matches 1 as @e[type=block_display,tag=red_flag] at @s run setblock ~ ~ ~ red_banner
 execute if score .hard select_area matches 1 as @e[type=block_display,tag=blue_flag] at @s run setblock ~ ~ ~ blue_banner
-execute if score .hard select_area matches 1 as @e[type=block_display,tag=generator] at @s run function bcm:place/generator_text
+execute if score .hard select_area matches 1 as @e[type=block_display,tag=generator] at @s positioned ^ ^ ^1 run function bcm:place/generator_text
 scoreboard players set .hard select_area 0
 
 ## all code past this command only runs if new map
