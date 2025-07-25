@@ -1,7 +1,7 @@
 tag @s remove init
 
 # position
-$execute if entity @s[tag=tmp_official_map] function bcm:map/edit/official/tp_convert {pos:"$(pos)"}
+$execute if entity @s[tag=tmp_official_map] run function bcm:map/edit/official/tp_convert {pos:"$(pos)"}
 $tp @s[tag=!tmp_official_map] $(pos)
 tag @s remove tmp_official_map
 

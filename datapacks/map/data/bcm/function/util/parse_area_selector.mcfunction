@@ -23,7 +23,7 @@ data modify storage bcm tmp.str set string storage bcm tmp.str 1
 
 # outputs to storage bcm tmp.in1
 function bcm:util/remove_chars with storage bcm tmp
-tellraw @a ["reduced string: ",{nbt:"tmp.in1",storage:"bcm"}]
+#tellraw @a ["reduced string: ",{nbt:"tmp.in1",storage:"bcm"}]
 
 
 ## get indexes of "dx", "dy", and "dz"
@@ -41,7 +41,7 @@ scoreboard players set i.dz calc -1
 
 # outputs to i.dx, i.dy, i.dz calc
 function bcm:util/index_of_areas
-tellraw @a ['index of "dx": ',{score:{name:"i.dx",objective:"calc"}},'\nindex of "dy": ',{score:{name:"i.dy",objective:"calc"}},'\nindex of "dz": ',{score:{name:"i.dz",objective:"calc"}}]
+#tellraw @a ['index of "dx": ',{score:{name:"i.dx",objective:"calc"}},'\nindex of "dy": ',{score:{name:"i.dy",objective:"calc"}},'\nindex of "dz": ',{score:{name:"i.dz",objective:"calc"}}]
 
 
 ## get values of dx, dy, and dz
@@ -76,7 +76,7 @@ execute if score i.dx calc > i.dz calc store result storage bcm macro.end int 1 
 function bcm:util/substring with storage bcm macro
 data modify storage bcm macro.dz set from storage bcm tmp.out
 
-tellraw @a ["dx: ",{nbt:"macro.dx",storage:"bcm"},"\ndy: ",{nbt:"macro.dy",storage:"bcm"},"\ndz: ",{nbt:"macro.dz",storage:"bcm"}]
+#tellraw @a ["dx: ",{nbt:"macro.dx",storage:"bcm"},"\ndy: ",{nbt:"macro.dy",storage:"bcm"},"\ndz: ",{nbt:"macro.dz",storage:"bcm"}]
 
 # cleanup
 data remove storage bcm macro.start
@@ -84,4 +84,4 @@ data remove storage bcm macro.end
 data remove storage bcm macro.str
 data remove storage bcm tmp
 
-tellraw @s ["final result: ",{nbt:"macro",storage:"bcm"}]
+#tellraw @s ["final result: ",{nbt:"macro",storage:"bcm"}]
