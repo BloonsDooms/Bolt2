@@ -1,5 +1,5 @@
 ### convert entity selector to object
-### area: "dx=###, dy=###, dz=###" -> $(out): {dx:###, dy:###, dz:###}
+### area: "dx=###, dy=###, dz=###" -> bcm macro: {dx:###, dy:###, dz:###}
 
 
 ## remove unimportant characters: commas, spaces, equals
@@ -67,7 +67,7 @@ execute if score i.dz calc > i.dy calc store result storage bcm macro.end int 1 
 function bcm:util/substring with storage bcm macro
 data modify storage bcm macro.dy set from storage bcm tmp.out
 
-# dx
+# dz
 scoreboard players operation .i calc = i.dz calc
 execute store result storage bcm macro.start int 1 run scoreboard players add .i calc 2
 execute store result storage bcm macro.end int 1 store result score .i calc run data get storage bcm macro.str
