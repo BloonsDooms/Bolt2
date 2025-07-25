@@ -16,4 +16,4 @@ summon block_display ~ ~ ~ {\
 execute as @n[type=block_display,tag=init] at @s run function bcm:place/generator_auto with storage bcm map.tmp_generators[-1]
 data remove storage bcm map.tmp_generators[-1]
 
-execute if data storage bcm map.tmp_generators[] run function bcm:place/generator_item_loop
+execute if data storage bcm map.tmp_generators[] run function bcm:place/generator_auto_loop
