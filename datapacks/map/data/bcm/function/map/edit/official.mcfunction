@@ -101,5 +101,13 @@ data modify storage bcm map.generators set from storage maps:active gens
 execute if data storage bcm map.generators[] run function bcm:place/generator_official_loop
 
 
+## spawn areas
+# only loads first bounding box
+function bcm:util/parse_area_selector with storage maps:active spawn.redSpawnBoundingBox[0]
+tellraw @a ["red spawn: ",{nbt:"macro",storage:"bcm"}]
+function bcm:util/parse_area_selector with storage maps:active spawn.blueSpawnBoundingBox[0]
+tellraw @a ["blue spawn: ",{nbt:"macro",storage:"bcm"}]
+
+
 ## cleanup
 data remove storage bcm abs_to_rel

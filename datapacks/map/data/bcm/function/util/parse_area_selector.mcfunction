@@ -84,4 +84,4 @@ data remove storage bcm macro.end
 data remove storage bcm macro.str
 data remove storage bcm tmp
 
-#tellraw @s ["final result: ",{nbt:"macro",storage:"bcm"}]
+#tellraw @a ["final result: ",{nbt:"macro",storage:"bcm"}]
