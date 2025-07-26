@@ -9,7 +9,11 @@ $function bcm:map/load {mapName:"$(mapName)",new:false}
 $data modify storage bcm map set from storage bcm maps[{registry:{mapName:"$(mapName)"}}].map
 
 ## null absolute to relative
-data modify storage bcm abs_to_rel set value "~ ~ ~"
+data modify storage bcm abs_to_rel set value {pos:"~ ~ ~"}
 
 ## load map data
 function bcm:map/edit/load
+
+## max wall height
+# stored as relative
+execute summon marker run function bcm:map/edit/wall_height_item

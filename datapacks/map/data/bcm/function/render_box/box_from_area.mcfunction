@@ -31,7 +31,7 @@ execute if score .dz calc matches ..-1 run tag @n[type=marker,tag=pos1,tag=tmp_i
 $execute as @n[type=marker,tag=tp_dz,tag=tmp_init] at @s run tp @s ~ ~ ~$(dz)
 
 # extend area by 1 block because selectors are silly 
-execute as @n[type=marker,tag=pos2,tag=tmp_init] at @s run tp @s ~1 ~1 ~1
+#execute as @n[type=marker,tag=pos2,tag=tmp_init] at @s run tp @s ~1 ~1 ~1
 
 # cleanup
 tag @e[type=marker] remove tp_dx

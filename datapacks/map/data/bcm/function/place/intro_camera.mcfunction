@@ -9,12 +9,12 @@ data modify entity @n[type=item_display,tag=intro_camera] transformation.left_ro
 # visibility state
 execute store result entity @n[type=item_display,tag=intro_camera] view_range float 1 run scoreboard players get display.camera set_render_box
 
-# save to storage
-data modify storage bcm macro.x set from entity @n[type=marker,tag=intro_camera] Pos[0]
-data modify storage bcm macro.y set from entity @n[type=marker,tag=intro_camera] Pos[1]
-data modify storage bcm macro.z set from entity @n[type=marker,tag=intro_camera] Pos[2]
-data modify storage bcm macro.yaw set from entity @n[type=marker,tag=intro_camera] Rotation[0]
-#data modify storage bcm macro.pitch set from entity @n[type=marker,tag=intro_camera] Rotation[1]
+# save to storage, require decimal point
+data modify storage bcm macro.x set string entity @n[type=marker,tag=intro_camera] Pos[0] 0 -1
+data modify storage bcm macro.y set string entity @n[type=marker,tag=intro_camera] Pos[1] 0 -1
+data modify storage bcm macro.z set string entity @n[type=marker,tag=intro_camera] Pos[2] 0 -1
+data modify storage bcm macro.yaw set string entity @n[type=marker,tag=intro_camera] Rotation[0] 0 -1
+#data modify storage bcm macro.pitch set string entity @n[type=marker,tag=intro_camera] Rotation[1] 0 -1
 data modify storage bcm macro.pitch set value 0
 data modify storage bcm macro.type set value "intro_camera"
 function bcm:place/point_macro with storage bcm macro

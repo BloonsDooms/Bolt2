@@ -15,3 +15,7 @@ execute summon marker run function bcm:map/edit/abs_to_rel
 
 ## load map data
 function bcm:map/edit/load
+
+## max wall height
+# stored as absolute
+execute summon marker run function bcm:map/edit/wall_height_official

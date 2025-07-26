@@ -13,7 +13,12 @@ execute store result storage bcm macro.x double 0.001 run scoreboard players ope
 execute store result storage bcm macro.y double 0.001 run scoreboard players operation .y calc -= .y1 calc
 execute store result storage bcm macro.z double 0.001 run scoreboard players operation .z calc -= .z1 calc
 
-# stringify
+# stringify explicitly to keep decimal point when ending in .0
+data modify storage bcm macro.x set string storage bcm macro.x 0 -1
+data modify storage bcm macro.y set string storage bcm macro.y 0 -1
+data modify storage bcm macro.z set string storage bcm macro.z 0 -1
+
+# concat
 function bcm:util/xyz_rot_string with storage bcm macro
-#$tellraw @a ["abs = $(abs)\nbcm map.$(to) = ",{nbt:"tmp.pos",storage:"bcm"}]
+#$tellraw @a ["abs = $(abs)\nbcm map.$(to) = ",{nbt:"tmp.pos",storage:"bcm"},"\nbcm macro = ",{nbt:"macro",storage:"bcm"}]
 $data modify storage bcm map.$(to) set from storage bcm tmp.pos

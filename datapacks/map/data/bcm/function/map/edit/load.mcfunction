@@ -91,18 +91,12 @@ data remove storage bcm map.tmp_generators
 
 # red
 function bcm:util/parse_area_selector with storage bcm map.red_spawn
-tellraw @a ["red spawn: ",{nbt:"macro",storage:"bcm"}]
 data modify storage bcm macro.origin set from storage bcm map.red_spawn.start
 data modify storage bcm macro.tag set value "red_spawn"
 function bcm:render_box/box_from_area with storage bcm macro
 
 # blue
 function bcm:util/parse_area_selector with storage bcm map.blue_spawn
-tellraw @a ["blue spawn: ",{nbt:"macro",storage:"bcm"}]
 data modify storage bcm macro.origin set from storage bcm map.blue_spawn.start
 data modify storage bcm macro.tag set value "blue_spawn"
 function bcm:render_box/box_from_area with storage bcm macro
-
-
-## cleanup
-data remove storage bcm abs_to_rel
