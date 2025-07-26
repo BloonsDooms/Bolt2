@@ -6,4 +6,4 @@ execute if entity @s[tag=place] run return run function bcm:place/object
 
 # this should never run
 kill @s
-execute as @p at @s run return run function bcm:fail/tellraw {input:'"ERROR: invalid map editor marker"'}
+execute as @p run return run function bcm:fail/tellraw {input:'"ERROR: invalid map editor marker"'}

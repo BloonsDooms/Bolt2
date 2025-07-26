@@ -4,4 +4,4 @@ execute if entity @s[tag=generator] store result score .generator place_object r
 
 # this should never run
 kill @s
-execute as @p at @s run return run function bcm:fail/tellraw {input:'"ERROR: invalid object placer marker"'}
+execute as @p run return run function bcm:fail/tellraw {input:'"ERROR: invalid object placer marker"'}

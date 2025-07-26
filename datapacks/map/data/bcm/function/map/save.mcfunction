@@ -6,8 +6,8 @@ data modify storage bcm map.save.start set from storage bcm abs.save.start
 execute unless score .save select_area matches 3 store success score .can_save_map calc run function bcm:fail/tellraw {input:'"Failed to save map: No save area set"'}
 execute unless score .red_spawn select_area matches 3 store success score .can_save_map calc run function bcm:fail/tellraw {input:'"Failed to save map: No red spawn area set"'}
 execute unless score .blue_spawn select_area matches 3 store success score .can_save_map calc run function bcm:fail/tellraw {input:'"Failed to save map: No blue spawn area set"'}
-# spawn areas completely inside save area?
-execute at @s as @e[type=marker,tag=render_box,tag=!save] unless function bcm:map/save/area_check run scoreboard players set .can_save_map calc 0
+# not required: spawn areas completely inside save area?
+execute as @e[type=marker,tag=render_box,tag=!save] run function bcm:map/area_check/save_soft
 
 # max wall height set and inside save area?
 execute store result score .wh calc run data get entity @n[type=block_display,tag=render_box,tag=wall_height] Pos[1] 100
@@ -24,21 +24,23 @@ execute if score .wh calc < .y1 calc store success score .can_save_map calc run 
 execute unless entity @n[type=marker,tag=red_spawnpoint] store success score .can_save_map calc run function bcm:fail/tellraw {input:'["Failed to save map: No red spawn ",{italic:true,text:"point"}]'}
 execute unless entity @n[type=marker,tag=blue_spawnpoint] store success score .can_save_map calc run function bcm:fail/tellraw {input:'["Failed to save map: No blue spawn ",{italic:true,text:"point"}]'}
 # spawnpoints inside save area?
-execute at @s as @e[type=marker,tag=spawnpoint] unless function bcm:map/save/area_check run scoreboard players set .can_save_map calc 0
+execute as @e[type=marker,tag=spawnpoint] run function bcm:map/area_check/save_hard
+execute as @e[type=marker,tag=red_spawnpoint] unless function bcm:map/area_check/red_spawn as @p run function bcm:fail/warning/tellraw {input:'["WARNING: ",{nbt:"error.text",storage:"bcm",interpret:true},"is outside red spawn area"]'}
+execute as @e[type=marker,tag=blue_spawnpoint] unless function bcm:map/area_check/blue_spawn as @p run function bcm:fail/warning/tellraw {input:'["WARNING: ",{nbt:"error.text",storage:"bcm",interpret:true},"is outside blue spawn area"]'}
 
 # flags set?
 execute unless entity @n[type=block_display,tag=red_flag] store success score .can_save_map calc run function bcm:fail/tellraw {input:'"Failed to save map: No red flag"'}
 execute unless entity @n[type=block_display,tag=blue_flag] store success score .can_save_map calc run function bcm:fail/tellraw {input:'"Failed to save map: No blue flag"'}
 # flags inside save area?
-execute at @s as @e[type=block_display,tag=flag] unless function bcm:map/save/area_check run scoreboard players set .can_save_map calc 0
+execute as @e[type=block_display,tag=flag] run function bcm:map/area_check/save_hard
 
 # intro camera set?
 execute unless entity @n[type=marker,tag=intro_camera] store success score .can_save_map calc run function bcm:fail/tellraw {input:'"Failed to save map: No map intro camera"'}
 # intro camera inside save area?
-execute at @s as @e[type=marker,tag=intro_camera] unless function bcm:map/save/area_check run scoreboard players set .can_save_map calc 0
+execute as @e[type=marker,tag=intro_camera] run function bcm:map/area_check/save_hard
 
 # exclude item generators outside save area
-execute as @e[type=block_display,tag=generator] unless function bcm:map/save/area_check_soft run tag @s add exclude
+execute as @e[type=block_display,tag=generator] unless function bcm:map/area_check/save run tag @s add exclude
 
 # if any of the above checks fail, don't save
 execute if score .can_save_map calc matches 0 run return fail
@@ -51,7 +53,7 @@ scoreboard players set .enabled select_area 0
 # relative wall height (must happen before abs->rel conversion, based on slightly offset y1)
 execute store result storage bcm map.max_wall_height int 0.01 run scoreboard players operation .wh calc -= .y1 calc
 
-# convert absolute positions to relative
+# convert absolute positions to relative for spawn areas, spawnpoints, and intro camera
 function bcm:map/save/relative with storage bcm map.save
 
 # flags

@@ -1,4 +1,5 @@
 scoreboard players set .is_busy item_structures 0
+scoreboard players set .enabled select_area 1
 
 kill @e[tag=saver]
 kill @e[tag=loader]
