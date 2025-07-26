@@ -25,8 +25,8 @@ execute unless entity @n[type=marker,tag=red_spawnpoint] store success score .ca
 execute unless entity @n[type=marker,tag=blue_spawnpoint] store success score .can_save_map calc run function bcm:fail/tellraw {input:'["Failed to save map: No blue spawn ",{italic:true,text:"point"}]'}
 # spawnpoints inside save area?
 execute as @e[type=marker,tag=spawnpoint] run function bcm:map/area_check/save_hard
-execute as @e[type=marker,tag=red_spawnpoint] unless function bcm:map/area_check/red_spawn as @p run function bcm:fail/warning/tellraw {input:'["WARNING: ",{nbt:"error.text",storage:"bcm",interpret:true},"is outside red spawn area"]'}
-execute as @e[type=marker,tag=blue_spawnpoint] unless function bcm:map/area_check/blue_spawn as @p run function bcm:fail/warning/tellraw {input:'["WARNING: ",{nbt:"error.text",storage:"bcm",interpret:true},"is outside blue spawn area"]'}
+execute as @e[type=marker,tag=red_spawnpoint] unless function bcm:map/area_check/red_spawn as @p run function bcm:fail/warning/tellraw {input:'["Warning: ",{nbt:"error.text",storage:"bcm",interpret:true},"is outside red spawn area"]'}
+execute as @e[type=marker,tag=blue_spawnpoint] unless function bcm:map/area_check/blue_spawn as @p run function bcm:fail/warning/tellraw {input:'["Warning: ",{nbt:"error.text",storage:"bcm",interpret:true},"is outside blue spawn area"]'}
 
 # flags set?
 execute unless entity @n[type=block_display,tag=red_flag] store success score .can_save_map calc run function bcm:fail/tellraw {input:'"Failed to save map: No red flag"'}
