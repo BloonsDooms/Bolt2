@@ -11,4 +11,4 @@ execute at @n[tag=end_point] run function item_structures:zprivate/forceload wit
 execute as @e[tag=saver,tag=org_x,limit=1,type=marker] at @s run function item_structures:zprivate/save/start
 
 function item_structures:zprivate/progress_estimate
-bossbar set progress name {text:"Save Progress (gets slower over time)",color:"green"}
+bossbar set progress name {text:"Save Progress",color:"green"}

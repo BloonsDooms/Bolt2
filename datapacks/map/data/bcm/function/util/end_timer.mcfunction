@@ -29,3 +29,7 @@ execute if score .m calc matches 0 if score .s calc matches 0 if score .ms calc 
 
 # reset worldborder
 worldborder set 59999968
+
+# stop tracking mspt
+schedule clear bcm:util/mspt_update
+scoreboard players set limit commands 30000
