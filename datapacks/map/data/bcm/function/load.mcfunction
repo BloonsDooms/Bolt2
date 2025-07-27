@@ -9,6 +9,8 @@ execute unless score display.camera set_render_box matches 0 run scoreboard play
 scoreboard objectives add set_pos_and_rot trigger
 scoreboard objectives add set_item_generator trigger
 scoreboard objectives add existing_map_response trigger
+scoreboard objectives add master_menu trigger
+scoreboard objectives add export_map trigger
 
 scoreboard objectives add calc dummy
 scoreboard players set #-1 calc -1

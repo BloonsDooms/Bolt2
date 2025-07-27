@@ -37,7 +37,7 @@
           "color": "white"
         },
         {
-          "nbt": "save.size[0]",
+          "nbt": "export.size[0]",
           "storage": "item_structures",
           "color": "dark_aqua"
         },
@@ -46,7 +46,7 @@
           "color": "white"
         },
         {
-          "nbt": "save.size[1]",
+          "nbt": "export.size[1]",
           "storage": "item_structures",
           "color": "dark_aqua"
         },
@@ -55,7 +55,7 @@
           "color": "white"
         },
         {
-          "nbt": "save.size[2]",
+          "nbt": "export.size[2]",
           "storage": "item_structures",
           "color": "dark_aqua"
         }
@@ -82,7 +82,7 @@
     },
     "ops": [
       {
-        "source": "save",
+        "source": "export",
         "target": "structure",
         "op": "merge"
       }
@@ -96,7 +96,7 @@
     },
     "ops": [
       {
-        "source": "map",
+        "source": "export",
         "target": "bleps_map",
         "op": "merge"
       }

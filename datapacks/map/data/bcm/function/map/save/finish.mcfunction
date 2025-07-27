@@ -8,3 +8,10 @@ scoreboard players set .enabled select_area 1
 # time
 function bcm:util/end_timer
 execute if score .print_messages item_structures matches 1 run tellraw @a ["final time: ",{nbt:"timer.m",storage:"bcm",interpret:true},{nbt:"timer.s",storage:"bcm",interpret:true},{nbt:"timer.ms",storage:"bcm",interpret:true}]
+
+# copy data to export path
+data modify storage bcm export set from storage bcm map
+data modify storage item_structures export set from storage item_structures save
+
+# tell players to export
+tellraw @a ["YOU'RE NOT DONE YET! Click ",{underlined:true,click_event:{action:"run_command",command:"trigger export_map set 1"},text:"here"}," or type \"/trigger export_map\" to get an item with the map's data on it, which you can save permanently."]
