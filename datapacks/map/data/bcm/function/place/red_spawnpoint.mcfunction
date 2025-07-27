@@ -16,3 +16,5 @@ data modify storage bcm macro.yaw set string entity @n[type=marker,tag=red_spawn
 data modify storage bcm macro.pitch set string entity @n[type=marker,tag=red_spawnpoint] Rotation[1] 0 -1
 data modify storage bcm macro.type set value "red_spawnpoint"
 function bcm:place/point_macro with storage bcm macro
+
+forceload add ~ ~

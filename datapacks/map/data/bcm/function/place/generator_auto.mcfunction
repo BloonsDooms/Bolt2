@@ -18,3 +18,5 @@ execute if score .r calc matches 3 at @s positioned ~1 ~ ~ run function bcm:plac
 
 # visibility state
 execute store result entity @s view_range float 1 run scoreboard players get display.gens set_render_box
+
+forceload add ~ ~

@@ -18,3 +18,5 @@ data modify storage bcm macro.yaw set string entity @n[type=marker,tag=intro_cam
 data modify storage bcm macro.pitch set value 0
 data modify storage bcm macro.type set value "intro_camera"
 function bcm:place/point_macro with storage bcm macro
+
+forceload add ~ ~
