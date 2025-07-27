@@ -6,10 +6,10 @@ $execute if score .map_exists calc matches 0 run return run function bcm:fail/te
 
 # remove old map editor objects
 execute as @e[type=block_display,tag=map_editor,tag=place] at @s run setblock ~ ~ ~ air destroy
-execute as @e[type=block_display,tag=map_editor,tag=place] run function bcm:place/delete
-kill @e[type=#bcm:place,tag=intro_camera]
-kill @e[type=#bcm:place,tag=spawnpoint]
-kill @e[type=#bcm:place,tag=render_box]
+execute as @e[type=block_display,tag=map_editor,tag=place] at @s run function bcm:place/delete
+execute as @e[type=#bcm:place,tag=intro_camera] at @s run function bcm:place/delete
+execute as @e[type=#bcm:place,tag=spawnpoint] at @s run function bcm:place/delete
+execute as @e[type=#bcm:place,tag=render_box] at @s run function bcm:place/delete
 scoreboard players set .print_messages item_structures 1
 
 # if item map, edit as is

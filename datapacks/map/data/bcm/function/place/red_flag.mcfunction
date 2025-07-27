@@ -13,6 +13,6 @@ execute store result entity @s view_range float 1 run scoreboard players get dis
 
 # delete old flag
 execute at @e[type=#bcm:place,tag=place,tag=red_flag,tag=!init] run setblock ~ ~ ~ air strict
-kill @e[type=#bcm:place,tag=place,tag=red_flag,tag=!init]
+execute as @e[type=#bcm:place,tag=place,tag=red_flag,tag=!init] at @s run function bcm:place/delete
 tag @s remove init
 return 1

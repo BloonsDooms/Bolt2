@@ -6,8 +6,8 @@
 $tag @e[type=#bcm:place,tag=render_box,tag=$(type)] add correct_type
 
 # set position
-execute if entity @s[tag=pos1] run kill @e[type=marker,tag=correct_type,tag=pos1,tag=!init]
-execute if entity @s[tag=pos2] run kill @e[type=marker,tag=correct_type,tag=pos2,tag=!init]
+execute if entity @s[tag=pos1] as @e[type=marker,tag=correct_type,tag=pos1,tag=!init] run function bcm:place/delete
+execute if entity @s[tag=pos2] as @e[type=marker,tag=correct_type,tag=pos2,tag=!init] run function bcm:place/delete
 tag @s remove init
 
 tp ~ ~ ~
