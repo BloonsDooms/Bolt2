@@ -100,3 +100,7 @@ function bcm:util/parse_area_selector with storage bcm map.blue_spawn
 data modify storage bcm macro.origin set from storage bcm map.blue_spawn.start
 data modify storage bcm macro.tag set value "blue_spawn"
 function bcm:render_box/box_from_area with storage bcm macro
+
+
+## players
+execute as @a[tag=!in_map_editor] run function bcm:editor/enter

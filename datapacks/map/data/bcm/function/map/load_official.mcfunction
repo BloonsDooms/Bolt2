@@ -15,13 +15,13 @@ scoreboard players operation .l calc /= .load_entries/s calc
 scoreboard players operation .s calc = .l calc
 scoreboard players operation .l calc /= #60 calc
 scoreboard players operation .s calc %= #60 calc
-execute if score .l calc matches 0 run tellraw @s ["estimated time to load: ",{score:{name:".s",objective:"calc"}},"s"]
-execute if score .l calc matches 1.. run tellraw @s ["estimated time to load: ",{score:{name:".l",objective:"calc"}},"m ",{score:{name:".s",objective:"calc"}},"s"]
+execute if score .print_messages item_structures matches 1 if score .l calc matches 0 run tellraw @a ["estimated time to load: ",{score:{name:".s",objective:"calc"}},"s"]
+execute if score .print_messages item_structures matches 1 if score .l calc matches 1.. run tellraw @a ["estimated time to load: ",{score:{name:".l",objective:"calc"}},"m ",{score:{name:".s",objective:"calc"}},"s"]
 
 # timer
 function bcm:util/start_timer
 
 # load
-scoreboard players set .print_messages item_structures 1
-function item_structures:load
-kill @n[type=marker,tag=start_point]
+schedule function item_structures:load_kill 5t
+
+return 1

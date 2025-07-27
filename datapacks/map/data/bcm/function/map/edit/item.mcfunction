@@ -17,3 +17,5 @@ function bcm:map/edit/load
 ## max wall height
 # stored as relative
 execute summon marker run function bcm:map/edit/wall_height_item
+
+return 1

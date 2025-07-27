@@ -1,5 +1,6 @@
 {
   "values":[
+    "bcm:give/map_editor_exit",
     "bcm:give/map_editor_menu",
     "bcm:give/pos_and_rot_menu",
     "bcm:give/select_area/save",
