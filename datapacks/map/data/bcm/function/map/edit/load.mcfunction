@@ -13,25 +13,7 @@ data remove storage bcm macro
 
 
 ## single-point eggless objects
-kill @e[type=marker,tag=tmp]
-summon marker ~ ~ ~ {Tags:[tmp]}
-
-# intro camera
-data modify storage bcm macro.pos set from storage bcm map.intro_camera
-execute as @n[type=marker,tag=tmp] run function bcm:map/edit/tp_convert with storage bcm macro
-execute as @n[type=marker,tag=tmp] at @s run function bcm:place/intro_camera
-
-# red spawnpoint
-data modify storage bcm macro.pos set from storage bcm map.red_spawnpoint
-execute as @n[type=marker,tag=tmp] run function bcm:map/edit/tp_convert with storage bcm macro
-execute as @n[type=marker,tag=tmp] at @s run function bcm:place/red_spawnpoint
-
-# blue spawnpoint
-data modify storage bcm macro.pos set from storage bcm map.blue_spawnpoint
-execute as @n[type=marker,tag=tmp] run function bcm:map/edit/tp_convert with storage bcm macro
-execute as @n[type=marker,tag=tmp] at @s run function bcm:place/blue_spawnpoint
-
-kill @e[type=marker,tag=tmp]
+execute summon marker run function bcm:map/edit/load_single_points
 
 
 ## flags
