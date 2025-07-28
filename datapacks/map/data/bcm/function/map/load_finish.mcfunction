@@ -8,7 +8,7 @@ execute if score .hard select_area matches 1 as @e[type=block_display,tag=genera
 scoreboard players set .hard select_area 0
 
 # keep it simple - forceload the whole map editor area all the time
-forceload add 0 0 512 512
+function bcm:editor/forceload
 
 ## all code past this command only runs if new map
 execute unless entity @n[type=marker,tag=tp_map_placer] run return 1
