@@ -189,10 +189,11 @@ scoreboard players set @s zombie_kill 0
 tag @s remove arrow_hit
 
 execute as @s store result score @s arrowCount run clear @s arrow 0
-scoreboard players set @s[gamemode=creative] arrowCount 3
 execute if score .tmi .data = .1 .num if score .tmi_arrow .data = .2 .num run scoreboard players add @s[scores={arrowCount=0}] no_quiver_arrow 1
 scoreboard players add @s[scores={arrowCount=..2}] arrowReload 1
 scoreboard players set @s[scores={arrowCount=3..}] arrowReload 0
+scoreboard players set @s[gamemode=creative] arrowReload 0
+scoreboard players set @s[tag=in_map_editor] arrowReload 0
 #execute if score .mode .data = .6 .num run scoreboard players set @s[scores={arrowCount=2..},team=red] arrowReload 0
 
 item replace entity @s[scores={arrowReload=..39,arrowCount=0}] hotbar.8 with gray_dye[custom_name={"text":"Reloading","italic":false}] 1
@@ -383,7 +384,7 @@ scoreboard players set @s[scores={blind=..0}] blind_new 0
 execute as @s[scores={blind=1..}] run function game:player/blind
 
 #bow correct
-execute if entity @s[nbt=!{Inventory:[{id:"minecraft:bow",Slot:0b}]},gamemode=!creative] run function game:player/inv_checks/no_bow
+execute if entity @s[nbt=!{Inventory:[{id:"minecraft:bow",Slot:0b}]},gamemode=!creative,tag=!in_map_editor] run function game:player/inv_checks/no_bow
 
 # OPTIMIZATION NEEDED : run only when give a new bow
 function game:bow/dynamic_bow_data
