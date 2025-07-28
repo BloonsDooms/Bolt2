@@ -194,6 +194,8 @@ scoreboard players add @s[scores={arrowCount=..2}] arrowReload 1
 scoreboard players set @s[scores={arrowCount=3..}] arrowReload 0
 scoreboard players set @s[gamemode=creative] arrowReload 0
 scoreboard players set @s[tag=in_map_editor] arrowReload 0
+scoreboard players set @s[gamemode=creative] arrowCount -1
+scoreboard players set @s[tag=in_map_editor] arrowCount -1
 #execute if score .mode .data = .6 .num run scoreboard players set @s[scores={arrowCount=2..},team=red] arrowReload 0
 
 item replace entity @s[scores={arrowReload=..39,arrowCount=0}] hotbar.8 with gray_dye[custom_name={"text":"Reloading","italic":false}] 1
