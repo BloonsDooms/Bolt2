@@ -14,6 +14,7 @@ scoreboard objectives add export_map trigger
 
 scoreboard objectives add calc dummy
 scoreboard players set #-1 calc -1
+scoreboard players set #2 calc 2
 scoreboard players set #4 calc 4
 scoreboard players set #5 calc 5
 scoreboard players set #10 calc 10

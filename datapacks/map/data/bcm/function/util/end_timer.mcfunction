@@ -1,7 +1,7 @@
 # get total milliseconds
 execute store result score .ms calc run worldborder get
 scoreboard players operation .ms calc *= #-1 calc
-scoreboard players add .ms calc 59999968
+execute store result score .ms_total calc run scoreboard players add .ms calc 59999968
 
 # milliseconds -> m:s.ms
 scoreboard players operation .s calc = .ms calc
