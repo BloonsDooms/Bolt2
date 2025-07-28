@@ -26,8 +26,9 @@ scoreboard players remove .r calc 100
 execute if score .print_messages item_structures matches 1 if score .r calc matches 0.. run tellraw @a ["saved ",{score:{name:".r",objective:"calc"}},"% faster than estimated"]
 scoreboard players operation .r calc *= #-1 calc
 execute if score .print_messages item_structures matches 1 if score .r calc matches 1.. run tellraw @a ["saved ",{score:{name:".r",objective:"calc"}},"% slower than estimated"]
-# new estimate = real, if >500ms
-execute if score .ms_total calc matches 500.. run scoreboard players operation .save_blocks/s calc = .rate calc
+# new estimate = avg(old est., real), if >500ms
+execute if score .ms_total calc matches 500.. run scoreboard players operation .save_blocks/s calc += .rate calc
+execute if score .ms_total calc matches 500.. run scoreboard players operation .save_blocks/s calc /= #2 calc
 
 # copy data to export path
 data modify storage bcm export set from storage bcm map
