@@ -7,6 +7,9 @@ execute if score .hard select_area matches 1 as @e[type=block_display,tag=blue_f
 execute if score .hard select_area matches 1 as @e[type=block_display,tag=generator] at @s positioned ^ ^ ^1 run function bcm:place/generator_text
 scoreboard players set .hard select_area 0
 
+# keep it simple - forceload the whole map editor area all the time
+forceload add 0 0 512 512
+
 ## all code past this command only runs if new map
 execute unless entity @n[type=marker,tag=tp_map_placer] run return 1
 
@@ -14,6 +17,3 @@ execute unless entity @n[type=marker,tag=tp_map_placer] run return 1
 execute store result score .z calc run data get storage item_structures save.size[2]
 execute store result storage bcm macro.z int 1 run scoreboard players add .z calc 64
 execute as fd8107bb-c1fa-4ddf-b8fe-d1087da4ff6e at @s run function bcm:map/tp_placer with storage bcm macro
-
-# keep it simple - forceload the whole map editor area all the time
-forceload add 0 0 512 512
