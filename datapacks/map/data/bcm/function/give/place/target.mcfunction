@@ -1,0 +1,12 @@
+give @s panda_spawn_egg[\
+  item_name={text:"possible target location"},\
+  item_model="minecraft:target",\
+  lore=[\
+    "Don't worry about this until you are done building",\
+    "Sets a valid location for targets to spawn in target mode"\
+  ],\
+  entity_data={\
+    id:"minecraft:marker",\
+    Tags:["map_editor","place","editor_target","init"],\
+  }\
+] 1

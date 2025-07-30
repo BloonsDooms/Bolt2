@@ -41,6 +41,7 @@ scoreboard objectives add place_object_egg minecraft.used:minecraft.panda_spawn_
 
 scoreboard objectives add bcm_generator_time dummy
 scoreboard objectives add bcm_generator_warmup dummy
+scoreboard objectives add bcm_crate_difficulty dummy
 
 # map placer
 # UUID is 1 less than active map origin entity

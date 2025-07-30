@@ -10,6 +10,8 @@
     "bcm:give/place/blue_spawnpoint",
     "bcm:give/place/intro_camera",
     "bcm:give/place/generator",
-    "bcm:give/set_max_wall_height"
+    "bcm:give/set_max_wall_height",
+    "bcm:give/place/target",
+    "bcm:give/place/crate"
   ]
 } 

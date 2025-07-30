@@ -30,7 +30,7 @@ return run dialog show @s {\
       }\
     },\
     {\
-      "label": "save map",\
+      "label": "save everything",\
       "tooltip": "this might take a while!\n\ncreates an item with your map's data stored on it, which you can save permanently in creative mode",\
       "action": {\
         "type": "minecraft:run_command",\
@@ -38,10 +38,18 @@ return run dialog show @s {\
       }\
     },\
     {\
-      "label": "return to lobby",\
+      "label": "save only targets & crates",\
+      "tooltip": "so you can add these objects after you're done building, without having to wait for the entire map to save",\
       "action": {\
         "type": "minecraft:run_command",\
         "command": "trigger master_menu set 4"\
+      }\
+    },\
+    {\
+      "label": "return to lobby",\
+      "action": {\
+        "type": "minecraft:run_command",\
+        "command": "trigger master_menu set 5"\
       }\
     }\
   ]\
