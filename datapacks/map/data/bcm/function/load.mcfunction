@@ -11,6 +11,7 @@ scoreboard objectives add set_item_generator trigger
 scoreboard objectives add existing_map_response trigger
 scoreboard objectives add master_menu trigger
 scoreboard objectives add export_map trigger
+scoreboard objectives add targets_and_crates trigger
 
 scoreboard objectives add calc dummy
 scoreboard players set #-1 calc -1

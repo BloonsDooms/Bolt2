@@ -66,11 +66,6 @@ data modify storage bcm map.generators set value []
 execute as @e[type=block_display,tag=generator,tag=!exclude] at @s run function bcm:map/save/generator
 tag @e[type=block_display,tag=generator] remove exclude
 
-# special blocks
-data modify storage bcm map.targets set value []
-scoreboard players set .crates calc 0
-scoreboard players set .targets calc 0
-
 # y offset
 execute as @e[type=marker,tag=render_box,tag=save] at @s run tp ~ ~-.9 ~
 tag @n[type=marker,tag=render_box,tag=save,tag=pos1] add start_point

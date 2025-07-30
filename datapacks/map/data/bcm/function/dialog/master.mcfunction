@@ -14,7 +14,7 @@ return run dialog show @s {\
   "columns": 1,\
   "actions": [\
     {\
-      "label": "display settings",\
+      "label": "display settings...",\
       "tooltip": "toggle visibility for various map editor objects here",\
       "action": {\
         "type": "minecraft:run_command",\
@@ -22,7 +22,7 @@ return run dialog show @s {\
       }\
     },\
     {\
-      "label": "adjust position & rotation",\
+      "label": "adjust position & rotation...",\
       "tooltip": "makes it easier to set spawn points and the intro camera precisely",\
       "action": {\
         "type": "minecraft:run_command",\
@@ -30,16 +30,16 @@ return run dialog show @s {\
       }\
     },\
     {\
-      "label": "save everything",\
-      "tooltip": "this might take a while!\n\ncreates an item with your map's data stored on it, which you can save permanently in creative mode",\
+      "label": "targets & crates...",\
+      "tooltip": "don't worry about this if you're not done building",\
       "action": {\
         "type": "minecraft:run_command",\
         "command": "trigger master_menu set 3"\
       }\
     },\
     {\
-      "label": "save only targets & crates",\
-      "tooltip": "so you can add these objects after you're done building, without having to wait for the entire map to save",\
+      "label": "save map",\
+      "tooltip": "this might take a while!\n\ncreates an item with your map's data stored on it, which you can save permanently in creative mode\n\ndoes not affect targets & crates",\
       "action": {\
         "type": "minecraft:run_command",\
         "command": "trigger master_menu set 4"\
