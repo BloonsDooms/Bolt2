@@ -1,15 +1,15 @@
-# old
-# execute if score @s targets_and_crates matches 1 run function bcm:map/load_targets_and_crates
-# execute if score @s targets_and_crates matches 2 run function bcm:map/destroy_targets_and_crates
-# execute if score @s targets_and_crates matches 3 run function bcm:map/save/targets_and_crates
+# load
+execute if score @s targets_and_crates matches 10 run function bcm:targets_and_crates/load/targets
+execute if score @s targets_and_crates matches 11 run function bcm:targets_and_crates/load/crates
 
-# new - process targets and crates seperately from each other because a target and a crate may share a position
-# 10 = load t
-# 11 = load c
-# 20 = destroy t
-# 21 = destroy c
-# 22 = destroy both
-# 30 = save t
-# 31 = save c
+# destroy
+execute if score @s targets_and_crates matches 20 run function bcm:targets_and_crates/destroy/targets
+execute if score @s targets_and_crates matches 21 run function bcm:targets_and_crates/destroy/crates
+execute if score @s targets_and_crates matches 22 run function bcm:targets_and_crates/destroy/all
+
+# save
+execute if score @s targets_and_crates matches 30 run function bcm:targets_and_crates/save/targets
+execute if score @s targets_and_crates matches 31 run function bcm:targets_and_crates/save/crates
+
 
 scoreboard players reset @s targets_and_crates

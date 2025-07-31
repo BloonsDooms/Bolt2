@@ -37,12 +37,12 @@ return run dialog show @s {\
                 "text": "LOAD",\
                 "color": "yellow"\
               },\
-              " all saved targets for this map into the editor.\n\nIf an existing target is in the same position as a saved target, the existing target will be ",\
+              " all saved ",\
               {\
-                "text": "REPLACED",\
-                "color": "yellow"\
+                "text": "TARGETS",\
+                "color": "red"\
               },\
-              " with the saved target.\n\nOther existing targets will be preserved.\n\nAre you sure you wish to continue?"\
+              " for this map into the editor.\n\nCurrently existing targets will be preserved.\n\nAre you sure you wish to continue?"\
             ]\
           },\
           "yes": {\
@@ -96,7 +96,12 @@ return run dialog show @s {\
                 "text": "LOAD",\
                 "color": "yellow"\
               },\
-              " all saved crates for this map into the editor.\n\nIf an existing crate is in the same position as a saved crate, the existing crate will be ",\
+              " all saved ",\
+              {\
+                "text": "CRATES",\
+                "color": "gold"\
+              },\
+              " for this map into the editor.\n\nIf an existing crate is in the same position as a saved crate, the existing crate will be ",\
               {\
                 "text": "REPLACED",\
                 "color": "yellow"\
@@ -155,7 +160,12 @@ return run dialog show @s {\
                 "text": "DESTROY",\
                 "color": "red"\
               },\
-              " all placed targets in the map editor.\n\nAre you sure you wish to continue?"\
+              " all placed ",\
+              {\
+                "text": "TARGETS",\
+                "color": "red"\
+              },\
+              " in the map editor.\n\nAre you sure you wish to continue?"\
             ]\
           },\
           "yes": {\
@@ -209,7 +219,12 @@ return run dialog show @s {\
                 "text": "DESTROY",\
                 "color": "red"\
               },\
-              " all placed crates in the map editor.\n\nAre you sure you wish to continue?"\
+              " all placed ",\
+              {\
+                "text": "CRATES",\
+                "color": "gold"\
+              },\
+              " in the map editor.\n\nAre you sure you wish to continue?"\
             ]\
           },\
           "yes": {\
@@ -263,7 +278,12 @@ return run dialog show @s {\
                 "text": "DESTROY",\
                 "color": "red"\
               },\
-              " both placed targets and crates in the map editor.\n\nAre you sure you wish to continue?"\
+              " all placed ",\
+              {\
+                "text": "TARGETS and CRATES",\
+                "color": "light_purple"\
+              },\
+              " in the map editor.\n\nAre you sure you wish to continue?"\
             ]\
           },\
           "yes": {\
@@ -301,7 +321,7 @@ return run dialog show @s {\
           "text": "save",\
           "color": "green"\
         },\
-        " placed targets & crates"\
+        " targets"\
       ],\
       "width": 200,\
       "action": {\
@@ -317,12 +337,17 @@ return run dialog show @s {\
                 "text": "SAVE",\
                 "color": "green"\
               },\
-              " placed targets & crates in the map editor, ",\
+              " placed ",\
+              {\
+                "text": "TARGETS",\
+                "color": "red"\
+              },\
+              "in the map editor, ",\
               {\
                 "text": "OVERWRITING",\
                 "color": "yellow"\
               },\
-              " any previously saved targets & crates.\n\nAre you sure you wish to continue?"\
+              " any previously saved targets.\n\nAre you sure you wish to continue?"\
             ]\
           },\
           "yes": {\
@@ -332,7 +357,7 @@ return run dialog show @s {\
                 "text": "save",\
                 "color": "green"\
               },\
-              " and ",\
+              " targets and ",\
               {\
                 "text": "overwrite",\
                 "color": "yellow"\
@@ -341,7 +366,75 @@ return run dialog show @s {\
             "width": 250,\
             "action": {\
               "type": "minecraft:run_command",\
-              "command": "trigger targets_and_crates set 3"\
+              "command": "trigger targets_and_crates set 30"\
+            }\
+          },\
+          "no": {\
+            "label": {\
+              "translate": "gui.cancel"\
+            },\
+            "width": 250,\
+            "action": {\
+              "type": "minecraft:run_command",\
+              "command": "trigger targets_and_crates set 0"\
+            }\
+          }\
+        }\
+      }\
+    },\
+    {\
+      "label": [\
+        "",\
+        {\
+          "text": "save",\
+          "color": "green"\
+        },\
+        " crates"\
+      ],\
+      "width": 200,\
+      "action": {\
+        "type": "minecraft:show_dialog",\
+        "dialog": {\
+          "type": "minecraft:confirmation",\
+          "title": "are you sure?",\
+          "body": {\
+            "type": "minecraft:plain_message",\
+            "contents": [\
+              "This will ",\
+              {\
+                "text": "SAVE",\
+                "color": "green"\
+              },\
+              " placed ",\
+              {\
+                "text": "CRATES",\
+                "color": "gold"\
+              },\
+              " in the map editor, ",\
+              {\
+                "text": "OVERWRITING",\
+                "color": "yellow"\
+              },\
+              " any previously saved crates.\n\nAre you sure you wish to continue?"\
+            ]\
+          },\
+          "yes": {\
+            "label": [\
+              "Yes, ",\
+              {\
+                "text": "save",\
+                "color": "green"\
+              },\
+              " crates and ",\
+              {\
+                "text": "overwrite",\
+                "color": "yellow"\
+              },\
+            ],\
+            "width": 250,\
+            "action": {\
+              "type": "minecraft:run_command",\
+              "command": "trigger targets_and_crates set 31"\
             }\
           },\
           "no": {\
