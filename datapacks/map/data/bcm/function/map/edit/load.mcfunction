@@ -1,6 +1,11 @@
 ## load point marker
 kill @e[type=marker,tag=load_point]
 summon marker ~ ~ ~ {Tags:["load_point"]}
+execute store result storage bcm macro.x int 1 run data get entity @n[type=marker,tag=load_point] Pos[0]
+execute store result storage bcm macro.y int 1 run data get entity @n[type=marker,tag=load_point] Pos[1]
+execute store result storage bcm macro.z int 1 run data get entity @n[type=marker,tag=load_point] Pos[2]
+function bcm:util/xyz_string_abs with storage bcm macro
+data modify storage bcm map.save.start set from storage bcm tmp.pos
 
 
 ## save area
