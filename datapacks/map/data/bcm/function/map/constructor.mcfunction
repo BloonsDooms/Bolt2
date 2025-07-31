@@ -4,11 +4,6 @@ data remove storage bcm tmp
 # bleps-specific
 data modify storage bcm tmp.map set from storage bcm map
 
-# convert targets data
-data remove storage bcm tmp.map.targets
-data remove storage bcm tmp_target
-execute if data storage bcm map.targets[] run function bcm:map/import_targets
-
 # blocks
 data modify storage bcm tmp.structure set from storage item_structures save
 
