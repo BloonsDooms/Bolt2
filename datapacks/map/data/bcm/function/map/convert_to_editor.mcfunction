@@ -22,3 +22,4 @@ data modify storage bcm map.blue_flag set from storage maps:active objectives.bl
 data modify storage bcm map.generators set from storage maps:active gens
 
 data modify storage bcm map.targets set from storage maps:active targets
+data modify storage bcm map.crates set value []
