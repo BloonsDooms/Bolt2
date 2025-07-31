@@ -5,8 +5,8 @@ $execute store result score .map_exists calc run function bcm:map/check_existing
 $execute if score .map_exists calc matches 0 run return run function bcm:fail/tellraw {input:'"ERROR: couldn\'t find map named \\"$(mapName)\\""'}
 
 # remove old map editor objects
-execute as @e[type=block_display,tag=map_editor,tag=place] at @s run setblock ~ ~ ~ air destroy
-execute as @e[type=block_display,tag=map_editor,tag=place] at @s run function bcm:place/delete
+execute as @e[type=#bcm:place,tag=map_editor,tag=place] at @s run setblock ~ ~ ~ air destroy
+execute as @e[type=#bcm:place,tag=map_editor,tag=place] at @s run function bcm:place/delete
 execute as @e[type=#bcm:place,tag=intro_camera] at @s run function bcm:place/delete
 execute as @e[type=#bcm:place,tag=spawnpoint] at @s run function bcm:place/delete
 execute as @e[type=#bcm:place,tag=render_box] at @s run function bcm:place/delete
