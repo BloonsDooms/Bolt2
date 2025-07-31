@@ -37,7 +37,12 @@ return run dialog show @s {\
                 "text": "LOAD",\
                 "color": "yellow"\
               },\
-              " all saved targets & crates into the map editor.\n\nCurrently placed targets & crates will be unaffected.\n\nAre you sure you wish to continue?"\
+              " all saved targets & crates for this map into the editor.\n\nIf an existing target/crate is in the same position as a saved target/crate, the existing one will be ",\
+              {\
+                "text": "REPLACED",\
+                "color": "yellow"\
+              },\
+              " with the saved one.\n\nOther existing targets & crates will be preserved.\n\nAre you sure you wish to continue?"\
             ]\
           },\
           "yes": {\
