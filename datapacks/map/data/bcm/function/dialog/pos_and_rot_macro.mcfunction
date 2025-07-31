@@ -52,6 +52,10 @@ $return run dialog show @s {\
   "exit_action": {\
     "label": {\
       "translate": "gui.cancel"\
+    },\
+    "action": {\
+      "type": "minecraft:run_command",\
+      "template": "trigger set_pos_and_rot set 0"\
     }\
   },\
   "actions": [\
