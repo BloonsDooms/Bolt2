@@ -1,1 +1,1 @@
-tellraw @a "save crates"
+tellraw @a [{selector:"@s"}," wants to save crates"]

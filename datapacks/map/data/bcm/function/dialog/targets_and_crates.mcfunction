@@ -342,7 +342,7 @@ return run dialog show @s {\
                 "text": "TARGETS",\
                 "color": "red"\
               },\
-              "in the map editor, ",\
+              " in the map editor, ",\
               {\
                 "text": "OVERWRITING",\
                 "color": "yellow"\

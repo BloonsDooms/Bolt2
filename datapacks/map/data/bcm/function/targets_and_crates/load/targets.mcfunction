@@ -2,6 +2,6 @@ execute store result score targets.load calc run data get storage bcm map.target
 scoreboard players set targets.replace calc 0
 data modify storage bcm tmp.targets set from storage bcm map.targets
 execute if data storage bcm tmp.targets[] at @n[type=marker,tag=load_point] summon marker run function bcm:place/target_auto with storage bcm tmp.targets[-1]
-tellraw @a [{score:{name:"targets.load",objective:"calc"}}," targets loaded, ",{score:{name:"targets.replace",objective:"calc"}}," of which were already there"]
+tellraw @a [{selector:"@s"}," ",{score:{name:"targets.load",objective:"calc"}}," targets loaded, ",{score:{name:"targets.replace",objective:"calc"}}," of which were already there"]
 
 data remove storage bcm tmp

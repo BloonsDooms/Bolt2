@@ -1,1 +1,1 @@
-tellraw @a "save targets"
+tellraw @a [{selector:"@s"}," wants to save targets"]
