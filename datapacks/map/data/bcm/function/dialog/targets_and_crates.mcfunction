@@ -21,7 +21,7 @@ return run dialog show @s {\
           "text": "load",\
           "color": "yellow"\
         },\
-        " saved targets & crates"\
+        " targets"\
       ],\
       "width": 200,\
       "action": {\
@@ -37,12 +37,12 @@ return run dialog show @s {\
                 "text": "LOAD",\
                 "color": "yellow"\
               },\
-              " all saved targets & crates for this map into the editor.\n\nIf an existing target/crate is in the same position as a saved target/crate, the existing one will be ",\
+              " all saved targets for this map into the editor.\n\nIf an existing target is in the same position as a saved target, the existing target will be ",\
               {\
                 "text": "REPLACED",\
                 "color": "yellow"\
               },\
-              " with the saved one.\n\nOther existing targets & crates will be preserved.\n\nAre you sure you wish to continue?"\
+              " with the saved target.\n\nOther existing targets will be preserved.\n\nAre you sure you wish to continue?"\
             ]\
           },\
           "yes": {\
@@ -52,12 +52,71 @@ return run dialog show @s {\
                 "text": "load",\
                 "color": "yellow"\
               },\
-              " saved targets & crates"\
+              " saved targets"\
             ],\
             "width": 250,\
             "action": {\
               "type": "minecraft:run_command",\
-              "command": "trigger targets_and_crates set 1"\
+              "command": "trigger targets_and_crates set 10"\
+            }\
+          },\
+          "no": {\
+            "label": {\
+              "translate": "gui.cancel"\
+            },\
+            "width": 250,\
+            "action": {\
+              "type": "minecraft:run_command",\
+              "command": "trigger targets_and_crates set 0"\
+            }\
+          }\
+        }\
+      }\
+    },\
+    {\
+      "label": [\
+        "",\
+        {\
+          "text": "load",\
+          "color": "yellow"\
+        },\
+        " crates "\
+      ],\
+      "width": 200,\
+      "action": {\
+        "type": "minecraft:show_dialog",\
+        "dialog": {\
+          "type": "minecraft:confirmation",\
+          "title": "are you sure?",\
+          "body": {\
+            "type": "minecraft:plain_message",\
+            "contents": [\
+              "This will ",\
+              {\
+                "text": "LOAD",\
+                "color": "yellow"\
+              },\
+              " all saved crates for this map into the editor.\n\nIf an existing crate is in the same position as a saved crate, the existing crate will be ",\
+              {\
+                "text": "REPLACED",\
+                "color": "yellow"\
+              },\
+              " with the saved crate.\n\nOther existing crates will be preserved.\n\nAre you sure you wish to continue?"\
+            ]\
+          },\
+          "yes": {\
+            "label": [\
+              "Yes, ",\
+              {\
+                "text": "load",\
+                "color": "yellow"\
+              },\
+              " saved crates"\
+            ],\
+            "width": 250,\
+            "action": {\
+              "type": "minecraft:run_command",\
+              "command": "trigger targets_and_crates set 11"\
             }\
           },\
           "no": {\
@@ -80,7 +139,7 @@ return run dialog show @s {\
           "text": "destroy",\
           "color": "red"\
         },\
-        " placed targets & crates"\
+        " targets"\
       ],\
       "width": 200,\
       "action": {\
@@ -96,7 +155,7 @@ return run dialog show @s {\
                 "text": "DESTROY",\
                 "color": "red"\
               },\
-              " all placed targets & crates in the map editor.\n\nAre you sure you wish to continue?"\
+              " all placed targets in the map editor.\n\nAre you sure you wish to continue?"\
             ]\
           },\
           "yes": {\
@@ -106,12 +165,120 @@ return run dialog show @s {\
                 "text": "destroy",\
                 "color": "red"\
               },\
-              " placed targets & crates"\
+              " placed targets"\
             ],\
             "width": 250,\
             "action": {\
               "type": "minecraft:run_command",\
-              "command": "trigger targets_and_crates set 2"\
+              "command": "trigger targets_and_crates set 20"\
+            }\
+          },\
+          "no": {\
+            "label": {\
+              "translate": "gui.cancel"\
+            },\
+            "width": 250,\
+            "action": {\
+              "type": "minecraft:run_command",\
+              "command": "trigger targets_and_crates set 0"\
+            }\
+          }\
+        }\
+      }\
+    },\
+    {\
+      "label": [\
+        "",\
+        {\
+          "text": "destroy",\
+          "color": "red"\
+        },\
+        " crates"\
+      ],\
+      "width": 200,\
+      "action": {\
+        "type": "minecraft:show_dialog",\
+        "dialog": {\
+          "type": "minecraft:confirmation",\
+          "title": "are you sure?",\
+          "body": {\
+            "type": "minecraft:plain_message",\
+            "contents": [\
+              "This will ",\
+              {\
+                "text": "DESTROY",\
+                "color": "red"\
+              },\
+              " all placed crates in the map editor.\n\nAre you sure you wish to continue?"\
+            ]\
+          },\
+          "yes": {\
+            "label": [\
+              "Yes, ",\
+              {\
+                "text": "destroy",\
+                "color": "red"\
+              },\
+              " placed crates"\
+            ],\
+            "width": 250,\
+            "action": {\
+              "type": "minecraft:run_command",\
+              "command": "trigger targets_and_crates set 21"\
+            }\
+          },\
+          "no": {\
+            "label": {\
+              "translate": "gui.cancel"\
+            },\
+            "width": 250,\
+            "action": {\
+              "type": "minecraft:run_command",\
+              "command": "trigger targets_and_crates set 0"\
+            }\
+          }\
+        }\
+      }\
+    },\
+    {\
+      "label": [\
+        "",\
+        {\
+          "text": "destroy",\
+          "color": "red"\
+        },\
+        " all"\
+      ],\
+      "width": 200,\
+      "action": {\
+        "type": "minecraft:show_dialog",\
+        "dialog": {\
+          "type": "minecraft:confirmation",\
+          "title": "are you sure?",\
+          "body": {\
+            "type": "minecraft:plain_message",\
+            "contents": [\
+              "This will ",\
+              {\
+                "text": "DESTROY",\
+                "color": "red"\
+              },\
+              " both placed targets and crates in the map editor.\n\nAre you sure you wish to continue?"\
+            ]\
+          },\
+          "yes": {\
+            "label": [\
+              "Yes, ",\
+              {\
+                "text": "destroy",\
+                "color": "red"\
+              },\
+              " placed targets and crates"\
+            ],\
+            "width": 250,\
+            "action": {\
+              "type": "minecraft:run_command",\
+              "command": "trigger targets_and_crates set 22"\
             }\
           },\
           "no": {\
