@@ -55,7 +55,7 @@ $return run dialog show @s {\
     },\
     "action": {\
       "type": "minecraft:run_command",\
-      "template": "trigger set_pos_and_rot set 0"\
+      "command": "trigger set_pos_and_rot set 0"\
     }\
   },\
   "actions": [\
