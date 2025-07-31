@@ -7,7 +7,7 @@ give @s panda_spawn_egg[\
   ],\
   entity_data={\
     id:"minecraft:interaction",\
-    Tags:["map_editor","place","editor_crate","init"],\
+    Tags:["map_editor","place","editor_crate","target_or_crate","init"],\
     response:true\
   }\
 ] 1

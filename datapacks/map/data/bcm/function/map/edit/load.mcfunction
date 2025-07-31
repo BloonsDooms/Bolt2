@@ -1,3 +1,8 @@
+## load point marker
+kill @e[type=marker,tag=load_point]
+summon marker ~ ~ ~ {Tags:["load_point"]}
+
+
 ## save area
 # pos 1 (~ ~ ~)
 summon marker ~ ~ ~ {Tags:["map_editor","pos1","render_box","save","init"]}

@@ -28,6 +28,7 @@ execute as @a[scores={existing_map_response=1}] run function bcm:trigger/overwri
 execute as @a[scores={master_menu=1..}] at @s run function bcm:trigger/master
 scoreboard players enable @a[tag=in_map_editor] export_map
 execute as @a[scores={export_map=1..}] run function bcm:trigger/export
+execute as @a[scores={targets_and_crates=1..}] run function bcm:trigger/targets_and_crates
 
 # editor area boundaries
 execute as @a[gamemode=creative,tag=in_map_editor,tag=!bypass_editor_boundary] at @s run function bcm:editor/boundary

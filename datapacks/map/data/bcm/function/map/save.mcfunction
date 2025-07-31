@@ -56,8 +56,13 @@ execute store result storage bcm map.max_wall_height int 0.01 run scoreboard pla
 # convert absolute positions to relative for spawn areas, spawnpoints, and intro camera
 function bcm:map/save/relative with storage bcm map.save
 
+# don't save targets & crates as part of map structure
+execute if entity @e[type=#bcm:place,tag=target_or_crate] run tellraw @s "temporarily setting air blocks at flags, and possible target & crate locations (they're not part of the map structure)"
+execute unless entity @e[type=#bcm:place,tag=target_or_crate] run tellraw @s "temporarily setting air blocks at flags (they're not part of the map structure)"
+execute as @e[type=#bcm:place,tag=target_or_crate] at @s run setblock ~ ~ ~ air strict
+
 # flags
-execute as @e[type=block_display,tag=flag] at @s run setblock ~ ~ ~ air
+execute as @e[type=block_display,tag=flag] at @s run setblock ~ ~ ~ air strict
 execute as @n[type=block_display,tag=red_flag] at @s run function bcm:map/save/flag {color:"red"}
 execute as @n[type=block_display,tag=blue_flag] at @s run function bcm:map/save/flag {color:"blue"}
 
