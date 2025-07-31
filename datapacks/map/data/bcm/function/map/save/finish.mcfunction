@@ -1,8 +1,10 @@
 # y offset
 execute as @e[type=marker,tag=render_box,tag=save] at @s run tp ~ ~.9 ~
 
-execute as @e[type=block_display,tag=red_flag] at @s run setblock ~ ~ ~ red_banner
-execute as @e[type=block_display,tag=blue_flag] at @s run setblock ~ ~ ~ blue_banner
+execute as @e[type=block_display,tag=red_flag] at @s run setblock ~ ~ ~ red_banner strict
+execute as @e[type=block_display,tag=blue_flag] at @s run setblock ~ ~ ~ blue_banner strict
+execute as @e[type=marker,tag=editor_target] at @s run setblock ~ ~ ~ target strict
+execute as @e[type=interaction,tag=editor_crate] at @s run setblock ~ ~ ~ deepslate_copper_ore strict
 scoreboard players set .enabled select_area 1
 
 # time
