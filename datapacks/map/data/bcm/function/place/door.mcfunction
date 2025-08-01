@@ -11,4 +11,5 @@ execute if score .r calc matches 135..179 run tp @s ~ ~ ~ -180 0
 execute if score .r calc matches -180..-136 run tp @s ~ ~ ~ -180 0
 execute if score .r calc matches -135..-46 run tp @s ~ ~ ~ -90 0
 
-# see game:doors/main for more
+# blocks
+execute at @s run fill ^-1 ^ ^ ^1 ^2 ^ yellow_stained_glass_pane keep

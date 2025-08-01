@@ -16,6 +16,7 @@ execute as @a[gamemode=creative] if predicate {condition:"minecraft:entity_prope
 # (2) we weren't specifically told not to do this (.hard)
 execute unless score .hard select_area matches 1 if score .enabled select_area matches 1 as @e[type=block_display,tag=map_editor,tag=place,tag=generator] at @s if block ^ ^ ^1 #air run setblock ~ ~ ~ air destroy
 execute unless score .hard select_area matches 1 if score .enabled select_area matches 1 as @e[type=#bcm:place,tag=map_editor,tag=place] at @s if block ~ ~ ~ #air run function bcm:place/delete
+execute unless score .hard select_area matches 1 if score .enabled select_area matches 1 as @e[type=marker,tag=map_editor,tag=door,tag=!open,tag=!open_2] at @s if function bcm:place/door_check run function bcm:place/delete_door
 
 # trigger
 execute as @a[scores={set_render_box=1..}] run function bcm:trigger/render_box
