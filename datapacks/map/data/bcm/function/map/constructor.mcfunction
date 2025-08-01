@@ -1,4 +1,4 @@
-## constructs a map object @ storage bcm tmp, containing its bleps-specific data, blocks, and registry
+## constructs a map object @ storage bcm tmp, containing its bleps-specific data, blocks, doors, and registry
 data remove storage bcm tmp
 
 # bleps-specific
@@ -6,6 +6,9 @@ data modify storage bcm tmp.map set from storage bcm map
 
 # blocks
 data modify storage bcm tmp.structure set from storage item_structures save
+
+# doors
+data modify storage bcm tmp.doors set from storage bcm doors
 
 # registry
 data modify storage bcm tmp.registry set value {\

@@ -1,6 +1,6 @@
 # schedule replace doors
 $data modify storage bcm schedule set value {load_point:"$(load_point)",dx:$(dx),dy:$(dy),dz:$(dz)}
-data modify storage bcm schedule.doors set from entity @s SelectedItem.components."minecraft:custom_data".doors
+data modify storage bcm schedule.doors set from storage bcm doors
 schedule function bcm:place/replace_doors_schedule 5t
 
 # map structure

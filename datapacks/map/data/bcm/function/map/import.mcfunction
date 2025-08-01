@@ -19,6 +19,9 @@ data remove storage bcm map.load_point
 # blocks
 scoreboard players set .print_messages item_structures 0
 function item_structures:import
+# doors
+data remove storage bcm doors
+data modify storage bcm doors set from entity @s SelectedItem.components."minecraft:custom_data".doors
 
 
 ## save to array
@@ -54,7 +57,7 @@ scoreboard players operation limit commands = #limit_old commands
 
 
 ## place doors
-data modify storage bcm tmp.doors set from entity @s SelectedItem.components."minecraft:custom_data".doors
+data modify storage bcm tmp.doors set from storage bcm doors
 execute if data storage bcm tmp.doors[-1] at fd8107bb-c1fa-4ddf-b8fe-d1087da4ff6e summon marker run function bcm:place/door_auto with storage bcm tmp.doors[-1]
 data remove storage bcm tmp
 

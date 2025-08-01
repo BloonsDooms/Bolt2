@@ -15,6 +15,9 @@ data remove storage bcm map.load_point
 # blocks
 scoreboard players set .print_messages item_structures 0
 function item_structures:import
+# doors
+data remove storage bcm doors
+data modify storage bcm doors set from entity @s SelectedItem.components."minecraft:custom_data".doors
 
 ## new map object
 function bcm:map/constructor

@@ -22,4 +22,10 @@ function bcm:map/edit/load
 # stored as absolute
 execute summon marker run function bcm:map/edit/wall_height_official
 
+## doors
+# reads from bcm official_map_structures[].doors
+$data modify storage bcm tmp.doors set from storage bcm official_map_structures[{registry:{mapName:"$(mapName)"}}].doors
+execute if data storage bcm tmp.doors[-1] summon marker run function bcm:place/door_auto_editor with storage bcm tmp.doors[-1]
+data remove storage bcm tmp
+
 return 1
