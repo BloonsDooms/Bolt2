@@ -4,15 +4,20 @@ execute as @s[tag=!new,tag=red] at @s run function animated_java:shutter/summon/
 tag @s add new
 
 #
+# doors inside the map editor can be opened by anyone
 tag @s add open
 execute as @s[tag=red,y_rotation=-180] at @s positioned ^-1.5 ^-1 ^-2 unless entity @p[dx=-4,dy=3,dz=-2,team=red] run tag @s remove open
 execute as @s[tag=!red,y_rotation=-180] at @s positioned ^-1.5 ^-1 ^-2 unless entity @p[dx=-4,dy=3,dz=-2,team=blue] run tag @s remove open
+execute as @s[tag=map_editor,y_rotation=-180] at @s positioned ^-1.5 ^-1 ^-2 if entity @p[dx=-4,dy=3,dz=-2] run tag @s add open
 execute as @s[tag=red,y_rotation=90] at @s positioned ^-2.5 ^-1 ^-2 unless entity @p[dx=-2,dy=3,dz=4,team=red] run tag @s remove open
 execute as @s[tag=!red,y_rotation=90] at @s positioned ^-2.5 ^-1 ^-2 unless entity @p[dx=-2,dy=3,dz=4,team=blue] run tag @s remove open
+execute as @s[tag=map_editor,y_rotation=90] at @s positioned ^-2.5 ^-1 ^-2 if entity @p[dx=-2,dy=3,dz=4] run tag @s add open
 execute as @s[tag=red,y_rotation=-90] at @s positioned ^-1.5 ^-1 ^-3 unless entity @p[dx=2,dy=3,dz=-4,team=red] run tag @s remove open
 execute as @s[tag=!red,y_rotation=-90] at @s positioned ^-1.5 ^-1 ^-3 unless entity @p[dx=2,dy=3,dz=-4,team=blue] run tag @s remove open
+execute as @s[tag=map_editor,y_rotation=-90] at @s positioned ^-1.5 ^-1 ^-3 if entity @p[dx=2,dy=3,dz=-4] run tag @s add open
 execute as @s[tag=red,y_rotation=0] at @s positioned ^-2.5 ^-1 ^-3 unless entity @p[dx=4,dy=3,dz=2,team=red] run tag @s remove open
 execute as @s[tag=!red,y_rotation=0] at @s positioned ^-2.5 ^-1 ^-3 unless entity @p[dx=4,dy=3,dz=2,team=blue] run tag @s remove open
+execute as @s[tag=map_editor,y_rotation=0] at @s positioned ^-2.5 ^-1 ^-3 if entity @p[dx=4,dy=3,dz=2] run tag @s add open
 
 #
 execute as @s[tag=open,tag=!open_2] at @s run fill ^-1 ^ ^ ^1 ^2 ^ air replace yellow_stained_glass_pane
