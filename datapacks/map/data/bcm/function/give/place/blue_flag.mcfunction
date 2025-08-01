@@ -1,6 +1,10 @@
 give @s panda_spawn_egg[\
   item_name={text:"blue flag"},\
   item_model="minecraft:blue_banner",\
+  lore=[\
+    "This is also the survivors'",\
+    "generator in infection mode",\
+  ],\
   entity_data={\
     id:"minecraft:block_display",\
     Tags:["map_editor","place","blue_flag","flag","init"],\

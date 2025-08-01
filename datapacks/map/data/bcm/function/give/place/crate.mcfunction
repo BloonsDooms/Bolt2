@@ -2,8 +2,8 @@ give @s panda_spawn_egg[\
   item_name={text:"possible crate location"},\
   item_model="minecraft:deepslate_copper_ore",\
   lore=[\
-    "Don't worry about this",\
-    "until you're done building",\
+    "Don't worry about this until",\
+    "you're done building",\
     "",\
     "Sets a valid location for crates",\
     "to spawn at in infection mode"\

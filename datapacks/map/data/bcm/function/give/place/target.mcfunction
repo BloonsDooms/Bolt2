@@ -2,8 +2,8 @@ give @s panda_spawn_egg[\
   item_name={text:"possible target location"},\
   item_model="minecraft:target",\
   lore=[\
-    "Don't worry about this",\
-    "until you're done building",\
+    "Don't worry about this until",\
+    "you're done building",\
     "",\
     "Sets a valid location for targets",\
     "to spawn at in targets mode"\
