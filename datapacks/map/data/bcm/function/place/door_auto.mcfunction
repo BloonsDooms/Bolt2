@@ -4,6 +4,5 @@ $execute if score .1 .num matches $(isRed) run tag @s add red
 tag @s add door
 
 # loop
-tellraw @a {nbt:"tmp.doors",storage:"bcm"}
 data remove storage bcm tmp.doors[-1]
 execute if data storage bcm tmp.doors[-1] summon marker run function bcm:place/door_auto with storage bcm tmp.doors[-1]
