@@ -39,9 +39,6 @@ execute unless entity @n[type=marker,tag=intro_camera] store success score .can_
 # intro camera inside save area?
 execute as @e[type=marker,tag=intro_camera] run function bcm:map/area_check/save_hard
 
-# exclude item generators outside save area
-execute as @e[type=block_display,tag=generator] unless function bcm:map/area_check/save run tag @s add exclude
-
 # if any of the above checks fail, don't save
 execute if score .can_save_map calc matches 0 run return fail
 
@@ -68,8 +65,11 @@ execute as @n[type=block_display,tag=blue_flag] at @s run function bcm:map/save/
 
 # item generators
 data modify storage bcm map.generators set value []
-execute as @e[type=block_display,tag=generator,tag=!exclude] at @s run function bcm:map/save/generator
-tag @e[type=block_display,tag=generator] remove exclude
+execute as @e[type=block_display,tag=generator] at @s run function bcm:map/save/generator
+
+# doors
+data modify storage bcm doors set value []
+execute as @e[type=marker,tag=map_editor,tag=door] at @s run function bcm:map/save/door
 
 # y offset
 execute as @e[type=marker,tag=render_box,tag=save] at @s run tp ~ ~-.9 ~

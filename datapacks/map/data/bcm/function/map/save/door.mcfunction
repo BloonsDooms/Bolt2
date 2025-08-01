@@ -1,4 +1,4 @@
-# exclude generators outside save area
+# exclude doors outside save area
 execute unless function bcm:map/area_check/save run return fail
 
 # calculate relative pos
@@ -11,13 +11,12 @@ execute store result storage bcm macro.y int 1 run scoreboard players operation 
 execute store result storage bcm macro.z int 1 run scoreboard players operation .z calc -= .z1 calc
 function bcm:util/xyz_string with storage bcm macro
 
-# get generator settings
-execute store result storage bcm tmp.generator_duration short 1 run scoreboard players get @s bcm_generator_time
-execute store result storage bcm tmp.generator_warmup short 1 run scoreboard players get @s bcm_generator_warmup
+# get team
+execute store success storage bcm tmp.isRed byte 1 if entity @s[tag=red]
 
 # get rotation
 execute store result storage bcm tmp.rotation float 1 run data get entity @s Rotation[0]
 
 # save to array
-data modify storage bcm map.generators append from storage bcm tmp
+data modify storage bcm doors append from storage bcm tmp
 data remove storage bcm tmp

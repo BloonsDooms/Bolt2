@@ -99,6 +99,11 @@
         "source": "export",
         "target": "bleps_map",
         "op": "merge"
+      },
+      {
+        "source": "doors",
+        "target": "doors",
+        "op": "replace"
       }
     ]
   }

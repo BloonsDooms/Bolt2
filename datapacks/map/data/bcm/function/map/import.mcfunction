@@ -51,7 +51,12 @@ function item_structures:load
 kill @n[type=marker,tag=start_point]
 data remove storage bcm tmp
 scoreboard players operation limit commands = #limit_old commands
-scoreboard players operation limit.step commands = #limit.step_old commands
+
+
+## place doors
+data modify storage bcm tmp.doors set from entity @s SelectedItem.components."minecraft:custom_data".doors
+execute if data storage bcm tmp.doors[-1] at fd8107bb-c1fa-4ddf-b8fe-d1087da4ff6e summon marker run function bcm:place/door_auto with storage bcm tmp.doors[-1]
+data remove storage bcm tmp
 
 
 ## place map
