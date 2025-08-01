@@ -5,6 +5,7 @@ execute at @s run forceload add ~ ~
 
 execute if entity @s[tag=render_box] align xyz run return run function bcm:render_box/set_pos
 execute if entity @s[tag=place] run return run function bcm:place/object
+execute if entity @s[tag=tmp_new_door] run return run function bcm:place/door
 
 # this should never run
 kill @s
