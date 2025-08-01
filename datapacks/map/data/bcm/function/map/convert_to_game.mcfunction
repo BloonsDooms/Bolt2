@@ -8,6 +8,7 @@ data remove storage maps:active spawn
 data remove storage maps:active objectives
 data remove storage maps:active gens
 data remove storage maps:active targets
+data remove storage maps:active crates
 
 
 ## origin
@@ -74,5 +75,6 @@ data modify storage maps:active objectives.blueFlag set from storage bcm map.blu
 data modify storage maps:active gens set from storage bcm map.generators
 
 
-## targets
+## targets & crates
 data modify storage maps:active targets set from storage bcm map.targets
+data modify storage maps:active crates set from storage bcm map.crates
