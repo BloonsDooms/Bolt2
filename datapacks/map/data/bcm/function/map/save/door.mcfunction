@@ -1,5 +1,5 @@
 # exclude doors outside save area
-#execute unless function bcm:map/area_check/save run return fail
+execute unless function bcm:map/area_check/save run return fail
 
 # calculate relative pos
 data remove storage bcm macro
