@@ -26,6 +26,7 @@ kill @e[tag=blueflag]
 
 kill @e[tag=target_marker]
 
+execute if score .mode .data = .6 .num run function game:game/infected/generator/spawn_macro with storage maps:active objectives
 function game:map/flags with storage maps:active objectives
 function game:map/clear_map with storage maps:active settings.mapSize
 
