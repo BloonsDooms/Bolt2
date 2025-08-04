@@ -1,3 +1,8 @@
+# if "RANDOM", teleport to map editor without opening a map
+$data modify storage bcm tmp.mapName set value "$(mapName)"
+execute store success score .map_exists calc run data modify storage bcm tmp.mapName set value "RANDOM"
+execute if score .map_exists calc matches 0 run return run function bcm:map/edit/no_map
+
 # which map type is it?
 $execute store result score .map_exists calc run function bcm:map/check_existing {mapName:"$(mapName)"}
 
