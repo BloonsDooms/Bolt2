@@ -49,7 +49,6 @@ execute store result storage bcm tmp.center.x float .5 run data get storage bcm 
 execute store result storage bcm tmp.center.y float .5 run data get storage bcm tmp.size.y
 execute store result storage bcm tmp.center.z float .5 run data get storage bcm tmp.size.z
 execute as @e[type=block_display,tag=correct_type] at @s run function bcm:render_box/center_origin with storage bcm tmp.center
-tellraw @a {nbt:"tmp.center",storage:"bcm"}
 
 # get entity selector
 data modify storage bcm tmp_entity_selector set from storage bcm tmp.start
