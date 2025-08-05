@@ -7,6 +7,6 @@ execute unless block ~ ~ ~ deepslate_copper_ore as @p[scores={place_object_egg=1
 
 playsound block.wood.place block @a[distance=..16] ~ ~ ~ 1 0.8
 
-# difficulty
-scoreboard players set @s bcm_crate_difficulty 1
+# spawn_chance
+scoreboard players set @s bcm_crate_spawn_chance 1
 function bcm:place/crate_text

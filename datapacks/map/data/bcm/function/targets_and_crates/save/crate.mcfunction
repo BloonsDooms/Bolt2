@@ -7,8 +7,8 @@ execute store result storage bcm macro.y int 1 run scoreboard players operation 
 execute store result storage bcm macro.z int 1 run scoreboard players operation .z calc -= .z1 calc
 function bcm:util/xyz_string with storage bcm macro
 
-# get crate difficulty
-execute store result storage bcm tmp.difficulty int 1 run scoreboard players get @s bcm_crate_difficulty
+# get crate spawn_chance
+execute store result storage bcm tmp.spawn_chance int 1 run scoreboard players get @s bcm_crate_spawn_chance
 
 # add to array
 data modify storage bcm map.crates append from storage bcm tmp

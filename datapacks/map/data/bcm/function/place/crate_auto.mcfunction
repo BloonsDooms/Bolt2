@@ -8,8 +8,8 @@ $execute if score .success calc matches 0 run tp @s $(pos)
 # if absolute
 $execute if score .success calc matches 1 run function bcm:map/edit/tp_convert {pos:"$(pos)"}
 
-# crate difficulty
-$scoreboard players set @s bcm_crate_difficulty $(difficulty)
+# crate spawn_chance
+$scoreboard players set @s bcm_crate_spawn_chance $(spawn_chance)
 function bcm:place/crate_text
 
 # replace conflicting crate
