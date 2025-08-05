@@ -37,6 +37,7 @@ scoreboard players set .save_blocks/s calc 11000
 scoreboard players set .load_entries/s calc 4000
 
 scoreboard objectives add select_area dummy
+execute unless score .enabled select_area matches 0..1 run scoreboard players set .enabled select_area 1
 scoreboard objectives add place_object dummy
 scoreboard objectives add place_object_egg minecraft.used:minecraft.panda_spawn_egg
 

@@ -184,7 +184,6 @@ scoreboard objectives add macro_counter dummy
 #> woman zone
 scoreboard objectives add generator_duration dummy
 scoreboard objectives add generator_warmup dummy
-scoreboard players set .enabled select_area 1
 #> end woman zone
 
 scoreboard objectives add wallHeight dummy
