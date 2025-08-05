@@ -11,9 +11,8 @@ execute as @e[type=marker,tag=render_box,tag=!save] run function bcm:map/area_ch
 
 # max wall height set and inside save area?
 execute store result score .wh calc run data get entity @n[type=block_display,tag=render_box,tag=wall_height] Pos[1] 100
-scoreboard players remove .wh calc 5
-execute store result score .y1 calc run data get entity @n[type=block_display,tag=render_box,tag=save,tag=y,tag=1] Pos[1] 100
-execute store result score .y2 calc run data get entity @n[type=block_display,tag=render_box,tag=save,tag=y,tag=2] Pos[1] 100
+execute store result score .y1 calc run data get entity @n[type=marker,tag=render_box,tag=save,tag=pos1] Pos[1] 100
+execute store result score .y2 calc run data get entity @n[type=marker,tag=render_box,tag=save,tag=pos2] Pos[1] 100
 execute unless entity @n[type=block_display,tag=render_box,tag=wall_height] store success score .can_save_map calc run function bcm:fail/tellraw {input:'"Failed to save map: No max wall height set"'}
 #execute unless entity @n[type=block_display,tag=render_box,tag=wall_height] run tellraw @s {text:"No max wall height set, defaulting to top of save area",color:"yellow"}
 #execute unless entity @n[type=block_display,tag=render_box,tag=wall_height] run scoreboard players operation .wh calc = .y2 calc
@@ -47,7 +46,7 @@ execute if score .can_save_map calc matches 0 run return fail
 # disable ability to change area selections
 scoreboard players set .enabled select_area 0
 
-# relative wall height (must happen before abs->rel conversion, based on slightly offset y1)
+# relative wall height
 execute store result storage bcm map.max_wall_height int 0.01 run scoreboard players operation .wh calc -= .y1 calc
 
 # convert absolute positions to relative for spawn areas, spawnpoints, and intro camera

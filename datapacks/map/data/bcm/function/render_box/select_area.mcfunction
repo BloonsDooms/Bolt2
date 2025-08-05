@@ -44,6 +44,13 @@ execute as @e[type=block_display,tag=correct_type,tag=!y] run data modify entity
 execute as @e[type=block_display,tag=correct_type,tag=!z] run data modify entity @s transformation.scale[2] set from storage bcm tmp.size.z
 execute as @e[type=block_display,tag=correct_type,tag=2] at @s run function bcm:render_box/2 with storage bcm tmp.size
 
+# move display origin to center of face then translate back, to decrease average distance to players
+execute store result storage bcm tmp.center.x float .5 run data get storage bcm tmp.size.x
+execute store result storage bcm tmp.center.y float .5 run data get storage bcm tmp.size.y
+execute store result storage bcm tmp.center.z float .5 run data get storage bcm tmp.size.z
+execute as @e[type=block_display,tag=correct_type] at @s run function bcm:render_box/center_origin with storage bcm tmp.center
+tellraw @a {nbt:"tmp.center",storage:"bcm"}
+
 # get entity selector
 data modify storage bcm tmp_entity_selector set from storage bcm tmp.start
 execute store result storage bcm tmp_entity_selector.dx int 1 run data get storage bcm tmp.size.x .999999999

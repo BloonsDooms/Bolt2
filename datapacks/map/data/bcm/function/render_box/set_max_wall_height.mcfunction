@@ -9,4 +9,4 @@ tp @e[type=block_display,tag=render_box,tag=wall_height] ~ ~ ~
 data modify entity @n[type=block_display,tag=render_box,tag=wall_height] Pos[0] set from entity @n[type=block_display,tag=render_box,tag=save,tag=2,tag=y] Pos[0]
 data modify entity @n[type=block_display,tag=render_box,tag=wall_height] Pos[2] set from entity @n[type=block_display,tag=render_box,tag=save,tag=2,tag=y] Pos[2]
 data modify entity @n[type=block_display,tag=render_box,tag=wall_height] transformation set from entity @n[type=block_display,tag=render_box,tag=save,tag=2,tag=y] transformation
-data modify entity @n[type=block_display,tag=render_box,tag=wall_height] transformation.translation set value [0f,-0.05f,0f]
+data modify entity @n[type=block_display,tag=render_box,tag=wall_height] transformation.translation[1] set value -0.05f
