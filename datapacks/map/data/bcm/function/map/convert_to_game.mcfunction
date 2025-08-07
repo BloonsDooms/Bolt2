@@ -34,18 +34,19 @@ data modify storage maps:active settings.introCutscene set from storage bcm map.
 data modify storage maps:active settings.wallHeight set from storage bcm map.max_wall_height
 data modify storage maps:active settings.disabledItems set value []
 
-# "x1 y1 z1" + [dx,dy,dz] -> {x1,y1,z1,x2,y2,z2}
+# "x1 y1 z1" + "dx,dy,dz" -> {x1,y1,z1,x2,y2,z2}
 # converts to ABSOLUTE coordinates
 function bcm:map/parse_load_point with storage bcm map
-execute store result score .x calc run data get storage item_structures save.size[0]
-execute store result score .y calc run data get storage item_structures save.size[1]
-execute store result score .z calc run data get storage item_structures save.size[2]
+function bcm:util/parse_area_selector with storage bcm map.save
+execute store result score .x calc run data get storage bcm macro.dx
+execute store result score .y calc run data get storage bcm macro.dy
+execute store result score .z calc run data get storage bcm macro.dz
+scoreboard players add .x calc 1
+scoreboard players add .y calc 1
+scoreboard players add .z calc 1
 execute store result storage maps:active settings.mapSize.x2 int 1 run scoreboard players operation .x calc += .x1 calc
 execute store result storage maps:active settings.mapSize.y2 int 1 run scoreboard players operation .y calc += .y1 calc
 execute store result storage maps:active settings.mapSize.z2 int 1 run scoreboard players operation .z calc += .z1 calc
-#data modify storage maps:active settings.mapSize.dx set from storage item_structures save.size[0]
-#data modify storage maps:active settings.mapSize.dy set from storage item_structures save.size[1]
-#data modify storage maps:active settings.mapSize.dz set from storage item_structures save.size[2]
 
 
 ## spawn
