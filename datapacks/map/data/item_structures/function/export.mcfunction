@@ -4,6 +4,7 @@ item modify block 69420 0 69420 container.0 item_structures:export
 data remove block 69420 0 69420 Items[0].components.minecraft:custom_data.bleps_map.load_point
 
 loot give @s mine 69420 0 69420
+playsound minecraft:entity.item.pickup player @s ~ ~ ~ 0.5 2
 
 execute if score .print_messages item_structures matches 1 run title @s times 10 80 10
 execute if score .print_messages item_structures matches 1 run title @s title {"text":"Created map item","color":"gold"}
