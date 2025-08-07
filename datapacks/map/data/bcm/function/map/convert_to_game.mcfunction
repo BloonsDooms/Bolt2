@@ -36,11 +36,9 @@ data modify storage maps:active settings.disabledItems set value []
 
 # "x1 y1 z1" + "dx,dy,dz" -> {x1,y1,z1,x2,y2,z2}
 # converts to ABSOLUTE coordinates
-function bcm:map/parse_load_point with storage bcm map
+execute summon marker run function bcm:map/parse_load_point with storage bcm map
 function bcm:util/parse_area_selector with storage bcm map.save
-execute store result score .x calc run data get storage bcm macro.dx
-execute store result score .y calc run data get storage bcm macro.dy
-execute store result score .z calc run data get storage bcm macro.dz
+function bcm:util/area_to_int with storage bcm macro
 scoreboard players add .x calc 1
 scoreboard players add .y calc 1
 scoreboard players add .z calc 1
