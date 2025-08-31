@@ -7,9 +7,6 @@ gamerule reducedDebugInfo false
 # bandaid fix
 data modify storage maps:active settings.tickingScript set value ""
 
-# kill map origin entity, preferably before it unloads.
-kill fd8107bb-c1fa-4ddf-b8fe-d1087da4ff6f
-
 #
 execute as @e[tag=crate] at @s run function game:game/infected/crates/despawn
 
@@ -148,6 +145,7 @@ scoreboard players set @a bow_throw 0
 scoreboard players set @a crossbowTime 1
 
 tag @a remove crossbow_waiting
+tag @a remove zombie_jump
 
 #
 effect clear @a blindness
