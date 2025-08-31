@@ -6,7 +6,11 @@ setblock ~ ~ ~ cauldron keep
 execute unless block ~ ~ ~ cauldron run kill @s
 execute unless block ~ ~ ~ cauldron as @p[scores={place_object_egg=1..}] run return run function bcm:fail/actionbar {input:'"Could not set the cauldron block"'}
 
-# rotation
+# times
+scoreboard players set @s bcm_generator_time 45
+scoreboard players set @s bcm_generator_warmup 5
+
+# rotation & sign
 execute store result score .r calc run data get entity @p[scores={place_object_egg=1..}] Rotation[0] 1
 execute if score .r calc matches -45..44 positioned ~ ~ ~-1 store success score .sign calc run function bcm:place/generator_sign {facing:"north",rotation:"[-180f,0f]"}
 execute if score .r calc matches 45..134 positioned ~1 ~ ~ store success score .sign calc run function bcm:place/generator_sign {facing:"east",rotation:"[-90f,0f]"}
@@ -22,9 +26,6 @@ playsound block.stone.place block @a[distance=..16] ~ ~ ~ 1 0.8
 # visibility state
 execute store result entity @s view_range float 1 run scoreboard players get display.gens set_render_box
 
-scoreboard players set @s bcm_generator_time 45
-scoreboard players set @s bcm_generator_warmup 5
-
+# cleanup
 tag @s remove init
-
 return 1

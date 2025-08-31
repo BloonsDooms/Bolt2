@@ -26,6 +26,7 @@ kill @e[tag=blueflag]
 
 kill @e[tag=target_marker]
 
+execute if score .mode .data = .6 .num run function game:game/infected/generator/spawn_macro with storage maps:active objectives
 function game:map/flags with storage maps:active objectives
 function game:map/clear_map with storage maps:active settings.mapSize
 
@@ -38,9 +39,13 @@ function game:map/clear_map with storage maps:active settings.mapSize
 # runs load script for the map, do this after spawning in everything else
 function game:map/load_script1 with storage macro
 
+execute if score .mode .data = .6 .num store result score crateCount macro_counter run data get storage maps:active crates
+execute if score .mode .data = .6 .num run scoreboard players set crateCounter macro_counter 0
+execute if score .mode .data = .6 .num run function game:map/spawn_crate_markers with storage maps:active crates[0]
+
 execute if score .mode .data = .7 .num store result score targetCount macro_counter run data get storage maps:active targets
 execute if score .mode .data = .7 .num run scoreboard players set targetCounter macro_counter 0
-execute if score .mode .data = .7 .num run function game:map/spawn_target_markers with storage maps:active targets[0] 
+execute if score .mode .data = .7 .num run function game:map/spawn_target_markers with storage maps:active targets[0]
 
 
 #execute if score .map .data = .1 .num run function game:map/towers/start

@@ -1,33 +1,63 @@
 [
   {
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:consumable": {
+        "consume_seconds": 0,
+        "animation": "none",
+        "sound": {
+          "sound_id": ""
+        },
+        "has_consume_particles": false,
+        "on_consume_effects": [
+          {
+            "type": "minecraft:apply_effects",
+            "effects": [
+              {
+                "id": "minecraft:luck",
+                "amplifier": 36
+              }
+            ]
+          }
+        ]
+      },
+      "minecraft:use_cooldown": {
+        "seconds": 4
+      }
+    }
+  },
+  {
     "function": "minecraft:set_lore",
     "entity": "this",
     "lore": [
       [
         {
-          "text":"Size: ",
-          "italic":false,
-          "color":"white"
+          "text": "Size: ",
+          "italic": false,
+          "color": "white"
         },
         {
-          "nbt":"save.size[0]",
-          "storage":"item_structures",
-          "color":"dark_aqua"
+          "nbt": "export.size[0]",
+          "storage": "item_structures",
+          "color": "dark_aqua"
         },
         {
-          "text":",",
-          "color":"white"
+          "text": ",",
+          "color": "white"
         },
         {
-          "nbt":"save.size[1]",
-          "storage":"item_structures","color":"dark_aqua"
+          "nbt": "export.size[1]",
+          "storage": "item_structures",
+          "color": "dark_aqua"
         },
         {
-          "text":",",
-          "color":"white"},
-          {"nbt":"save.size[2]",
-          "storage":"item_structures",
-          "color":"dark_aqua"
+          "text": ",",
+          "color": "white"
+        },
+        {
+          "nbt": "export.size[2]",
+          "storage": "item_structures",
+          "color": "dark_aqua"
         }
       ]
     ],
@@ -37,10 +67,10 @@
     "function": "minecraft:set_name",
     "entity": "this",
     "name": {
-      "text":"Use an anvil to name this map!",
-      "italic":false,
-      "color":"red",
-      "bold":true
+      "text": "Use an anvil to name this map!",
+      "italic": false,
+      "color": "red",
+      "bold": true
     },
     "target": "item_name"
   },
@@ -52,7 +82,7 @@
     },
     "ops": [
       {
-        "source": "save",
+        "source": "export",
         "target": "structure",
         "op": "merge"
       }
@@ -66,9 +96,14 @@
     },
     "ops": [
       {
-        "source": "map",
+        "source": "export",
         "target": "bleps_map",
         "op": "merge"
+      },
+      {
+        "source": "doors",
+        "target": "doors",
+        "op": "replace"
       }
     ]
   }

@@ -1,28 +1,31 @@
-# create load point
+## loads map structure called mapName from bcm maps[] with LNW corner at ~ ~ ~
+# summon load point marker
 summon marker ~ ~ ~ {Tags:[start_point]}
-execute store result storage bcm macro.x int 1 run data get entity @n[type=marker,tag=start_point] Pos[0]
-execute store result storage bcm macro.y int 1 run data get entity @n[type=marker,tag=start_point] Pos[1]
-execute store result storage bcm macro.z int 1 run data get entity @n[type=marker,tag=start_point] Pos[2]
-function bcm:xyz_string_abs with storage bcm macro
-data modify storage bcm map.load_point set from storage bcm tmp.pos
-data remove storage bcm tmp
+
+# set load point if new map
+$scoreboard players set .new item_structures $(new)
+$execute if score .new item_structures matches 1 as @n[type=marker,tag=start_point] run function bcm:map/set_load_point {mapName:"$(mapName)"}
+
 # y offset
-# deprecated: load at save area pos1
-#execute as @e[type=marker,tag=render_box,tag=save] at @s run tp ~ ~-.9 ~
-#tag @n[type=marker,tag=render_box,tag=save,tag=pos1] add start_point
-execute as @e[type=marker,tag=save_point] at @s run tp ~ ~-.9 ~
+execute as @e[type=marker,tag=start_point] at @s run tp ~ ~-1 ~
 
 # time estimate
+$data modify storage item_structures save set from storage bcm maps[{registry:{mapName:"$(mapName)"}}].structure
 execute store result score .l calc run data get storage minecraft:item_structures save.blocks
 scoreboard players operation .l calc /= .load_entries/s calc
 scoreboard players operation .s calc = .l calc
 scoreboard players operation .l calc /= #60 calc
 scoreboard players operation .s calc %= #60 calc
-execute if score .l calc matches 0 run tellraw @s ["estimated time to load: ",{score:{name:".s",objective:"calc"}},"s @ 20tps"]
-execute if score .l calc matches 1.. run tellraw @s ["estimated time to load: ",{score:{name:".l",objective:"calc"}},"m ",{score:{name:".s",objective:"calc"}},"s @ 20tps"]
+execute if score .print_messages item_structures matches 1 if score .l calc matches 0 run tellraw @a ["estimated time to load: ",{score:{name:".s",objective:"calc"}},"s"]
+execute if score .print_messages item_structures matches 1 if score .l calc matches 1.. run tellraw @a ["estimated time to load: ",{score:{name:".l",objective:"calc"}},"m ",{score:{name:".s",objective:"calc"}},"s"]
 
 # timer
-function bcm:start_timer
+function bcm:util/start_timer
 
 # load
-function item_structures:load
+#scoreboard players set .print_messages item_structures 1
+data remove storage item_structures forceload
+data modify storage item_structures forceload.x set from storage item_structures save.size[0]
+data modify storage item_structures forceload.z set from storage item_structures save.size[2]
+function item_structures:zprivate/forceload with storage item_structures forceload
+schedule function item_structures:load_kill 5t

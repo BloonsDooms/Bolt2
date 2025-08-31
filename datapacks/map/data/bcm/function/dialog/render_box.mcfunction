@@ -3,8 +3,8 @@ data modify storage bcm macro set value {macro:"$(camera)$(wall_height)$(gens)$(
 
 # default values
 execute store result storage bcm macro.save float 1 run scoreboard players get display.save set_render_box
-execute store result storage bcm macro.spawn float 1 run scoreboard players get display.spawn set_render_box
-execute store result storage bcm macro.spawnpoint float 1 run scoreboard players get display.spawnpoint set_render_box
+execute store result storage bcm macro.spawns float 1 run scoreboard players get display.spawn set_render_box
+execute store result storage bcm macro.spawnpoints float 1 run scoreboard players get display.spawnpoint set_render_box
 execute store result storage bcm macro.flags float 1 run scoreboard players get display.flags set_render_box
 execute store result storage bcm macro.gens float 1 run scoreboard players get display.gens set_render_box
 execute store result storage bcm macro.wall_height float 1 run scoreboard players get display.wall_height set_render_box

@@ -202,7 +202,7 @@ scoreboard players set .Kills .metric 0
 
 #
 
-function game:map/cutscene with storage maps:active settings
+execute at fd8107bb-c1fa-4ddf-b8fe-d1087da4ff6f run function game:map/cutscene with storage maps:active settings
 #kill @e[tag=cutscene]
 
 #execute if score .map .data = .1 .num run summon armor_stand -84 -55 21 {NoGravity:1b,Rotation:[-90F,0F],Marker:0b,Invisible:1b,Tags:["cutscene","intro","rev"]}

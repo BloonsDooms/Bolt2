@@ -1,1 +1,1 @@
-$data modify storage bcm map.$(type) set value "$(x) $(y) $(z) $(yaw) $(pitch)"
+$data modify storage bcm abs.$(type) set value "$(x) $(y) $(z) $(yaw) $(pitch)"

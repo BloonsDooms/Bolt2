@@ -1,1 +1,3 @@
-$forceload remove ~ ~ ~$(x) ~$(z)
+$forceload remove ~$(x) ~$(z) ~ ~
+
+function bcm:editor/forceload

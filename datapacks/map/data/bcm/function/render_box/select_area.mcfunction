@@ -6,8 +6,8 @@
 $tag @e[type=#bcm:place,tag=render_box,tag=$(type)] add correct_type
 
 # set position
-execute if entity @s[tag=pos1] run kill @e[type=marker,tag=correct_type,tag=pos1,tag=!init]
-execute if entity @s[tag=pos2] run kill @e[type=marker,tag=correct_type,tag=pos2,tag=!init]
+execute if entity @s[tag=pos1] as @e[type=marker,tag=correct_type,tag=pos1,tag=!init] run function bcm:place/delete
+execute if entity @s[tag=pos2] as @e[type=marker,tag=correct_type,tag=pos2,tag=!init] run function bcm:place/delete
 tag @s remove init
 
 tp ~ ~ ~
@@ -29,8 +29,8 @@ execute if score .x1 calc > .x2 calc store result storage bcm tmp.start.x double
 execute if score .y1 calc > .y2 calc store result storage bcm tmp.start.y double .01 run scoreboard players operation .y1 calc >< .y2 calc
 execute if score .z1 calc > .z2 calc store result storage bcm tmp.start.z double .01 run scoreboard players operation .z1 calc >< .z2 calc
 execute as @e[type=block_display,tag=correct_type] run function bcm:render_box/1 with storage bcm tmp.start
-function bcm:xyz_string_abs with storage bcm tmp.start
-$data modify storage bcm map.$(type).start set from storage bcm tmp.pos
+function bcm:util/xyz_string_abs with storage bcm tmp.start
+$data modify storage bcm abs.$(type).start set from storage bcm tmp.pos
 
 # size
 scoreboard players add .x2 calc 100
@@ -43,6 +43,12 @@ execute as @e[type=block_display,tag=correct_type,tag=!x] run data modify entity
 execute as @e[type=block_display,tag=correct_type,tag=!y] run data modify entity @s transformation.scale[1] set from storage bcm tmp.size.y
 execute as @e[type=block_display,tag=correct_type,tag=!z] run data modify entity @s transformation.scale[2] set from storage bcm tmp.size.z
 execute as @e[type=block_display,tag=correct_type,tag=2] at @s run function bcm:render_box/2 with storage bcm tmp.size
+
+# move display origin to center of face then translate back, to decrease average distance to players
+execute store result storage bcm tmp.center.x float .5 run data get storage bcm tmp.size.x
+execute store result storage bcm tmp.center.y float .5 run data get storage bcm tmp.size.y
+execute store result storage bcm tmp.center.z float .5 run data get storage bcm tmp.size.z
+execute as @e[type=block_display,tag=correct_type] at @s run function bcm:render_box/center_origin with storage bcm tmp.center
 
 # get entity selector
 data modify storage bcm tmp_entity_selector set from storage bcm tmp.start
