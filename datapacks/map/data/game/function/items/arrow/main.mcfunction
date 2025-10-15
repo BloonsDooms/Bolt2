@@ -5,6 +5,9 @@ scoreboard players add @s t1 1
 tag @e remove me
 tag @s add me
 
+# run arrow hitbox on self
+function game:id/player
+
 #
 execute as @s[scores={t1=1}] store result score @s x run data get entity @s Pos[0] 1
 execute as @s[scores={t1=1}] store result score @s y run data get entity @s Pos[1] 1
@@ -95,9 +98,6 @@ execute store result storage minecraft:macro input.pos_z float 0.01 run scoreboa
 execute if entity @s[scores={distance=12000..},tag=!kill] run function game:items/arrow/macro_hitbox with storage minecraft:macro input
 
 #tellraw @p {"score":{"name":"@s","objective":"distance"}}
-
-# run arrow hitbox on self
-function game:id/player
 
 execute as @s[tag=!kill] at @s run function game:items/arrow/hitbox
 

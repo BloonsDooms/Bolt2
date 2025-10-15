@@ -147,7 +147,7 @@ execute at @s[tag=hasflag,team=blue] run summon armor_stand ~ ~-1 ~ {NoGravity:1
 tag @s remove hasflag
 
 #
-particle minecraft:flash ~ ~1 ~
+particle minecraft:flash{color:[1.000,1.000,1.000,1.00]} ~ ~1 ~
 particle minecraft:damage_indicator ~ ~1 ~ 0.2 0.2 0.2 .5 7 force
 
 playsound minecraft:entity.player.big_fall master @a ~ ~ ~ 1 0

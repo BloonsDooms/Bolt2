@@ -47,7 +47,7 @@ execute as @s[scores={timer=1},tag=!wall_pass] at @s positioned ~ ~1.6 ~ run pla
 execute as @s[scores={timer=1},tag=!wall_pass] at @s positioned ~ ~1.6 ~ run playsound minecraft:block.wool.break master @a ~ ~ ~ 0.3 2
 execute as @s[scores={timer=1},tag=!wall_pass] at @s positioned ~ ~1.6 ~ run playsound minecraft:block.sand.step master @a ~ ~ ~ 0.2 0
 
-execute as @s[scores={timer=1},tag=!wall_pass] at @s positioned ~ ~1.6 ~ run particle minecraft:flash ~ ~0.6 ~ 0 0 0 0 1 force
+execute as @s[scores={timer=1},tag=!wall_pass] at @s positioned ~ ~1.6 ~ run particle minecraft:flash{color:[1.000,1.000,1.000,1.00]} ~ ~0.6 ~ 0 0 0 0 1 force
 
 execute as @s[scores={timer=1},tag=!wall_pass] at @s run tp @s ~ ~ ~ facing entity @p[gamemode=adventure]
 #execute as @s[scores={timer=1},tag=!wall_pass] at @s run tp @s ~ ~ ~ ~180 0

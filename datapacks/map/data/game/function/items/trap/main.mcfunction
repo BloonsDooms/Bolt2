@@ -5,8 +5,11 @@ execute if entity @s[scores={t4=4}] at @s run tp @s ~ ~-0.9 ~
 
 ##### CONTROL AND PLANT PARTICLES
 
+tag @s add ran_main
 scoreboard players add @s t4 1
 scoreboard players add @s timer 0
+
+#execute as @s[scores={t4=..2}] run data merge entity @s {HurtTime:0s}
 
 execute as @s[scores={t4=2}] at @s if block ~ -64 ~ redstone_block run tag @s add cant_place
 #execute as @s[scores={t4=2}] at @s if block ~ -64 ~ diamond_block run tag @s add cant_place

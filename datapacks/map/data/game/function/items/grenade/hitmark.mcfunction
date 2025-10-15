@@ -49,7 +49,7 @@ execute as @s[scores={t2=1},tag=!wall_pass] at @s positioned ~ ~1.6 ~ run playso
 execute as @s[scores={t2=1},tag=!wall_pass] at @s positioned ~ ~1.6 ~ run playsound minecraft:item.flintandsteel.use master @a ~ ~ ~ 1 1.5
 
 execute as @s[scores={t2=1},tag=!wall_pass] at @s positioned ~ ~1.6 ~ run particle minecraft:lava ~ ~0.2 ~ 0.1 0.1 0.1 0.1 3
-execute as @s[scores={t2=1},tag=!wall_pass] at @s positioned ~ ~1.6 ~ run particle minecraft:flash ~ ~0.6 ~ 0 0 0 0 1 force
+execute as @s[scores={t2=1},tag=!wall_pass] at @s positioned ~ ~1.6 ~ run particle minecraft:flash{color:[1.000,1.000,1.000,1.00]} ~ ~0.6 ~ 0 0 0 0 1 force
 
 execute as @s[scores={t2=3}] at @s run playsound minecraft:block.note_block.snare master @a ~ ~ ~ 1 0.8
 execute as @s[scores={t2=4}] at @s run playsound minecraft:block.note_block.bit master @a ~ ~ ~ 0.6 0.8

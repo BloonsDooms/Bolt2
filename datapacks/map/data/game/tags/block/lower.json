@@ -8,6 +8,7 @@
     "dead_bush",
     "hanging_roots",
     "#minecraft:pressure_plates",
-    "minecraft:nether_sprouts"
+    "minecraft:nether_sprouts",
+    "minecraft:iron_trapdoor"
   ]
 }

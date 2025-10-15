@@ -21,7 +21,7 @@ playsound minecraft:block.anvil.place master @a ~ ~1 ~ 0.5 0.65
 particle poof ~ ~1 ~ 0.2 0.1 0.2 0.05 10 force @a
 particle smoke ~ ~1 ~ 0.2 0.1 0.2 0.05 30 force @a
 particle minecraft:campfire_cosy_smoke ~ ~1.2 ~ 0.2 0.1 0.2 0.001 5 force @a
-particle minecraft:flash ~ ~1.2 ~ 0 0 0 0.001 0 force @a
+particle minecraft:flash{color:[1.000,1.000,1.000,1.00]} ~ ~1.2 ~ 0 0 0 0.001 0 force @a
 
 #> Thy end is now
 kill @s
