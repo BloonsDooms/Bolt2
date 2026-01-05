@@ -81,4 +81,4 @@ execute as @a[tag=locked_73,tag=play_map_tinyt,tag=play_map_divide,tag=play_map_
 tag @a remove hasflag
 tag @a remove hasspawn
 
-gamerule reducedDebugInfo true
+gamerule reduced_debug_info true
