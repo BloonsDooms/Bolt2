@@ -322,12 +322,13 @@ execute unless score .cutscene_running .data = .1 .num if score .running .data =
 #trap
 effect give @e[tag=trap] resistance 999 10 true
 execute as @e[tag=trap] run execute store result score @s hurt run data get entity @s HurtTime 1
-execute as @e[tag=trap,scores={hurt=..1}] at @s positioned ~ ~0.6 ~ run function game:items/trap/main
-execute as @e[tag=trap,scores={hurt=2..},team=red] on attacker as @s[team=blue] if score .mode .data = .1 .num if score .tmi .data = .0 .num run scoreboard players add @s track_traps_killed 1
-execute as @e[tag=trap,scores={hurt=2..},team=blue] on attacker as @s[team=red] if score .mode .data = .1 .num if score .tmi .data = .0 .num run scoreboard players add @s track_traps_killed 1
-execute as @e[tag=trap,scores={hurt=2..}] on attacker if score .tmi .data matches 1 if score .tmi_arrow .data matches 2 run tag @s add arrow_hit
-effect give @e[tag=trap,scores={hurt=2..}] glowing 10 10 true
-kill @e[tag=trap,scores={hurt=2..}]
+execute as @e[tag=trap] unless score @s t4 matches 1.. run scoreboard players set @s hurt 0
+execute as @e[tag=trap,scores={hurt=..9}] at @s positioned ~ ~0.6 ~ run function game:items/trap/main
+execute as @e[tag=trap,scores={hurt=10..},team=red] on attacker as @s[team=blue] if score .mode .data = .1 .num if score .tmi .data = .0 .num run scoreboard players add @s track_traps_killed 1
+execute as @e[tag=trap,scores={hurt=10..},team=blue] on attacker as @s[team=red] if score .mode .data = .1 .num if score .tmi .data = .0 .num run scoreboard players add @s track_traps_killed 1
+execute as @e[tag=trap,scores={hurt=10..}] on attacker if score .tmi .data matches 1 if score .tmi_arrow .data matches 2 run tag @s add arrow_hit
+effect give @e[tag=trap,scores={hurt=10..}] glowing 10 10 true
+kill @e[tag=trap,scores={hurt=10..}]
 
 execute as @a[scores={track_traps_killed=5..},tag=locked_10] run function game:player/unlock/10
 

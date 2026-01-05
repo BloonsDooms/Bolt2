@@ -147,7 +147,7 @@ execute at @s[tag=hasflag,team=blue] run summon armor_stand ~ ~-1 ~ {NoGravity:1
 tag @s remove hasflag
 
 #
-particle minecraft:flash ~ ~1 ~
+particle minecraft:flash{color:[1.000,1.000,1.000,1.00]} ~ ~1 ~
 particle minecraft:damage_indicator ~ ~1 ~ 0.2 0.2 0.2 .5 7 force
 
 playsound minecraft:entity.player.big_fall master @a ~ ~ ~ 1 0
@@ -185,6 +185,9 @@ execute as @s[scores={death_ani=3},team=blue] at @s positioned ~ ~1 ~ run summon
 scoreboard players add @s stats_deaths 1
 scoreboard players add @s track_total_deaths 1
 execute as @s[tag=locked_76,scores={track_total_deaths=10..}] run function game:player/unlock/76
+
+#
+function game:items/crossbow/unload
 
 #
 tag @s remove me
