@@ -14,7 +14,10 @@ scoreboard objectives remove place_slime_temp
 scoreboard objectives remove place_magmac_temp
 
 #
+# target area
 forceload add 268 -262 231 -294
+# tmi boxes
+forceload add 227 -246 221 -238
 
 #
 team add blue
