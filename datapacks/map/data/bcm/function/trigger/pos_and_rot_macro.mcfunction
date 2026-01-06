@@ -1,1 +1,1 @@
-$tp @s ~ ~ ~ $(yaw) $(pitch)
+$rotate @s $(yaw) $(pitch)

@@ -1,6 +1,6 @@
 # get absolute position
 summon marker ~ ~ ~ {Tags:[tmp]}
-$tp @n[type=marker,tag=tmp] $(abs)
+$execute as @n[type=marker,tag=tmp] positioned $(abs) run function bcm:util/tp_here
 execute store result score .x calc run data get entity @n[type=marker,tag=tmp] Pos[0] 1000
 execute store result score .y calc run data get entity @n[type=marker,tag=tmp] Pos[1] 1000
 execute store result score .z calc run data get entity @n[type=marker,tag=tmp] Pos[2] 1000

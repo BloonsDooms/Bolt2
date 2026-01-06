@@ -1,2 +1,2 @@
-$tp @s ~ ~ ~ ~$(yaw) ~
+$rotate @s ~$(yaw) ~
 tag @s remove init

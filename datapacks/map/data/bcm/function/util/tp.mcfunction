@@ -1,1 +1,1 @@
-$tp @s $(pos)
+$execute positioned $(pos) run function bcm:util/tp_here
