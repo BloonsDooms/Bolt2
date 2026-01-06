@@ -56,6 +56,8 @@ data modify storage maps:active spawn.blueSpawnBoundingBox set value [{}]
 data modify storage maps:active spawn.blueSpawnBoundingBox[0].area set from storage bcm map.blue_spawn.area
 data modify storage maps:active spawn.blueSpawnBoundingBox[0].origin set from storage bcm map.blue_spawn.start
 
+# REWORK this needs to be changed to absolute coordinates, teleporting the player every tick with relative coordinates leads to client side desync.
+# I would fix this right now but my brain is not working, moving to an easier problem and coming back later.
 data modify storage maps:active spawn.redSpawn set from storage bcm map.red_spawnpoint
 data modify storage maps:active spawn.blueSpawn set from storage bcm map.blue_spawnpoint
 
