@@ -1,6 +1,1 @@
-{
-  "replace": true,
-  "values": [
-    "bs.block:__help__"
-  ]
-}
+{"replace":true,"values":["bs.block:__help__"]}

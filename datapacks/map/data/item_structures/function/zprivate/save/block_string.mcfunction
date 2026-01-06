@@ -1,6 +1,6 @@
 ## Bookshelf - edited version of #bs.block:get_block to exclude NBT, which is handled separately
 # read block
-loot replace block 69420 0 69420 container.0 loot bs.block:get/get_block
+loot replace block 69420 0 69420 container.0 loot bs.block:internal/get_block
 data modify storage bs:out block set from block 69420 0 69420 Items[0].components."minecraft:custom_data"
 
 # remove 'minecraft:' prefix
