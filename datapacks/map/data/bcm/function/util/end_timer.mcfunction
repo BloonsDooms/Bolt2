@@ -1,7 +1,6 @@
 # get total milliseconds
-execute store result score .ms calc run worldborder get
-scoreboard players operation .ms calc *= #-1 calc
-execute store result score .ms_total calc run scoreboard players add .ms calc 59999968
+execute store result score .ms_total calc store result score .ms calc run stopwatch query bcm:timer 1000
+stopwatch remove bcm:timer
 
 # milliseconds -> m:s.ms
 scoreboard players operation .s calc = .ms calc
@@ -27,9 +26,7 @@ execute if score .m calc matches 1.. run data modify storage bcm timer.m set val
 
 execute if score .m calc matches 0 if score .s calc matches 0 if score .ms calc matches 0 run data modify storage bcm timer.ms set value "less than 1 tick"
 
-# reset worldborder
-worldborder set 59999968
-
 # stop tracking mspt
+stopwatch remove bcm:mspt_tracker
 schedule clear bcm:util/mspt_update
 scoreboard players set limit commands 30000
