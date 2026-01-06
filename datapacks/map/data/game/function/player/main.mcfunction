@@ -208,9 +208,9 @@ item replace entity @s[scores={arrowReload=40..,arrowCount=0}] hotbar.8 with min
 item replace entity @s[scores={arrowReload=40..,arrowCount=1}] hotbar.8 with minecraft:arrow 2
 item replace entity @s[scores={arrowReload=40..,arrowCount=2}] hotbar.8 with minecraft:arrow 3
 
-item modify entity @s[scores={arrowCount=1..},team=] hotbar.8 game:model_0
-item modify entity @s[scores={arrowCount=1..},team=red] hotbar.8 game:model_1
-item modify entity @s[scores={arrowCount=1..},team=blue] hotbar.8 game:model_2
+item modify entity @s[gamemode=!creative,scores={arrowCount=1..},team=] hotbar.8 game:model_0
+item modify entity @s[gamemode=!creative,scores={arrowCount=1..},team=red] hotbar.8 game:model_1
+item modify entity @s[gamemode=!creative,scores={arrowCount=1..},team=blue] hotbar.8 game:model_2
 
 scoreboard players remove @s[scores={arrowReload=40..}] arrowReload 40
 
