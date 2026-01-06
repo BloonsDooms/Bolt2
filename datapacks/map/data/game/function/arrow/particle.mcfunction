@@ -206,7 +206,7 @@ execute as @s[scores={bow_texture=76}] at @s run particle entity_effect{color:[0
 execute as @s[scores={bow_texture=76}] at @s run particle minecraft:spit ~ ~ ~ 0.1 0.1 0.1 0.06 3 force @a[tag=id_share]
 
 # Chain
-execute as @s[scores={bow_texture=77}] at @s run particle minecraft:item{item:"minecraft:chain"} ~ ~ ~ 0.2 0.2 0.2 0.15 6 force @a[tag=id_share]
+execute as @s[scores={bow_texture=77}] at @s run particle minecraft:item{item:"minecraft:iron_chain"} ~ ~ ~ 0.2 0.2 0.2 0.15 6 force @a[tag=id_share]
 execute as @s[scores={bow_texture=77}] at @s run particle minecraft:spit ~ ~ ~ 0.1 0.1 0.1 0.06 2 force @a[tag=id_share]
 
 #

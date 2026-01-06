@@ -5,7 +5,7 @@ scoreboard players set @s turretTimer 50
 execute anchored eyes facing entity @e[tag=currentTarget,limit=1] eyes positioned ^ ^ ^0.2 run function game:ffa/turret/particle
 
 execute at @e[tag=currentTarget] run particle explosion ~ ~1.8 ~ 0 0 0 1 1 force @a
-execute at @e[tag=currentTarget] run particle flash ~ ~1.8 ~ 0 0 0 1 1 force @a
+execute at @e[tag=currentTarget] run particle flash{color:[1.000,1.000,1.000,1.00]} ~ ~1.8 ~ 0 0 0 1 1 force @a
 execute unless entity @e[tag=currentTarget,type=minecraft:zombie_villager] at @e[tag=currentTarget] run playsound minecraft:item.trident.thunder master @a ~ ~ ~ 2 2
 execute unless entity @e[tag=currentTarget,type=minecraft:zombie_villager] at @e[tag=currentTarget] run playsound minecraft:entity.wither.shoot master @a ~ ~ ~ 2 1.3
 execute unless entity @e[tag=currentTarget,type=minecraft:zombie_villager] at @e[tag=currentTarget] run playsound minecraft:entity.generic.explode master @a ~ ~ ~ 2 2
