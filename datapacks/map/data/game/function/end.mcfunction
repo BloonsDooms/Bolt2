@@ -2,7 +2,7 @@
 stopsound @a * minecraft:music.dragon
 
 #
-#gamerule reduced_debug_info false
+gamerule reduced_debug_info false
 
 # bandaid fix
 data modify storage maps:active settings.tickingScript set value ""
