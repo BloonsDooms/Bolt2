@@ -90,6 +90,7 @@ execute unless items entity @s hotbar.0 bow run tag @s add off_correct
 tag @s[tag=lobby,tag=off_correct] remove lobby_inv_correct
 
 tag @s[gamemode=creative] remove off_correct
+tag @s[gamemode=spectator] remove off_correct
 tag @s[tag=lobby] remove off_correct
 
 execute as @s[tag=off_correct] run function game:player/offhand_correct
@@ -390,7 +391,7 @@ scoreboard players set @s[scores={blind=..0}] blind_new 0
 execute as @s[scores={blind=1..}] run function game:player/blind
 
 #bow correct
-execute if entity @s[nbt=!{Inventory:[{id:"minecraft:bow",Slot:0b}]},gamemode=!creative] run function game:player/inv_checks/no_bow
+execute if entity @s[nbt=!{Inventory:[{id:"minecraft:bow",Slot:0b}]},gamemode=!creative,gamemode=!spectator] run function game:player/inv_checks/no_bow
 
 # OPTIMIZATION NEEDED : run only when give a new bow
 function game:bow/dynamic_bow_data
