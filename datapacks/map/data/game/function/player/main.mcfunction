@@ -196,6 +196,7 @@ tag @s remove arrow_hit
 
 execute as @s store result score @s arrowCount run clear @s arrow 0
 scoreboard players set @s[gamemode=creative] arrowCount 3
+scoreboard players set @s[gamemode=spectator] arrowCount 3
 execute if score .tmi .data = .1 .num if score .tmi_arrow .data = .2 .num run scoreboard players add @s[scores={arrowCount=0}] no_quiver_arrow 1
 scoreboard players add @s[scores={arrowCount=..2}] arrowReload 1
 scoreboard players set @s[scores={arrowCount=3..}] arrowReload 0
@@ -208,9 +209,9 @@ item replace entity @s[scores={arrowReload=40..,arrowCount=0}] hotbar.8 with min
 item replace entity @s[scores={arrowReload=40..,arrowCount=1}] hotbar.8 with minecraft:arrow 2
 item replace entity @s[scores={arrowReload=40..,arrowCount=2}] hotbar.8 with minecraft:arrow 3
 
-item modify entity @s[gamemode=!creative,scores={arrowCount=1..},team=] hotbar.8 game:model_0
-item modify entity @s[gamemode=!creative,scores={arrowCount=1..},team=red] hotbar.8 game:model_1
-item modify entity @s[gamemode=!creative,scores={arrowCount=1..},team=blue] hotbar.8 game:model_2
+item modify entity @s[gamemode=!creative,gamemode=!spectator,scores={arrowCount=1..},team=] hotbar.8 game:model_0
+item modify entity @s[gamemode=!creative,gamemode=!spectator,scores={arrowCount=1..},team=red] hotbar.8 game:model_1
+item modify entity @s[gamemode=!creative,gamemode=!spectator,scores={arrowCount=1..},team=blue] hotbar.8 game:model_2
 
 scoreboard players remove @s[scores={arrowReload=40..}] arrowReload 40
 
