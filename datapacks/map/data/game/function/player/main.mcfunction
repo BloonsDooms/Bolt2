@@ -391,7 +391,7 @@ scoreboard players set @s[scores={blind=..0}] blind_new 0
 execute as @s[scores={blind=1..}] run function game:player/blind
 
 #bow correct
-execute if entity @s[nbt=!{Inventory:[{id:"minecraft:bow",Slot:0b}]},gamemode=!creative,gamemode=!spectator] run function game:player/inv_checks/no_bow
+execute as @s[gamemode=!creative,gamemode=!spectator] unless items entity @s hotbar.0 bow run function game:player/inv_checks/no_bow
 
 # OPTIMIZATION NEEDED : run only when give a new bow
 function game:bow/dynamic_bow_data
