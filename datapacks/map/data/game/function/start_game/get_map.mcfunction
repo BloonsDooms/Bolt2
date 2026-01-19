@@ -20,8 +20,6 @@ function game:game/next_id
 # custom random is always map ID 0
 execute if score .map .data matches 0 run say placeholder for custom random function.
 execute store result storage macro mapID int 1 run scoreboard players get .map .data
-# macro throws an error, despite this not being needed unless its an item map? @Shuba_Shuba this is somthing you did.
-execute unless data storage macro mapName run data modify storage macro mapName set value "null"
 
 # clear, then populate maps:active
 function game:map/map_from_id with storage macro
