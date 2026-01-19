@@ -1,5 +1,6 @@
 stopsound @a
 
+# progress timer if the chunk is loaded..... which is run BEFORE THE PLAYERS ARE TELEPORTED.
 execute if score .70 .num > .load .data if score .22 .num < .load .data as @a at @s if loaded ~ ~ ~ run scoreboard players set .load .data 22
 
 kill @e[tag=head]
@@ -19,6 +20,7 @@ execute store result score .map_setting invul run data get storage maps:active s
 execute if score .mode .data matches 6 store result score .map_setting invul run data get storage maps:active spawn.infectionInvulnTime
 
 
+# REWORK this no longer loads the map fast enough
 function game:map/load_box with storage maps:active settings
 #execute if score .map .data = .1 .num run tp @a[tag=!loading] -54.5 -57.00 8.5 0 0
 #execute if score .map .data = .2 .num run tp @a[tag=!loading] -151.5 -59.00 -122.5
@@ -51,4 +53,4 @@ execute if score .0 .num = .load .data run tag @a remove loading
 scoreboard players add .load_time .data 1
 
 execute if score .load_time .data matches 20.. run title @a times 0 20 10
-execute if score .load_time .data matches 20.. run title @a title {"translate":"\u0001","font":"title"}
+#execute if score .load_time .data matches 20.. run title @a title {"translate":"\u0001","font":"title"}

@@ -64,7 +64,7 @@ execute if score .mode .data = .7 .num run function game:map/spawn_target_marker
 #execute if score .map .data = .14 .num run function game:map/river/start
 #execute if score .map .data = .15 .num run function game:map/lighth/start
 
-# REWORK
+# REWORK - all of these IDs are dynamic now...
 
 execute if score .map .data = .10 .num run tag @a[tag=playing] add play_map_tinyt
 execute if score .map .data = .3 .num run tag @a[tag=playing] add play_map_divide
@@ -82,3 +82,6 @@ tag @a remove hasflag
 tag @a remove hasspawn
 
 gamerule reduced_debug_info true
+
+# run game
+scoreboard players set .gamestate .data 50

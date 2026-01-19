@@ -2,6 +2,9 @@
 stopsound @a * minecraft:music.dragon
 
 #
+scoreboard players set .gamestate .data 0
+
+#
 gamerule reduced_debug_info false
 
 # bandaid fix

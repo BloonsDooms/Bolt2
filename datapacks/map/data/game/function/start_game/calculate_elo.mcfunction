@@ -1,19 +1,31 @@
-# REWORK
-execute if score .mode .data = .1 .num if score .map .data = .3 .num if score .tmi .data matches 0 run tellraw @a [{"text":"NOTICE!","color":"#8F2929","bold":true},{"text":" Walls item disabled on map.","bold":false}]
 
-#
+
 tag @a remove sur_start
+tag @a remove zombie_jump
+tag @a remove crossbow_waiting
+tag @a remove hasspawn
+tag @a remove used_spawn
+tag @a remove killed
 
-#
+tag @a remove playing
+tag @a[scores={team_pref=0..}] add playing
+
+
+
+# is_even. Don't import the JS library tristan, just don't.
+scoreboard players operation .even_players .data = .players_in .data
+scoreboard players add .even_players .data 1
+scoreboard players operation .even_players .data %= .2 .num
+
+
+## This is primarly straight from start.mcfunction, haven't gone through it beyond this point.
+# some stuff needs to be moved around/rewritten
+
 scoreboard players set @a out_of_spawn_time 0
 scoreboard players set @a delay_boost 0
 scoreboard players set @a delay_reveal 0
 scoreboard players set @a blind -1
 
-tag @a remove zombie_jump
-tag @a remove crossbow_waiting
-
-#
 scoreboard players add @a team_pref 0
 
 scoreboard players set .stats_end .data 0
@@ -27,14 +39,6 @@ tag @a[scores={team_pref=0..}] add playing
 
 scoreboard players set .players_in .data 0
 execute as @a[tag=playing] run scoreboard players add .players_in .data 1
-
-scoreboard players set .even_players .data 1
-execute if score .players_in .data = .1 .num run scoreboard players set .even_players .data 0
-execute if score .players_in .data = .3 .num run scoreboard players set .even_players .data 0
-execute if score .players_in .data = .5 .num run scoreboard players set .even_players .data 0
-execute if score .players_in .data = .7 .num run scoreboard players set .even_players .data 0
-execute if score .players_in .data = .9 .num run scoreboard players set .even_players .data 0
-execute if score .players_in .data = .11 .num run scoreboard players set .even_players .data 0
 
 team leave @a
 
@@ -106,6 +110,7 @@ scoreboard players set @a title_pause 0
 
 scoreboard players set @a kill 0
 
+
 scoreboard objectives remove Scores
 scoreboard objectives add Scores dummy
 
@@ -139,7 +144,6 @@ execute if score .mode .data = .7 .num run scoreboard players set .TIME .data 60
 
 execute as @a at @s run function game:player/getitems
 
-function game:game/mapstart
 
 gamemode adventure @a
 
@@ -183,6 +187,9 @@ bossbar set minecraft:scrap color blue
 bossbar set minecraft:scrap value 0
 bossbar set minecraft:scrap max 12
 bossbar set minecraft:scrap visible false
+
+
+
 
 #scoreboard players operation global timer -= 1 math
 #execute store result bossbar timer value run scoreboard players get global timer
@@ -363,3 +370,9 @@ execute if score .tmi .data = .1 .num if items block 235 -49 -224 container.22 s
 
 #
 #tag @a[scores={team_pref=-1}] add is_spectating
+
+
+
+
+# progress to next gamestate.
+scoreboard players set .gamestate .data 25

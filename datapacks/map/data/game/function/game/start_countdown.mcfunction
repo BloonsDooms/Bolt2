@@ -26,3 +26,7 @@ execute if score .start_cd .data = .10 .num as @a at @s run playsound minecraft:
 execute if score .start_cd .data = .10 .num if entity @a[scores={team_pref=0..}] run effect give @a minecraft:slowness 3 5 true
 
 scoreboard players remove .start_cd .data 1
+
+
+# entrypoint for starting the game.
+execute if score .start_cd .data matches 0 run function game:start_game/start_game
