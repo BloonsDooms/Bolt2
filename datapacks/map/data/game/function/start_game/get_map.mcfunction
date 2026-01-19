@@ -49,7 +49,7 @@ kill @e[tag=cutscene]
 
 # yeah.... probably shouldn't be here
 title @a times 0 20 0
-#title @a title {"translate":"\u0001","font":"title"}
+title @a title {"translate":"\u0001","font":"title"}
 
 
 
