@@ -1,0 +1,23 @@
+{
+  "criteria": {
+    "equip_armor": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "player": [],
+        "damage": {
+          "type": {
+            "source_entity": {
+              "type": "minecraft:player"
+            },
+            "direct_entity": {
+              "type": "#minecraft:arrows"
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "game:arrow/hit_detection/on_hit"
+  }
+}
