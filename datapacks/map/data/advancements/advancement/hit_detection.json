@@ -9,9 +9,12 @@
             "source_entity": {
               "type": "minecraft:player"
             },
-            "direct_entity": {
-              "type": "#minecraft:arrows"
-            }
+            "tags": [
+              {
+                "id": "game:is_arrow",
+                "expected": true
+              }
+            ]
           }
         }
       }
