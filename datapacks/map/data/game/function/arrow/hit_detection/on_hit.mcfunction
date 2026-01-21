@@ -10,7 +10,7 @@ execute on attacker run scoreboard players add @s kill 1
 execute on attacker run scoreboard players add @s killP 1
 
 tag @s add me
-execute at @s on attacker run scoreboard players operation @a[distance=..5,tag=me] KILL_ID = @s ID
+execute at @s on attacker run scoreboard players operation @a[tag=me] KILL_ID = @s ID
 tag @s remove me
 
 # debug stuff, needs more info.
