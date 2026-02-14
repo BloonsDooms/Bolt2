@@ -40,7 +40,8 @@ execute if score .chunkload_time .timer matches 270 run tellraw @a[tag=verbose] 
 
 
 # if all 4 chunks are loaded, progress gamestate to 20. Gamestate 20 currently runs calculate_elo, but in the future will clear map first.
-execute as @a if entity @s[tag=south_loaded,tag=north_loaded,tag=east_loaded,tag=west_loaded] run scoreboard players set .gamestate .data 20
+# REWORK adding a temporary fix to force it to wait an additional 50 gameticks to load the chunks... This is a weird bug in multiplayer.
+execute as @a if entity @s[tag=south_loaded,tag=north_loaded,tag=east_loaded,tag=west_loaded] if score .chunkload_time .timer matches 50.. run scoreboard players set .gamestate .data 20
 
 # if the chunks have failed to load after 15 seconds. Gamestate 16 throws an error and falls back to spawn.
 execute as @a unless entity @s[tag=south_loaded,tag=north_loaded,tag=east_loaded,tag=west_loaded] if score .chunkload_time .timer matches 301.. run scoreboard players set .gamestate .data 16
