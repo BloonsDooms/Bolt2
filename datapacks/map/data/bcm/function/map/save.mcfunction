@@ -13,6 +13,7 @@ execute as @e[type=marker,tag=render_box,tag=!save] run function bcm:map/area_ch
 execute store result score .wh calc run data get entity @n[type=block_display,tag=render_box,tag=wall_height] Pos[1] 100
 execute store result score .y1 calc run data get entity @n[type=marker,tag=render_box,tag=save,tag=pos1] Pos[1] 100
 execute store result score .y2 calc run data get entity @n[type=marker,tag=render_box,tag=save,tag=pos2] Pos[1] 100
+execute if score .y2 calc < .y1 calc run scoreboard players operation .y1 calc >< .y2 calc
 execute unless entity @n[type=block_display,tag=render_box,tag=wall_height] store success score .can_save_map calc run function bcm:fail/tellraw {input:'"Failed to save map: No max wall height set"'}
 #execute unless entity @n[type=block_display,tag=render_box,tag=wall_height] run tellraw @s {text:"No max wall height set, defaulting to top of save area",color:"yellow"}
 #execute unless entity @n[type=block_display,tag=render_box,tag=wall_height] run scoreboard players operation .wh calc = .y2 calc
