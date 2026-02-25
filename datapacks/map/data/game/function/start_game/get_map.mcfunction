@@ -44,6 +44,7 @@ stopsound @a
 gamemode adventure @a
 kill @e[tag=head]
 kill @e[tag=cutscene]
+tag @a remove lobby
 
 # yeah.... probably shouldn't be here
 title @a times 0 20 0
