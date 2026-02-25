@@ -1,6 +1,7 @@
 ## loads map structure called mapName from bcm maps[] with LNW corner at ~ ~ ~
 # summon load point marker
 summon marker ~ ~ ~ {Tags:[start_point]}
+tellraw @a {nbt:"Pos",entity:"@n[type=marker,tag=start_point]"}
 
 # set load point if new map
 $scoreboard players set .new item_structures $(new)
@@ -28,4 +29,8 @@ data remove storage item_structures forceload
 data modify storage item_structures forceload.x set from storage item_structures save.size[0]
 data modify storage item_structures forceload.z set from storage item_structures save.size[2]
 function item_structures:zprivate/forceload with storage item_structures forceload
+execute store result score tmp calc run forceload query ~ ~
+tellraw @a ["forceload: ",{score:{name:"tmp",objective:"calc"}}]
+execute store result score tmp calc if loaded ~ ~ ~
+tellraw @a ["is loaded: ",{score:{name:"tmp",objective:"calc"}}]
 schedule function item_structures:load_kill 5t

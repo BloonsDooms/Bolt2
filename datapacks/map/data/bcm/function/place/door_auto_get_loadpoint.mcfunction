@@ -1,0 +1,1 @@
+$execute if data storage bcm tmp.doors[-1] positioned 544 0 $(load_z) summon marker run function bcm:place/door_auto with storage bcm tmp.doors[-1]

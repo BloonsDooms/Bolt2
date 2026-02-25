@@ -45,10 +45,8 @@ scoreboard objectives add bcm_generator_time dummy
 scoreboard objectives add bcm_generator_warmup dummy
 scoreboard objectives add bcm_crate_spawn_chance dummy
 
-# map placer
-# UUID is 1 less than active map origin entity
-execute unless entity fd8107bb-c1fa-4ddf-b8fe-d1087da4ff6e run forceload add 544 32
-execute unless entity fd8107bb-c1fa-4ddf-b8fe-d1087da4ff6e run summon marker 544 0 32 {UUID:[I;-41875525,-1040560673,-1191259896,2107965294]}
+# item map load point
+execute unless score #item_map_load_z calc matches -2147483648..2147483647 run tellraw @a {text:"ERROR: Score #item_map_load_z calc is UNSET - Adding item maps WILL NOT WORK PROPERLY!!!",color:"red"}
 
 # keep it simple - forceload the whole map editor area all the time
 function bcm:editor/forceload
