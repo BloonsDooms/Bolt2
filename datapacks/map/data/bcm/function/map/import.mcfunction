@@ -58,13 +58,18 @@ scoreboard players operation limit commands = #limit_old commands
 
 ## place doors
 data modify storage bcm tmp.doors set from storage bcm doors
-execute if data storage bcm tmp.doors[-1] at fd8107bb-c1fa-4ddf-b8fe-d1087da4ff6e summon marker run function bcm:place/door_auto with storage bcm tmp.doors[-1]
+#execute if data storage bcm tmp.doors[-1] at fd8107bb-c1fa-4ddf-b8fe-d1087da4ff6e summon marker run function bcm:place/door_auto with storage bcm tmp.doors[-1]
+execute store result storage bcm macro.load_z int 1 run scoreboard players get #item_map_load_z calc
+function bcm:place/door_auto_get_loadpoint with storage bcm macro
+tellraw @a {nbt:"macro.load_z",storage:"bcm"}
 data remove storage bcm tmp
 
 
 ## place map
 # UUID is 1 less than active map origin entity
-tag fd8107bb-c1fa-4ddf-b8fe-d1087da4ff6e add tp_map_placer
+#tag fd8107bb-c1fa-4ddf-b8fe-d1087da4ff6e add tp_map_placer
+scoreboard players set .new_item_map calc 1
 scoreboard players set .print_messages item_structures 1
 data modify storage bcm macro.new set value true
-execute at fd8107bb-c1fa-4ddf-b8fe-d1087da4ff6e run function bcm:map/load with storage bcm macro
+function bcm:map/load_get_loadpoint with storage bcm macro
+data remove storage bcm macro.load_z

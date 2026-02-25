@@ -30,9 +30,13 @@ execute if score .ms_total calc matches 500.. run scoreboard players operation .
 function bcm:editor/forceload
 
 ## all code past this command only runs if new map
-execute unless entity @n[type=marker,tag=tp_map_placer] run return 1
+execute unless score .new_item_map calc matches 1 run return 1
+scoreboard players reset .new_item_map
 
 # tp map placer
+#execute store result score .z calc run data get storage item_structures save.size[2]
+#execute store result storage bcm macro.z int 1 run scoreboard players add .z calc 64
+#execute as fd8107bb-c1fa-4ddf-b8fe-d1087da4ff6e at @s run function bcm:map/tp_placer with storage bcm macro
 execute store result score .z calc run data get storage item_structures save.size[2]
-execute store result storage bcm macro.z int 1 run scoreboard players add .z calc 64
-execute as fd8107bb-c1fa-4ddf-b8fe-d1087da4ff6e at @s run function bcm:map/tp_placer with storage bcm macro
+scoreboard players add .z calc 64
+scoreboard players operation #item_map_load_z calc += .z calc
