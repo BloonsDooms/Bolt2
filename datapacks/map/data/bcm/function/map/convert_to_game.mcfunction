@@ -22,9 +22,34 @@ data modify storage maps:active origin set from storage bcm map.load_point
 ## settings
 data modify storage maps:active settings.loadingBox set from storage bcm map.intro_camera
 
-# DIFFERENT: bounding box origin
-data modify storage maps:active settings.spectatorBoundingBox.area set from storage bcm map.save.area
-data modify storage maps:active settings.spectatorBoundingBox.origin set value "~ ~ ~"
+# "x1 y1 z1" + "dx,dy,dz" -> {x1,y1,z1,x2,y2,z2}
+# converts to ABSOLUTE coordinates
+# this data is reused for settings.mapSize
+execute summon marker run function bcm:map/parse_load_point with storage bcm map
+function bcm:util/parse_area_selector with storage bcm map.save
+function bcm:util/area_to_int with storage bcm macro
+# extend spectator box 8 blocks beyond edge of build
+# might change in the future to be per map?
+scoreboard players set spectatorBox.extend calc 8
+scoreboard players operation spectatorBox.x1 calc = .x1 calc
+scoreboard players operation spectatorBox.y1 calc = .y1 calc
+scoreboard players operation spectatorBox.z1 calc = .z1 calc
+scoreboard players operation spectatorBox.x calc = .x calc
+scoreboard players operation spectatorBox.y calc = .y calc
+scoreboard players operation spectatorBox.z calc = .z calc
+# origin
+execute store result storage bcm tmp.x int 1 run scoreboard players operation spectatorBox.x1 calc -= spectatorBox.extend calc
+execute store result storage bcm tmp.y int 1 run scoreboard players operation spectatorBox.y1 calc -= spectatorBox.extend calc
+execute store result storage bcm tmp.z int 1 run scoreboard players operation spectatorBox.z1 calc -= spectatorBox.extend calc
+function bcm:util/xyz_string_abs with storage bcm tmp
+data modify storage maps:active settings.spectatorBoundingBox.origin set from storage bcm tmp.pos
+# area
+execute store result storage bcm tmp.dx int 1 run scoreboard players operation spectatorBox.x calc += spectatorBox.extend calc
+execute store result storage bcm tmp.dy int 1 run scoreboard players operation spectatorBox.y calc += spectatorBox.extend calc
+execute store result storage bcm tmp.dz int 1 run scoreboard players operation spectatorBox.z calc += spectatorBox.extend calc
+function bcm:util/entity_selector_string with storage bcm tmp
+data modify storage maps:active settings.spectatorBoundingBox.area set from storage bcm tmp.selector
+data remove storage bcm tmp
 data modify storage maps:active settings.spectatorJoinLocation set from storage bcm map.intro_camera
 
 data modify storage maps:active settings.introCutscene set from storage bcm map.intro_camera
@@ -33,12 +58,7 @@ data modify storage maps:active settings.introCutscene set from storage bcm map.
 
 data modify storage maps:active settings.wallHeight set from storage bcm map.max_wall_height
 data modify storage maps:active settings.disabledItems set value []
-
-# "x1 y1 z1" + "dx,dy,dz" -> {x1,y1,z1,x2,y2,z2}
-# converts to ABSOLUTE coordinates
-execute summon marker run function bcm:map/parse_load_point with storage bcm map
-function bcm:util/parse_area_selector with storage bcm map.save
-function bcm:util/area_to_int with storage bcm macro
+# reusing results from above here
 scoreboard players add .x calc 1
 scoreboard players add .y calc 1
 scoreboard players add .z calc 1

@@ -1,2 +1,0 @@
-#$data modify storage bcm tmp_entity_selector.absolute set value "x=$(x),y=$(y),z=$(z),dx=$(dx),dy=$(dy),dz=$(dz)"
-$data modify storage bcm tmp_entity_selector.relative set value "dx=$(dx),dy=$(dy),dz=$(dz)"

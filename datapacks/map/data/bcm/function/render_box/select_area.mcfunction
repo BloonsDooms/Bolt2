@@ -51,19 +51,16 @@ execute store result storage bcm tmp.center.z float .5 run data get storage bcm 
 execute as @e[type=block_display,tag=correct_type] at @s run function bcm:render_box/center_origin with storage bcm tmp.center
 
 # get entity selector
-data modify storage bcm tmp_entity_selector set from storage bcm tmp.start
-execute store result storage bcm tmp_entity_selector.dx int 1 run data get storage bcm tmp.size.x .999999999
-execute store result storage bcm tmp_entity_selector.dy int 1 run data get storage bcm tmp.size.y .999999999
-execute store result storage bcm tmp_entity_selector.dz int 1 run data get storage bcm tmp.size.z .999999999
-function bcm:render_box/entity_selector_string with storage bcm tmp_entity_selector
-#$data modify storage bcm map.$(type).area_abs set from storage bcm tmp_entity_selector.absolute
-$data modify storage bcm map.$(type).area set from storage bcm tmp_entity_selector.relative
+execute store result storage bcm tmp.selector.dx int 1 run data get storage bcm tmp.size.x .999999999
+execute store result storage bcm tmp.selector.dy int 1 run data get storage bcm tmp.size.y .999999999
+execute store result storage bcm tmp.selector.dz int 1 run data get storage bcm tmp.size.z .999999999
+function bcm:util/entity_selector_string with storage bcm tmp.selector
+$data modify storage bcm map.$(type).area set from storage bcm tmp.selector
 
 # if save, update wall height display
 execute if entity @s[tag=save] as @n[type=block_display,tag=render_box,tag=wall_height] run function bcm:render_box/update_wall_height_display
 
 # cleanup
-data remove storage bcm tmp_entity_selector
 data remove storage bcm tmp
 tag @e[type=#bcm:place] remove correct_type
 return 3
