@@ -23,27 +23,27 @@ data merge storage maps:active {settings:{\
     wallHeight: 10,\
     disabledItems:[],\
     \
-    mapSize:{x1:-391, y1:-3,  z1:-939,\
-             x2:-323, y2:14, z2:-869},\
+    mapSize:{x1:-391, y1:-3,  z1:-949,\
+             x2:-313, y2:14, z2:-869},\
 }}
 
 # Spawn, the bounding box is used for invlun time and afk detection.
 # The bounding box is x, y, z, dx, dy, dz. IE., a position and a volume
 data merge storage maps:active {spawn:{\
     blueSpawnBoundingBox:[{area:"dx=8,dy=12,dz=15",origin:"-364 -4 -889"}],\
-    redSpawnBoundingBox:[{area:"dx=15,dy=12,dz=8",origin:"-873 -4 -907"}],\
+    redSpawnBoundingBox:[{area:"dx=15,dy=12,dz=8",origin:"-388 -4 -907"}],\
     \
     blueSpawn:"-361.0 1.0 -881.5 -90 0",\
     redSpawn:"-380.5 1.0 -901.0 180 0",\
     \
-    ctfInvulnTime:30,\
+    ctfInvulnTime:35,\
     infectionInvulnTime:0,\
 }}
 
 # Flags and the infection generator
 data merge storage maps:active {objectives:{\
-    blueFlag: "-330 4 -892",\
-    redFlag: "-371 4 -933",\
+    blueFlag: "-330 2 -892",\
+    redFlag: "-371 2 -933",\
     infectionGenerator:[0, 0, 0],\
 }}
 
