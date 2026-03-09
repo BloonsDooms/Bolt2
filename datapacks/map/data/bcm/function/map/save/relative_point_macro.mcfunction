@@ -19,6 +19,9 @@ data modify storage bcm macro.y set string storage bcm macro.y 0 -1
 data modify storage bcm macro.z set string storage bcm macro.z 0 -1
 
 # concat
-function bcm:util/xyz_rot_string with storage bcm macro
+#function bcm:util/xyz_rot_string with storage bcm macro
+$scoreboard players set #bool calc $(rot)
+execute if score #bool calc matches 1 run function bcm:util/xyz_rot_string with storage bcm macro
+execute unless score #bool calc matches 1 run function bcm:util/xyz_string with storage bcm macro
 #$tellraw @a ["abs = $(abs)\nbcm map.$(to) = ",{nbt:"tmp.pos",storage:"bcm"},"\nbcm macro = ",{nbt:"macro",storage:"bcm"}]
 $data modify storage bcm map.$(to) set from storage bcm tmp.pos

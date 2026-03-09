@@ -9,11 +9,11 @@ $execute positioned $(start) run kill @n[type=marker,tag=tmp]
 
 data remove storage bcm macro
 
-function bcm:map/save/relative_point {to:"red_spawn.start"}
-function bcm:map/save/relative_point {to:"blue_spawn.start"}
-function bcm:map/save/relative_point {to:"red_spawnpoint"}
-function bcm:map/save/relative_point {to:"blue_spawnpoint"}
-function bcm:map/save/relative_point {to:"intro_camera"}
+function bcm:map/save/relative_point {to:"red_spawn.start", rot:false}
+function bcm:map/save/relative_point {to:"blue_spawn.start", rot:false}
+function bcm:map/save/relative_point {to:"red_spawnpoint", rot:true}
+function bcm:map/save/relative_point {to:"blue_spawnpoint", rot:true}
+function bcm:map/save/relative_point {to:"intro_camera", rot:true}
 
 data remove storage bcm tmp
 
