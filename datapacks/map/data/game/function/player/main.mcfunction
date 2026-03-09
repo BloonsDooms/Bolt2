@@ -197,7 +197,7 @@ tag @s remove arrow_hit
 
 execute as @s store result score @s arrowCount run clear @s arrow 0
 scoreboard players set @s[gamemode=creative] arrowCount 3
-scoreboard players set @s[gamemode=spectator] arrowCount 3
+scoreboard players set @s[tag=in_spec_area] arrowCount 3
 execute if score .tmi .data = .1 .num if score .tmi_arrow .data = .2 .num run scoreboard players add @s[scores={arrowCount=0}] no_quiver_arrow 1
 scoreboard players add @s[scores={arrowCount=..2}] arrowReload 1
 scoreboard players set @s[scores={arrowCount=3..}] arrowReload 0
