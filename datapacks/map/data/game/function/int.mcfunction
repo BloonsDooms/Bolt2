@@ -338,6 +338,7 @@ scoreboard objectives add icon_y dummy
 scoreboard objectives add icon_t dummy
 
 scoreboard objectives add climb minecraft.custom:minecraft.climb_one_cm
+scoreboard objectives setdisplay sidebar jump_vine
 
 scoreboard objectives add drop_egg_generic minecraft.dropped:minecraft.panda_spawn_egg
 scoreboard objectives add drop_snowball minecraft.dropped:minecraft.snowball
