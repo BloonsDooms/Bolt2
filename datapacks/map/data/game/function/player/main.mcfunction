@@ -323,14 +323,23 @@ execute as @s[scores={climb=1..}] at @s if block ~ ~0.24 ~ minecraft:ladder run 
 execute as @s[scores={has_lev=..0}] at @s if block ~ ~0.24 ~ minecraft:ladder if block ~ ~0.7 ~ minecraft:air run effect clear @s minecraft:levitation
 execute as @s[scores={climb=1..}] at @s if block ~ ~0.24 ~ minecraft:ladder if block ~ ~0.7 ~ minecraft:air run effect give @s minecraft:levitation 1 1 true
 
-execute as @s[nbt={OnGround:0b}] at @s if block ~ ~-0.2 ~ minecraft:vine run effect give @s minecraft:levitation 1 3 true
+#vines
+tag @s[tag=climb_vine,nbt={OnGround:1b}] remove climb_vine
+execute at @s[tag=climb_vine,scores={jump_vine=1..}] if block ~ ~-1 ~ minecraft:vine unless block ~ ~-0.4 ~ minecraft:vine run scoreboard players set @s jump_vine 0
+execute at @s[tag=climb_vine] if block ~ ~-1 ~ minecraft:vine unless block ~ ~-0.4 ~ minecraft:vine run tag @s remove climb_vine
+tag @s[scores={jump_vine=1..}] add climb_vine
+execute as @s[tag=!climb_vine,scores={climb=1..}] at @s if block ~ ~-0.2 ~ minecraft:vine run tag @s add climb_vine
+execute as @s[tag=!climb_vine,scores={climb=1..}] at @s if block ~ ~-0.4 ~ minecraft:vine run tag @s add climb_vine
+
+execute as @s[nbt={OnGround:0b},tag=climb_vine] at @s if block ~ ~-0.2 ~ minecraft:vine run effect give @s minecraft:levitation 1 3 true
 execute as @s[scores={has_lev=..0}] at @s if block ~ ~-0.2 ~ minecraft:vine if block ~ ~0.7 ~ minecraft:air run effect clear @s minecraft:levitation
-execute as @s[nbt={OnGround:0b}] at @s if block ~ ~-0.2 ~ minecraft:vine if block ~ ~0.7 ~ minecraft:air run effect give @s minecraft:levitation 1 1 true
+execute as @s[nbt={OnGround:0b},tag=climb_vine] at @s if block ~ ~-0.2 ~ minecraft:vine if block ~ ~0.7 ~ minecraft:air run effect give @s minecraft:levitation 1 1 true
 
 execute as @s[scores={has_lev=..0}] at @s unless block ~ ~0.24 ~ minecraft:ladder unless block ~ ~-0.2 ~ minecraft:vine run effect clear @s minecraft:levitation
-execute as @s[nbt={OnGround:0b}] at @s if block ~ ~-0.4 ~ minecraft:vine run effect give @s minecraft:levitation 1 1 true
+execute as @s[nbt={OnGround:0b},tag=climb_vine] at @s if block ~ ~-0.4 ~ minecraft:vine run effect give @s minecraft:levitation 1 1 true
 
 scoreboard players set @s climb 0
+scoreboard players set @s[nbt={OnGround:1b}] jump_vine 0
 
 effect clear @s[x=-224,y=-47,z=-14,dx=50,dy=40,dz=80] levitation
 #effect clear @s[scores={shift=1..}] levitation
