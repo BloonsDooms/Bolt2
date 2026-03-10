@@ -37,31 +37,61 @@ scoreboard players operation @s[tag=next,scores={t=2}] t2 = @s generator_duratio
 scoreboard players operation @s[tag=next,scores={t=3}] t2 = @s generator_duration
 
 
+# sign text template
+data modify storage bcm sign set value [\
+    [{text:"null",bold:true,color:"black"},{text:"null",color:"#540b0b",bold:false}],\
+    [{text:"Time: ",color:"black"},{score:{name:"@e[tag=gen,tag=me,limit=1]",objective:"t2"}}],\
+    {text:"null",color:"dark_gray"},\
+    [{text:"Next: ",bold:true,color:"black"},{text:"null",color:"#3A3C50",bold:false}]\
+]
 
-data merge entity @s[scores={t3=0..3}] {CustomName:{"text":"⬜ ⬜ ⬜"}}
-data merge entity @s[scores={t3=4..7}] {CustomName:{"text":"⬛ ⬜ ⬜"}}
-data merge entity @s[scores={t3=8..11}] {CustomName:{"text":"⬛ ⬛ ⬜"}}
-data merge entity @s[scores={t3=12..15}] {CustomName:{"text":"⬜ ⬛ ⬛"}}
-data merge entity @s[scores={t3=16..19}] {CustomName:{"text":"⬜ ⬜ ⬛"}}
+# progress bar thingy
+#execute as @s[scores={t3=0..3}] run data modify storage bcm sign[2].text set value "⬜ ⬜ ⬜"
+#execute as @s[scores={t3=4..7}] run data modify storage bcm sign[2].text set value "⬛ ⬜ ⬜"
+#execute as @s[scores={t3=8..11}] run data modify storage bcm sign[2].text set value "⬛ ⬛ ⬜"
+#execute as @s[scores={t3=12..15}] run data modify storage bcm sign[2].text set value "⬜ ⬛ ⬛"
+#execute as @s[scores={t3=16..19}] run data modify storage bcm sign[2].text set value "⬜ ⬜ ⬛"
+execute as @s[scores={t3=0..1}] run data modify storage bcm sign[2].text set value "⬜ ⬜ ⬜ ⬜ ⬜ ⬜"
+execute as @s[scores={t3=2..3}] run data modify storage bcm sign[2].text set value "⬛ ⬜ ⬜ ⬜ ⬜ ⬜"
+execute as @s[scores={t3=4..5}] run data modify storage bcm sign[2].text set value "⬛ ⬛ ⬜ ⬜ ⬜ ⬜"
+execute as @s[scores={t3=6..7}] run data modify storage bcm sign[2].text set value "⬛ ⬛ ⬛ ⬜ ⬜ ⬜"
+execute as @s[scores={t3=8..9}] run data modify storage bcm sign[2].text set value "⬛ ⬛ ⬛ ⬛ ⬜ ⬜"
+execute as @s[scores={t3=10..11}] run data modify storage bcm sign[2].text set value "⬜ ⬛ ⬛ ⬛ ⬛ ⬜"
+execute as @s[scores={t3=12..13}] run data modify storage bcm sign[2].text set value "⬜ ⬜ ⬛ ⬛ ⬛ ⬛"
+execute as @s[scores={t3=14..15}] run data modify storage bcm sign[2].text set value "⬜ ⬜ ⬜ ⬛ ⬛ ⬛"
+execute as @s[scores={t3=16..17}] run data modify storage bcm sign[2].text set value "⬜ ⬜ ⬜ ⬜ ⬛ ⬛"
+execute as @s[scores={t3=18..19}] run data modify storage bcm sign[2].text set value "⬜ ⬜ ⬜ ⬜ ⬜ ⬛"
 
-data merge entity @s[scores={t3=0..1}] {CustomName:{"text":"⬜ ⬜ ⬜ ⬜ ⬜ ⬜"}}
-data merge entity @s[scores={t3=2..3}] {CustomName:{"text":"⬛ ⬜ ⬜ ⬜ ⬜ ⬜"}}
-data merge entity @s[scores={t3=4..5}] {CustomName:{"text":"⬛ ⬛ ⬜ ⬜ ⬜ ⬜"}}
-data merge entity @s[scores={t3=6..7}] {CustomName:{"text":"⬛ ⬛ ⬛ ⬜ ⬜ ⬜"}}
-data merge entity @s[scores={t3=8..9}] {CustomName:{"text":"⬛ ⬛ ⬛ ⬛ ⬜ ⬜"}}
-data merge entity @s[scores={t3=10..11}] {CustomName:{"text":"⬜ ⬛ ⬛ ⬛ ⬛ ⬜"}}
-data merge entity @s[scores={t3=12..13}] {CustomName:{"text":"⬜ ⬜ ⬛ ⬛ ⬛ ⬛"}}
-data merge entity @s[scores={t3=14..15}] {CustomName:{"text":"⬜ ⬜ ⬜ ⬛ ⬛ ⬛"}}
-data merge entity @s[scores={t3=16..17}] {CustomName:{"text":"⬜ ⬜ ⬜ ⬜ ⬛ ⬛"}}
-data merge entity @s[scores={t3=18..19}] {CustomName:{"text":"⬜ ⬜ ⬜ ⬜ ⬜ ⬛"}}
+# top text "Making: <item>" OR "Warming Up"
+execute as @s[scores={t=..0}] run data modify storage bcm sign[0][0].text set value "Warming Up"
+execute as @s[scores={t=..0}] run data modify storage bcm sign[0][1].text set value ""
+execute as @s[scores={t=1..3}] run data modify storage bcm sign[0][0].text set value "Making: "
+execute as @s[scores={t=1}] run data modify storage bcm sign[0][1].text set value "Mini TNT"
+execute as @s[scores={t=2}] run data modify storage bcm sign[0][1].text set value "Walls"
+execute as @s[scores={t=3}] run data modify storage bcm sign[0][1].text set value "Traps"
 
-execute as @s[scores={t=1}] run data merge block ^ ^ ^1 {front_text:{Color:"-1",messages:[[{"text":"Making: ","bold":true,"color":"black"},{"text":"Mini TNT","color":"#540b0b","bold":false}],[{"text":"Time: ","color":"black"},{"score":{"name":"@e[tag=gen,tag=me,limit=1]","objective":"t2"}}],{"selector":"@e[tag=gen,tag=me,limit=1]","color":"dark_gray"},[{"text":"Next: ","bold":true,"color":"black"},{"text":"Walls","color":"#3A3C50","bold":false}]]}}
-#execute if score .map .data matches 3 as @s[scores={t=1}] run data merge block ^ ^ ^1 {front_text:{Color:"-1",messages:[[{"text":"Making: ","bold":true,"color":"black"},{"text":"Mini TNT","color":"#540b0b","bold":false}],[{"text":"Time: ","color":"black"},{"score":{"name":"@e[tag=gen,tag=me,limit=1]","objective":"t2"}}],{"selector":"@e[tag=gen,tag=me,limit=1]","color":"dark_gray"},[{"text":"Next: ","bold":true,"color":"black"},{"text":"Traps","color":"#543A06","bold":false}]]}}
-execute if data storage maps:active settings.disabledItems[0] as @s[scores={t=1}] run data merge block ^ ^ ^1 {front_text:{Color:"-1",messages:[[{"text":"Making: ","bold":true,"color":"black"},{"text":"Mini TNT","color":"#540b0b","bold":false}],[{"text":"Time: ","color":"black"},{"score":{"name":"@e[tag=gen,tag=me,limit=1]","objective":"t2"}}],{"selector":"@e[tag=gen,tag=me,limit=1]","color":"dark_gray"},[{"text":"Next: ","bold":true,"color":"black"},{"text":"Traps","color":"#543A06","bold":false}]]}}
-execute as @s[scores={t=2}] run data merge block ^ ^ ^1 {front_text:{Color:"-1",messages:[[{"text":"Making: ","bold":true,"color":"black"},{"text":"Walls","color":"#3A3C50","bold":false}],[{"text":"Time: ","color":"black"},{"score":{"name":"@e[tag=gen,tag=me,limit=1]","objective":"t2"}}],{"selector":"@e[tag=gen,tag=me,limit=1]","color":"dark_gray"},[{"text":"Next: ","bold":true,"color":"black"},{"text":"Traps","color":"#543A06","bold":false}]]}}
-execute as @s[scores={t=3}] run data merge block ^ ^ ^1 {front_text:{Color:"-1",messages:[[{"text":"Making: ","bold":true,"color":"black"},{"text":"Traps","color":"#543A06","bold":false}],[{"text":"Time: ","color":"black"},{"score":{"name":"@e[tag=gen,tag=me,limit=1]","objective":"t2"}}],{"selector":"@e[tag=gen,tag=me,limit=1]","color":"dark_gray"},[{"text":"Next: ","bold":true,"color":"black"},{"text":"Mini TNT","color":"#540b0b","bold":false}]]}}
+# bottom text "Next: <item>"
+execute as @s[scores={t=..0}] run data modify storage bcm sign[3][1].text set value "Mini TNT"
+execute as @s[scores={t=1}] run data modify storage bcm sign[3][1].text set value "Walls"
+execute as @s[scores={t=1}] if data storage maps:active settings.disabledItems[0] run data modify storage bcm sign[3][1].text set value "Traps"
+execute as @s[scores={t=2}] run data modify storage bcm sign[3][1].text set value "Traps"
+execute as @s[scores={t=3}] run data modify storage bcm sign[3][1].text set value "Mini TNT"
 
-execute as @s[scores={t=..0}] run data merge block ^ ^ ^1 {front_text:{Color:"-1",messages:[[{"text":"Warming Up","bold":true,"color":"black"},{"text":"","color":"black","bold":false}],[{"text":"Time: ","color":"black"},{"score":{"name":"@e[tag=gen,tag=me,limit=1]","objective":"t2"}}],{"selector":"@e[tag=gen,tag=me,limit=1]","color":"dark_gray"},[{"text":"Next: ","bold":true,"color":"black"},{"text":"Mini TNT","color":"#540b0b","bold":false}]]}}
+# apply text to signs
+execute positioned ~1 ~ ~ if block ~ ~ ~ #wall_signs[facing=east] run data modify block ~ ~ ~ front_text.messages set from storage bcm sign
+execute positioned ~-1 ~ ~ if block ~ ~ ~ #wall_signs[facing=west] run data modify block ~ ~ ~ front_text.messages set from storage bcm sign
+execute positioned ~ ~ ~1 if block ~ ~ ~ #wall_signs[facing=south] run data modify block ~ ~ ~ front_text.messages set from storage bcm sign
+execute positioned ~ ~ ~-1 if block ~ ~ ~ #wall_signs[facing=north] run data modify block ~ ~ ~ front_text.messages set from storage bcm sign
+
+# clean up
+data remove storage bcm sign
+
+#execute as @s[scores={t=1}] run data merge block ^ ^ ^1 {front_text:{messages:[[{text:"Making: ",bold:true,color:"black"},{text:"Mini TNT",color:"#540b0b",bold:false}],[{text:"Time: ",color:"black"},{score:{name:"@e[tag=gen,tag=me,limit=1]",objective:"t2"}}],{selector:"@e[tag=gen,tag=me,limit=1]",color:"dark_gray"},[{text:"Next: ",bold:true,color:"black"},{text:"Walls",color:"#3A3C50",bold:false}]]}}
+#execute if data storage maps:active settings.disabledItems[0] as @s[scores={t=1}] run data merge block ^ ^ ^1 {front_text:{messages:[[{text:"Making: ",bold:true,color:"black"},{text:"Mini TNT",color:"#540b0b",bold:false}],[{text:"Time: ",color:"black"},{score:{name:"@e[tag=gen,tag=me,limit=1]",objective:"t2"}}],{selector:"@e[tag=gen,tag=me,limit=1]",color:"dark_gray"},[{text:"Next: ",bold:true,color:"black"},{text:"Traps",color:"#543A06",bold:false}]]}}
+#execute as @s[scores={t=2}] run data merge block ^ ^ ^1 {front_text:{messages:[[{text:"Making: ",bold:true,color:"black"},{text:"Walls",color:"#3A3C50",bold:false}],[{text:"Time: ",color:"black"},{score:{name:"@e[tag=gen,tag=me,limit=1]",objective:"t2"}}],{selector:"@e[tag=gen,tag=me,limit=1]",color:"dark_gray"},[{text:"Next: ",bold:true,color:"black"},{text:"Traps",color:"#543A06",bold:false}]]}}
+#execute as @s[scores={t=3}] run data merge block ^ ^ ^1 {front_text:{messages:[[{text:"Making: ",bold:true,color:"black"},{text:"Traps",color:"#543A06",bold:false}],[{text:"Time: ",color:"black"},{score:{name:"@e[tag=gen,tag=me,limit=1]",objective:"t2"}}],{selector:"@e[tag=gen,tag=me,limit=1]",color:"dark_gray"},[{text:"Next: ",bold:true,color:"black"},{text:"Mini TNT",color:"#540b0b",bold:false}]]}}
+
+#execute as @s[scores={t=..0}] run data merge block ^ ^ ^1 {front_text:{messages:[[{text:"Warming Up",bold:true,color:"black"},{text:"",color:"black",bold:false}],[{text:"Time: ",color:"black"},{score:{name:"@e[tag=gen,tag=me,limit=1]",objective:"t2"}}],{selector:"@e[tag=gen,tag=me,limit=1]",color:"dark_gray"},[{text:"Next: ",bold:true,color:"black"},{text:"Mini TNT",color:"#540b0b",bold:false}]]}}
 
 
 tag @s remove me
