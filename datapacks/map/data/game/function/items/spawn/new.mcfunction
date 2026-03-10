@@ -41,9 +41,9 @@ execute at @s[tag=in] at @s positioned ~ ~0.8 ~ positioned ~0.29 ~ ~0.29 run fun
 execute at @s[tag=in] at @s positioned ~ ~0.8 ~ positioned ~0.29 ~ ~-0.29 run function game:physics/inblock
 execute at @s[tag=in] at @s positioned ~ ~0.8 ~ positioned ~-0.29 ~ ~0.29 run function game:physics/inblock
 execute at @s[tag=in] at @s positioned ~ ~0.8 ~ positioned ~-0.29 ~ ~-0.29 run function game:physics/inblock
-execute at @s[tag=in] at @s positioned ~ ~0.8 ~ positioned ~ ~ ~ unless block ~ ~ ~ #minecraft:fences run function game:physics/inblock
-execute at @s[tag=in] at @s positioned ~ ~0.8 ~ positioned ~ ~0.29 ~ unless block ~ ~ ~ #minecraft:fences run function game:physics/inblock
-execute at @s[tag=in] at @s positioned ~ ~0.8 ~ positioned ~ ~-0.79 ~ unless block ~ ~ ~ #minecraft:fences run function game:physics/inblock
+execute at @s[tag=in] at @s positioned ~ ~0.8 ~ positioned ~ ~ ~ run function game:physics/inblock
+execute at @s[tag=in] at @s positioned ~ ~0.8 ~ positioned ~ ~0.29 ~ run function game:physics/inblock
+execute at @s[tag=in] at @s positioned ~ ~0.8 ~ positioned ~ ~-0.79 ~ run function game:physics/inblock
 
 tag @s[tag=!in] add stuck
 
