@@ -31,8 +31,8 @@ data merge storage maps:active {spawn:{\
     blueSpawnBoundingBox:[{area:"dx=20,dy=10,dz=10",origin:"-139. 6. 404."}],\
     redSpawnBoundingBox:[{area:"dx=20,dy=10,dz=-10",origin:"-139. 6. 361."}],\
     \
-    blueSpawn:"-130.5 7 -407.5 180 0",\
-    redSpawn:"-130.5 7 -367.5 0 0",\
+    blueSpawn:"-130.5 7 407.5 180 0",\
+    redSpawn:"-130.5 7 367.5 0 0",\
     \
     ctfInvulnTime:40,\
     infectionInvulnTime:40,\
