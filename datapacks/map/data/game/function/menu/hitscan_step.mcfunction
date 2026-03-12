@@ -47,10 +47,10 @@ execute if entity @s[x=262.5,y=-41.5,z=-221.5,dx=2,dy=3,dz=2] run scoreboard pla
 execute if entity @s[x=259.5,y=-41.5,z=-218.5,dx=2,dy=3,dz=2,scores={timer=..160}] as @e[type=giant,tag=10] run function game:menu/p_display/dead_head_start
 execute if entity @s[x=259.5,y=-41.5,z=-218.5,dx=2,dy=3,dz=2] run scoreboard players set @s timer 1000
 
-execute if entity @s[x=264.9,y=-53,z=-248.0,dx=2,dy=2,dz=2,scores={timer=..160}] run function game:menu/map_prev
+execute if entity @s[x=264.9,y=-53,z=-248.0,dx=2,dy=2,dz=2,scores={timer=..160}] run function game:menu/map_prev_button
 execute if entity @s[x=264.9,y=-53,z=-248.0,dx=2,dy=2,dz=2] run scoreboard players set @s timer 1000
 
-execute if entity @s[x=264.9,y=-53,z=-245.0,dx=2,dy=2,dz=2,scores={timer=..160}] run function game:menu/map_next
+execute if entity @s[x=264.9,y=-53,z=-245.0,dx=2,dy=2,dz=2,scores={timer=..160}] run function game:menu/map_next_button
 execute if entity @s[x=264.9,y=-53,z=-245.0,dx=2,dy=2,dz=2] run scoreboard players set @s timer 1000
 
 execute if entity @s[x=264.9,y=-53,z=-225.0,dx=2,dy=2,dz=2,scores={timer=..160}] run function game:menu/mode_next

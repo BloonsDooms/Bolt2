@@ -416,6 +416,9 @@ scoreboard players set .tmi_objective .data 0
 scoreboard players set .tmi_arrow .data 0
 scoreboard players set .tmi_preset .data 1
 
+# for item maps
+execute unless score .custom_maps_enabled .data matches 0..1 run scoreboard players set .custom_maps_enabled .data 0
+
 #
 scoreboard objectives add .custom_random dummy
 

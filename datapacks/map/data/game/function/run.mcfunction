@@ -6,6 +6,11 @@ execute if score .delay_10 .timer matches 10.. run scoreboard players set .delay
 tag @a[scores={leave_game=1..}] remove new_p_text
 scoreboard players set @a leave_game 0
 
+
+# long story
+forceload add 207 -496 16 -465
+
+
 #
 execute positioned 234.32 -49.00 -223.08 if entity @a[distance=..10] run function game:tmi/chest_items
 execute positioned 234.32 -49.00 -223.08 if entity @a[distance=..10] run function game:menu/custom_random/container
