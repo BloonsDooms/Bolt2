@@ -29,6 +29,16 @@ execute if score .ms_total calc matches 500.. run scoreboard players operation .
 # keep it simple - forceload the whole map editor area all the time
 function bcm:editor/forceload
 
+# clone in-game-destructible blocks for map resetting
+data modify storage bcm tmp.x set from storage item_structures save.size[0]
+data modify storage bcm tmp.y set from storage item_structures save.size[1]
+data modify storage bcm tmp.z set from storage item_structures save.size[2]
+execute store result storage bcm tmp.max_blocks int 1 run gamerule max_block_modifications
+gamerule max_block_modifications 7200000
+execute at @s run function bcm:map/clone_destructible with storage bcm tmp
+function bcm:map/max_block_modifications with storage bcm tmp
+data remove storage bcm tmp
+
 ## all code past this command only runs if new map
 execute unless score .new_item_map calc matches 1 run return 1
 scoreboard players reset .new_item_map

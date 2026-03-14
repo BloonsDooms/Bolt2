@@ -1,7 +1,7 @@
 ## loads map structure called mapName from bcm maps[] with LNW corner at ~ ~ ~
 # summon load point marker
 summon marker ~ ~ ~ {Tags:[start_point]}
-tellraw @a {nbt:"Pos",entity:"@n[type=marker,tag=start_point]"}
+# tellraw @a {nbt:"Pos",entity:"@n[type=marker,tag=start_point]"}
 
 # set load point if new map
 $scoreboard players set .new item_structures $(new)

@@ -1,0 +1,1 @@
+$clone ~ ~ ~ ~$(x) ~-$(y) ~$(z) ~ -59 ~ strict filtered #game:destructible normal

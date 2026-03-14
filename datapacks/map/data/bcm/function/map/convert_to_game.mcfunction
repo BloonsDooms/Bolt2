@@ -56,7 +56,8 @@ data modify storage maps:active settings.introCutscene set from storage bcm map.
 
 # no tickingScript
 
-data modify storage maps:active settings.wallHeight set from storage bcm map.max_wall_height
+execute store result score .wh calc run data get storage bcm map.max_wall_height
+execute store result storage maps:active settings.wallHeight int 1 run scoreboard players operation .wh calc += .y1 calc
 data modify storage maps:active settings.disabledItems set value []
 # reusing results from above here
 scoreboard players add .x calc 1

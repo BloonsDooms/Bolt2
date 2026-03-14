@@ -10,4 +10,4 @@ function bcm:util/xyz_string_abs with storage bcm macro
 $data modify storage bcm maps[{registry:{mapName:"$(mapName)"}}].map.load_point set from storage bcm tmp.pos
 data remove storage bcm tmp
 
-tellraw @a "set load point"
+# tellraw @a "set load point"
