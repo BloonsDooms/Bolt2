@@ -61,7 +61,7 @@ data modify storage bcm tmp.doors set from storage bcm doors
 #execute if data storage bcm tmp.doors[-1] at fd8107bb-c1fa-4ddf-b8fe-d1087da4ff6e summon marker run function bcm:place/door_auto with storage bcm tmp.doors[-1]
 execute store result storage bcm macro.load_z int 1 run scoreboard players get #item_map_load_z calc
 function bcm:place/door_auto_get_loadpoint with storage bcm macro
-tellraw @a {nbt:"macro.load_z",storage:"bcm"}
+# tellraw @a {nbt:"macro.load_z",storage:"bcm"}
 data remove storage bcm tmp
 
 
