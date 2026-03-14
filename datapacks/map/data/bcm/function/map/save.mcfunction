@@ -20,6 +20,11 @@ execute unless entity @n[type=block_display,tag=render_box,tag=wall_height] stor
 execute if score .wh calc > .y2 calc store success score .can_save_map calc run function bcm:fail/tellraw {input:'"Failed to save map: Max wall height is outside (above) the save area"'}
 execute if score .wh calc < .y1 calc store success score .can_save_map calc run function bcm:fail/tellraw {input:'"Failed to save map: Max wall height is outside (under) the save area"'}
 
+# 180-block height restriction (for resettability purposes)
+scoreboard players operation .y calc = .y2 calc
+scoreboard players operation .y calc -= .y1 calc
+execute if score .y calc matches 181.. store success score .can_save_map calc run function bcm:fail/tellraw {input:'"Failed to save map: It\'s too tall! (Max allowed height is 180 blocks)"'}
+
 # spawnpoints set?
 execute unless entity @n[type=marker,tag=red_spawnpoint] store success score .can_save_map calc run function bcm:fail/tellraw {input:'["Failed to save map: No red spawn ",{italic:true,text:"point"}]'}
 execute unless entity @n[type=marker,tag=blue_spawnpoint] store success score .can_save_map calc run function bcm:fail/tellraw {input:'["Failed to save map: No blue spawn ",{italic:true,text:"point"}]'}
