@@ -27,7 +27,8 @@ execute as @a[scores={set_item_generator=-1}] at @s run function bcm:trigger/ite
 execute as @a[scores={set_item_generator=..-2}] at @s run function bcm:trigger/item_generator_cancel
 execute as @a[scores={existing_map_response=1}] run function bcm:trigger/overwrite_existing_map
 execute as @a[scores={master_menu=1..}] at @s run function bcm:trigger/master
-scoreboard players enable @a[tag=in_map_editor] export_map
+# scoreboard players enable @a[tag=in_map_editor] export_map
+scoreboard players enable @a[gamemode=creative] export_map
 execute as @a[scores={export_map=1..}] at @s run function bcm:trigger/export
 execute as @a[scores={targets_and_crates=1..}] run function bcm:trigger/targets_and_crates
 

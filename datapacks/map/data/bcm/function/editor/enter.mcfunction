@@ -1,4 +1,4 @@
-tag @s add in_map_editor
+# tag @s add in_map_editor
 execute if entity @s[tag=!bypass_editor_boundary] run summon interaction 0 0 0 {width:13f,height:13f,Tags:[x,min]}
 execute if entity @s[tag=!bypass_editor_boundary] run summon interaction 0 0 0 {width:13f,height:13f,Tags:[x,max]}
 execute if entity @s[tag=!bypass_editor_boundary] run summon interaction 0 0 0 {width:13f,height:13f,Tags:[z,min]}
