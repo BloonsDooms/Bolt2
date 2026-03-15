@@ -3,8 +3,8 @@ $data merge storage minecraft:item_structures {save:$(MapIcon)}
 
 # spawn in build 
 tag @s add start_point
-function item_structures:load
 scoreboard players set .is_map_icon item_structures 1
+function item_structures:load
 scoreboard players set .is_busy item_structures 1
 tag @s remove start_point
 
