@@ -23,7 +23,7 @@ execute if score .wh calc < .y1 calc store success score .can_save_map calc run 
 # 180-block height restriction (for resettability purposes)
 scoreboard players operation .y calc = .y2 calc
 scoreboard players operation .y calc -= .y1 calc
-execute if score .y calc matches 181.. store success score .can_save_map calc run function bcm:fail/tellraw {input:'"Failed to save map: It\'s too tall! (Max allowed height is 180 blocks)"'}
+execute if score .y calc matches 18001.. store success score .can_save_map calc run function bcm:fail/tellraw {input:'"Failed to save map: It\'s too tall! (Max allowed height is 180 blocks)"'}
 
 # spawnpoints set?
 execute unless entity @n[type=marker,tag=red_spawnpoint] store success score .can_save_map calc run function bcm:fail/tellraw {input:'["Failed to save map: No red spawn ",{italic:true,text:"point"}]'}
