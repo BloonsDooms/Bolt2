@@ -35,7 +35,7 @@ data modify storage bcm tmp.y set from storage item_structures save.size[1]
 data modify storage bcm tmp.z set from storage item_structures save.size[2]
 execute store result storage bcm tmp.max_blocks int 1 run gamerule max_block_modifications
 gamerule max_block_modifications 7200000
-execute at @s run function bcm:map/clone_destructible with storage bcm tmp
+execute unless score .is_map_icon item_structures matches 1 at @s run function bcm:map/clone_destructible with storage bcm tmp
 function bcm:map/max_block_modifications with storage bcm tmp
 data remove storage bcm tmp
 
