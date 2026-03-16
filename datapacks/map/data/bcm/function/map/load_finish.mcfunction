@@ -37,7 +37,17 @@ execute store result storage bcm tmp.max_blocks int 1 run gamerule max_block_mod
 gamerule max_block_modifications 7200000
 execute unless score .is_map_icon item_structures matches 1 at @s run function bcm:map/clone_destructible with storage bcm tmp
 function bcm:map/max_block_modifications with storage bcm tmp
+
+# utility placement restrictors
+execute at @s as @e[type=marker,tag=door] run function bcm:map/door_restrictors with storage bcm tmp
 data remove storage bcm tmp
+function bcm:util/parse_area_selector with storage bcm map.red_spawn
+data modify storage bcm macro.start set from storage bcm map.red_spawn.start
+function bcm:map/spawn_restrictors with storage bcm macro
+function bcm:util/parse_area_selector with storage bcm map.blue_spawn
+data modify storage bcm macro.start set from storage bcm map.blue_spawn.start
+function bcm:map/spawn_restrictors with storage bcm macro
+data remove storage bcm macro
 
 ## all code past this command only runs if new map
 execute unless score .new_item_map calc matches 1 run return 1
