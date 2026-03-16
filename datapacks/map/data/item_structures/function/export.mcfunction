@@ -11,4 +11,4 @@ execute if score .print_messages item_structures matches 1 run title @s title {"
 #execute if score .print_messages item_structures matches 1 run title @s subtitle [{"text":"Save item with ","color":"gray"},{keybind:"key.saveToolbarActivator"},"+<slot>"]
 execute if score .print_messages item_structures matches 1 run tellraw @s ["HOW TO SAVE YOUR MAP ITEM:\n1: Use an anvil to name your map\n2: Press ",{keybind:"key.inventory"},", and go to the \"",{translate:"itemGroup.hotbar"},"\" tab.\n3: Choose a row to save to, then press the keys shown.\n4: That's it! Your map item (and everything else in your hotbar) should now appear when you go back to the ",{translate:"itemGroup.hotbar"}," tab."]
 
-function item_structures:zprivate/menu/sound
+function item_structures:zprivate/sound

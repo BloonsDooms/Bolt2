@@ -6,4 +6,4 @@ execute if score .print_messages item_structures matches 1 run title @s subtitle
 execute unless data entity @s SelectedItem.components."minecraft:custom_data".structure run title @s title {"text":"FAILED Imported","color":"dark_green"}
 execute unless data entity @s SelectedItem.components."minecraft:custom_data".structure run title @s subtitle {"text":"This isnt an item structure!","color":"gray"}
 
-function item_structures:zprivate/menu/sound
+function item_structures:zprivate/sound
