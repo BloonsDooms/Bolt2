@@ -4,4 +4,5 @@ data modify storage bcm schedule.doors set from storage bcm doors
 schedule function bcm:place/replace_doors_schedule 5t
 
 # map structure
+scoreboard players set .place_restrictors item_structures 1
 $execute positioned $(load_point) run function bcm:map/load {mapName:"$(mapName)",new:false}

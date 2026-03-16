@@ -16,6 +16,6 @@ data modify storage item_structures forceload.z set from storage item_structures
 function item_structures:zprivate/forceload with storage item_structures forceload
 
 # [bleps] clear previous utility placement restrictors
-execute unless score .is_map_icon item_structures matches 1 run function item_structures:zprivate/remove_restrictors with storage item_structures forceload
+execute if score .place_restrictors item_structures matches 1 run function item_structures:zprivate/remove_restrictors with storage item_structures forceload
 
 function item_structures:zprivate/load/move

@@ -70,6 +70,7 @@ data remove storage bcm tmp
 #tag fd8107bb-c1fa-4ddf-b8fe-d1087da4ff6e add tp_map_placer
 scoreboard players set .new_item_map calc 1
 scoreboard players set .print_messages item_structures 1
+scoreboard players set .place_restrictors item_structures 1
 data modify storage bcm macro.new set value true
 function bcm:map/load_get_loadpoint with storage bcm macro
 data remove storage bcm macro.load_z
