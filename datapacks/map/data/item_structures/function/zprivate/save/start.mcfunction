@@ -19,7 +19,6 @@ execute if score .print_messages item_structures matches 1 run tellraw @a [{scor
 execute if score total vect_x matches 100.. run tellraw @a [{color:"yellow",text:"NOTICE: structure is really big. after saving it, we'll tell you if it's too big to export or not. but it's probably fine - especially if you have large areas with all one block, including air."}]
 
 # first block can't match "previous" block
-#data modify storage item_structures prev set value -1 
 data remove storage bs:out block
 
 scoreboard players set id commands -1

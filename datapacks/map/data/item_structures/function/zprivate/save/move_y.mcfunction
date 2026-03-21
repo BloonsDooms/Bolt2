@@ -6,5 +6,4 @@ scoreboard players remove #count vect_y 1
 scoreboard players operation #count vect_z = #system vect_z
 
 execute if score #count vect_y matches 1.. run return run function item_structures:zprivate/save/move
-#execute if score #count vect_y matches ..0 run schedule function item_structures:zprivate/save/end 1t
 execute if score #count vect_y matches ..0 run function #item_structures:finish_save

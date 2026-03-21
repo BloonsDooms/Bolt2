@@ -7,7 +7,6 @@ execute store result score #block_id commands run data get storage item_structur
 execute if score #block_id commands matches 0..32767 run return run function item_structures:zprivate/load/block_place
 
 ## multiple blocks
-#execute unless score #block_id commands matches 0..32767 run function item_structures:zprivate/load/compressed_block
 # parse entry
 scoreboard players operation #same_count commands = #block_id commands
 scoreboard players operation #block_id commands %= #32768 constant
