@@ -6,8 +6,8 @@ execute store result score different commands run function item_structures:zpriv
 execute if score same_count commands matches 131071 run scoreboard players set different commands 1
 
 # if nbt, treat as different to prevent data loss
-execute if data block ~ ~ ~ {} run scoreboard players set different commands 1
-execute if data block ~ ~ ~ {} run data modify storage item_structures save.nbts append from block ~ ~ ~ {}
+execute if block ~ ~ ~ #item_structures:nbt_savable run scoreboard players set different commands 1
+execute if block ~ ~ ~ #item_structures:nbt_savable run data modify storage item_structures save.nbts append from block ~ ~ ~ {}
 
 # add entry
 execute if score different commands matches 0 run scoreboard players add same_count commands 1
