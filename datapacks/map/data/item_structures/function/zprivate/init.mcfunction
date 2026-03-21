@@ -4,7 +4,7 @@ scoreboard objectives add vect_z dummy
 
 scoreboard objectives add constant dummy
 scoreboard objectives add commands dummy
-scoreboard players set limit commands 30000
+scoreboard players set #limit commands 30000
 scoreboard players set limit.step commands 2000
 scoreboard objectives add item_structures dummy
 

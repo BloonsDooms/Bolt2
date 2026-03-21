@@ -7,4 +7,4 @@ execute if score .place_restrictors item_structures matches 1 if block ~ ~ ~ #mi
 
 # skip blocks filled
 $execute positioned ~$(length_minus_one) ~ ~ run function bcm:util/tp_here
-scoreboard players operation @s vect_x -= same_count commands
+scoreboard players operation #count vect_x -= #same_count commands

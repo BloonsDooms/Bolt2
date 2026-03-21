@@ -36,9 +36,9 @@ scoreboard players add .map_count .data 1
 ## place icon
 # must finish loading on the same tick
 # most icons do 15k-20k commands, my math says it's impossible to exceed 54k
-scoreboard players operation #limit_old commands = limit commands
+scoreboard players operation #limit_old commands = #limit commands
 scoreboard players operation #limit.step_old commands = limit.step commands
-scoreboard players set limit commands 54000
+scoreboard players set #limit commands 54000
 scoreboard players set limit.step commands 0
 # find map icon slot
 scoreboard players operation .i calc = .map_count .data
@@ -53,7 +53,7 @@ function item_structures:load
 # cleanup
 kill @n[type=marker,tag=start_point]
 data remove storage bcm tmp
-scoreboard players operation limit commands = #limit_old commands
+scoreboard players operation #limit commands = #limit_old commands
 
 
 ## place doors
