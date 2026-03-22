@@ -1,63 +1,87 @@
 {
-  "minecraft:recipes/building_blocks/dye_gray_carpet": {
+  "advancements:root_5": {
     "criteria": {
-      "has_needed_dye": "2024-06-26 20:19:39 -0500"
+      "warrior": "2026-02-22 23:20:33 +0000"
     },
     "done": true
   },
-  "minecraft:recipes/misc/light_gray_dye_from_gray_white_dye": {
+  "advancements:root_4": {
     "criteria": {
-      "has_gray_dye": "2024-06-26 20:19:39 -0500"
+      "warrior": "2026-02-22 23:20:33 +0000"
     },
     "done": true
   },
-  "minecraft:recipes/decorations/crafting_table": {
+  "advancements:root_6": {
     "criteria": {
-      "unlock_right_away": "2024-06-26 20:19:39 -0500"
+      "warrior": "2026-02-22 23:20:33 +0000"
     },
     "done": true
   },
-  "minecraft:recipes/decorations/chest": {
+  "advancements:root_1": {
     "criteria": {
-      "has_lots_of_items": "2024-06-26 20:19:39 -0500"
+      "warrior": "2026-02-22 23:20:33 +0000"
     },
     "done": true
   },
-  "minecraft:recipes/redstone/dispenser": {
+  "advancements:root_3": {
     "criteria": {
-      "has_bow": "2024-06-26 20:19:39 -0500"
+      "warrior": "2026-02-22 23:20:33 +0000"
     },
     "done": true
   },
-  "minecraft:adventure/adventuring_time": {
+  "advancements:root_2": {
     "criteria": {
-      "minecraft:plains": "2024-06-26 20:19:40 -0500"
-    },
-    "done": false
-  },
-  "minecraft:recipes/building_blocks/dye_gray_wool": {
-    "criteria": {
-      "has_needed_dye": "2024-06-26 20:19:39 -0500"
+      "warrior": "2026-02-22 23:20:33 +0000"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/dye_gray_bed": {
+  "advancements:root_9": {
     "criteria": {
-      "has_needed_dye": "2024-06-26 20:19:39 -0500"
+      "warrior": "2026-02-22 23:20:33 +0000"
     },
     "done": true
   },
-  "minecraft:recipes/decorations/gray_candle": {
+  "advancements:general/start": {
     "criteria": {
-      "has_gray_dye": "2024-06-26 20:19:39 -0500"
+      "tinyt": "2026-02-22 23:51:55 +0000"
     },
     "done": true
   },
-  "minecraft:recipes/decorations/gray_stained_glass_pane_from_glass_pane": {
+  "advancements:ctf/flag_kill": {
     "criteria": {
-      "has_gray_dye": "2024-06-26 20:19:39 -0500"
+      "tinyt": "2026-02-22 23:53:25 +0000"
     },
     "done": true
   },
-  "DataVersion": 3839
+  "advancements:general/die10": {
+    "criteria": {
+      "die10": "2026-02-22 23:55:13 +0000"
+    },
+    "done": true
+  },
+  "advancements:ctf/flag": {
+    "criteria": {
+      "tinyt": "2026-02-22 23:57:11 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/realtime": {
+    "criteria": {
+      "tinyt": "2026-02-22 23:57:23 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/win": {
+    "criteria": {
+      "win": "2026-02-22 23:58:18 +0000"
+    },
+    "done": true
+  },
+  "advancements:ctf/height": {
+    "criteria": {
+      "tinyt": "2026-02-23 00:15:21 +0000"
+    },
+    "done": true
+  },
+  "DataVersion": 4671
 }

@@ -1,3 +1,99 @@
 {
-  "DataVersion": 3953
+  "advancements:root_5": {
+    "criteria": {
+      "warrior": "2026-01-21 03:07:31 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_4": {
+    "criteria": {
+      "warrior": "2026-01-21 03:07:31 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_6": {
+    "criteria": {
+      "warrior": "2026-01-21 03:07:31 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_1": {
+    "criteria": {
+      "warrior": "2026-01-21 03:07:31 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_3": {
+    "criteria": {
+      "warrior": "2026-01-21 03:07:31 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_2": {
+    "criteria": {
+      "warrior": "2026-01-21 03:07:31 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_9": {
+    "criteria": {
+      "warrior": "2026-01-21 03:07:31 +0000"
+    },
+    "done": true
+  },
+  "advancements:infected/win_inf": {
+    "criteria": {
+      "ted": "2026-01-21 03:08:11 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/play_inf": {
+    "criteria": {
+      "tinyt": "2026-01-21 03:08:16 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/win": {
+    "criteria": {
+      "win": "2026-01-21 03:08:16 +0000"
+    },
+    "done": true
+  },
+  "advancements:infected/ev3": {
+    "criteria": {
+      "ted": "2026-01-21 03:50:01 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/antiair": {
+    "criteria": {
+      "tinyt": "2026-01-21 04:22:28 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/die10": {
+    "criteria": {
+      "die10": "2026-01-21 04:23:27 +0000"
+    },
+    "done": true
+  },
+  "advancements:ctf/wall20": {
+    "criteria": {
+      "tinyt": "2026-01-21 04:24:02 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/start": {
+    "criteria": {
+      "tinyt": "2026-01-21 04:21:30 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/play_tmi": {
+    "criteria": {
+      "tinyt": "2026-01-21 04:26:12 +0000"
+    },
+    "done": true
+  },
+  "DataVersion": 4671
 }

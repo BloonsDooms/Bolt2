@@ -1,3 +1,117 @@
 {
-  "DataVersion": 3953
+  "advancements:root_5": {
+    "criteria": {
+      "warrior": "2025-08-27 02:47:49 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_4": {
+    "criteria": {
+      "warrior": "2025-08-27 02:47:49 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_6": {
+    "criteria": {
+      "warrior": "2025-08-27 02:47:49 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_1": {
+    "criteria": {
+      "warrior": "2025-08-27 02:47:49 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_3": {
+    "criteria": {
+      "warrior": "2025-08-27 02:47:49 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_2": {
+    "criteria": {
+      "warrior": "2025-08-27 02:47:49 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_9": {
+    "criteria": {
+      "warrior": "2025-08-27 02:47:49 +0000"
+    },
+    "done": true
+  },
+  "advancements:lobby/target1": {
+    "criteria": {
+      "elo1": "2025-08-30 04:55:28 +0000"
+    },
+    "done": true
+  },
+  "advancements:lobby/target2": {
+    "criteria": {
+      "elo1": "2025-08-30 04:56:43 +0000"
+    },
+    "done": true
+  },
+  "advancements:lobby/can": {
+    "criteria": {
+      "can": "2025-08-30 04:57:36 +0000"
+    },
+    "done": true
+  },
+  "advancements:lobby/blind": {
+    "criteria": {
+      "ted": "2025-08-30 04:59:27 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/start": {
+    "criteria": {
+      "tinyt": "2025-08-30 05:00:39 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/die10": {
+    "criteria": {
+      "die10": "2025-08-30 05:03:04 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/antiair": {
+    "criteria": {
+      "tinyt": "2025-08-30 05:03:33 +0000"
+    },
+    "done": true
+  },
+  "advancements:ctf/flag_kill": {
+    "criteria": {
+      "tinyt": "2025-08-30 05:03:33 +0000"
+    },
+    "done": true
+  },
+  "advancements:ctf/ger": {
+    "criteria": {
+      "tinyt": "2025-08-30 05:07:33 +0000"
+    },
+    "done": true
+  },
+  "advancements:ctf/killstreak1": {
+    "criteria": {
+      "elo1": "2026-01-21 06:17:17 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/headstomp": {
+    "criteria": {
+      "tinyt": "2026-01-21 06:17:17 +0000"
+    },
+    "done": true
+  },
+  "advancements:ctf/trap": {
+    "criteria": {
+      "tinyt": "2026-01-21 06:17:53 +0000"
+    },
+    "done": true
+  },
+  "DataVersion": 4671
 }
