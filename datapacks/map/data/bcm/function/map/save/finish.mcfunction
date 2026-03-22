@@ -13,9 +13,9 @@ execute if score .print_messages item_structures matches 1 run tellraw @a ["fina
 
 # improve save ETA
 # get real save rate
-scoreboard players operation .rate calc = system vect_x
-scoreboard players operation .rate calc *= system vect_y
-scoreboard players operation .rate calc *= system vect_z
+scoreboard players operation .rate calc = #system vect_x
+scoreboard players operation .rate calc *= #system vect_y
+scoreboard players operation .rate calc *= #system vect_z
 scoreboard players operation .rate calc *= #10 calc
 scoreboard players operation .rate calc /= .ms_total calc
 scoreboard players operation .rate calc *= #100 calc

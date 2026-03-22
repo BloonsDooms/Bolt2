@@ -3,7 +3,6 @@ $data merge storage minecraft:item_structures {save:$(MapIcon)}
 
 # spawn in build 
 tag @s add start_point
-scoreboard players set .is_map_icon item_structures 1
 function item_structures:load
 scoreboard players set .is_busy item_structures 1
 tag @s remove start_point
@@ -14,5 +13,4 @@ execute store result storage macro map_id int 1 run scoreboard players add .map_
 execute if score .map_icon_counter .data < .map_count .data run return run schedule function game:menu/rebuild_menu_scheduler 2t
 
 # mark as unbusy only once finished loading all icons
-scoreboard players set .is_map_icon item_structures 0
 scoreboard players set .is_busy item_structures 0

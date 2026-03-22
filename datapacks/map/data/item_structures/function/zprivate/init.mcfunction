@@ -4,7 +4,7 @@ scoreboard objectives add vect_z dummy
 
 scoreboard objectives add constant dummy
 scoreboard objectives add commands dummy
-scoreboard players set limit commands 30000
+scoreboard players set #limit commands 30000
 scoreboard players set limit.step commands 2000
 scoreboard objectives add item_structures dummy
 
@@ -20,13 +20,5 @@ scoreboard players set #-1 constant -1
 
 forceload add 69420 69420
 setblock 69420 0 69420 yellow_shulker_box
-
-#schedule function cw_menu:message 1t
-#schedule function item_structures:menu/message 2t
-
-# shuba added this
-scoreboard objectives add bsc dummy
-#function item_structures:setup_blocks_list
-#function item_structures:setup_index_list
 
 scoreboard players add .print_messages item_structures 0

@@ -91,9 +91,9 @@ tag @e[type=marker,tag=render_box,tag=save] remove start_point
 tag @e[type=marker,tag=render_box,tag=save] remove end_point
 
 # time estimate (after saving begins for volume calculation)
-scoreboard players operation .l calc = system vect_x
-scoreboard players operation .l calc *= system vect_y
-scoreboard players operation .l calc *= system vect_z
+scoreboard players operation .l calc = #system vect_x
+scoreboard players operation .l calc *= #system vect_y
+scoreboard players operation .l calc *= #system vect_z
 scoreboard players operation .l calc /= .save_blocks/s calc
 scoreboard players operation .s calc = .l calc
 scoreboard players operation .l calc /= #60 calc

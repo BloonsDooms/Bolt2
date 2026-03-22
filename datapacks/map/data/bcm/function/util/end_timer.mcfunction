@@ -29,4 +29,4 @@ execute if score .m calc matches 0 if score .s calc matches 0 if score .ms calc 
 # stop tracking mspt
 stopwatch remove bcm:mspt_tracker
 schedule clear bcm:util/mspt_update
-scoreboard players set limit commands 30000
+scoreboard players set #limit commands 30000
