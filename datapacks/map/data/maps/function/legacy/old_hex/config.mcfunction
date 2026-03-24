@@ -23,8 +23,8 @@ data merge storage maps:active {settings:{\
     wallHeight: 4,\
     disabledItems:[],\
     \
-    mapSize:{x1:-616, y1:14,  z1:-86,\
-             x2:-656, y2:-6, z2:-147},\
+    mapSize:{x1:-656, y1:14,  z1:-147,\
+             x2:-616, y2:-6, z2:-86},\
 }}
 
 # Spawn, the bounding box is used for invlun time and afk detection.
