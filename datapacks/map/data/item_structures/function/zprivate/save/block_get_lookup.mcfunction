@@ -1,1 +1,0 @@
-$data modify storage item_structures save.stack set from storage item_structures id.$(block)
