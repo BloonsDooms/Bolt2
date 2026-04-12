@@ -13,6 +13,8 @@ jobs:
         with:
           username: ${{ secrets.FTP_USERNAME }}
           server: ${{ secrets.FTP_SERVER }}
+          delete_remote_files: true
+          rsyncArgs: --exclude=.git --exclude=*.log
           port: 2022
           local_path: 'datapacks/*'
           remote_path: '/world/datapacks'
