@@ -19,6 +19,19 @@ execute as @s[tag=red,y_rotation=0] at @s positioned ^-2.5 ^-1 ^-3 unless entity
 execute as @s[tag=!red,y_rotation=0] at @s positioned ^-2.5 ^-1 ^-3 unless entity @p[dx=4,dy=3,dz=2,team=blue] run tag @s remove open
 execute as @s[tag=map_editor,y_rotation=0] at @s positioned ^-2.5 ^-1 ^-3 if entity @p[dx=4,dy=3,dz=2] run tag @s add open
 
+execute as @s[tag=red,y_rotation=-180] at @s positioned ^-1.5 ^-1 ^-2 run scoreboard players set @a[dx=-4,dy=3,dz=-2,team=red,scores={door_invul=..-1},tag=inspawn] door_invul 20
+execute as @s[tag=!red,y_rotation=-180] at @s positioned ^-1.5 ^-1 ^-2 run scoreboard players set @a[dx=-4,dy=3,dz=-2,team=blue,scores={door_invul=..-1},tag=inspawn] door_invul 20
+execute as @s[tag=map_editor,y_rotation=-180] at @s positioned ^-1.5 ^-1 ^-2 run scoreboard players set @a[dx=-4,dy=3,dz=-2,scores={door_invul=..-1},tag=inspawn] door_invul 20
+execute as @s[tag=red,y_rotation=90] at @s positioned ^-2.5 ^-1 ^-2 run scoreboard players set @a[dx=-2,dy=3,dz=4,team=red,scores={door_invul=..-1},tag=inspawn] door_invul 20
+execute as @s[tag=!red,y_rotation=90] at @s positioned ^-2.5 ^-1 ^-2 run scoreboard players set @a[dx=-2,dy=3,dz=4,team=blue,scores={door_invul=..-1},tag=inspawn] door_invul 20
+execute as @s[tag=map_editor,y_rotation=90] at @s positioned ^-2.5 ^-1 ^-2 run scoreboard players set @a[dx=-2,dy=3,dz=4,scores={door_invul=..-1},tag=inspawn] door_invul 20
+execute as @s[tag=red,y_rotation=-90] at @s positioned ^-1.5 ^-1 ^-3 run scoreboard players set @a[dx=2,dy=3,dz=-4,team=red,scores={door_invul=..-1},tag=inspawn] door_invul 20
+execute as @s[tag=!red,y_rotation=-90] at @s positioned ^-1.5 ^-1 ^-3 run scoreboard players set @a[dx=2,dy=3,dz=-4,team=blue,scores={door_invul=..-1},tag=inspawn] door_invul 20
+execute as @s[tag=map_editor,y_rotation=-90] at @s positioned ^-1.5 ^-1 ^-3 run scoreboard players set @a[dx=2,dy=3,dz=-4,scores={door_invul=..-1},tag=inspawn] door_invul 20
+execute as @s[tag=red,y_rotation=0] at @s positioned ^-2.5 ^-1 ^-3 run scoreboard players set @a[dx=4,dy=3,dz=2,team=red,scores={door_invul=..-1},tag=inspawn] door_invul 20
+execute as @s[tag=!red,y_rotation=0] at @s positioned ^-2.5 ^-1 ^-3 run scoreboard players set @a[dx=4,dy=3,dz=2,team=blue,scores={door_invul=..-1},tag=inspawn] door_invul 20
+execute as @s[tag=map_editor,y_rotation=0] at @s positioned ^-2.5 ^-1 ^-3 run scoreboard players set @a[dx=4,dy=3,dz=2,scores={door_invul=..-1},tag=inspawn] door_invul 20
+
 #
 execute as @s[tag=open,tag=!open_2] at @s run fill ^-1 ^ ^ ^1 ^2 ^ air replace yellow_stained_glass_pane
 execute as @s[tag=!open,tag=open_2] at @s run fill ^-1 ^ ^ ^1 ^2 ^ yellow_stained_glass_pane replace air

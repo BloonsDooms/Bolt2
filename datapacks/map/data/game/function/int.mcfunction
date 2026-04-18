@@ -269,6 +269,7 @@ scoreboard objectives add time_dead dummy
 
 scoreboard objectives add flagtime dummy
 scoreboard objectives add invul dummy
+scoreboard objectives add door_invul dummy
 scoreboard objectives add wall_invul dummy
 scoreboard objectives add danger dummy
 

@@ -524,3 +524,7 @@ execute as @s[tag=locked_53,tag=!locked_3,tag=!locked_76,tag=!locked_74,tag=!loc
 execute as @s[tag=locked_58,tag=!locked_77,tag=!locked_27,tag=!locked_54,tag=!locked_17,tag=!locked_40,tag=!locked_69,tag=!locked_68,tag=!locked_67,tag=!locked_6,tag=!locked_61,tag=!locked_18,tag=!locked_65,tag=!locked_52,tag=!locked_26,tag=!locked_2,tag=!locked_60,tag=!locked_10,tag=!locked_66,tag=!locked_41,tag=!locked_7,tag=!locked_12] run function game:player/unlock/58
 execute as @s[tag=locked_35,tag=!locked_55,tag=!locked_43,tag=!locked_19,tag=!locked_44,tag=!locked_5,tag=!locked_15,tag=!locked_37,tag=!locked_42] run function game:player/unlock/35
 execute as @s[tag=locked_64,tag=!locked_58,tag=!locked_53,tag=!locked_23,tag=!locked_36,tag=!locked_31,tag=!locked_35,tag=!locked_8] run function game:player/unlock/64
+
+#
+tag @s[scores={door_invul=-1}] remove inspawn
+scoreboard players remove @s[scores={door_invul=-1..}] door_invul 1

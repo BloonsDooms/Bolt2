@@ -10,6 +10,14 @@ execute if block -386 8 182 minecraft:dark_oak_pressure_plate[powered=true] run 
 execute if block -386 8 181 minecraft:dark_oak_pressure_plate[powered=true] run scoreboard players set .valley_door_red_on .timer 1
 execute if block -386 8 180 minecraft:dark_oak_pressure_plate[powered=true] run scoreboard players set .valley_door_red_on .timer 1
 
+execute if block -388 8 108 minecraft:stone_pressure_plate[powered=true] run scoreboard players set .valley_door_blue_on .timer 1
+execute if block -388 8 107 minecraft:stone_pressure_plate[powered=true] run scoreboard players set .valley_door_blue_on .timer 1
+execute if block -388 8 106 minecraft:stone_pressure_plate[powered=true] run scoreboard players set .valley_door_blue_on .timer 1
+
+execute if block -388 8 182 minecraft:stone_pressure_plate[powered=true] run scoreboard players set .valley_door_red_on .timer 1
+execute if block -388 8 181 minecraft:stone_pressure_plate[powered=true] run scoreboard players set .valley_door_red_on .timer 1
+execute if block -388 8 180 minecraft:stone_pressure_plate[powered=true] run scoreboard players set .valley_door_red_on .timer 1
+
 #setdoor timer
 execute if score .valley_door_blue_on .timer matches 0 run scoreboard players remove .valley_door_blue .timer 1
 execute if score .valley_door_blue_on .timer matches 1 run scoreboard players add .valley_door_blue .timer 1

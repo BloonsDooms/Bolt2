@@ -102,6 +102,7 @@ scoreboard players set @s drop_map 0
 scoreboard players set @s drop_scrap 0
 scoreboard players set @s drop_egg 0
 scoreboard players set @s drop_turret 0
+scoreboard players set @s wall_invul -1
 
 #
 stopsound @s
