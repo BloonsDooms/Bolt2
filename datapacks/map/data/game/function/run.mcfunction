@@ -121,19 +121,35 @@ team join red_lobby @a[team=!red_lobby,tag=lobby,scores={team_pref=1}]
 team join blue_lobby @a[team=!blue_lobby,tag=lobby,scores={team_pref=2}]
 team join Spectator @a[team=!Spectator,tag=lobby,scores={team_pref=-1}]
 
-title @a[x=249,y=-56,z=-265,dx=30,dy=3,dz=70,gamemode=adventure,scores={team_pref=0..}] actionbar {"text":"SHOOT MENU BUTTONS","bold":true,"color":"gray"}
-title @a[x=249,y=-56,z=-265,dx=30,dy=3,dz=70,gamemode=adventure,scores={team_pref=-1}] actionbar {"text":"READY UP TO USE MENU","bold":true,"color":"gray"}
+title @a[x=249,y=-56,z=-265,dx=30,dy=3,dz=70,gamemode=adventure,scores={team_pref=-1..}] actionbar [{"obfuscated":true,"text":"te ","color":"gray"},{"obfuscated":false,"text":"SHOOT MENU BUTTONS","bold":true,"color":"white"},{"obfuscated":true,"text":" st","color":"gray"}]
+#title @a[x=249,y=-56,z=-265,dx=30,dy=3,dz=70,gamemode=adventure,scores={team_pref=-1}] actionbar {"text":"READY UP TO USE MENU","bold":true,"color":"gray"}
 #clear @a[x=249,y=-56,z=-265,dx=30,dy=3,dz=70,gamemode=adventure] golden_apple
-tp @a[x=249,y=-56,z=-265,dx=30,dy=3,dz=70,gamemode=adventure] 243.5 -44.00 -235.5 -90 13
+
+tag @a[x=249,y=-56,z=-265,dx=30,dy=3,dz=70,gamemode=adventure] add join_menu
+tp @a[tag=join_menu] 243.5 -44.00 -235.5 -90 13
+#execute as @a[tag=join_menu] at @s run playsound minecraft:entity.warden.attack_impact master @s ~ ~ ~ 0.3 0.1
+execute as @a[tag=join_menu] at @s run playsound minecraft:ui.loom.select_pattern master @s ~ ~ ~ 1 1.1
+execute as @a[tag=join_menu] at @s run playsound minecraft:entity.allay.item_taken master @s ~ ~ ~ 1 1
+execute as @a[tag=join_menu] at @s run playsound minecraft:block.note_block.basedrum master @s ~ ~ ~ 1 1.7
+tag @a remove join_menu
 
 tag @e[type=arrow,x=245,y=-50,z=-235,distance=..80] add kill
 tag @e[type=arrow,x=233.0,y=-80,z=-266.9,dx=30,dy=60,dz=-25] remove kill
 
 execute as @a[x=243.5,y=-44,z=-235.5,distance=..50,scores={arrowReload=2..35}] as @s run scoreboard players set @s arrowReload 38
-execute as @a[x=243.5,y=-44,z=-235.5,distance=..4,scores={team_pref=-1}] run clear @s arrow
+#execute as @a[x=243.5,y=-44,z=-235.5,distance=..4,scores={team_pref=-1}] run clear @s arrow
 execute as @a[x=243.5,y=-44,z=-235.5,distance=..4] run scoreboard players set @s lobby_text_time 80
-execute as @a[x=243.5,y=-44,z=-235.5,distance=..4,scores={team_pref=-1}] run scoreboard players set @s arrowReload 0
+#execute as @a[x=243.5,y=-44,z=-235.5,distance=..4,scores={team_pref=-1}] run scoreboard players set @s arrowReload 0
 execute as @a[x=243.5,y=-44,z=-235.5,distance=..2.9,scores={bowUse=1..}] as @s run function game:menu/hitscan_start
+
+tag @a remove in_menu
+tag @a[x=243.5,y=-44,z=-235.5,distance=..2.9] add in_menu
+
+execute as @a[tag=!in_menu,tag=in_menu2] at @s run playsound minecraft:block.note_block.basedrum master @s ~ ~ ~ 0.3 0
+execute as @a[tag=!in_menu,tag=in_menu2] at @s run playsound minecraft:block.note_block.basedrum master @s ~ ~ ~ 0.3 0.5
+
+tag @a[tag=!in_menu] remove in_menu2
+tag @a[tag=in_menu] add in_menu2
 
 scoreboard players set @a[scores={deaths=..0}] KILL_ID 0
 

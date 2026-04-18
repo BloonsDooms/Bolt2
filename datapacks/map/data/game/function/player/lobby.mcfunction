@@ -9,7 +9,7 @@ scoreboard players add @s lobby_text_time 1
 
 scoreboard players set @s[gamemode=spectator] lobby_text_time 20
 
-title @s[scores={team_pref=-1,lobby_text_time=1}] actionbar {"text":"Unjoined! (will spectate)","color":"gray"}
+title @s[scores={team_pref=-1,lobby_text_time=1}] actionbar [{"text":"","color":"white"},{"text":" Unjoined! (will spectate) ","color":"gray"},{"text":"","color":"white"}]
 execute if score .mode_screen .data = .6 .num run title @s[scores={team_pref=0,lobby_text_time=1}] actionbar {"text":"Selected Random Team (infected or survivor)","color":"light_purple"}
 execute if score .mode_screen .data = .6 .num run title @s[scores={team_pref=1,lobby_text_time=1}] actionbar {"text":"Selected Infected Team","color":"red"}
 execute if score .mode_screen .data = .6 .num run title @s[scores={team_pref=2,lobby_text_time=1}] actionbar {"text":"Selected Survivor Team","color":"dark_aqua"}

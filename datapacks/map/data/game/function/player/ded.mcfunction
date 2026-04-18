@@ -139,3 +139,4 @@ execute as @s[scores={respawn=30}] at @s run function game:player/tryspawn
 
 #
 scoreboard players set @s no_quiver_arrow 0
+scoreboard players set @s door_invul -2

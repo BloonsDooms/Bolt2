@@ -526,5 +526,5 @@ execute as @s[tag=locked_35,tag=!locked_55,tag=!locked_43,tag=!locked_19,tag=!lo
 execute as @s[tag=locked_64,tag=!locked_58,tag=!locked_53,tag=!locked_23,tag=!locked_36,tag=!locked_31,tag=!locked_35,tag=!locked_8] run function game:player/unlock/64
 
 #
-tag @s[scores={door_invul=-1}] remove inspawn
+scoreboard players set @s[tag=inspawn,scores={door_invul=-1}] invul 0
 scoreboard players remove @s[scores={door_invul=-1..}] door_invul 1

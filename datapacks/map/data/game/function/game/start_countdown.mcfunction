@@ -25,8 +25,11 @@ execute if score .start_cd .data = .30 .num as @a at @s run playsound minecraft:
 execute if score .start_cd .data = .10 .num as @a at @s run playsound minecraft:block.beacon.activate master @s ~ ~ ~ 1 0.9
 execute if score .start_cd .data = .10 .num if entity @a[scores={team_pref=0..}] run effect give @a minecraft:slowness 3 5 true
 
+# entrypoint for starting the game.
+execute if score .start_cd .data matches 0 unless score .mode_screen .data = .6 .num if entity @a[scores={team_pref=0..}] run function game:start_game/start_game
+execute if score .start_cd .data = .0 .num if score .mode_screen .data = .6 .num if score .players_ready .data matches 2.. run function game:start_game/start_game
+
+#
 scoreboard players remove .start_cd .data 1
 
 
-# entrypoint for starting the game.
-execute if score .start_cd .data matches 0 run function game:start_game/start_game
