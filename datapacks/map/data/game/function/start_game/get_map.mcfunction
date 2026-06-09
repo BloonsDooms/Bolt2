@@ -18,11 +18,10 @@ execute if score .mode_screen .data matches 5 run scoreboard players set .mode .
 function game:game/next_id
 
 # custom random is always map ID 0
-execute if score .map .data matches 0 run function game:game/random_map
-execute store result storage macro mapID int 1 run scoreboard players get .map .data
-
 # clear, then populate maps:active
-function game:map/map_from_id with storage macro
+execute if score .map .data matches 0 run function game:game/random_map
+execute unless score .map .data matches 0 store result storage macro mapID int 1 run scoreboard players get .map .data
+execute unless score .map .data matches 0 run function game:map/map_from_id with storage macro
 
 # REWORK - this is part of making shuba's system and aiden's system play nicely together. This can be handled more gracefully.
 execute unless data storage maps:active origin run data modify storage maps:active origin set value "0 0 0"
