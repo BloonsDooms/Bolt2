@@ -65,7 +65,7 @@ data modify storage maps:list maps append value {\
 }
 
 data modify storage maps:list maps append value {\
-    mapName:"Towers",\
+    mapName:"TOWERS",\
     mapColor:"#9DAAC7",\
     mapIcon:"🏬",\
     mapTextScale:12.0,\
