@@ -321,14 +321,15 @@ execute if score .menu_glass .timer matches 65 run fill 241 -31 -258 242 -31 -26
 execute if score .menu_glass .timer matches 65 run fill 241 -30 -258 242 -30 -260 minecraft:pink_stained_glass replace minecraft:red_stained_glass
 execute if score .menu_glass .timer matches 70 run fill 241 -30 -258 242 -30 -260 minecraft:red_stained_glass replace minecraft:pink_stained_glass
 
-execute if score .menu_glass .timer matches 5 run fill 236 -46 -258 240 -46 -258 minecraft:purple_stained_glass
-execute if score .menu_glass .timer matches 10 run fill 236 -46 -258 240 -46 -258 minecraft:magenta_stained_glass
-execute if score .menu_glass .timer matches 10 run fill 236 -45 -258 240 -45 -258 minecraft:purple_stained_glass
-execute if score .menu_glass .timer matches 15 run fill 236 -45 -258 240 -45 -258 minecraft:magenta_stained_glass
-execute if score .menu_glass .timer matches 15 run fill 236 -44 -258 240 -44 -258 minecraft:purple_stained_glass
-execute if score .menu_glass .timer matches 20 run fill 236 -44 -258 240 -44 -258 minecraft:magenta_stained_glass
-execute if score .menu_glass .timer matches 20 run fill 236 -43 -258 240 -43 -258 minecraft:purple_stained_glass
-execute if score .menu_glass .timer matches 25 run fill 236 -43 -258 240 -43 -258 minecraft:magenta_stained_glass
+## This was updated, there is now a building here.
+#execute if score .menu_glass .timer matches 5 run fill 236 -46 -258 240 -46 -258 minecraft:purple_stained_glass
+#execute if score .menu_glass .timer matches 10 run fill 236 -46 -258 240 -46 -258 minecraft:magenta_stained_glass
+#execute if score .menu_glass .timer matches 10 run fill 236 -45 -258 240 -45 -258 minecraft:purple_stained_glass
+#execute if score .menu_glass .timer matches 15 run fill 236 -45 -258 240 -45 -258 minecraft:magenta_stained_glass
+#execute if score .menu_glass .timer matches 15 run fill 236 -44 -258 240 -44 -258 minecraft:purple_stained_glass
+#execute if score .menu_glass .timer matches 20 run fill 236 -44 -258 240 -44 -258 minecraft:magenta_stained_glass
+#execute if score .menu_glass .timer matches 20 run fill 236 -43 -258 240 -43 -258 minecraft:purple_stained_glass
+#execute if score .menu_glass .timer matches 25 run fill 236 -43 -258 240 -43 -258 minecraft:magenta_stained_glass
 
 execute if score .menu_glass .timer matches 5 run fill 234 -46 -259 232 -46 -256 minecraft:magenta_stained_glass replace minecraft:purple_stained_glass
 execute if score .menu_glass .timer matches 10 run fill 234 -46 -259 232 -46 -256 minecraft:purple_stained_glass replace minecraft:magenta_stained_glass
