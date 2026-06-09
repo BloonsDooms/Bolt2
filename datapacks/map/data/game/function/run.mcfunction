@@ -10,6 +10,8 @@ scoreboard players set @a leave_game 0
 # long story
 forceload add 207 -496 16 -465
 
+# custom map enable/disable switch
+function game:lobby/temporary_custom_switch
 
 #
 execute positioned 234.32 -49.00 -223.08 if entity @a[distance=..10] run function game:tmi/chest_items
