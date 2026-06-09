@@ -21,6 +21,10 @@ function maps:map_registry
 # register item maps
 data modify storage maps:list maps append from storage bcm maps[].registry
 
+# custom random - using true as fallback value, fetch from settings where possible
+data modify storage maps:list maps[].enabled set value true
+function game:menu/custom_random/check
+
 kill @e[type=marker,tag=map_icon_builder]
 summon marker 16.5 -63.5 -492.5 {Tags:["map_icon_builder"]}
 
