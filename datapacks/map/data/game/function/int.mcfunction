@@ -421,6 +421,8 @@ scoreboard players set .tmi_preset .data 1
 execute unless score .custom_maps_enabled .data matches 0..1 run scoreboard players set .custom_maps_enabled .data 0
 execute unless score .custom_maps_trust_block_nbt .data matches 0..1 run scoreboard players set .custom_maps_trust_block_nbt .data 0
 
+scoreboard objectives add custom_random_dialog trigger
+
 #
 scoreboard objectives add .custom_random dummy
 
