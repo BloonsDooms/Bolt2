@@ -3,3 +3,6 @@ $execute unless data storage maps:list maps[$(mapID)].isItemMap run return run f
 
 # item maps
 $function game:map/load_item_map with storage maps:list maps[$(mapID)]
+
+#also add the map name to maps:active, currently used for achievements
+$data modify storage maps:active map_name set from storage maps:list maps[$(mapID)].mapName

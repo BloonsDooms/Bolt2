@@ -490,6 +490,7 @@ execute as @s[tag=playing,team=blue,scores={scrap=1..,stats_scrap=..0,title_paus
 scoreboard players remove @s[scores={title_pause=0..}] title_pause 1
 
 # Dark/Blind remove
+# REWORK - figure out what the fuck is happening here please
 scoreboard players remove @s[scores={fog_remove=-5..}] fog_remove 1
 execute if score .map .data matches 2 run effect clear @s[scores={fog_remove=0}] blindness
 execute if score .map .data matches 2 run effect clear @s[scores={fog_remove=0}] darkness

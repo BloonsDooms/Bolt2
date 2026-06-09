@@ -64,19 +64,30 @@ execute if score .mode .data = .7 .num run function game:map/spawn_target_marker
 #execute if score .map .data = .14 .num run function game:map/river/start
 #execute if score .map .data = .15 .num run function game:map/lighth/start
 
-# REWORK - all of these IDs are dynamic now...
+data merge storage macro {mapName:"TINY TOWN"}
+execute if function game:map/get_map_name run tag @a[tag=playing] add play_map_tinyt
+data merge storage macro {mapName:"DIVIDE"}
+execute if function game:map/get_map_name run tag @a[tag=playing] add play_map_divide
+data merge storage macro {mapName:"HEX"}
+execute if function game:map/get_map_name run tag @a[tag=playing] add play_map_hex
+data merge storage macro {mapName:"COVES"}
+execute if function game:map/get_map_name run tag @a[tag=playing] add play_map_coves
+data merge storage macro {mapName:"TOWERS"}
+execute if function game:map/get_map_name run tag @a[tag=playing] add play_map_towers
+data merge storage macro {mapName:"LIGHTHOUSE"}
+execute if function game:map/get_map_name run tag @a[tag=playing] add play_map_lighth
+data merge storage macro {mapName:"GARDEN"}
+execute if function game:map/get_map_name run tag @a[tag=playing] add play_map_garden
+data merge storage macro {mapName:"VALLEY"}
+execute if function game:map/get_map_name run tag @a[tag=playing] add play_map_valley
+data merge storage macro {mapName:"RIVER"}
+execute if function game:map/get_map_name run tag @a[tag=playing] add play_map_river
+data merge storage macro {mapName:"CAMP"}
+execute if function game:map/get_map_name run tag @a[tag=playing] add play_map_camp
+data merge storage macro {mapName:"MALL"}
+execute if function game:map/get_map_name run tag @a[tag=playing] add play_map_mall
 
-execute if score .map .data = .10 .num run tag @a[tag=playing] add play_map_tinyt
-execute if score .map .data = .3 .num run tag @a[tag=playing] add play_map_divide
-execute if score .map .data = .5 .num run tag @a[tag=playing] add play_map_hex
-execute if score .map .data = .2 .num run tag @a[tag=playing] add play_map_coves
-execute if score .map .data = .1 .num run tag @a[tag=playing] add play_map_towers
-execute if score .map .data = .15 .num run tag @a[tag=playing] add play_map_lighth
-execute if score .map .data = .12 .num run tag @a[tag=playing] add play_map_garden
-execute if score .map .data = .6 .num run tag @a[tag=playing] add play_map_valley
-execute if score .map .data = .14 .num run tag @a[tag=playing] add play_map_river
-
-execute as @a[tag=locked_73,tag=play_map_tinyt,tag=play_map_divide,tag=play_map_hex,tag=play_map_coves,tag=play_map_towers,tag=play_map_lighth,tag=play_map_garden,tag=play_map_valley,tag=play_map_river] run function game:player/unlock/73
+execute as @a[tag=locked_73,tag=play_map_tinyt,tag=play_map_divide,tag=play_map_hex,tag=play_map_coves,tag=play_map_towers,tag=play_map_lighth,tag=play_map_garden,tag=play_map_valley,tag=play_map_river,tag=play_map_camp,tag=play_map_mall] run function game:player/unlock/73
 
 tag @a remove hasflag
 tag @a remove hasspawn
