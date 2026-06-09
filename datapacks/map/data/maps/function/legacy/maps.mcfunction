@@ -1,6 +1,6 @@
 # actual map
 data modify storage maps:list maps append value {\
-    mapName:"OLD HEX",\
+    mapName:"Old Hex",\
     mapColor:"#97C4DE",\
     mapIcon:"🏠",\
     mapTextScale:10.0,\
@@ -14,7 +14,7 @@ data modify storage maps:list maps append value {\
 
 
 data modify storage maps:list maps append value {\
-    mapName:"OLD VALLEY",\
+    mapName:"Old Valley",\
     mapColor:"#97C4DE",\
     mapIcon:"🏠",\
     mapTextScale:10.0,\

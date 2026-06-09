@@ -17,7 +17,7 @@ execute as @e[tag=crate] at @s run function game:game/infected/crates/despawn
 execute if score Blue Scores > Red Scores if score .mode .data = .1 .num as @a[team=blue,tag=locked_72] run function game:player/unlock/72
 execute if score Red Scores > Blue Scores if score .mode .data = .1 .num as @a[team=red,tag=locked_72] run function game:player/unlock/72
 
-data merge storage macro {mapName:"TINY TOWN"}
+data merge storage macro {mapName:"Tiny Town"}
 execute if score Blue Scores > Red Scores if score .mode .data = .1 .num if function game:map/get_map_name as @a[team=blue,tag=locked_79] run function game:player/unlock/79
 execute if score Red Scores > Blue Scores if score .mode .data = .1 .num if function game:map/get_map_name as @a[team=red,tag=locked_79] run function game:player/unlock/79
 
@@ -25,7 +25,7 @@ execute if score Red Scores > Blue Scores if score .mode .data = .1 .num if func
 execute if score .mode .data = .6 .num if score .players_playing .data matches 2.. as @a[tag=locked_11,tag=playing] run function game:player/unlock/11
 execute if score .mode .data = .6 .num if score .players_playing .data matches 2.. as @a[tag=locked_72,tag=playing] run function game:player/unlock/72
 
-data merge storage macro {mapName:"TINY TOWN"}
+data merge storage macro {mapName:"Tiny Town"}
 execute if score .mode .data = .6 .num if score .players_playing .data matches 2.. if function game:map/get_map_name as @a[tag=locked_79,tag=playing] run function game:player/unlock/79
 
 # achievement for playing target

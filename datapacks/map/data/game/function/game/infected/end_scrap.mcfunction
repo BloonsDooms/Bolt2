@@ -10,5 +10,5 @@ execute if score .players_playing .data matches 2.. as @a[tag=locked_25,tag=sur_
 
 execute if score .players_playing .data matches 2.. as @a[tag=locked_72,tag=sur_start] run function game:player/unlock/72
 
-data merge storage macro {mapName:"TINY TOWN"}
+data merge storage macro {mapName:"Tiny Town"}
 execute if score .players_playing .data matches 2.. as @a[tag=locked_79,tag=sur_start] if function game:map/get_map_name run function game:player/unlock/79
