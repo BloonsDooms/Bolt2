@@ -18,7 +18,7 @@ execute if score .mode_screen .data matches 5 run scoreboard players set .mode .
 function game:game/next_id
 
 # custom random is always map ID 0
-execute if score .map .data matches 0 run say placeholder for custom random function.
+execute if score .map .data matches 0 run function game:game/random_map
 execute store result storage macro mapID int 1 run scoreboard players get .map .data
 
 # clear, then populate maps:active
