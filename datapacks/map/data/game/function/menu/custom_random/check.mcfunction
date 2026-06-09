@@ -76,12 +76,12 @@ clear @a[tag=lobby] brown_dye
 
 # temporary fix for new custom random system
 # map names could be replaced with numeric indexes but i think we're moving away from hardcoding those
-execute store result storage maps:list maps[{mapName:"TINY TOWN"}].enabled byte 1 run scoreboard players get .map1 .custom_random
-execute store result storage maps:list maps[{mapName:"DIVIDE"}].enabled byte 1 run scoreboard players get .map2 .custom_random
-execute store result storage maps:list maps[{mapName:"HEX"}].enabled byte 1 run scoreboard players get .map3 .custom_random
-execute store result storage maps:list maps[{mapName:"COVES"}].enabled byte 1 run scoreboard players get .map4 .custom_random
-execute store result storage maps:list maps[{mapName:"LIGHTHOUSE"}].enabled byte 1 run scoreboard players get .map5 .custom_random
-execute store result storage maps:list maps[{mapName:"TOWERS"}].enabled byte 1 run scoreboard players get .map6 .custom_random
-execute store result storage maps:list maps[{mapName:"GARDEN"}].enabled byte 1 run scoreboard players get .map7 .custom_random
-execute store result storage maps:list maps[{mapName:"RIVER"}].enabled byte 1 run scoreboard players get .map8 .custom_random
-execute store result storage maps:list maps[{mapName:"VALLEY"}].enabled byte 1 run scoreboard players get .map9 .custom_random
+execute store result storage maps:list maps[{mapName:"Tiny Town"}].enabled byte 1 run scoreboard players get .map1 .custom_random
+execute store result storage maps:list maps[{mapName:"Divide"}].enabled byte 1 run scoreboard players get .map2 .custom_random
+execute store result storage maps:list maps[{mapName:"Hex"}].enabled byte 1 run scoreboard players get .map3 .custom_random
+execute store result storage maps:list maps[{mapName:"Coves"}].enabled byte 1 run scoreboard players get .map4 .custom_random
+execute store result storage maps:list maps[{mapName:"Lighthouse"}].enabled byte 1 run scoreboard players get .map5 .custom_random
+execute store result storage maps:list maps[{mapName:"Towers"}].enabled byte 1 run scoreboard players get .map6 .custom_random
+execute store result storage maps:list maps[{mapName:"Garden"}].enabled byte 1 run scoreboard players get .map7 .custom_random
+execute store result storage maps:list maps[{mapName:"River"}].enabled byte 1 run scoreboard players get .map8 .custom_random
+execute store result storage maps:list maps[{mapName:"Valley"}].enabled byte 1 run scoreboard players get .map9 .custom_random

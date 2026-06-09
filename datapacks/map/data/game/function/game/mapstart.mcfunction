@@ -64,27 +64,27 @@ execute if score .mode .data = .7 .num run function game:map/spawn_target_marker
 #execute if score .map .data = .14 .num run function game:map/river/start
 #execute if score .map .data = .15 .num run function game:map/lighth/start
 
-data merge storage macro {mapName:"TINY TOWN"}
+data merge storage macro {mapName:"Tiny Town"}
 execute if function game:map/get_map_name run tag @a[tag=playing] add play_map_tinyt
-data merge storage macro {mapName:"DIVIDE"}
+data merge storage macro {mapName:"Divide"}
 execute if function game:map/get_map_name run tag @a[tag=playing] add play_map_divide
-data merge storage macro {mapName:"HEX"}
+data merge storage macro {mapName:"Hex"}
 execute if function game:map/get_map_name run tag @a[tag=playing] add play_map_hex
-data merge storage macro {mapName:"COVES"}
+data merge storage macro {mapName:"Coves"}
 execute if function game:map/get_map_name run tag @a[tag=playing] add play_map_coves
-data merge storage macro {mapName:"TOWERS"}
+data merge storage macro {mapName:"Towers"}
 execute if function game:map/get_map_name run tag @a[tag=playing] add play_map_towers
-data merge storage macro {mapName:"LIGHTHOUSE"}
+data merge storage macro {mapName:"Lighthouse"}
 execute if function game:map/get_map_name run tag @a[tag=playing] add play_map_lighth
-data merge storage macro {mapName:"GARDEN"}
+data merge storage macro {mapName:"Garden"}
 execute if function game:map/get_map_name run tag @a[tag=playing] add play_map_garden
-data merge storage macro {mapName:"VALLEY"}
+data merge storage macro {mapName:"Valley"}
 execute if function game:map/get_map_name run tag @a[tag=playing] add play_map_valley
-data merge storage macro {mapName:"RIVER"}
+data merge storage macro {mapName:"River"}
 execute if function game:map/get_map_name run tag @a[tag=playing] add play_map_river
-data merge storage macro {mapName:"CAMP"}
+data merge storage macro {mapName:"Camp"}
 execute if function game:map/get_map_name run tag @a[tag=playing] add play_map_camp
-data merge storage macro {mapName:"MALL"}
+data merge storage macro {mapName:"Mall"}
 execute if function game:map/get_map_name run tag @a[tag=playing] add play_map_mall
 
 execute as @a[tag=locked_73,tag=play_map_tinyt,tag=play_map_divide,tag=play_map_hex,tag=play_map_coves,tag=play_map_towers,tag=play_map_lighth,tag=play_map_garden,tag=play_map_valley,tag=play_map_river,tag=play_map_camp,tag=play_map_mall] run function game:player/unlock/73

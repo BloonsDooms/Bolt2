@@ -1,6 +1,6 @@
 # actual map
 data modify storage maps:list maps append value {\
-    mapName:"TINY TOWN",\
+    mapName:"Tiny Town",\
     mapColor:"#97C4DE",\
     mapIcon:"🐓",\
     mapTextScale:10.0,\
@@ -13,7 +13,7 @@ data modify storage maps:list maps append value {\
 }
 
 data modify storage maps:list maps append value {\
-    mapName:"DIVIDE",\
+    mapName:"Divide",\
     mapColor:"#97DEA0",\
     mapIcon:"⏣",\
     mapTextScale:11.5,\
@@ -26,7 +26,7 @@ data modify storage maps:list maps append value {\
 }
 
 data modify storage maps:list maps append value {\
-    mapName:"HEX",\
+    mapName:"Hex",\
     mapColor:"#A797DE",\
     mapIcon:"📡",\
     mapTextScale:14.5,\
@@ -39,7 +39,7 @@ data modify storage maps:list maps append value {\
 }
 
 data modify storage maps:list maps append value {\
-    mapName:"COVES",\
+    mapName:"Coves",\
     mapColor:"#9595DE",\
     mapIcon:"🚇",\
     mapTextScale:15.2,\
@@ -52,7 +52,7 @@ data modify storage maps:list maps append value {\
 }
 
 data modify storage maps:list maps append value {\
-    mapName:"LIGHTHOUSE",\
+    mapName:"Lighthouse",\
     mapColor:"#97C4DE",\
     mapIcon:"🌴",\
     mapTextScale:9.6,\
@@ -65,7 +65,7 @@ data modify storage maps:list maps append value {\
 }
 
 data modify storage maps:list maps append value {\
-    mapName:"TOWERS",\
+    mapName:"Towers",\
     mapColor:"#9DAAC7",\
     mapIcon:"🏬",\
     mapTextScale:12.0,\
@@ -78,7 +78,7 @@ data modify storage maps:list maps append value {\
 }
 
 data modify storage maps:list maps append value {\
-    mapName:"GARDEN",\
+    mapName:"Garden",\
     mapColor:"#97DEBF",\
     mapIcon:"✼",\
     mapTextScale:12.5,\
@@ -91,7 +91,7 @@ data modify storage maps:list maps append value {\
 }
 
 data modify storage maps:list maps append value {\
-    mapName:"RIVER",\
+    mapName:"River",\
     mapColor:"#97C4DE",\
     mapIcon:"💧",\
     mapTextScale:14.5,\
@@ -104,7 +104,7 @@ data modify storage maps:list maps append value {\
 }
 
 data modify storage maps:list maps append value {\
-    mapName:"VALLEY",\
+    mapName:"Valley",\
     mapColor:"#DEAF97",\
     mapIcon:"⛰",\
     mapTextScale:13.0,\

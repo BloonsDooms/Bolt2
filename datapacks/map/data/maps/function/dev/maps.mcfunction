@@ -1,6 +1,6 @@
 # actual map
 data modify storage maps:list maps append value {\
-    mapName:"MANOR",\
+    mapName:"Manor",\
     mapColor:"#97C4DE",\
     mapIcon:"🏠",\
     mapTextScale:10.0,\
@@ -30,7 +30,7 @@ data modify storage maps:list maps append value {\
 
 # actual map
 data modify storage maps:list maps append value {\
-    mapName:"CAMP",\
+    mapName:"Camp",\
     mapColor:"#97C4DE",\
     mapIcon:"🏕",\
     mapTextScale:10.0,\
