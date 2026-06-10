@@ -13,3 +13,6 @@ execute if data storage maps:list custom_random_dialog.maps[0] run function game
 # show dialog
 scoreboard players enable @s custom_random_dialog
 function game:menu/custom_random_dialog/show with storage maps:list custom_random_dialog
+
+# refresh for others in dialog
+execute as @a[scores={custom_random_dialog=0}] run function game:menu/custom_random_dialog/show with storage maps:list custom_random_dialog
