@@ -11,4 +11,4 @@ execute if entity @a[scores={t1=1..}] run scoreboard players set .check .calc 1
 execute if entity @a[scores={t2=1..}] run scoreboard players set .check .calc 1
 execute if score .delay_10 .timer matches 2 if score .check .calc matches 0 unless items block 235 -49 -226 container.* lime_dye run scoreboard players set .check .calc 1
 
-execute if score .check .calc matches 1 run function game:menu/custom_random/check
+execute if score .check .calc matches 1 run function game:menu/custom_random/deprecated/check
