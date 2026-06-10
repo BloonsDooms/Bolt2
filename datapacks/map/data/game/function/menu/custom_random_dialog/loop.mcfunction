@@ -1,5 +1,5 @@
 # create dialog action
-data modify storage maps:list tmp_dialog.action set value {\
+data modify storage maps:list custom_random_dialog.action set value {\
     label: [\
         " - ",\
         {text: "Disabled", color: red}\
@@ -8,17 +8,18 @@ data modify storage maps:list tmp_dialog.action set value {\
         type: "minecraft:run_command"\
     }\
 }
-$data modify storage maps:list tmp_dialog.action.label prepend value "$(mapName)"
+$data modify storage maps:list custom_random_dialog.action.label prepend value "$(mapName)"
 $scoreboard players set .dialog_enabled .custom_random $(enabled)
-execute if score .dialog_enabled .custom_random matches 1 run data modify storage maps:list tmp_dialog.action.label[2] set value {text:"Enabled",color:green}
+execute if score .dialog_enabled .custom_random matches 1 run data modify storage maps:list custom_random_dialog.action.label[2] set value {text:"Enabled",color:green}
 
 # trigger num
-execute store result storage maps:list tmp_dialog.trigger_num int 1 run scoreboard players add .dialog .custom_random 1
-function game:menu/custom_random_dialog/set_trigger_num with storage maps:list tmp_dialog
+execute store result storage maps:list custom_random_dialog.trigger_num int 1 run scoreboard players add .dialog .custom_random 1
+function game:menu/custom_random_dialog/set_trigger_num with storage maps:list custom_random_dialog
 
-# add to list
-data modify storage maps:list tmp_dialog.actions append from storage maps:list tmp_dialog.action
+# add to list if in correct set
+execute if score .custom_maps_enabled .data matches 0 unless data storage maps:list custom_random_dialog.maps[0].isItemMap run data modify storage maps:list custom_random_dialog.actions append from storage maps:list custom_random_dialog.action
+execute if score .custom_maps_enabled .data matches 1 if data storage maps:list custom_random_dialog.maps[0].isItemMap run data modify storage maps:list custom_random_dialog.actions append from storage maps:list custom_random_dialog.action
 
 # next map
-data remove storage maps:list tmp_dialog.maps[0]
-execute if data storage maps:list tmp_dialog.maps[0] run function game:menu/custom_random_dialog/loop with storage maps:list tmp_dialog.maps[0]
+data remove storage maps:list custom_random_dialog.maps[0]
+execute if data storage maps:list custom_random_dialog.maps[0] run function game:menu/custom_random_dialog/loop with storage maps:list custom_random_dialog.maps[0]

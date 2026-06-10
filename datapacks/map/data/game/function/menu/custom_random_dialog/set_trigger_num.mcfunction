@@ -1,2 +1,2 @@
-$execute if score .dialog_enabled .custom_random matches 0 run data modify storage maps:list tmp_dialog.action.action.command set value "trigger custom_random_dialog set $(trigger_num)1"
-$execute if score .dialog_enabled .custom_random matches 1 run data modify storage maps:list tmp_dialog.action.action.command set value "trigger custom_random_dialog set $(trigger_num)2"
+$execute if score .dialog_enabled .custom_random matches 0 run data modify storage maps:list custom_random_dialog.action.action.command set value "trigger custom_random_dialog set $(trigger_num)1"
+$execute if score .dialog_enabled .custom_random matches 1 run data modify storage maps:list custom_random_dialog.action.action.command set value "trigger custom_random_dialog set $(trigger_num)2"
