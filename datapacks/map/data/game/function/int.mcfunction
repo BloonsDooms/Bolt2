@@ -438,6 +438,8 @@ scoreboard objectives add custom_random_dialog trigger
 
 #
 scoreboard players set .ranked .data 1
+scoreboard players set .inf_ran .data 1
+scoreboard players set .1v1_armor .data 0
 
 #
 scoreboard players set .range1 .data 0
