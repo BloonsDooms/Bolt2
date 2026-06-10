@@ -531,4 +531,4 @@ scoreboard players set @s[tag=inspawn,scores={door_invul=-1}] invul 0
 scoreboard players remove @s[scores={door_invul=-1..}] door_invul 1
 
 # custom random dialog
-execute if score @s custom_random_dialog matches -2147483648..2147483647 run function game:menu/custom_random_dialog/check
+execute if score @s custom_random_dialog matches -2147483648..2147483647 run function game:menu/custom_random/check

@@ -423,18 +423,18 @@ execute unless score .custom_maps_trust_block_nbt .data matches 0..1 run scorebo
 
 scoreboard objectives add custom_random_dialog trigger
 
-#
-scoreboard objectives add .custom_random dummy
+# deprecated old custom random menu
+# scoreboard objectives add .custom_random dummy
 
-scoreboard players set .map1 .custom_random 1
-scoreboard players set .map2 .custom_random 1
-scoreboard players set .map3 .custom_random 1
-scoreboard players set .map4 .custom_random 1
-scoreboard players set .map5 .custom_random 1
-scoreboard players set .map6 .custom_random 1
-scoreboard players set .map7 .custom_random 1
-scoreboard players set .map8 .custom_random 1
-scoreboard players set .map9 .custom_random 1
+# scoreboard players set .map1 .custom_random 1
+# scoreboard players set .map2 .custom_random 1
+# scoreboard players set .map3 .custom_random 1
+# scoreboard players set .map4 .custom_random 1
+# scoreboard players set .map5 .custom_random 1
+# scoreboard players set .map6 .custom_random 1
+# scoreboard players set .map7 .custom_random 1
+# scoreboard players set .map8 .custom_random 1
+# scoreboard players set .map9 .custom_random 1
 
 #
 scoreboard players set .ranked .data 1
