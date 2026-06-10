@@ -53,8 +53,8 @@ execute if entity @s[x=264.9,y=-53,z=-248.0,dx=2,dy=2,dz=2] run scoreboard playe
 execute if entity @s[x=264.9,y=-53,z=-245.0,dx=2,dy=2,dz=2,scores={timer=..160}] run function game:menu/map_next_button
 execute if entity @s[x=264.9,y=-53,z=-245.0,dx=2,dy=2,dz=2] run scoreboard players set @s timer 1000
 
-execute if entity @s[x=264.9,y=-53,z=-242.0,dx=2,dy=2,dz=6,scores={timer=..160}] run function game:menu/edit_map_button
-execute if entity @s[x=264.9,y=-53,z=-242.0,dx=2,dy=2,dz=6] run scoreboard players set @s timer 1000
+execute if score .custom_maps_enabled .data matches 1 if entity @s[x=264.9,y=-53,z=-242.0,dx=2,dy=2,dz=6,scores={timer=..160}] run function game:menu/edit_map_button
+execute if score .custom_maps_enabled .data matches 1 if entity @s[x=264.9,y=-53,z=-242.0,dx=2,dy=2,dz=6] run scoreboard players set @s timer 1000
 
 execute if entity @s[x=264.9,y=-53,z=-225.0,dx=2,dy=2,dz=2,scores={timer=..160}] run function game:menu/mode_next
 execute if entity @s[x=264.9,y=-53,z=-225.0,dx=2,dy=2,dz=2] run scoreboard players set @s timer 1000
