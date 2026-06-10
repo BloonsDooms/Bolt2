@@ -15,7 +15,7 @@ function game:lobby/temporary_custom_switch
 
 #
 execute positioned 234.32 -49.00 -223.08 if entity @a[distance=..10] run function game:tmi/chest_items
-execute positioned 234.32 -49.00 -223.08 if entity @a[distance=..10] run function game:menu/custom_random/container
+#execute positioned 234.32 -49.00 -223.08 if entity @a[distance=..10] run function game:menu/custom_random/deprecated/container
 execute positioned 234.32 -49.00 -223.08 if entity @a[distance=..10] run function game:menu/settings/container
 
 #
