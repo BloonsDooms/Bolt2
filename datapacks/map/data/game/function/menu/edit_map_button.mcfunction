@@ -1,3 +1,7 @@
+# fail if game running
+execute if score .running .data matches 1 run return run title @a[tag=lobby] title {"text":"Game in progress","color":"gray","font":"fancy"}
+execute if score .start_cd .data matches 0..10 run return fail
+
 # transition screen
 title @a[tag=!in_map_editor] times 10 10 10
 title @a[tag=!in_map_editor] title {"translate":"\u0001","font":"title"}
