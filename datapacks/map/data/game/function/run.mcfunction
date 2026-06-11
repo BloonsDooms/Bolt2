@@ -411,6 +411,7 @@ execute if score .running .data = .0 .num run scoreboard players set .no_players
 execute if score .no_players .timer > .200 .num run scoreboard players set .no_players .timer -60
 
 #
+execute if score .edit_cd .data >= .0 .num run function game:game/edit_countdown
 execute if score .start_cd .data >= .0 .num run function game:game/start_countdown
 execute if score .start_cd .data = .n5 .num run scoreboard players set .start_cd .data -1
 
