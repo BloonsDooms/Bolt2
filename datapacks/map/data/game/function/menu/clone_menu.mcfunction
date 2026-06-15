@@ -31,3 +31,8 @@ execute store result score .map_screen_time_type .data run random value 0..7
 
 # is this old? this looks old.
 # might not be old....
+
+# custom maps replace bottom w/ edit button visual
+execute if score .custom_maps_enabled .data matches 1 run fill 271 -54 -242 271 -51 -235 raw_gold_block strict
+execute if score .custom_maps_enabled .data matches 1 run fill 270 -54 -242 270 -51 -235 polished_basalt[axis=z] strict
+execute if score .custom_maps_enabled .data matches 1 run fill 270 -53 -242 270 -52 -235 air strict
