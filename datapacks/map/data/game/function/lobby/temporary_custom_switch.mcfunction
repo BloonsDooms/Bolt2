@@ -48,3 +48,6 @@ function game:menu/next_map_loop with storage minecraft:macro
 
 # update visual
 function game:menu/map_display with storage minecraft:macro
+
+# edit button text visibility
+execute store result entity 9193d285-e55d-4da1-b962-86a964871769 view_range float 1 run scoreboard players get .custom_maps_enabled .data

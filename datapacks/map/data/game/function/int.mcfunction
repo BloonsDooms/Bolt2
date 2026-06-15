@@ -421,6 +421,8 @@ scoreboard players set .tmi_preset .data 1
 execute unless score .custom_maps_enabled .data matches 0..1 run scoreboard players set .custom_maps_enabled .data 0
 execute unless score .custom_maps_trust_block_nbt .data matches 0..1 run scoreboard players set .custom_maps_trust_block_nbt .data 0
 
+execute unless entity 9193d285-e55d-4da1-b962-86a964871769 run summon minecraft:text_display 265.1875 -52.875 -238.0625 {UUID: uuid("9193d285-e55d-4da1-b962-86a964871769"), alignment: "center", background: 1073741824, default_background: 0b, line_width: 200, see_through: 0b, shadow: 0b, text: {bold: 0b, color: "#EEEEEE", font: "minecraft:fancy", text: " EDIT  "}, text_opacity: -1b, transformation: {left_rotation: [0.0f, -0.7071068f, 0.0f, 0.7071068f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [8.999994f, 7.4999995f, 7.499997f], translation: [0.0f, 0.0f, 0.0f]}}
+
 scoreboard objectives add custom_random_dialog trigger
 
 # deprecated old custom random menu
