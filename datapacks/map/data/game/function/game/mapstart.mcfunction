@@ -37,7 +37,7 @@ function game:map/clear_map with storage maps:active settings.mapSize
 #function game:map/item_generator with storage maps:active gens[0]
 
 # runs load script for the map, do this after spawning in everything else
-function game:map/load_script1 with storage macro
+function game:map/load_script1 with storage maps:active
 
 execute if score .mode .data = .6 .num store result score crateCount macro_counter run data get storage maps:active crates
 execute if score .mode .data = .6 .num run scoreboard players set crateCounter macro_counter 0
