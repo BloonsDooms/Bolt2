@@ -48,7 +48,7 @@ summon marker 16.5 -63.5 -492.5 {Tags:["start_point"]}
 execute as @n[type=marker,tag=start_point] at @s run function bcm:map/tp_2
 # place blocks
 scoreboard players set .print_messages item_structures 0
-data modify storage item_structures save set from storage bcm tmp.registry.MapIcon
+data modify storage item_structures save set from storage bcm tmp.registry.mapThumbnail
 function item_structures:load
 # cleanup
 kill @n[type=marker,tag=start_point]

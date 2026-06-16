@@ -1,5 +1,5 @@
 # load map data to shuba's system
-$data merge storage minecraft:item_structures {save:$(MapIcon)}
+$data merge storage minecraft:item_structures {save:$(mapThumbnail)}
 
 # spawn in build 
 tag @s add start_point
