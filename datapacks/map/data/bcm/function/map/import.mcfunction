@@ -22,6 +22,9 @@ function item_structures:import
 # doors
 data remove storage bcm doors
 data modify storage bcm doors set from entity @s SelectedItem.components."minecraft:custom_data".doors
+# registry
+data remove storage bcm registry
+data modify storage bcm registry set from entity @s SelectedItem.components."minecraft:custom_data".registry
 
 
 ## save to array

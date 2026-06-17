@@ -104,6 +104,11 @@
         "source": "doors",
         "target": "doors",
         "op": "replace"
+      },
+      {
+        "source": "registry_export",
+        "target": "registry",
+        "op": "replace"
       }
     ]
   }

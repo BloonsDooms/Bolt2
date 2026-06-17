@@ -34,6 +34,7 @@ execute if score .ms_total calc matches 500.. run scoreboard players operation .
 
 # copy data to export path
 data modify storage bcm export set from storage bcm map
+data modify storage bcm registry_export set from storage bcm registry
 data modify storage item_structures export set from storage item_structures save
 
 # tell players to export

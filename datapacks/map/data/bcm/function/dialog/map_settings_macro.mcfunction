@@ -1,10 +1,10 @@
-return run dialog show @s {\
+$return run dialog show @s {\
   type: "minecraft:notice",\
   title: "map settings",\
   inputs: [\
     {\
       type: "minecraft:single_option",\
-      key: "",\
+      key: "color",\
       label: "Map Color",\
       options: [\
         {\
@@ -12,59 +12,67 @@ return run dialog show @s {\
           display: {\
             text: "Green",\
             color: "green"\
-          }\
+          },\
+          initial: $(initial_green)b\
         },\
         {\
           id: "2",\
           display: {\
             text: "Red",\
             color: "red"\
-          }\
+          },\
+          initial: $(initial_red)b\
         },\
         {\
           id: "3",\
           display: {\
             text: "Blue",\
             color: "blue"\
-          }\
+          },\
+          initial: $(initial_blue)b\
         },\
         {\
           id: "4",\
           display: {\
             text: "Yellow",\
             color: "yellow"\
-          }\
+          },\
+          initial: $(initial_yellow)b\
         }\
       ]\
     },\
     {\
       type: "minecraft:single_option",\
-      key: "",\
+      key: "size",\
       label: "Size Rating",\
       options: [\
         {\
           id: "0",\
-          display: "Very Small"\
+          display: "Very Small",\
+          initial: $(initial_very_small)b\
         },\
         {\
           id: "1",\
-          display: "Small"\
+          display: "Small",\
+          initial: $(initial_small)b\
         },\
         {\
           id: "2",\
-          display: "Medium"\
+          display: "Medium",\
+          initial: $(initial_medium)b\
         },\
         {\
           id: "3",\
-          display: "Large"\
+          display: "Large",\
+          initial: $(initial_large)b\
         }\
       ]\
     },\
     {\
       type: "minecraft:boolean",\
-      key: "",\
+      key: "disable_walls",\
       label: "Disable walls",\
-      initial: 0b,\
+      initial: $(initial_disable_walls)b,\
       on_true: "1",\
       on_false: "0"\
     }\
@@ -72,6 +80,10 @@ return run dialog show @s {\
   action: {\
     label: {\
       translate: "advancements.end.dragon_breath.title"\
+    },\
+    action: {\
+      type: "minecraft:dynamic/run_command",\
+      template: "trigger map_settings set $(macro)"\
     }\
   }\
 }
