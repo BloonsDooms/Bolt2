@@ -27,8 +27,12 @@ data modify storage maps:list maps[].enabled set value true
 kill @e[type=marker,tag=map_icon_builder]
 summon marker 16.5 -63.5 -492.5 {Tags:["map_icon_builder"]}
 
-execute store result storage macro map_id int 1 run scoreboard players set .map_icon_counter .data 0
-execute store result score .map_count .data run data get storage maps:list maps
+bossbar add rebuild_menu {text:"Rebuilding Menu...",color:yellow}
+execute store result storage macro map_id int 1 store result bossbar rebuild_menu value run scoreboard players set .map_icon_counter .data 0
+execute store result score .map_count .data store result bossbar rebuild_menu max run data get storage maps:list maps
+bossbar set rebuild_menu players @a
+bossbar set rebuild_menu style progress
+bossbar set rebuild_menu visible true
 
 scoreboard players set .print_messages item_structures 0
 
