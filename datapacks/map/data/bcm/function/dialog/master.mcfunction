@@ -38,18 +38,26 @@ return run dialog show @s {\
       }\
     },\
     {\
-      "label": "save map",\
-      "tooltip": "this might take a while!\n\ncreates an item with your map's data stored on it, which you can save permanently in creative mode\n\ndoes not affect targets & crates",\
+      "label": "map settings...",\
+      "tooltip": "change disabled items, thumbnail color, and map size rating here",\
       "action": {\
         "type": "minecraft:run_command",\
         "command": "trigger master_menu set 4"\
       }\
     },\
     {\
-      "label": "return to lobby",\
+      "label": "save map",\
+      "tooltip": "this might take a while!\n\ncreates an item with your map's data stored on it, which you can save permanently in creative mode\n\ndoes not affect targets & crates",\
       "action": {\
         "type": "minecraft:run_command",\
         "command": "trigger master_menu set 5"\
+      }\
+    },\
+    {\
+      "label": "return to lobby",\
+      "action": {\
+        "type": "minecraft:run_command",\
+        "command": "trigger master_menu set 6"\
       }\
     }\
   ]\
