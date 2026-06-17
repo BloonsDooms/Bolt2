@@ -11,6 +11,3 @@ tag @s remove start_point
 execute at @s run tp @s ~2 ~ ~
 execute store result storage macro map_id int 1 run scoreboard players add .map_icon_counter .data 1
 execute if score .map_icon_counter .data < .map_count .data run return run schedule function game:menu/rebuild_menu_scheduler 2t
-
-# mark as unbusy only once finished loading all icons
-scoreboard players set .is_busy item_structures 0
