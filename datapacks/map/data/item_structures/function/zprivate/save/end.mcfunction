@@ -12,6 +12,8 @@ data modify storage item_structures forceload.z set from storage item_structures
 execute at @s run function item_structures:zprivate/forceunload with storage item_structures forceload
 kill @e[tag=saver]
 
+data remove storage item_structures save.stack
+
 ## data size estimate
 # 4 bytes per entry
 execute store result score bytes commands run data get storage item_structures save.blocks
