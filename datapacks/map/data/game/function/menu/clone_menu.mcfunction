@@ -1,5 +1,5 @@
 # clones in the correct visual
-fill 270 -35 -222 271 -54 -249 air
+fill 270 -35 -222 271 -54 -249 air strict
 
 # cursor uuid: 
 # a8c9d4ee-a615-48ec-a9de-9baf67e4e639
@@ -13,7 +13,7 @@ summon marker 17.5 -62.5 -492.5 {UUID:[I;-1463167762,-1508554516,-1445028945,174
 function game:menu/move_cursor with storage macro
 
 
-execute at a8c9d4ee-a615-48ec-a9de-9baf67e4e639 run clone ~ ~ ~ ~-1 ~20 ~27 270 -54 -249 masked force
+execute at a8c9d4ee-a615-48ec-a9de-9baf67e4e639 run clone ~ ~ ~ ~-1 ~20 ~27 270 -54 -249 strict masked force
 
 #execute if score .map_screen .data = .1 .num run clone 309 -54 -249 308 -35 -223 270 -54 -249 masked force
 #execute if score .map_screen .data = .2 .num run clone 314 -54 -249 313 -35 -223 270 -54 -249 masked force
