@@ -13,6 +13,8 @@ data modify storage maps:active settings.tickingScript set value ""
 #
 execute as @e[tag=crate] at @s run function game:game/infected/crates/despawn
 
+time set 6000
+
 #tiny town and win achievements
 execute if score Blue Scores > Red Scores if score .mode .data = .1 .num as @a[team=blue,tag=locked_72] run function game:player/unlock/72
 execute if score Red Scores > Blue Scores if score .mode .data = .1 .num as @a[team=red,tag=locked_72] run function game:player/unlock/72
