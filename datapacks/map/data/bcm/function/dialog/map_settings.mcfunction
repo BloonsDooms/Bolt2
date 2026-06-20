@@ -5,6 +5,7 @@ data modify storage bcm macro set value {\
     initial_red: false,\
     initial_blue: false,\
     initial_yellow: false,\
+    initial_white: false,\
     initial_very_small: false,\
     initial_small: false,\
     initial_medium: false,\
@@ -23,6 +24,7 @@ execute if data storage bcm {registry:{mapColor:green}} run data modify storage 
 execute if data storage bcm {registry:{mapColor:red}} run data modify storage bcm macro.initial_red set value true
 execute if data storage bcm {registry:{mapColor:blue}} run data modify storage bcm macro.initial_blue set value true
 execute if data storage bcm {registry:{mapColor:yellow}} run data modify storage bcm macro.initial_yellow set value true
+execute if data storage bcm {registry:{mapColor:white}} run data modify storage bcm macro.initial_white set value true
 
 # show dialog
 scoreboard players enable @s map_settings

@@ -38,6 +38,14 @@ $return run dialog show @s {\
             color: "yellow"\
           },\
           initial: $(initial_yellow)b\
+        },\
+        {\
+          id: "5",\
+          display: {\
+            text: "Black & White",\
+            color: "white"\
+          },\
+          initial: $(initial_white)b\
         }\
       ]\
     },\
