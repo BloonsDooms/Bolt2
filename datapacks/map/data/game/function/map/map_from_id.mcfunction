@@ -1,5 +1,5 @@
 # add the map name to maps:active, currently used for achievements
-$data modify storage maps:active map_name set from storage maps:list maps[$(mapID)].mapName
+$data modify storage maps:active mapName set from storage maps:list maps[$(mapID)].mapName
 
 # normal maps
 $execute unless data storage maps:list maps[$(mapID)].isItemMap run return run function game:map/load_map with storage maps:list maps[$(mapID)]

@@ -1,2 +1,2 @@
-$execute if data storage maps:list maps[{mapName:"$(map_name)"}].isItemMap run return run function game:map/load_script_item_map with storage maps:active settings.mapSize
-$function game:map/load_script2 with storage maps:list maps[{mapName:"$(map_name)"}]
+$execute if data storage maps:list maps[{mapName:"$(mapName)"}].isItemMap run return run function game:map/load_script_item_map with storage maps:active settings.mapSize
+$function game:map/load_script2 with storage maps:list maps[{mapName:"$(mapName)"}]
