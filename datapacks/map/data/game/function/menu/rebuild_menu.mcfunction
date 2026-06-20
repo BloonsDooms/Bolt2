@@ -1,5 +1,8 @@
 # load map data to shuba's system
-$data merge storage minecraft:item_structures {save:$(mapThumbnail)}
+data modify storage minecraft:item_structures save set from storage maps:list tmp.mapThumbnail
+
+# rebuild text box if necessary
+execute if data storage maps:list tmp.mapTextBlocks run function game:menu/rebuild_text_box with storage maps:list tmp
 
 # spawn in build 
 tag @s add start_point

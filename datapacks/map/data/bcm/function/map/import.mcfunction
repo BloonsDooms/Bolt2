@@ -36,14 +36,14 @@ data modify storage maps:list maps append from storage bcm tmp.registry
 scoreboard players add .map_count .data 1
 
 
-## place icon
+## place thumbnail
 # must finish loading on the same tick
-# most icons do 15k-20k commands, my math says it's impossible to exceed 54k
+# most thumbnails do 15k-20k commands, my math says it's impossible to exceed 54k
 scoreboard players operation #limit_old commands = #limit commands
 scoreboard players operation #limit.step_old commands = limit.step commands
 scoreboard players set #limit commands 54000
 scoreboard players set limit.step commands 0
-# find map icon slot
+# find map thumbnail slot
 scoreboard players operation .i calc = .map_count .data
 scoreboard players remove .i calc 1
 forceload add 16 -493
@@ -53,6 +53,8 @@ execute as @n[type=marker,tag=start_point] at @s run function bcm:map/tp_2
 scoreboard players set .print_messages item_structures 0
 data modify storage item_structures save set from storage bcm tmp.registry.mapThumbnail
 function item_structures:load
+# trim text box if necessary
+execute if data storage bcm tmp.registry.mapTextBlocks at @n[type=marker,tag=start_point] run function game:menu/rebuild_text_box with storage bcm tmp.registry
 # cleanup
 kill @n[type=marker,tag=start_point]
 data remove storage bcm tmp

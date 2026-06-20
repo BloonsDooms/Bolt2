@@ -25,7 +25,7 @@ $execute if score .3 .num matches $(mapSize) run title @a[tag=me_player] actionb
 # moving this here too for sake of simplicty (its using all the same data)
 kill @e[type=text_display,tag=map_name]
 
-$summon text_display 265.25 -38.1 -235.65 {Tags:["map_name"],billboard:"fixed",Rotation:[90F,0F],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[$(mapTextScale)f,12f,$(mapTextScale)]},text:{"text":" $(mapIcon) $(mapName) $(mapIcon) ","font":"fancy","bold":false,"color":"$(mapColor)"}}
+$summon text_display 265.25 -38.1 -235.65 {Tags:["map_name"],billboard:"fixed",line_width:2147483647,Rotation:[90F,0F],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[$(mapTextScale)f,12f,$(mapTextScale)]},text:{"text":" $(mapIcon) $(mapName) $(mapIcon) ","font":"fancy","bold":false,"color":"$(mapColor)"}}
 
 #execute if score .map_screen .data = .2 .num run summon text_display 265.25 -38.1 -235.65 {Tags:["map_name"],billboard:"fixed",Rotation:[90F,0F],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[11.5f,12f,11.5f]},text:{"text":" ⏣ DIVIDE ⏣ ","font":"fancy","bold":false,"color":"#97DEA0"}}
 #execute if score .map_screen .data = .3 .num run summon text_display 265.25 -38.1 -235.65 {Tags:["map_name"],billboard:"fixed",Rotation:[90F,0F],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[14.5f,12f,14.5f]},text:{"text":" 📡 HEX 📡 ","font":"fancy","bold":false,"color":"#A797DE"}}
