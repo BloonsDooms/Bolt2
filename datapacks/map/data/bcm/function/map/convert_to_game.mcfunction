@@ -1,6 +1,6 @@
 ### THIS CONVERTS MAP DATA FROM SHUBA'S SYSTEM TO AIDEN'S SYSTEM
 # copies from "minecraft:bcm map" to "maps:active {}"
-# editor doesn't have disabled items or invulnerability times
+# editor doesn't have invulnerability times
 
 # you can't directly set/delete root objects
 data remove storage maps:active settings
@@ -59,6 +59,7 @@ data modify storage maps:active settings.introCutscene set from storage bcm map.
 execute store result score .wh calc run data get storage bcm map.max_wall_height
 execute store result storage maps:active settings.wallHeight int 1 run scoreboard players operation .wh calc += .y1 calc
 data modify storage maps:active settings.disabledItems set value []
+execute if data storage bcm map{disable_walls:true} run data modify storage maps:active settings.disabledItems append value "walls"
 # reusing results from above here
 scoreboard players add .x calc 1
 scoreboard players add .y calc 1

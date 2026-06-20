@@ -7,6 +7,8 @@ data modify storage bcm map.intro_camera set from storage maps:active settings.i
 
 data modify storage bcm map.max_wall_height set from storage maps:active settings.wallHeight
 
+execute store success storage bcm map.disable_walls byte 1 if data storage maps:active settings.disabledItems[0]
+
 data modify storage bcm map.red_spawnpoint set from storage maps:active spawn.redSpawn
 data modify storage bcm map.blue_spawnpoint set from storage maps:active spawn.blueSpawn
 
