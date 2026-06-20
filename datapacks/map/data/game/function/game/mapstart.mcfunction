@@ -26,6 +26,8 @@ kill @e[tag=blueflag]
 
 kill @e[tag=target_marker]
 
+execute if data storage maps:active settings.disabledItems[0] run tellraw @a [{text:"NOTICE!",color:"#8F2929",bold:true},{text:" Walls item disabled on map.",bold:false}]
+
 execute if score .mode .data = .6 .num run function game:game/infected/generator/spawn_macro with storage maps:active objectives
 function game:map/flags with storage maps:active objectives
 function game:map/clear_map with storage maps:active settings.mapSize
