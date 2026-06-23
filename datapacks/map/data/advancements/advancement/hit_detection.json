@@ -1,14 +1,13 @@
 {
   "criteria": {
-    "equip_armor": {
+    "requirement": {
       "trigger": "minecraft:entity_hurt_player",
       "conditions": {
-        "player": [],
         "damage": {
+          "source_entity": {
+            "minecraft:entity_type": "minecraft:player"
+          },
           "type": {
-            "source_entity": {
-              "type": "minecraft:player"
-            },
             "tags": [
               {
                 "id": "game:is_arrow",
