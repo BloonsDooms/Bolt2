@@ -24,6 +24,7 @@ scoreboard players operation .even_players .data %= .2 .num
 scoreboard players set @a out_of_spawn_time 0
 scoreboard players set @a delay_boost 0
 scoreboard players set @a delay_reveal 0
+scoreboard players set @a delay_ping 0
 scoreboard players set @a blind -1
 
 scoreboard players add @a team_pref 0

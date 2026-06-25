@@ -63,6 +63,9 @@ scoreboard players remove @a[scores={delay_boost=0..}] delay_boost 1
 kill @e[type=egg]
 
 #
+scoreboard players remove @a[scores={delay_ping=1..}] delay_ping 1
+
+#
 execute as @a[scores={zoomies=1..}] at @s run function game:items/speed/effect
 execute as @a[scores={speed_use=1..,respawn=..0}] at @s run function game:items/speed/trigger
 execute as @a[scores={speed_use=1..}] at @s run function game:items/speed/fail

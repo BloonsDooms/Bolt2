@@ -8,6 +8,7 @@ tag @a remove sur_start
 scoreboard players set @a out_of_spawn_time 0
 scoreboard players set @a delay_boost 0
 scoreboard players set @a delay_reveal 0
+scoreboard players set @a delay_ping 0
 scoreboard players set @a blind -1
 
 tag @a remove zombie_jump
