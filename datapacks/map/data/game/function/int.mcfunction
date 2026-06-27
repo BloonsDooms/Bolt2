@@ -372,6 +372,7 @@ scoreboard objectives add zoomies dummy
 scoreboard objectives add delay_boost dummy
 scoreboard objectives add delay_reveal dummy
 scoreboard objectives add delay_ping dummy
+scoreboard objectives add double_ping_window dummy
 
 scoreboard objectives add team_pref dummy
 scoreboard objectives add team_pref_temp dummy

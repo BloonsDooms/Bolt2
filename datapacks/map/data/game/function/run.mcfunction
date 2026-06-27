@@ -64,6 +64,7 @@ kill @e[type=egg]
 
 #
 scoreboard players remove @a[scores={delay_ping=1..}] delay_ping 1
+scoreboard players remove @a[scores={double_ping_window=1..}] double_ping_window 1
 
 #
 execute as @a[scores={zoomies=1..}] at @s run function game:items/speed/effect
