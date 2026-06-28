@@ -25,3 +25,24 @@ summon minecraft:text_display 233.15 -48.4 -248.0 {Tags:["lobby_menu_static"],al
 #
 kill @e[tag=chain_dis]
 summon block_display 241.0 -46 -211.0 {block_state:{Name:"minecraft:chain"},Tags:["chain_dis"]}
+
+#
+tag @e[tag=balloon_plat] add kill
+summon minecraft:shulker 239.5 -38.00 -225.50 {NoAI:1,Invulnerable:1,Silent:1,Tags:["balloon_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
+summon minecraft:shulker 242.5 -39.00 -228.50 {NoAI:1,Invulnerable:1,Silent:1,Tags:["balloon_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
+summon minecraft:shulker 240.5 -42.00 -227.5 {NoAI:1,Invulnerable:1,Silent:1,Tags:["balloon_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
+summon minecraft:shulker 241.54 -41.00 -223.46 {NoAI:1,Invulnerable:1,Silent:1,Tags:["balloon_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
+summon minecraft:shulker 244.5 -43.00 -226.5 {NoAI:1,Invulnerable:1,Silent:1,Tags:["balloon_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
+
+kill @e[tag=balloon_plat_vis]
+summon item_display 242.5 -39.00 -228.50 {Tags:["balloon_plat_vis"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.5f,0f,-0.5f],scale:[1f,1f,1f]},item:{id:"minecraft:string",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}}}
+summon item_display 239.5 -38.00 -225.50 {Tags:["balloon_plat_vis"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.5f,0f,-0.5f],scale:[1f,1f,1f]},item:{id:"minecraft:string",count:1,components:{"minecraft:custom_model_data":{strings:["5"]}}}}
+summon item_display 240.5 -42.00 -227.5 {Tags:["balloon_plat_vis"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.5f,0f,-0.5f],scale:[1f,1f,1f]},item:{id:"minecraft:string",count:1,components:{"minecraft:custom_model_data":{strings:["8"]}}}}
+summon item_display 241.54 -41.00 -223.46 {Tags:["balloon_plat_vis"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.5f,0f,-0.5f],scale:[1f,1f,1f]},item:{id:"minecraft:string",count:1,components:{"minecraft:custom_model_data":{strings:["3"]}}}}
+summon item_display 244.5 -43.00 -226.5 {Tags:["balloon_plat_vis"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.5f,0f,-0.5f],scale:[1f,1f,1f]},item:{id:"minecraft:string",count:1,components:{"minecraft:custom_model_data":{strings:["2"]}}}}
+
+summon item_display 242.5 -39.80 -228.50 {Tags:["balloon_plat_vis"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.5f,0f,-0.5f],scale:[1f,1f,1f]},item:{id:"minecraft:string",count:1,components:{"minecraft:custom_model_data":{strings:["9"]}}}}
+summon item_display 239.5 -38.80 -225.50 {Tags:["balloon_plat_vis"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.5f,0f,-0.5f],scale:[1f,1f,1f]},item:{id:"minecraft:string",count:1,components:{"minecraft:custom_model_data":{strings:["9"]}}}}
+summon item_display 240.5 -42.80 -227.5 {Tags:["balloon_plat_vis"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.5f,0f,-0.5f],scale:[1f,1f,1f]},item:{id:"minecraft:string",count:1,components:{"minecraft:custom_model_data":{strings:["9"]}}}}
+summon item_display 241.54 -41.80 -223.46 {Tags:["balloon_plat_vis"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.5f,0f,-0.5f],scale:[1f,1f,1f]},item:{id:"minecraft:string",count:1,components:{"minecraft:custom_model_data":{strings:["9"]}}}}
+summon item_display 244.5 -43.80 -226.5 {Tags:["balloon_plat_vis"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.5f,0f,-0.5f],scale:[1f,1f,1f]},item:{id:"minecraft:string",count:1,components:{"minecraft:custom_model_data":{strings:["9"]}}}}

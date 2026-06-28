@@ -7,7 +7,8 @@ tag @e[tag=into_start] add teleported
 
 #
 execute as @s[scores={golden_apple=1..},tag=locked_14] at @s run function game:player/unlock/14
-execute as @s[scores={golden_apple=1..}] at @s run function game:test4
+execute as @s[scores={golden_apple=1..}] at @s run summon marker ~ ~ ~ {Tags:["burst_delay"]}
+execute as @s[scores={golden_apple=1..}] at @s run scoreboard players set @e[tag=burst_delay,limit=1] t1 1
 effect clear @s[scores={golden_apple=1..}] minecraft:absorption
 effect clear @s[scores={golden_apple=1..}] minecraft:regeneration
 scoreboard players set @s golden_apple 0
@@ -335,7 +336,7 @@ execute as @s[nbt={OnGround:0b},tag=climb_vine] at @s if block ~ ~-0.2 ~ minecra
 execute as @s[scores={has_lev=..0}] at @s if block ~ ~-0.2 ~ minecraft:vine if block ~ ~0.7 ~ minecraft:air run effect clear @s minecraft:levitation
 execute as @s[nbt={OnGround:0b},tag=climb_vine] at @s if block ~ ~-0.2 ~ minecraft:vine if block ~ ~0.7 ~ minecraft:air run effect give @s minecraft:levitation 1 1 true
 
-execute as @s[scores={has_lev=..0}] at @s unless block ~ ~0.24 ~ minecraft:ladder unless block ~ ~-0.2 ~ minecraft:vine run effect clear @s minecraft:levitation
+execute as @s[tag=!lobby,scores={has_lev=..0}] at @s unless block ~ ~0.24 ~ minecraft:ladder unless block ~ ~-0.2 ~ minecraft:vine run effect clear @s minecraft:levitation
 execute as @s[nbt={OnGround:0b},tag=climb_vine] at @s if block ~ ~-0.4 ~ minecraft:vine run effect give @s minecraft:levitation 1 1 true
 
 scoreboard players set @s climb 0

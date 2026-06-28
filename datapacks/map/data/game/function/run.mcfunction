@@ -122,36 +122,67 @@ execute as @a[tag=lobby] at @s run function game:player/lobby
 scoreboard players set @a[tag=lobby] invul 40
 #scoreboard players set @a[x=243.5,y=-44,z=-235.5,distance=3.5..60] arrowReload 32
 #clear @a[x=243.5,y=-44,z=-235.5,distance=3.5..60] arrow
+team join noCol @a[team=!noCol,tag=lobby,scores={team_pref=0}]
 team join red_lobby @a[team=!red_lobby,tag=lobby,scores={team_pref=1}]
 team join blue_lobby @a[team=!blue_lobby,tag=lobby,scores={team_pref=2}]
 team join Spectator @a[team=!Spectator,tag=lobby,scores={team_pref=-1}]
 
-title @a[x=249,y=-56,z=-265,dx=30,dy=3,dz=70,gamemode=adventure,scores={team_pref=-1..}] actionbar [{"obfuscated":true,"text":"te ","color":"gray"},{"obfuscated":false,"text":"SHOOT MENU BUTTONS","bold":true,"color":"white"},{"obfuscated":true,"text":" st","color":"gray"}]
+title @a[x=249,y=-56,z=-265,dx=30,dy=3,dz=70,gamemode=adventure,scores={team_pref=-1..}] times 10 20 30
+title @a[x=249,y=-56,z=-265,dx=30,dy=3,dz=70,gamemode=adventure,scores={team_pref=-1..}] title [{"text":""}]
+title @a[x=249,y=-56,z=-265,dx=30,dy=3,dz=70,gamemode=adventure,scores={team_pref=-1..}] subtitle [{"obfuscated":false,"text":"Shoot Menu Buttons","bold":false,"color":"#ffffff","font":"low4"}]
 #title @a[x=249,y=-56,z=-265,dx=30,dy=3,dz=70,gamemode=adventure,scores={team_pref=-1}] actionbar {"text":"READY UP TO USE MENU","bold":true,"color":"gray"}
 #clear @a[x=249,y=-56,z=-265,dx=30,dy=3,dz=70,gamemode=adventure] golden_apple
 
 tag @a[x=249,y=-56,z=-265,dx=30,dy=3,dz=70,gamemode=adventure] add join_menu
-tp @a[tag=join_menu] 243.5 -44.00 -235.5 -90 13
-#execute as @a[tag=join_menu] at @s run playsound minecraft:entity.warden.attack_impact master @s ~ ~ ~ 0.3 0.1
-execute as @a[tag=join_menu] at @s run playsound minecraft:ui.loom.select_pattern master @s ~ ~ ~ 1 1.1
-execute as @a[tag=join_menu] at @s run playsound minecraft:entity.allay.item_taken master @s ~ ~ ~ 1 1
-execute as @a[tag=join_menu] at @s run playsound minecraft:block.note_block.basedrum master @s ~ ~ ~ 1 1.7
-tag @a remove join_menu
+execute as @a[tag=join_menu] run function game:menu/join_menu
+tag @a remove is_m_rider
+execute as @e[tag=menu_ride] run function game:menu/menu_ride
 
+scoreboard players add @e[tag=burst_delay] t1 1
+execute as @e[tag=burst_delay,scores={t1=2..}] at @s run function game:test4
+kill @e[tag=burst_delay,scores={t1=2..}]
+
+execute as @a[tag=!is_m_rider,tag=is_m_rider2] at @s run effect give @s slow_falling 1 0 true
+execute as @a[tag=!is_m_rider,tag=is_m_rider2] at @s rotated ~ 0 run summon marker ^ ^ ^-0.28 {Tags:["burst_delay"]}
+execute as @a[tag=!is_m_rider,tag=is_m_rider2] at @s rotated ~ 0 run summon marker ^ ^ ^-0.28 {Tags:["burst_delay"]}
+#execute as @a[tag=!is_m_rider,tag=is_m_rider2] at @s run summon minecraft:wind_charge ~ ~-1.2 ~ {Motion:[0.0,2.0,0.0]}
+#execute as @a[tag=!is_m_rider,tag=is_m_rider2] at @s run summon minecraft:wind_charge ~1 ~1 ~ {Motion:[-1.0,0.0,0.0]}
+#execute as @a[tag=!is_m_rider,tag=is_m_rider2] at @s run summon minecraft:wind_charge ~-1 ~1 ~ {Motion:[1.0,0.0,0.0]}
+execute as @a[tag=!is_m_rider,tag=is_m_rider2] at @s run scoreboard players set @s lowgravity 12
+#effect give @a[tag=!is_m_rider,tag=is_m_rider2] levitation 1 1 true
+execute as @a[tag=!is_m_rider,tag=is_m_rider2] run tag @s remove is_m_rider2
+
+execute as @a[scores={lowgravity=1..}] run attribute @s minecraft:explosion_knockback_resistance base set 0.4
+execute as @a[scores={lowgravity=..0}] run attribute @s minecraft:explosion_knockback_resistance base reset
+execute as @a[scores={lowgravity=1..}] run attribute @s minecraft:gravity base set 0.04
+execute as @a[scores={lowgravity=..0},tag=!has_balloon] run attribute @s minecraft:gravity base reset
+scoreboard players remove @a[scores={lowgravity=1..}] lowgravity 1
+
+#stopsound @a * minecraft:entity.breeze.wind_burst
+
+tag @a[tag=is_m_rider] add is_m_rider2
+#tag @a[tag=!is_m_rider] remove is_m_rider2
+
+
+#
 tag @e[type=arrow,x=245,y=-50,z=-235,distance=..80] add kill
 tag @e[type=arrow,x=233.0,y=-80,z=-266.9,dx=30,dy=60,dz=-25] remove kill
 
-execute as @a[x=243.5,y=-44,z=-235.5,distance=..50,scores={arrowReload=2..35}] as @s run scoreboard players set @s arrowReload 38
+#on menu platform
+execute as @a[x=243.5,y=-43,z=-235.5,distance=..50,scores={arrowReload=2..35}] as @s run scoreboard players set @s arrowReload 38
 #execute as @a[x=243.5,y=-44,z=-235.5,distance=..4,scores={team_pref=-1}] run clear @s arrow
-execute as @a[x=243.5,y=-44,z=-235.5,distance=..4] run scoreboard players set @s lobby_text_time 80
+execute as @a[x=243.5,y=-43,z=-235.5,distance=..4] run scoreboard players set @s lobby_text_time 40
 #execute as @a[x=243.5,y=-44,z=-235.5,distance=..4,scores={team_pref=-1}] run scoreboard players set @s arrowReload 0
-execute as @a[x=243.5,y=-44,z=-235.5,distance=..2.9,scores={bowUse=1..}] as @s run function game:menu/hitscan_start
+execute as @a[x=243.5,y=-43,z=-235.5,distance=..2.9,scores={bowUse=1..}] as @s run function game:menu/hitscan_start
 
 tag @a remove in_menu
-tag @a[x=243.5,y=-44,z=-235.5,distance=..2.9] add in_menu
+tag @a[x=243.5,y=-43,z=-235.5,distance=..2.9] add in_menu
 
-execute as @a[tag=!in_menu,tag=in_menu2] at @s run playsound minecraft:block.note_block.basedrum master @s ~ ~ ~ 0.3 0
-execute as @a[tag=!in_menu,tag=in_menu2] at @s run playsound minecraft:block.note_block.basedrum master @s ~ ~ ~ 0.3 0.5
+#execute as @a[tag=!in_menu,tag=in_menu2] at @s run attribute @s minecraft:scale base set 1
+#execute as @a[tag=!in_menu,tag=in_menu2] at @s run effect give @s slow_falling 1 0 true
+#execute as @a[tag=!in_menu,tag=in_menu2] at @s run effect give @s levitation 1 0 true
+#execute as @a[tag=!in_menu,tag=in_menu2] at @s run playsound minecraft:block.note_block.basedrum master @s ~ ~ ~ 0.3 0
+#execute as @a[tag=!in_menu,tag=in_menu2] at @s run playsound minecraft:block.note_block.basedrum master @s ~ ~ ~ 0.3 0.5
 
 tag @a[tag=!in_menu] remove in_menu2
 tag @a[tag=in_menu] add in_menu2
@@ -291,6 +322,34 @@ execute as @e[type=minecraft:area_effect_cloud] at @s run function game:items/ac
 #### PLAYERS ###
 execute as @a at @s run function game:player/main
 
+# balloon. has to come after player main
+scoreboard players set @a balloon_count 0
+tag @a remove has_balloon
+execute as @a if items entity @s weapon.mainhand string run tag @s add has_balloon
+
+execute as @e[tag=balloon,type=pig,tag=!hitbox] at @s run function game:items/balloon/vis_main
+
+tag @a[scores={balloon_count=0}] remove has_balloon
+
+execute as @a[tag=!has_balloon,tag=has_balloon2,tag=last_balloon] run clear @s string 1
+
+tag @a[tag=!has_balloon,tag=!new_balloon] remove last_balloon
+tag @a remove new_balloon
+scoreboard players set @a use_balloon 0
+
+tag @a[tag=has_balloon] add has_balloon2
+tag @a[tag=!has_balloon] remove has_balloon2
+
+execute as @a[tag=has_balloon,scores={balloon_count=1}] run attribute @s minecraft:gravity base set 0.045
+execute as @a[tag=has_balloon,scores={balloon_count=2}] run attribute @s minecraft:gravity base set 0.04
+execute as @a[tag=has_balloon,scores={balloon_count=3}] run attribute @s minecraft:gravity base set 0.035
+execute as @a[tag=has_balloon,scores={balloon_count=4..}] run attribute @s minecraft:gravity base set 0.03
+execute as @a[tag=has_balloon] run attribute @s minecraft:jump_strength base set 0.6
+execute as @a[tag=!has_balloon] run attribute @s minecraft:jump_strength base reset
+
+scoreboard players remove @a[scores={balloon_cooldown=1..}] balloon_cooldown 1
+
+#
 scoreboard players set @a DamageTaken 0
 scoreboard players set @a DamageDealt 0
 scoreboard players set @a sword_break 0

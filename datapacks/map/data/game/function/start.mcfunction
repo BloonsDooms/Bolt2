@@ -5,6 +5,9 @@ execute if score .mode .data = .1 .num if score .map .data = .3 .num if score .t
 tag @a remove sur_start
 
 #
+execute as @a run attribute @s minecraft:scale base set 1
+
+#
 scoreboard players set @a out_of_spawn_time 0
 scoreboard players set @a delay_boost 0
 scoreboard players set @a delay_reveal 0

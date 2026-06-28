@@ -26,8 +26,8 @@ team add red
 team add red_lobby {"text":"Red Lobby"}
 team add blue_lobby {"text":"Blue Lobby"}
 
-team modify red_lobby suffix [{"text":"["},{"text":"Red","color":"red"},{"text":"]"}]
-team modify blue_lobby suffix [{"text":"["},{"text":"Blue","color":"dark_aqua"},{"text":"]"}]
+team modify red_lobby suffix [{"text":" ["},{"text":"Red","color":"red"},{"text":"]"}]
+team modify blue_lobby suffix [{"text":" ["},{"text":"Blue","color":"dark_aqua"},{"text":"]"}]
 
 team add Spectator
 
@@ -46,6 +46,11 @@ team modify blue seeFriendlyInvisibles true
 
 team add noCol
 team modify noCol collisionRule never
+
+team modify red_lobby collisionRule never
+team modify blue_lobby collisionRule never
+
+team modify noCol suffix [{"text":" ["},{"text":"Random","color":"#A763FF"},{"text":"]"}]
 
 team add noColRed
 team modify noColRed collisionRule never
@@ -163,6 +168,11 @@ scoreboard objectives add stats_ger_kills dummy
 scoreboard objectives add stats_trap_kills dummy
 scoreboard objectives add has_lev dummy
 
+scoreboard objectives add menu_afk dummy
+
+scoreboard objectives add use_balloon minecraft.used:minecraft.string
+scoreboard objectives add balloon_count dummy
+scoreboard objectives add balloon_cooldown dummy
 
 scoreboard objectives add code_1 dummy
 scoreboard objectives add code_2 dummy
@@ -357,6 +367,7 @@ scoreboard objectives add drop_lingering minecraft.dropped:minecraft.lingering_p
 scoreboard objectives add drop_egg minecraft.dropped:minecraft.egg
 scoreboard objectives add drop_turret minecraft.dropped:minecraft.pig_spawn_egg
 scoreboard objectives add drop_zoom minecraft.dropped:minecraft.ender_pearl
+scoreboard objectives add drop_balloon minecraft.dropped:minecraft.string
 
 scoreboard objectives add boost_use minecraft.used:minecraft.egg
 scoreboard objectives add speed_use minecraft.used:minecraft.ender_pearl
