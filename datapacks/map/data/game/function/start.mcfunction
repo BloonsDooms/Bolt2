@@ -367,3 +367,6 @@ execute if score .tmi .data = .1 .num if items block 235 -49 -224 container.22 s
 
 #
 #tag @a[scores={team_pref=-1}] add is_spectating
+
+#advancement
+execute as @a[scores={team_pref=0..},tag=locked_48] run function game:player/unlock/48
