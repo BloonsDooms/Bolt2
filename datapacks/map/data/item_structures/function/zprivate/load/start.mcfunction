@@ -10,6 +10,7 @@ scoreboard players operation #count vect_x = #system vect_x
 scoreboard players operation #count vect_y = #system vect_y
 scoreboard players operation #count vect_z = #system vect_z
 
+# this is redundant - these chunks should already be loaded by now
 data remove storage item_structures forceload
 data modify storage item_structures forceload.x set from storage item_structures load.size[0]
 data modify storage item_structures forceload.z set from storage item_structures load.size[2]

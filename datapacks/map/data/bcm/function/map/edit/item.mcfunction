@@ -1,3 +1,5 @@
+$data modify storage bcm mapNameEditing set value "$(mapName)"
+
 ## begin placing copy
 # copies map structure to item_structures save
 # do not remove map editor objects

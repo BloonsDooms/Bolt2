@@ -78,6 +78,7 @@ execute as @e[type=marker,tag=map_editor,tag=door] at @s run function bcm:map/sa
 
 # y offset
 execute as @e[type=marker,tag=render_box,tag=save] at @s run tp ~ ~-.9 ~
+tellraw @a {entity:"@n[type=marker,tag=save,tag=pos1]",nbt:"Pos"}
 tag @n[type=marker,tag=render_box,tag=save,tag=pos1] add start_point
 tag @n[type=marker,tag=render_box,tag=save,tag=pos2] add end_point
 

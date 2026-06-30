@@ -46,7 +46,7 @@ return run dialog show @s {\
       }\
     },\
     {\
-      "label": "save map",\
+      "label": "save map...",\
       "tooltip": "this might take a while!\n\ncreates an item with your map's data stored on it, which you can save permanently in creative mode\n\ndoes not affect targets & crates",\
       "action": {\
         "type": "minecraft:run_command",\
