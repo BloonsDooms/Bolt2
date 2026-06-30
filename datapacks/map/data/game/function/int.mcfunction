@@ -173,6 +173,12 @@ scoreboard objectives add menu_afk dummy
 scoreboard objectives add use_balloon minecraft.used:minecraft.string
 scoreboard objectives add balloon_count dummy
 scoreboard objectives add balloon_cooldown dummy
+scoreboard objectives add balloon_release dummy
+scoreboard objectives add balloon_land_sound_cool dummy
+
+scoreboard objectives add balloon_talk dummy
+scoreboard objectives add balloon_talk2 dummy
+scoreboard objectives add balloon_talk_cool dummy
 
 scoreboard objectives add code_1 dummy
 scoreboard objectives add code_2 dummy

@@ -4,12 +4,27 @@ tag @s add me
 tag @a remove leasher
 
 execute on leasher as @s run tag @s add leasher
+
+data remove entity @s[tag=release] leash
+
+tag @s[tag=saveme] add saveme2
+tag @s remove saveme
+execute as @s[tag=!release] unless entity @p[tag=leasher] run data modify entity @s leash.UUID set from entity @s data.uuidsave
+execute as @s[tag=!release] unless entity @p[tag=leasher] run tag @a remove close_owner
+execute as @s[tag=!release] unless entity @p[tag=leasher] run scoreboard players operation @a ID -= @s ID
+execute as @s[tag=!release] unless entity @p[tag=leasher] run tag @a[scores={ID=0}] add close_owner
+execute as @s[tag=!release] unless entity @p[tag=leasher] run scoreboard players operation @a ID += @s ID
+execute as @s[tag=!release] at @s unless entity @p[tag=leasher] if entity @p[tag=close_owner,distance=..10] run tag @s[tag=!saveme2] add saveme
+tag @s remove saveme2
+
+execute as @s[tag=saveme] run return fail
+
 execute on leasher run scoreboard players add @s balloon_count 1
 
 execute as @s run execute store result score @s hurt run data get entity @s HurtTime 1
 
 tag @s[scores={hurt=9..}] add pop
-execute on passengers as @s[type=pig,scores={hurt=9..}] on attacker run tag @e[tag=me] add pop
+execute on passengers as @s[type=pig] on attacker run tag @e[tag=me] add pop
 
 scoreboard players add @s t1 1
 scoreboard players add @s t2 1
@@ -27,7 +42,7 @@ execute store result score .motx .calc run data get entity @s Motion[0] 100
 execute store result score .motz .calc run data get entity @s Motion[2] 100
 
 attribute @s minecraft:scale base set 0.0
-execute if entity @e[tag=balloon,distance=..0.9,tag=!me,scores={t3=0}] if score .motx .calc matches -2..2 if score .motx .calc matches -2..2 run function game:items/balloon/rand_move
+execute as @s[tag=!release] if entity @e[tag=balloon,tag=!hitbox,distance=..0.9,tag=!me,scores={t3=0}] if score .motx .calc matches -2..2 if score .motx .calc matches -2..2 run function game:items/balloon/rand_move
 scoreboard players remove @s[scores={t3=1..}] t3 1
 
 scoreboard players add .y2 .calc 24
@@ -39,8 +54,16 @@ execute if score .y1 .calc < .y2 .calc run attribute @s gravity base set -0.04
 
 tag @a remove attacker
 
-execute if entity @e[tag=leasher,tag=!has_balloon] run tag @s add pop
-execute as @s[scores={t2=2..}] unless entity @a[tag=leasher] run tag @s add pop
+attribute @s[tag=release] gravity base set -0.03
+effect give @s[tag=release] levitation infinite 4 true
+scoreboard players add @s[tag=release] balloon_release 1
+tag @s[scores={balloon_release=38..}] add pop
+
+execute as @s[tag=release,tag=!release2] at @s run playsound minecraft:item.lead.break master @a
+tag @s[tag=release] add release2
+
+execute if entity @e[tag=leasher,tag=!has_balloon] run tag @s add release
+execute as @s[scores={t2=2..}] unless entity @a[tag=leasher] run tag @s add release
 execute on passengers as @s[type=interaction] on attacker run tag @s add attacker
 execute if entity @p[tag=attacker] run function game:items/balloon/hit
 
