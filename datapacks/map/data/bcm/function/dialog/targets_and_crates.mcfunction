@@ -1,450 +1,470 @@
 scoreboard players enable @s targets_and_crates
 return run dialog show @s {\
-  "type": "minecraft:multi_action",\
-  "title": "targets & crates menu",\
-  "inputs": [],\
-  "exit_action": {\
-    "label": {\
-      "translate": "gui.cancel"\
+  type: "minecraft:multi_action",\
+  title: "targets & crates menu",\
+  inputs: [],\
+  exit_action: {\
+    label: {\
+      translate: "gui.cancel"\
     },\
-    "action": {\
-      "type": "minecraft:run_command",\
-      "command": "trigger targets_and_crates set 0"\
+    action: {\
+      type: "minecraft:run_command",\
+      command: "trigger targets_and_crates set 0"\
     }\
   },\
-  "columns": 1,\
-  "actions": [\
+  columns: 1,\
+  actions: [\
     {\
-      "label": [\
+      label: [\
         "",\
         {\
-          "text": "load",\
-          "color": "yellow"\
+          text: "load",\
+          color: "yellow"\
         },\
         " targets"\
       ],\
-      "width": 200,\
-      "action": {\
-        "type": "minecraft:show_dialog",\
-        "dialog": {\
-          "type": "minecraft:confirmation",\
-          "title": "are you sure?",\
-          "body": {\
-            "type": "minecraft:plain_message",\
-            "contents": [\
+      width: 200,\
+      action: {\
+        type: "minecraft:show_dialog",\
+        dialog: {\
+          type: "minecraft:confirmation",\
+          title: "are you sure?",\
+          body: {\
+            type: "minecraft:plain_message",\
+            contents: [\
               "This will ",\
               {\
-                "text": "LOAD",\
-                "color": "yellow"\
+                text: "LOAD",\
+                color: "yellow"\
               },\
               " all saved ",\
               {\
-                "text": "TARGETS",\
-                "color": "red"\
+                text: "TARGETS",\
+                color: "red"\
               },\
               " for this map into the editor.\n\nCurrently existing targets will be preserved.\n\nAre you sure you wish to continue?"\
             ]\
           },\
-          "yes": {\
-            "label": [\
+          yes: {\
+            label: [\
               "Yes, ",\
               {\
-                "text": "load",\
-                "color": "yellow"\
+                text: "load",\
+                color: "yellow"\
               },\
               " saved targets"\
             ],\
-            "width": 250,\
-            "action": {\
-              "type": "minecraft:run_command",\
-              "command": "trigger targets_and_crates set 10"\
+            width: 250,\
+            action: {\
+              type: "minecraft:run_command",\
+              command: "trigger targets_and_crates set 10"\
             }\
           },\
-          "no": {\
-            "label": {\
-              "translate": "gui.cancel"\
+          no: {\
+            label: {\
+              translate: "gui.cancel"\
             },\
-            "width": 250,\
-            "action": {\
-              "type": "minecraft:run_command",\
-              "command": "trigger targets_and_crates set 0"\
+            width: 250,\
+            action: {\
+              type: "minecraft:run_command",\
+              command: "trigger targets_and_crates set 0"\
             }\
           }\
         }\
       }\
     },\
     {\
-      "label": [\
+      label: [\
         "",\
         {\
-          "text": "load",\
-          "color": "yellow"\
+          text: "load",\
+          color: "yellow"\
         },\
         " crates "\
       ],\
-      "width": 200,\
-      "action": {\
-        "type": "minecraft:show_dialog",\
-        "dialog": {\
-          "type": "minecraft:confirmation",\
-          "title": "are you sure?",\
-          "body": {\
-            "type": "minecraft:plain_message",\
-            "contents": [\
+      width: 200,\
+      action: {\
+        type: "minecraft:show_dialog",\
+        dialog: {\
+          type: "minecraft:confirmation",\
+          title: "are you sure?",\
+          body: {\
+            type: "minecraft:plain_message",\
+            contents: [\
               "This will ",\
               {\
-                "text": "LOAD",\
-                "color": "yellow"\
+                text: "LOAD",\
+                color: "yellow"\
               },\
               " all saved ",\
               {\
-                "text": "CRATES",\
-                "color": "gold"\
+                text: "CRATES",\
+                color: "gold"\
               },\
               " for this map into the editor.\n\nIf an existing crate is in the same position as a saved crate, the existing crate will be ",\
               {\
-                "text": "REPLACED",\
-                "color": "yellow"\
+                text: "REPLACED",\
+                color: "yellow"\
               },\
               " with the saved crate.\n\nOther existing crates will be preserved.\n\nAre you sure you wish to continue?"\
             ]\
           },\
-          "yes": {\
-            "label": [\
+          yes: {\
+            label: [\
               "Yes, ",\
               {\
-                "text": "load",\
-                "color": "yellow"\
+                text: "load",\
+                color: "yellow"\
               },\
               " saved crates"\
             ],\
-            "width": 250,\
-            "action": {\
-              "type": "minecraft:run_command",\
-              "command": "trigger targets_and_crates set 11"\
+            width: 250,\
+            action: {\
+              type: "minecraft:run_command",\
+              command: "trigger targets_and_crates set 11"\
             }\
           },\
-          "no": {\
-            "label": {\
-              "translate": "gui.cancel"\
+          no: {\
+            label: {\
+              translate: "gui.cancel"\
             },\
-            "width": 250,\
-            "action": {\
-              "type": "minecraft:run_command",\
-              "command": "trigger targets_and_crates set 0"\
+            width: 250,\
+            action: {\
+              type: "minecraft:run_command",\
+              command: "trigger targets_and_crates set 0"\
             }\
           }\
         }\
       }\
     },\
     {\
-      "label": [\
+      label: [\
         "",\
         {\
-          "text": "destroy",\
-          "color": "red"\
+          text: "destroy",\
+          color: "red"\
         },\
         " targets"\
       ],\
-      "width": 200,\
-      "action": {\
-        "type": "minecraft:show_dialog",\
-        "dialog": {\
-          "type": "minecraft:confirmation",\
-          "title": "are you sure?",\
-          "body": {\
-            "type": "minecraft:plain_message",\
-            "contents": [\
+      width: 200,\
+      action: {\
+        type: "minecraft:show_dialog",\
+        dialog: {\
+          type: "minecraft:confirmation",\
+          title: "are you sure?",\
+          body: {\
+            type: "minecraft:plain_message",\
+            contents: [\
               "This will ",\
               {\
-                "text": "DESTROY",\
-                "color": "red"\
+                text: "DESTROY",\
+                color: "red"\
               },\
               " all placed ",\
               {\
-                "text": "TARGETS",\
-                "color": "red"\
+                text: "TARGETS",\
+                color: "red"\
               },\
               " in the map editor.\n\nAre you sure you wish to continue?"\
             ]\
           },\
-          "yes": {\
-            "label": [\
+          yes: {\
+            label: [\
               "Yes, ",\
               {\
-                "text": "destroy",\
-                "color": "red"\
+                text: "destroy",\
+                color: "red"\
               },\
               " placed targets"\
             ],\
-            "width": 250,\
-            "action": {\
-              "type": "minecraft:run_command",\
-              "command": "trigger targets_and_crates set 20"\
+            width: 250,\
+            action: {\
+              type: "minecraft:run_command",\
+              command: "trigger targets_and_crates set 20"\
             }\
           },\
-          "no": {\
-            "label": {\
-              "translate": "gui.cancel"\
+          no: {\
+            label: {\
+              translate: "gui.cancel"\
             },\
-            "width": 250,\
-            "action": {\
-              "type": "minecraft:run_command",\
-              "command": "trigger targets_and_crates set 0"\
+            width: 250,\
+            action: {\
+              type: "minecraft:run_command",\
+              command: "trigger targets_and_crates set 0"\
             }\
           }\
         }\
       }\
     },\
     {\
-      "label": [\
+      label: [\
         "",\
         {\
-          "text": "destroy",\
-          "color": "red"\
+          text: "destroy",\
+          color: "red"\
         },\
         " crates"\
       ],\
-      "width": 200,\
-      "action": {\
-        "type": "minecraft:show_dialog",\
-        "dialog": {\
-          "type": "minecraft:confirmation",\
-          "title": "are you sure?",\
-          "body": {\
-            "type": "minecraft:plain_message",\
-            "contents": [\
+      width: 200,\
+      action: {\
+        type: "minecraft:show_dialog",\
+        dialog: {\
+          type: "minecraft:confirmation",\
+          title: "are you sure?",\
+          body: {\
+            type: "minecraft:plain_message",\
+            contents: [\
               "This will ",\
               {\
-                "text": "DESTROY",\
-                "color": "red"\
+                text: "DESTROY",\
+                color: "red"\
               },\
               " all placed ",\
               {\
-                "text": "CRATES",\
-                "color": "gold"\
+                text: "CRATES",\
+                color: "gold"\
               },\
               " in the map editor.\n\nAre you sure you wish to continue?"\
             ]\
           },\
-          "yes": {\
-            "label": [\
+          yes: {\
+            label: [\
               "Yes, ",\
               {\
-                "text": "destroy",\
-                "color": "red"\
+                text: "destroy",\
+                color: "red"\
               },\
               " placed crates"\
             ],\
-            "width": 250,\
-            "action": {\
-              "type": "minecraft:run_command",\
-              "command": "trigger targets_and_crates set 21"\
+            width: 250,\
+            action: {\
+              type: "minecraft:run_command",\
+              command: "trigger targets_and_crates set 21"\
             }\
           },\
-          "no": {\
-            "label": {\
-              "translate": "gui.cancel"\
+          no: {\
+            label: {\
+              translate: "gui.cancel"\
             },\
-            "width": 250,\
-            "action": {\
-              "type": "minecraft:run_command",\
-              "command": "trigger targets_and_crates set 0"\
+            width: 250,\
+            action: {\
+              type: "minecraft:run_command",\
+              command: "trigger targets_and_crates set 0"\
             }\
           }\
         }\
       }\
     },\
     {\
-      "label": [\
+      label: [\
         "",\
         {\
-          "text": "destroy",\
-          "color": "red"\
+          text: "destroy",\
+          color: "red"\
         },\
         " all"\
       ],\
-      "width": 200,\
-      "action": {\
-        "type": "minecraft:show_dialog",\
-        "dialog": {\
-          "type": "minecraft:confirmation",\
-          "title": "are you sure?",\
-          "body": {\
-            "type": "minecraft:plain_message",\
-            "contents": [\
+      width: 200,\
+      action: {\
+        type: "minecraft:show_dialog",\
+        dialog: {\
+          type: "minecraft:confirmation",\
+          title: "are you sure?",\
+          body: {\
+            type: "minecraft:plain_message",\
+            contents: [\
               "This will ",\
               {\
-                "text": "DESTROY",\
-                "color": "red"\
+                text: "DESTROY",\
+                color: "red"\
               },\
               " all placed ",\
               {\
-                "text": "TARGETS and CRATES",\
-                "color": "light_purple"\
+                text: "TARGETS and CRATES",\
+                color: "light_purple"\
               },\
               " in the map editor.\n\nAre you sure you wish to continue?"\
             ]\
           },\
-          "yes": {\
-            "label": [\
+          yes: {\
+            label: [\
               "Yes, ",\
               {\
-                "text": "destroy",\
-                "color": "red"\
+                text: "destroy",\
+                color: "red"\
               },\
               " placed targets and crates"\
             ],\
-            "width": 250,\
-            "action": {\
-              "type": "minecraft:run_command",\
-              "command": "trigger targets_and_crates set 22"\
+            width: 250,\
+            action: {\
+              type: "minecraft:run_command",\
+              command: "trigger targets_and_crates set 22"\
             }\
           },\
-          "no": {\
-            "label": {\
-              "translate": "gui.cancel"\
+          no: {\
+            label: {\
+              translate: "gui.cancel"\
             },\
-            "width": 250,\
-            "action": {\
-              "type": "minecraft:run_command",\
-              "command": "trigger targets_and_crates set 0"\
+            width: 250,\
+            action: {\
+              type: "minecraft:run_command",\
+              command: "trigger targets_and_crates set 0"\
             }\
           }\
         }\
       }\
     },\
     {\
-      "label": [\
+      label: [\
         "",\
         {\
-          "text": "save",\
-          "color": "green"\
+          text: "save",\
+          color: "green"\
         },\
         " targets"\
       ],\
-      "width": 200,\
-      "action": {\
-        "type": "minecraft:show_dialog",\
-        "dialog": {\
-          "type": "minecraft:confirmation",\
-          "title": "are you sure?",\
-          "body": {\
-            "type": "minecraft:plain_message",\
-            "contents": [\
+      width: 200,\
+      action: {\
+        type: "minecraft:show_dialog",\
+        dialog: {\
+          type: "minecraft:confirmation",\
+          title: "are you sure?",\
+          body: {\
+            type: "minecraft:plain_message",\
+            contents: [\
               "This will ",\
               {\
-                "text": "SAVE",\
-                "color": "green"\
+                text: "SAVE",\
+                color: "green"\
               },\
               " placed ",\
               {\
-                "text": "TARGETS",\
-                "color": "red"\
+                text: "TARGETS",\
+                color: "red"\
               },\
               " in the map editor, ",\
               {\
-                "text": "OVERWRITING",\
-                "color": "yellow"\
+                text: "REPLACING",\
+                color: "yellow"\
               },\
-              " any previously saved targets.\n\nAre you sure you wish to continue?"\
+              " the old set of targets, if it exists.\n\nAre you sure you wish to continue?"\
             ]\
           },\
-          "yes": {\
-            "label": [\
+          inputs: [\
+            {\
+              type: "minecraft:boolean",\
+              key: "overwrite",\
+              label: "overwrite existing map",\
+              initial: 1b,\
+              on_true: "1",\
+              on_false: "0"\
+            }\
+          ],\
+          yes: {\
+            label: [\
               "Yes, ",\
               {\
-                "text": "save",\
-                "color": "green"\
+                text: "save",\
+                color: "green"\
               },\
               " targets and ",\
               {\
-                "text": "overwrite",\
-                "color": "yellow"\
-              },\
+                text: "replace",\
+                color: "yellow"\
+              }\
             ],\
-            "width": 250,\
-            "action": {\
-              "type": "minecraft:run_command",\
-              "command": "trigger targets_and_crates set 30"\
+            width: 250,\
+            action: {\
+              type: "minecraft:dynamic/run_command",\
+              template: "trigger targets_and_crates set $(overwrite)30"\
             }\
           },\
-          "no": {\
-            "label": {\
-              "translate": "gui.cancel"\
+          no: {\
+            label: {\
+              translate: "gui.cancel"\
             },\
-            "width": 250,\
-            "action": {\
-              "type": "minecraft:run_command",\
-              "command": "trigger targets_and_crates set 0"\
+            width: 250,\
+            action: {\
+              type: "minecraft:run_command",\
+              command: "trigger targets_and_crates set 0"\
             }\
           }\
         }\
       }\
     },\
     {\
-      "label": [\
+      label: [\
         "",\
         {\
-          "text": "save",\
-          "color": "green"\
+          text: "save",\
+          color: "green"\
         },\
         " crates"\
       ],\
-      "width": 200,\
-      "action": {\
-        "type": "minecraft:show_dialog",\
-        "dialog": {\
-          "type": "minecraft:confirmation",\
-          "title": "are you sure?",\
-          "body": {\
-            "type": "minecraft:plain_message",\
-            "contents": [\
+      width: 200,\
+      action: {\
+        type: "minecraft:show_dialog",\
+        dialog: {\
+          type: "minecraft:confirmation",\
+          title: "are you sure?",\
+          body: {\
+            type: "minecraft:plain_message",\
+            contents: [\
               "This will ",\
               {\
-                "text": "SAVE",\
-                "color": "green"\
+                text: "SAVE",\
+                color: "green"\
               },\
               " placed ",\
               {\
-                "text": "CRATES",\
-                "color": "gold"\
+                text: "CRATES",\
+                color: "gold"\
               },\
               " in the map editor, ",\
               {\
-                "text": "OVERWRITING",\
-                "color": "yellow"\
+                text: "REPLACING",\
+                color: "yellow"\
               },\
-              " any previously saved crates.\n\nAre you sure you wish to continue?"\
+              " the old set of crates, if it exists.\n\nAre you sure you wish to continue?"\
             ]\
           },\
-          "yes": {\
-            "label": [\
+          inputs: [\
+            {\
+              type: "minecraft:boolean",\
+              key: "overwrite",\
+              label: "overwrite existing map",\
+              initial: 1b,\
+              on_true: "1",\
+              on_false: "0"\
+            }\
+          ],\
+          yes: {\
+            label: [\
               "Yes, ",\
               {\
-                "text": "save",\
-                "color": "green"\
+                text: "save",\
+                color: "green"\
               },\
               " crates and ",\
               {\
-                "text": "overwrite",\
-                "color": "yellow"\
-              },\
+                text: "replace",\
+                color: "yellow"\
+              }\
             ],\
-            "width": 250,\
-            "action": {\
-              "type": "minecraft:run_command",\
-              "command": "trigger targets_and_crates set 31"\
+            width: 250,\
+            action: {\
+              type: "minecraft:dynamic/run_command",\
+              template: "trigger targets_and_crates set $(overwrite)31"\
             }\
           },\
-          "no": {\
-            "label": {\
-              "translate": "gui.cancel"\
+          no: {\
+            label: {\
+              translate: "gui.cancel"\
             },\
-            "width": 250,\
-            "action": {\
-              "type": "minecraft:run_command",\
-              "command": "trigger targets_and_crates set 0"\
+            width: 250,\
+            action: {\
+              type: "minecraft:run_command",\
+              command: "trigger targets_and_crates set 0"\
             }\
           }\
         }\
