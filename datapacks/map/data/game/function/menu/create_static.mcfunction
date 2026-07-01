@@ -56,3 +56,14 @@ summon item_display 241.5 -50.00 -224.50 {teleport_duration:10,Tags:["balloon_gu
 summon minecraft:shulker 241.5 -50.00 -224.50 {NoAI:1,Invulnerable:1,Silent:1,Tags:["balloon_guy_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
 summon minecraft:shulker 241.5 -49.00 -224.50 {NoAI:1,Invulnerable:1,Silent:1,Tags:["balloon_guy_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
 summon interaction 241.5 -50.00 -224.50 {height:2.1,width:1.5,Tags:["balloon_guy_interact"]}
+
+#wise guy
+kill @e[tag=wise_guy]
+kill @e[tag=wise_guy_interact]
+tag @e[tag=wise_guy_play] add kill
+
+summon item_display 244.5 -50.00 -255.5 {teleport_duration:10,Rotation:[33F,0F],Tags:["wise_guy"],transformation:{left_rotation:[0f,0.0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0.0f,1.7,0.0f],scale:[1.0f,1.0f,1.0f]},item:{id:"minecraft:string",count:1,components:{"minecraft:custom_model_data":{strings:["12"]}}}}
+summon minecraft:shulker 244.5 -50.00 -255.5 {NoAI:1,Invulnerable:1,Silent:1,Tags:["wise_guy_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
+summon minecraft:shulker 244.5 -49.00 -255.5 {NoAI:1,Invulnerable:1,Silent:1,Tags:["wise_guy_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
+summon minecraft:shulker 244.5 -48.00 -255.5 {NoAI:1,Invulnerable:1,Silent:1,Tags:["wise_guy_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
+summon interaction 244.5 -50.00 -255.5 {height:2.1,width:1.5,Tags:["wise_guy_interact"]}

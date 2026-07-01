@@ -385,6 +385,13 @@ execute as @e[tag=coin_interact] run function game:menu/coin_interact
 kill @e[scores={t1=8..},tag=coin_vis]
 scoreboard players add @e[scores={t1=1..},tag=coin_vis] t1 1
 
+#wise guy
+execute as @e[tag=wise_guy_interact] on target run function game:menu/wise_guy_interact
+
+execute as @e[tag=balloon_guy] at @s unless entity @p[distance=..6] run tp @s ~ ~ ~ 33 0
+execute as @e[tag=wise_guy] at @s if entity @p[distance=..6] run tp @s ~ ~ ~ facing entity @p
+execute as @e[tag=wise_guy] at @s if entity @p[distance=..6] run tp @s ~ ~ ~ ~ 0
+
 #
 scoreboard players set @a DamageTaken 0
 scoreboard players set @a DamageDealt 0
