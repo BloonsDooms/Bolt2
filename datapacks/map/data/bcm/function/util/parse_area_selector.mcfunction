@@ -34,14 +34,14 @@ data remove storage bcm macro
 data modify storage bcm macro.str set from storage bcm tmp.in1
 
 # setup
-scoreboard players set .i calc 0
-scoreboard players set i.dx calc -1
-scoreboard players set i.dy calc -1
-scoreboard players set i.dz calc -1
+scoreboard players set .i .calc 0
+scoreboard players set i.dx .calc -1
+scoreboard players set i.dy .calc -1
+scoreboard players set i.dz .calc -1
 
-# outputs to i.dx, i.dy, i.dz calc
+# outputs to i.dx, i.dy, i.dz .calc
 function bcm:util/index_of_areas
-#tellraw @a ['index of "dx": ',{score:{name:"i.dx",objective:"calc"}},'\nindex of "dy": ',{score:{name:"i.dy",objective:"calc"}},'\nindex of "dz": ',{score:{name:"i.dz",objective:"calc"}}]
+#tellraw @a ['index of "dx": ',{score:{name:"i.dx",objective:".calc"}},'\nindex of "dy": ',{score:{name:"i.dy",objective:".calc"}},'\nindex of "dz": ',{score:{name:"i.dz",objective:".calc"}}]
 
 
 ## get values of dx, dy, and dz
@@ -50,29 +50,29 @@ function bcm:util/index_of_areas
 # end = index of next key, string length if N/A
 
 # dx
-scoreboard players operation .i calc = i.dx calc
-execute store result storage bcm macro.start int 1 run scoreboard players add .i calc 2
-execute store result storage bcm macro.end int 1 store result score .i calc run data get storage bcm macro.str
-execute if score i.dy calc > i.dx calc store result storage bcm macro.end int 1 run scoreboard players operation .i calc < i.dy calc
-execute if score i.dz calc > i.dx calc store result storage bcm macro.end int 1 run scoreboard players operation .i calc < i.dz calc
+scoreboard players operation .i .calc = i.dx .calc
+execute store result storage bcm macro.start int 1 run scoreboard players add .i .calc 2
+execute store result storage bcm macro.end int 1 store result score .i .calc run data get storage bcm macro.str
+execute if score i.dy .calc > i.dx .calc store result storage bcm macro.end int 1 run scoreboard players operation .i .calc < i.dy .calc
+execute if score i.dz .calc > i.dx .calc store result storage bcm macro.end int 1 run scoreboard players operation .i .calc < i.dz .calc
 function bcm:util/substring with storage bcm macro
 data modify storage bcm macro.dx set from storage bcm tmp.out
 
 # dy
-scoreboard players operation .i calc = i.dy calc
-execute store result storage bcm macro.start int 1 run scoreboard players add .i calc 2
-execute store result storage bcm macro.end int 1 store result score .i calc run data get storage bcm macro.str
-execute if score i.dx calc > i.dy calc store result storage bcm macro.end int 1 run scoreboard players operation .i calc < i.dx calc
-execute if score i.dz calc > i.dy calc store result storage bcm macro.end int 1 run scoreboard players operation .i calc < i.dz calc
+scoreboard players operation .i .calc = i.dy .calc
+execute store result storage bcm macro.start int 1 run scoreboard players add .i .calc 2
+execute store result storage bcm macro.end int 1 store result score .i .calc run data get storage bcm macro.str
+execute if score i.dx .calc > i.dy .calc store result storage bcm macro.end int 1 run scoreboard players operation .i .calc < i.dx .calc
+execute if score i.dz .calc > i.dy .calc store result storage bcm macro.end int 1 run scoreboard players operation .i .calc < i.dz .calc
 function bcm:util/substring with storage bcm macro
 data modify storage bcm macro.dy set from storage bcm tmp.out
 
 # dz
-scoreboard players operation .i calc = i.dz calc
-execute store result storage bcm macro.start int 1 run scoreboard players add .i calc 2
-execute store result storage bcm macro.end int 1 store result score .i calc run data get storage bcm macro.str
-execute if score i.dy calc > i.dz calc store result storage bcm macro.end int 1 run scoreboard players operation .i calc < i.dy calc
-execute if score i.dx calc > i.dz calc store result storage bcm macro.end int 1 run scoreboard players operation .i calc < i.dx calc
+scoreboard players operation .i .calc = i.dz .calc
+execute store result storage bcm macro.start int 1 run scoreboard players add .i .calc 2
+execute store result storage bcm macro.end int 1 store result score .i .calc run data get storage bcm macro.str
+execute if score i.dy .calc > i.dz .calc store result storage bcm macro.end int 1 run scoreboard players operation .i .calc < i.dy .calc
+execute if score i.dx .calc > i.dz .calc store result storage bcm macro.end int 1 run scoreboard players operation .i .calc < i.dx .calc
 function bcm:util/substring with storage bcm macro
 data modify storage bcm macro.dz set from storage bcm tmp.out
 

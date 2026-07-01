@@ -17,13 +17,13 @@ execute if score .is_negative set_pos_and_rot matches 1 run scoreboard players o
 data remove storage bcm macro
 # 1 digit?
 execute unless data storage bcm macro.yaw run function bcm:trigger/check_length {10_exp_digits:10,objective:"set_pos_and_rot",max:1000,sentinel:789}
-execute unless data storage bcm macro.yaw if score .i calc matches 789 store result storage bcm macro.yaw int 1 run scoreboard players get .value calc
+execute unless data storage bcm macro.yaw if score .i .calc matches 789 store result storage bcm macro.yaw int 1 run scoreboard players get .value .calc
 # 2 digits?
 execute unless data storage bcm macro.yaw run function bcm:trigger/check_length {10_exp_digits:100,objective:"set_pos_and_rot",max:1000,sentinel:789}
-execute unless data storage bcm macro.yaw if score .i calc matches 789 store result storage bcm macro.yaw int 1 run scoreboard players get .value calc
+execute unless data storage bcm macro.yaw if score .i .calc matches 789 store result storage bcm macro.yaw int 1 run scoreboard players get .value .calc
 # 3 digits?
 execute unless data storage bcm macro.yaw run function bcm:trigger/check_length {10_exp_digits:1000,objective:"set_pos_and_rot",max:1000,sentinel:789}
-execute unless data storage bcm macro.yaw if score .i calc matches 789 store result storage bcm macro.yaw int 1 run scoreboard players get .value calc
+execute unless data storage bcm macro.yaw if score .i .calc matches 789 store result storage bcm macro.yaw int 1 run scoreboard players get .value .calc
 
 # pitch: [-90,90]
 execute if score .is_negative set_pos_and_rot matches 1 run scoreboard players operation @s set_pos_and_rot *= .n1 .num

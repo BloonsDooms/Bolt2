@@ -2,9 +2,9 @@
 summon marker ~ ~ ~ {Tags:[tmp]}
 data modify storage bcm macro.pos set from storage bcm abs.save.start
 execute as @n[type=marker,tag=tmp] run function bcm:util/tp with storage bcm macro
-execute store result score .x1 calc run data get entity @n[type=marker,tag=tmp] Pos[0]
-execute store result score .y1 calc run data get entity @n[type=marker,tag=tmp] Pos[1]
-execute store result score .z1 calc run data get entity @n[type=marker,tag=tmp] Pos[2]
+execute store result score .x1 .calc run data get entity @n[type=marker,tag=tmp] Pos[0]
+execute store result score .y1 .calc run data get entity @n[type=marker,tag=tmp] Pos[1]
+execute store result score .z1 .calc run data get entity @n[type=marker,tag=tmp] Pos[2]
 kill @e[type=marker,tag=tmp]
 
 # save crates relative to origin
@@ -14,8 +14,8 @@ execute as @e[type=interaction,tag=editor_crate] at @s if function bcm:map/area_
 data remove storage bcm tmp
 
 # announce
-execute store result score crates.save calc run data get storage bcm map.crates
-tellraw @a ["\n",{selector:"@s"}," saved ",{score:{name:"crates.save",objective:"calc"}}," crates\n"]
+execute store result score crates.save .calc run data get storage bcm map.crates
+tellraw @a ["\n",{selector:"@s"}," saved ",{score:{name:"crates.save",objective:".calc"}}," crates\n"]
 execute unless score .overwrite targets_and_crates matches 1 run tellraw @a "Crates saved only to export item (old set still loaded on server)"
 execute if score .overwrite targets_and_crates matches 1 run tellraw @a "Overwrote existing map's crate set"
 

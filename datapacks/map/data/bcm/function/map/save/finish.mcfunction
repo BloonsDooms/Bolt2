@@ -13,24 +13,24 @@ execute if score .print_messages item_structures matches 1 run tellraw @a ["fina
 
 # improve save ETA
 # get real save rate
-scoreboard players operation .rate calc = #system vect_x
-scoreboard players operation .rate calc *= #system vect_y
-scoreboard players operation .rate calc *= #system vect_z
-scoreboard players operation .rate calc *= .10 .num
-scoreboard players operation .rate calc /= .ms_total calc
-scoreboard players operation .rate calc *= .100 .num
-execute if score .print_messages item_structures matches 1 run tellraw @a ["average save rate: ",{score:{name:".rate",objective:"calc"}}," blocks/s"]
+scoreboard players operation .rate .calc = #system vect_x
+scoreboard players operation .rate .calc *= #system vect_y
+scoreboard players operation .rate .calc *= #system vect_z
+scoreboard players operation .rate .calc *= .10 .num
+scoreboard players operation .rate .calc /= .ms_total .calc
+scoreboard players operation .rate .calc *= .100 .num
+execute if score .print_messages item_structures matches 1 run tellraw @a ["average save rate: ",{score:{name:".rate",objective:".calc"}}," blocks/s"]
 # % difference
-scoreboard players operation .r calc = .rate calc
-scoreboard players operation .r calc *= .100 .num
-scoreboard players operation .r calc /= .save_blocks/s calc
-scoreboard players remove .r calc 100
-execute if score .print_messages item_structures matches 1 if score .r calc matches 0.. run tellraw @a ["saved ",{score:{name:".r",objective:"calc"}},"% faster than estimated"]
-scoreboard players operation .r calc *= .n1 .num
-execute if score .print_messages item_structures matches 1 if score .r calc matches 1.. run tellraw @a ["saved ",{score:{name:".r",objective:"calc"}},"% slower than estimated"]
+scoreboard players operation .r .calc = .rate .calc
+scoreboard players operation .r .calc *= .100 .num
+scoreboard players operation .r .calc /= .save_blocks/s .calc
+scoreboard players remove .r .calc 100
+execute if score .print_messages item_structures matches 1 if score .r .calc matches 0.. run tellraw @a ["saved ",{score:{name:".r",objective:".calc"}},"% faster than estimated"]
+scoreboard players operation .r .calc *= .n1 .num
+execute if score .print_messages item_structures matches 1 if score .r .calc matches 1.. run tellraw @a ["saved ",{score:{name:".r",objective:".calc"}},"% slower than estimated"]
 # new estimate = avg(old est., real), if >500ms
-execute if score .ms_total calc matches 500.. run scoreboard players operation .save_blocks/s calc += .rate calc
-execute if score .ms_total calc matches 500.. run scoreboard players operation .save_blocks/s calc /= .2 .num
+execute if score .ms_total .calc matches 500.. run scoreboard players operation .save_blocks/s .calc += .rate .calc
+execute if score .ms_total .calc matches 500.. run scoreboard players operation .save_blocks/s .calc /= .2 .num
 
 # copy data to export path
 data modify storage bcm export set from storage bcm map

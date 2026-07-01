@@ -16,7 +16,7 @@ execute if score .l set_item_generator matches 0 store success score .l set_item
 execute if score .l set_item_generator matches 0 store success score .l set_item_generator run function bcm:trigger/check_length {10_exp_digits:1000,objective:"set_item_generator",max:1000,sentinel:789}
 # get value
 execute if score .l set_item_generator matches 0 run function bcm:fail/tellraw {input:'"Can\'t parse input"'}
-scoreboard players operation @n[type=block_display,tag=owned] bcm_generator_warmup = .value calc
+scoreboard players operation @n[type=block_display,tag=owned] bcm_generator_warmup = .value .calc
 
 # time: [1,180]
 execute store result score @n[type=block_display,tag=owned] bcm_generator_time run scoreboard players operation @s set_item_generator /= .1000 .num

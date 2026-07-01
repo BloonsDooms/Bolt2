@@ -15,11 +15,11 @@ data modify storage bcm macro set value {\
 
 # get current values
 data modify storage bcm macro.initial_disable_walls set from storage bcm map.disable_walls
-execute store result score .size calc run data get storage bcm registry.mapSize
-execute if score .size calc matches 0 run data modify storage bcm macro.initial_very_small set value true
-execute if score .size calc matches 1 run data modify storage bcm macro.initial_small set value true
-execute if score .size calc matches 2 run data modify storage bcm macro.initial_medium set value true
-execute if score .size calc matches 3 run data modify storage bcm macro.initial_large set value true
+execute store result score .size .calc run data get storage bcm registry.mapSize
+execute if score .size .calc matches 0 run data modify storage bcm macro.initial_very_small set value true
+execute if score .size .calc matches 1 run data modify storage bcm macro.initial_small set value true
+execute if score .size .calc matches 2 run data modify storage bcm macro.initial_medium set value true
+execute if score .size .calc matches 3 run data modify storage bcm macro.initial_large set value true
 execute if data storage bcm {registry:{mapColor:green}} run data modify storage bcm macro.initial_green set value true
 execute if data storage bcm {registry:{mapColor:red}} run data modify storage bcm macro.initial_red set value true
 execute if data storage bcm {registry:{mapColor:blue}} run data modify storage bcm macro.initial_blue set value true

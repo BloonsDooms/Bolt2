@@ -3,9 +3,9 @@ data modify storage bcm macro set value {macro:"$(pitch)789$(yaw)$(align)"}
 
 # get current yaw and pitch
 # [-180f,180f] -> [0i,360i]
-execute store result score .yaw calc run data get entity @s Rotation[0]
-execute if score .yaw calc matches ..0 run scoreboard players add .yaw calc 360
-execute store result storage bcm macro.yaw int 1 run scoreboard players get .yaw calc
+execute store result score .yaw .calc run data get entity @s Rotation[0]
+execute if score .yaw .calc matches ..0 run scoreboard players add .yaw .calc 360
+execute store result storage bcm macro.yaw int 1 run scoreboard players get .yaw .calc
 execute store result storage bcm macro.pitch int 1 run data get entity @s Rotation[1] 1
 
 # show dialog

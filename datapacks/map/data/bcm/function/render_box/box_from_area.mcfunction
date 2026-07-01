@@ -2,9 +2,9 @@
 $data modify storage bcm tmp.dx set value $(dx)
 $data modify storage bcm tmp.dy set value $(dy)
 $data modify storage bcm tmp.dz set value $(dz)
-execute store result score .dx calc run data get storage bcm tmp.dx 1
-execute store result score .dy calc run data get storage bcm tmp.dy 1
-execute store result score .dz calc run data get storage bcm tmp.dz 1
+execute store result score .dx .calc run data get storage bcm tmp.dx 1
+execute store result score .dy .calc run data get storage bcm tmp.dy 1
+execute store result score .dz .calc run data get storage bcm tmp.dz 1
 data remove storage bcm tmp
 
 # summon bounding box markers
@@ -16,18 +16,18 @@ $execute as @n[type=marker,tag=pos1,tag=tmp_init] at @s run function bcm:map/edi
 $execute as @n[type=marker,tag=pos2,tag=tmp_init] at @s run function bcm:map/edit/tp_convert {pos:"$(origin)"}
 
 # dx
-execute if score .dx calc matches 0.. run tag @n[type=marker,tag=pos2,tag=tmp_init] add tp_dx
-execute if score .dx calc matches ..-1 run tag @n[type=marker,tag=pos1,tag=tmp_init] add tp_dx
+execute if score .dx .calc matches 0.. run tag @n[type=marker,tag=pos2,tag=tmp_init] add tp_dx
+execute if score .dx .calc matches ..-1 run tag @n[type=marker,tag=pos1,tag=tmp_init] add tp_dx
 $execute as @n[type=marker,tag=tp_dx,tag=tmp_init] at @s run tp @s ~$(dx) ~ ~
 
 # dy
-execute if score .dy calc matches 0.. run tag @n[type=marker,tag=pos2,tag=tmp_init] add tp_dy
-execute if score .dy calc matches ..-1 run tag @n[type=marker,tag=pos1,tag=tmp_init] add tp_dy
+execute if score .dy .calc matches 0.. run tag @n[type=marker,tag=pos2,tag=tmp_init] add tp_dy
+execute if score .dy .calc matches ..-1 run tag @n[type=marker,tag=pos1,tag=tmp_init] add tp_dy
 $execute as @n[type=marker,tag=tp_dy,tag=tmp_init] at @s run tp @s ~ ~$(dy) ~
 
 # dz
-execute if score .dz calc matches 0.. run tag @n[type=marker,tag=pos2,tag=tmp_init] add tp_dz
-execute if score .dz calc matches ..-1 run tag @n[type=marker,tag=pos1,tag=tmp_init] add tp_dz
+execute if score .dz .calc matches 0.. run tag @n[type=marker,tag=pos2,tag=tmp_init] add tp_dz
+execute if score .dz .calc matches ..-1 run tag @n[type=marker,tag=pos1,tag=tmp_init] add tp_dz
 $execute as @n[type=marker,tag=tp_dz,tag=tmp_init] at @s run tp @s ~ ~ ~$(dz)
 
 # extend area by 1 block because selectors are silly 
