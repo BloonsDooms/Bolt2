@@ -10,21 +10,21 @@ scoreboard players set .hard select_area 0
 # improve load ETA
 # get real load rate
 execute store result score .rate calc run data get storage item_structures save.blocks
-scoreboard players operation .rate calc *= #10 calc
+scoreboard players operation .rate calc *= .10 .num
 scoreboard players operation .rate calc /= .ms_total calc
-scoreboard players operation .rate calc *= #100 calc
+scoreboard players operation .rate calc *= .100 .num
 execute if score .print_messages item_structures matches 1 run tellraw @a ["average load rate: ",{score:{name:".rate",objective:"calc"}}," entries/s"]
 # % difference
 scoreboard players operation .r calc = .rate calc
-scoreboard players operation .r calc *= #100 calc
+scoreboard players operation .r calc *= .100 .num
 scoreboard players operation .r calc /= .load_entries/s calc
 scoreboard players remove .r calc 100
 execute if score .print_messages item_structures matches 1 if score .r calc matches 0.. run tellraw @a ["loaded ",{score:{name:".r",objective:"calc"}},"% faster than estimated"]
-scoreboard players operation .r calc *= #-1 calc
+scoreboard players operation .r calc *= .n1 .num
 execute if score .print_messages item_structures matches 1 if score .r calc matches 1.. run tellraw @a ["loaded ",{score:{name:".r",objective:"calc"}},"% slower than estimated"]
 # new estimate = avg(old est., real) if >500ms
 execute if score .ms_total calc matches 500.. run scoreboard players operation .load_entries/s calc += .rate calc
-execute if score .ms_total calc matches 500.. run scoreboard players operation .load_entries/s calc /= #2 calc
+execute if score .ms_total calc matches 500.. run scoreboard players operation .load_entries/s calc /= .2 .num
 
 # keep it simple - forceload the whole map editor area all the time
 function bcm:editor/forceload

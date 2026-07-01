@@ -2,7 +2,7 @@ $scoreboard players set 10^digits calc $(10_exp_digits)
 $scoreboard players set .max calc $(max)
 
 $execute store result score .value calc run scoreboard players operation .i calc = @s $(objective)
-execute if score .i calc matches ..-1 store result score .value calc run scoreboard players operation .i calc *= #-1 calc
+execute if score .i calc matches ..-1 store result score .value calc run scoreboard players operation .i calc *= .n1 .num
 scoreboard players operation .i calc /= 10^digits calc
 scoreboard players operation .i calc %= .max calc
 

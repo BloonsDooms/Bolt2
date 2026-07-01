@@ -646,6 +646,8 @@ scoreboard players set .640 .num 640
 scoreboard players set .800 .num 800
 scoreboard players set .900 .num 900
 
+scoreboard players set .1000 .num 1000
+
 scoreboard players set .1200 .num 1200
 
 scoreboard players set .250000 .num 250000

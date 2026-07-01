@@ -9,7 +9,7 @@ execute if score @s targets_and_crates matches 22 run function bcm:targets_and_c
 
 # save
 execute store success score .overwrite targets_and_crates if score @s targets_and_crates matches 100..
-scoreboard players operation @s targets_and_crates %= #100 calc
+scoreboard players operation @s targets_and_crates %= .100 .num
 execute if score @s targets_and_crates matches 30 run function bcm:targets_and_crates/save/targets
 execute if score @s targets_and_crates matches 31 run function bcm:targets_and_crates/save/crates
 

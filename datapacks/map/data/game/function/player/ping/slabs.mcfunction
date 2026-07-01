@@ -1,6 +1,6 @@
 # get y
 execute store result score .y calc run data get entity @s Pos[1] 100
-scoreboard players operation .y calc %= #100 calc
+scoreboard players operation .y calc %= .100 .num
 kill @s
 
 # slab blockstate checks

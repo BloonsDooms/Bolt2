@@ -19,7 +19,7 @@ execute if score .l set_item_generator matches 0 run function bcm:fail/tellraw {
 scoreboard players operation @n[type=block_display,tag=owned] bcm_generator_warmup = .value calc
 
 # time: [1,180]
-execute store result score @n[type=block_display,tag=owned] bcm_generator_time run scoreboard players operation @s set_item_generator /= #1000 calc
+execute store result score @n[type=block_display,tag=owned] bcm_generator_time run scoreboard players operation @s set_item_generator /= .1000 .num
 
 # update sign text
 execute as @n[type=block_display,tag=owned] at @s positioned ^ ^ ^1 run function bcm:place/generator_text

@@ -5,13 +5,13 @@
 scoreboard players operation .value set_pos_and_rot = @s set_pos_and_rot
 scoreboard players set .is_negative set_pos_and_rot 0
 execute if score .value set_pos_and_rot matches ..-1 run scoreboard players set .is_negative set_pos_and_rot 1
-execute if score .is_negative set_pos_and_rot matches 1 run scoreboard players operation .value set_pos_and_rot *= #-1 calc
-scoreboard players operation .value set_pos_and_rot %= #10 calc
+execute if score .is_negative set_pos_and_rot matches 1 run scoreboard players operation .value set_pos_and_rot *= .n1 .num
+scoreboard players operation .value set_pos_and_rot %= .10 .num
 execute if score .value set_pos_and_rot matches 2 at @s align xyz run tp ~.5 ~ ~.5
 execute if score .value set_pos_and_rot matches 3 at @s align xyz run tp ~ ~ ~
-execute if score .is_negative set_pos_and_rot matches 1 run scoreboard players operation @s set_pos_and_rot *= #-1 calc
-scoreboard players operation @s set_pos_and_rot /= #10 calc
-execute if score .is_negative set_pos_and_rot matches 1 run scoreboard players operation @s set_pos_and_rot *= #-1 calc
+execute if score .is_negative set_pos_and_rot matches 1 run scoreboard players operation @s set_pos_and_rot *= .n1 .num
+scoreboard players operation @s set_pos_and_rot /= .10 .num
+execute if score .is_negative set_pos_and_rot matches 1 run scoreboard players operation @s set_pos_and_rot *= .n1 .num
 
 # yaw: [0,360] - unknown length 1 to 3 digits, followed by 789
 data remove storage bcm macro
@@ -26,10 +26,10 @@ execute unless data storage bcm macro.yaw run function bcm:trigger/check_length 
 execute unless data storage bcm macro.yaw if score .i calc matches 789 store result storage bcm macro.yaw int 1 run scoreboard players get .value calc
 
 # pitch: [-90,90]
-execute if score .is_negative set_pos_and_rot matches 1 run scoreboard players operation @s set_pos_and_rot *= #-1 calc
-execute if score .is_negative set_pos_and_rot matches 0 store result storage bcm macro.pitch int 1 run scoreboard players operation @s set_pos_and_rot /= #1000 calc
-execute if score .is_negative set_pos_and_rot matches 1 store result storage bcm macro.pitch int -1 run scoreboard players operation @s set_pos_and_rot /= #1000 calc
-execute if score .is_negative set_pos_and_rot matches 1 run scoreboard players operation @s set_pos_and_rot *= #-1 calc
+execute if score .is_negative set_pos_and_rot matches 1 run scoreboard players operation @s set_pos_and_rot *= .n1 .num
+execute if score .is_negative set_pos_and_rot matches 0 store result storage bcm macro.pitch int 1 run scoreboard players operation @s set_pos_and_rot /= .1000 .num
+execute if score .is_negative set_pos_and_rot matches 1 store result storage bcm macro.pitch int -1 run scoreboard players operation @s set_pos_and_rot /= .1000 .num
+execute if score .is_negative set_pos_and_rot matches 1 run scoreboard players operation @s set_pos_and_rot *= .n1 .num
 
 # tp
 #tellraw @s {nbt:"macro",storage:"bcm"}

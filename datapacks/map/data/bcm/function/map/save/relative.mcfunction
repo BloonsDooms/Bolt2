@@ -17,6 +17,6 @@ function bcm:map/save/relative_point {to:"intro_camera", rot:true}
 
 data remove storage bcm tmp
 
-scoreboard players operation .x1 calc /= #1000 calc
-scoreboard players operation .y1 calc /= #1000 calc
-scoreboard players operation .z1 calc /= #1000 calc
+scoreboard players operation .x1 calc /= .1000 .num
+scoreboard players operation .y1 calc /= .1000 .num
+scoreboard players operation .z1 calc /= .1000 .num

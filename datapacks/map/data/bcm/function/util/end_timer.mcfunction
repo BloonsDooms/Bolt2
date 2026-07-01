@@ -4,10 +4,10 @@ stopwatch remove bcm:timer
 
 # milliseconds -> m:s.ms
 scoreboard players operation .s calc = .ms calc
-scoreboard players operation .ms calc %= #1000 calc
-execute store result score .m calc run scoreboard players operation .s calc /= #1000 calc
-scoreboard players operation .s calc %= #60 calc
-scoreboard players operation .m calc /= #60 calc
+scoreboard players operation .ms calc %= .1000 .num
+execute store result score .m calc run scoreboard players operation .s calc /= .1000 .num
+scoreboard players operation .s calc %= .60 .num
+scoreboard players operation .m calc /= .60 .num
 
 # formatting & leading zeros
 data remove storage bcm timer

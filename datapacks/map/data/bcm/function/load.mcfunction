@@ -16,16 +16,6 @@ scoreboard objectives add map_settings trigger
 scoreboard objectives add save_map trigger
 
 scoreboard objectives add calc dummy
-scoreboard players set #-1 calc -1
-scoreboard players set #2 calc 2
-scoreboard players set #4 calc 4
-scoreboard players set #5 calc 5
-scoreboard players set #10 calc 10
-scoreboard players set #20 calc 20
-scoreboard players set #60 calc 60
-scoreboard players set #90 calc 90
-scoreboard players set #100 calc 100
-scoreboard players set #1000 calc 1000
 
 # save rate is very constant -> very accurate save ETA
 # @ 5k blocks: 12500 blocks/s

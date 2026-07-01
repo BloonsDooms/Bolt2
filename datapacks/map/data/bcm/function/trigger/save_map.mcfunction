@@ -1,6 +1,6 @@
 # .overwrite is boolean
 scoreboard players operation .overwrite save_map = @s save_map
-scoreboard players operation .overwrite save_map %= #2 calc
+scoreboard players operation .overwrite save_map %= .2 .num
 scoreboard players reset @s save_map
 
 # save unless system busy
