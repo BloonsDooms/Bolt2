@@ -1,6 +1,6 @@
 # raycast
 particle enchanted_hit ~ ~ ~ 0 0 0 0 1 normal @s
-execute positioned ^ ^ ^0.25 if block ~ ~ ~ #air run return run function game:player/ping
+execute positioned ^ ^ ^0.25 if function game:player/ping/check run return run function game:player/ping/raycast
 
 # at pinged location
 execute if entity @s[team=red] run tag @a[team=red] add tmp_receive_location_ping
