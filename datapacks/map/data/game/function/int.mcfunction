@@ -469,7 +469,6 @@ scoreboard players set .range4 .data 0
 
 #
 scoreboard objectives add .num dummy
-scoreboard players set .-1 .num -1
 scoreboard players set .0 .num 0
 scoreboard players set .1 .num 1
 scoreboard players set .2 .num 2
