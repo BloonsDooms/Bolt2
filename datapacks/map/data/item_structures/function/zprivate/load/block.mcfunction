@@ -9,8 +9,8 @@ execute if score #block_id commands matches 0..32767 run return run function ite
 ## multiple blocks
 # parse entry
 scoreboard players operation #same_count commands = #block_id commands
-scoreboard players operation #block_id commands %= #32768 constant
-scoreboard players operation #same_count commands /= #32768 constant
+scoreboard players operation #block_id commands %= .32768 .num
+scoreboard players operation #same_count commands /= .32768 .num
 
 # if entry fits in the row, easy
 execute if score #same_count commands < #count vect_x run data remove storage item_structures load.blocks[0]

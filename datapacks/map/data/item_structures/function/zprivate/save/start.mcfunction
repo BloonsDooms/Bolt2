@@ -12,9 +12,9 @@ scoreboard players operation total vect_x = #system vect_x
 scoreboard players operation total vect_x *= #system vect_y
 scoreboard players operation total vect_x *= #system vect_z
 execute if score .print_messages item_structures matches 1 run tellraw @a ["volume: ",{score:{name:"total",objective:"vect_x"}}," blocks"]
-scoreboard players operation total vect_x *= #100 constant
-scoreboard players operation total vect_x /= .max_export_volume constant
-execute if score .print_messages item_structures matches 1 run tellraw @a [{score:{name:"total",objective:"vect_x"}},"% of max recommended export volume (",{score:{name:".max_export_volume",objective:"constant"}}," blocks)"]
+scoreboard players operation total vect_x *= .100 .num
+scoreboard players operation total vect_x /= .max_export_volume item_structures
+execute if score .print_messages item_structures matches 1 run tellraw @a [{score:{name:"total",objective:"vect_x"}},"% of max recommended export volume (",{score:{name:".max_export_volume",objective:"item_structures"}}," blocks)"]
 # print warning even if print messages is off
 execute if score total vect_x matches 100.. run tellraw @a [{color:"yellow",text:"NOTICE: structure is really big. after saving it, we'll tell you if it's too big to export or not. but it's probably fine - especially if you have large areas with all one block, including air."}]
 
