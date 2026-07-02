@@ -13,8 +13,8 @@ execute unless items entity @s weapon.mainhand netherite_ingot[minecraft:custom_
 data modify storage bcm map set from entity @s SelectedItem.components."minecraft:custom_data".bleps_map
 data remove storage bcm map.load_point
 # blocks
-scoreboard players set .print_messages item_structures 0
-function item_structures:import
+data remove storage item_structures save
+data modify storage item_structures save set from entity @s SelectedItem.components."minecraft:custom_data".structure
 # doors
 data remove storage bcm doors
 data modify storage bcm doors set from entity @s SelectedItem.components."minecraft:custom_data".doors

@@ -59,8 +59,8 @@ execute store result storage bcm map.max_wall_height int 0.01 run scoreboard pla
 function bcm:map/save/relative with storage bcm map.save
 
 # don't save targets & crates as part of map structure
-execute if entity @e[type=#bcm:place,tag=target_or_crate] run tellraw @s "temporarily setting air blocks at flags, and possible target & crate locations (they're not part of the map structure)"
-execute unless entity @e[type=#bcm:place,tag=target_or_crate] run tellraw @s "temporarily setting air blocks at flags (they're not part of the map structure)"
+execute if entity @e[type=#bcm:place,tag=target_or_crate] run tellraw @a[tag=verbose] "temporarily setting air blocks at flags, and possible target & crate locations (they're not part of the map structure)"
+execute unless entity @e[type=#bcm:place,tag=target_or_crate] run tellraw @a[tag=verbose] "temporarily setting air blocks at flags (they're not part of the map structure)"
 execute as @e[type=#bcm:place,tag=target_or_crate] at @s run setblock ~ ~ ~ air replace
 
 # flags
@@ -98,5 +98,5 @@ scoreboard players operation .l .calc /= .save_blocks/s .calc
 scoreboard players operation .s .calc = .l .calc
 scoreboard players operation .l .calc /= .60 .num
 scoreboard players operation .s .calc %= .60 .num
-execute if score .print_messages item_structures matches 1 if score .l .calc matches 0 run tellraw @s ["estimated time to save: ",{score:{name:".s",objective:".calc"}},"s"]
-execute if score .print_messages item_structures matches 1 if score .l .calc matches 1.. run tellraw @s ["estimated time to save: ",{score:{name:".l",objective:".calc"}},"m ",{score:{name:".s",objective:".calc"}},"s"]
+execute if score .print_messages item_structures matches 1 if score .l .calc matches 0 run tellraw @a ["estimated time to save: ",{score:{name:".s",objective:".calc"}},"s"]
+execute if score .print_messages item_structures matches 1 if score .l .calc matches 1.. run tellraw @a ["estimated time to save: ",{score:{name:".l",objective:".calc"}},"m ",{score:{name:".s",objective:".calc"}},"s"]

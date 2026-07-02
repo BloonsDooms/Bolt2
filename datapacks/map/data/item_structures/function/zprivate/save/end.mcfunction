@@ -1,9 +1,5 @@
 scoreboard players set .is_busy item_structures 0
 
-execute if score .print_messages item_structures matches 1 run title @a times 10 80 10
-execute if score .print_messages item_structures matches 1 run title @a title {"text":"Structure Saved","color":"yellow"}
-execute if score .print_messages item_structures matches 1 run title @a subtitle {"text":"Ready for transfer!","color":"gray"}
-
 bossbar set progress visible false
 
 data remove storage item_structures forceload
@@ -28,11 +24,11 @@ scoreboard players operation bytes_nbt commands *= .4 .num
 scoreboard players operation bytes_nbt commands *= .100 .num
 scoreboard players operation bytes commands += bytes_nbt commands
 # print if enabled
-execute if score .print_messages item_structures matches 1 if score bytes commands matches ..999 run return run tellraw @a ["approximate structure data size: ",{score:{name:"bytes",objective:"commands"}}," B"]
+execute if score bytes commands matches ..999 run return run tellraw @a[tag=verbose] ["approximate structure data size: ",{score:{name:"bytes",objective:"commands"}}," B"]
 scoreboard players operation kB commands = bytes commands
 scoreboard players operation kB commands /= .1000 .num
 scoreboard players operation bytes commands %= .1000 .num
 scoreboard players operation bytes commands /= .100 .num
-execute if score .print_messages item_structures matches 1 run tellraw @a ["approximate structure data size: ",{score:{name:"kB",objective:"commands"}},".",{score:{name:"bytes",objective:"commands"}}," kB"]
+tellraw @a[tag=verbose] ["approximate structure data size: ",{score:{name:"kB",objective:"commands"}},".",{score:{name:"bytes",objective:"commands"}}," kB"]
 # ALWAYS print this warning if estimated data size >1.8MB
 execute if score kB commands matches 1800.. run tellraw @a [{color:"red",text:"WARNING: structure is most likely too large to export! exporting anyway may result in creating an item with too much data for minecraft to handle. continue at own risk."}]
