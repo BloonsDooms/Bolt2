@@ -42,6 +42,5 @@ tellraw @a ["YOU'RE NOT DONE YET! Click ",{underlined:true,click_event:{action:"
 
 # overwrite existing map automatically?
 execute if score .overwrite save_map matches 1 run function bcm:map/constructor
-execute if score .overwrite save_map matches 1 run data modify storage bcm tmp.registry.mapName set from storage bcm mapNameEditing
 execute if score .overwrite save_map matches 1 run data modify storage bcm macro.mapName set from storage bcm mapNameEditing
 execute if score .overwrite save_map matches 1 run function bcm:map/overwrite with storage bcm macro
