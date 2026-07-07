@@ -39,6 +39,7 @@ execute if score .rand .calc matches 19 run tellraw @s [{"text":"[Phil] "},{"tex
 execute if score .rand .calc matches 20 run tellraw @s [{"text":"[Phil] "},{"text":"Don't insult the sewer clowns, they are my best customers."}]
 
 execute if score .rand .calc matches -100..100 at @s run playsound minecraft:entity.villager.no master @s ~ ~ ~ 0.5 2
+execute if score .rand .calc matches -100..100 at @s run playsound minecraft:block.note_block.basedrum master @a ~ ~ ~ 0.6 0.8
 
 # success
 execute if score .rand .calc matches 1000 at @s unless entity @s[scores={balloon_talk_cool=1..}] run playsound minecraft:entity.villager.trade master @a ~ ~ ~ 1 2
