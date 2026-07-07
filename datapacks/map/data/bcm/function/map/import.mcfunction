@@ -52,9 +52,9 @@ execute as @n[type=marker,tag=start_point] at @s run function bcm:map/tp_2
 # place blocks
 scoreboard players set .print_messages item_structures 0
 data modify storage item_structures save set from storage bcm tmp.registry.mapThumbnail
-function item_structures:load
-# trim text box if necessary
+# rebuild text box if necessary
 execute if data storage bcm tmp.registry.mapTextBlocks at @n[type=marker,tag=start_point] run function game:menu/rebuild_text_box with storage bcm tmp.registry
+function item_structures:load
 # cleanup
 kill @n[type=marker,tag=start_point]
 data remove storage bcm tmp
