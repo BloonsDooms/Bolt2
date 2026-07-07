@@ -23,8 +23,6 @@ data remove storage bcm registry
 data modify storage bcm registry set from entity @s SelectedItem.components."minecraft:custom_data".registry
 
 ## new map object
-function bcm:map/constructor
-
-## overwrite existing map
-data modify storage bcm macro.mapName set from storage bcm tmp.registry.mapName
+data modify storage bcm macro.mapName set from entity @s SelectedItem.components."minecraft:custom_name"
+function bcm:map/constructor with storage bcm macro
 function bcm:map/overwrite with storage bcm macro

@@ -29,7 +29,7 @@ data modify storage bcm registry set from entity @s SelectedItem.components."min
 
 ## save to array
 # create map object
-function bcm:map/constructor
+function bcm:map/constructor with storage bcm macro
 # add to array
 data modify storage bcm maps append from storage bcm tmp
 data modify storage maps:list maps append from storage bcm tmp.registry

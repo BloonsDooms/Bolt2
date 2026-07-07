@@ -23,8 +23,7 @@ data modify storage bcm tmp.registry set value {\
 data modify storage bcm tmp.registry merge from storage bcm registry
 
 # name
-data modify storage bcm tmp.registry.mapName set from entity @s SelectedItem.components."minecraft:custom_name"
-execute if score .overwrite save_map matches 1 run data modify storage bcm tmp.registry.mapName set from storage bcm mapNameEditing
+$data modify storage bcm tmp.registry.mapName set value "$(mapName)"
 
 # thumbnail
 execute unless data storage bcm tmp.registry.mapThumbnail run function bcm:map/get_preset_thumbnail
