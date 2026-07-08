@@ -3,3 +3,4 @@
 !datapacks/
 !.gitignore
 datapacks/map.zip
+!dimensions/
