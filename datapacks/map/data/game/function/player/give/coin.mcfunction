@@ -1,0 +1,1 @@
+give @s gold_ingot[custom_name={"text":"Coin","italic":false,"color":"gray"},lore=[{"text":"Can trade for balloons","color":"white","italic":false}]] 1
