@@ -1,0 +1,71 @@
+{
+  "stats": {
+    "minecraft:killed": {
+      "minecraft:zombie_villager": 16
+    },
+    "minecraft:custom": {
+      "minecraft:damage_resisted": 2551464,
+      "minecraft:time_since_rest": 144994,
+      "minecraft:walk_one_cm": 244011,
+      "minecraft:leave_game": 4,
+      "minecraft:mob_kills": 40,
+      "minecraft:damage_taken": 2,
+      "minecraft:interact_with_lectern": 4,
+      "minecraft:play_time": 144994,
+      "minecraft:damage_dealt": 500,
+      "minecraft:jump": 2234,
+      "minecraft:time_since_death": 144994,
+      "minecraft:drop": 7,
+      "minecraft:bell_ring": 2,
+      "minecraft:target_hit": 62,
+      "minecraft:sprint_one_cm": 727895,
+      "minecraft:open_chest": 16,
+      "minecraft:inspect_hopper": 5,
+      "minecraft:fall_one_cm": 142720,
+      "minecraft:total_world_time": 144994,
+      "minecraft:fly_one_cm": 642045,
+      "minecraft:crouch_one_cm": 2034,
+      "minecraft:sneak_time": 1180,
+      "minecraft:climb_one_cm": 6787,
+      "minecraft:damage_dealt_resisted": 625703
+    },
+    "minecraft:picked_up": {
+      "minecraft:creeper_spawn_egg": 22,
+      "minecraft:bat_spawn_egg": 33,
+      "minecraft:snowball": 28,
+      "minecraft:golden_apple": 26
+    },
+    "minecraft:used": {
+      "minecraft:bat_spawn_egg": 113,
+      "minecraft:netherite_sword": 14,
+      "minecraft:pig_spawn_egg": 30,
+      "minecraft:map": 4,
+      "minecraft:creeper_spawn_egg": 62,
+      "minecraft:magma_cube_spawn_egg": 21,
+      "minecraft:golden_apple": 22,
+      "minecraft:snowball": 65,
+      "minecraft:slime_spawn_egg": 4,
+      "minecraft:crossbow": 96,
+      "minecraft:carrot_on_a_stick": 4,
+      "minecraft:egg": 11,
+      "minecraft:zombie_villager_spawn_egg": 49,
+      "minecraft:written_book": 5,
+      "minecraft:ender_pearl": 5,
+      "minecraft:bow": 720
+    },
+    "minecraft:broken": {
+      "minecraft:chainmail_helmet": 7,
+      "minecraft:netherite_sword": 14
+    },
+    "minecraft:mined": {
+      "minecraft:gravel": 6
+    },
+    "minecraft:dropped": {
+      "minecraft:iron_ingot": 1,
+      "minecraft:carrot_on_a_stick": 4,
+      "minecraft:bat_spawn_egg": 1,
+      "minecraft:written_book": 1
+    }
+  },
+  "DataVersion": 4671
+}

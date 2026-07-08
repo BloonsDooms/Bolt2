@@ -1,0 +1,67 @@
+{
+  "stats": {
+    "minecraft:broken": {
+      "minecraft:chainmail_helmet": 7,
+      "minecraft:netherite_sword": 14
+    },
+    "minecraft:used": {
+      "minecraft:bat_spawn_egg": 37,
+      "minecraft:netherite_sword": 14,
+      "minecraft:panda_spawn_egg": 31,
+      "minecraft:pig_spawn_egg": 22,
+      "minecraft:creeper_spawn_egg": 14,
+      "minecraft:golden_apple": 29,
+      "minecraft:snowball": 70,
+      "minecraft:potion": 1,
+      "minecraft:slime_spawn_egg": 5,
+      "minecraft:crossbow": 39,
+      "minecraft:carrot_on_a_stick": 46,
+      "minecraft:egg": 9,
+      "minecraft:zombie_villager_spawn_egg": 19,
+      "minecraft:ender_pearl": 5,
+      "minecraft:written_book": 1,
+      "minecraft:bow": 806
+    },
+    "minecraft:killed": {
+      "minecraft:zombie_villager": 12
+    },
+    "minecraft:dropped": {
+      "minecraft:bow": 11,
+      "minecraft:snowball": 14
+    },
+    "minecraft:picked_up": {
+      "minecraft:panda_spawn_egg": 19,
+      "minecraft:snowball": 73,
+      "minecraft:golden_apple": 23
+    },
+    "minecraft:mined": {
+      "minecraft:gravel": 2
+    },
+    "minecraft:custom": {
+      "minecraft:damage_resisted": 2106219,
+      "minecraft:time_since_rest": 118267,
+      "minecraft:inspect_dropper": 3,
+      "minecraft:walk_one_cm": 313695,
+      "minecraft:leave_game": 4,
+      "minecraft:mob_kills": 17,
+      "minecraft:damage_dealt": 200,
+      "minecraft:interact_with_lectern": 1,
+      "minecraft:play_time": 118267,
+      "minecraft:jump": 2118,
+      "minecraft:time_since_death": 118267,
+      "minecraft:drop": 12,
+      "minecraft:target_hit": 149,
+      "minecraft:sprint_one_cm": 487765,
+      "minecraft:open_chest": 7,
+      "minecraft:inspect_dispenser": 4,
+      "minecraft:fall_one_cm": 180816,
+      "minecraft:total_world_time": 118267,
+      "minecraft:fly_one_cm": 498282,
+      "minecraft:crouch_one_cm": 5697,
+      "minecraft:sneak_time": 1939,
+      "minecraft:climb_one_cm": 17405,
+      "minecraft:damage_dealt_resisted": 55627
+    }
+  },
+  "DataVersion": 4671
+}

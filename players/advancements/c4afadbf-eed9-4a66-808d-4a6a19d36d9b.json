@@ -1,0 +1,99 @@
+{
+  "advancements:ctf/spawn_kill": {
+    "criteria": {
+      "tinyt": "2026-03-23 23:34:45 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/antiair": {
+    "criteria": {
+      "tinyt": "2026-03-23 23:34:45 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/win": {
+    "criteria": {
+      "win": "2026-03-23 23:40:46 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/die10": {
+    "criteria": {
+      "die10": "2026-03-23 23:36:37 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_5": {
+    "criteria": {
+      "warrior": "2026-03-23 23:31:23 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_4": {
+    "criteria": {
+      "warrior": "2026-03-23 23:31:23 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_6": {
+    "criteria": {
+      "warrior": "2026-03-23 23:31:23 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_1": {
+    "criteria": {
+      "warrior": "2026-03-23 23:31:23 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_3": {
+    "criteria": {
+      "warrior": "2026-03-23 23:31:23 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_2": {
+    "criteria": {
+      "warrior": "2026-03-23 23:31:23 +0000"
+    },
+    "done": true
+  },
+  "advancements:ctf/killstreak1": {
+    "criteria": {
+      "elo1": "2026-03-23 23:36:34 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/start": {
+    "criteria": {
+      "tinyt": "2026-03-23 23:33:16 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_9": {
+    "criteria": {
+      "warrior": "2026-03-23 23:31:23 +0000"
+    },
+    "done": true
+  },
+  "advancements:ctf/cross": {
+    "criteria": {
+      "tinyt": "2026-03-23 23:40:15 +0000"
+    },
+    "done": true
+  },
+  "advancements:ctf/flag": {
+    "criteria": {
+      "tinyt": "2026-03-23 23:40:41 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/headstomp": {
+    "criteria": {
+      "tinyt": "2026-03-23 23:40:26 +0000"
+    },
+    "done": true
+  },
+  "DataVersion": 4671
+}

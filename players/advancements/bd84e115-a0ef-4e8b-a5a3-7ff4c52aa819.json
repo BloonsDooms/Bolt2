@@ -1,0 +1,153 @@
+{
+  "advancements:general/kills2": {
+    "criteria": {
+      "kills2": "2026-05-10 02:24:29 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/kills1": {
+    "criteria": {
+      "kills1": "2026-05-10 02:13:26 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/kills3": {
+    "criteria": {
+      "kills3": "2026-05-10 02:44:31 +0000"
+    },
+    "done": true
+  },
+  "advancements:ctf/spawn_kill": {
+    "criteria": {
+      "tinyt": "2026-05-10 02:08:16 +0000"
+    },
+    "done": true
+  },
+  "advancements:ctf/elo1": {
+    "criteria": {
+      "elo1": "2026-05-10 02:18:58 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/antiair": {
+    "criteria": {
+      "tinyt": "2026-05-10 02:18:47 +0000"
+    },
+    "done": true
+  },
+  "advancements:ctf/ger": {
+    "criteria": {
+      "tinyt": "2026-05-10 02:08:50 +0000"
+    },
+    "done": true
+  },
+  "advancements:ctf/trap": {
+    "criteria": {
+      "tinyt": "2026-05-10 02:07:57 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/win": {
+    "criteria": {
+      "win": "2026-05-10 02:00:18 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/die10": {
+    "criteria": {
+      "die10": "2026-05-10 02:03:21 +0000"
+    },
+    "done": true
+  },
+  "advancements:ctf/traplong": {
+    "criteria": {
+      "tinyt": "2026-05-10 02:07:57 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/realtime": {
+    "criteria": {
+      "tinyt": "2026-05-10 02:13:49 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_5": {
+    "criteria": {
+      "warrior": "2026-05-10 01:55:09 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_4": {
+    "criteria": {
+      "warrior": "2026-05-10 01:55:09 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_6": {
+    "criteria": {
+      "warrior": "2026-05-10 01:55:09 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_1": {
+    "criteria": {
+      "warrior": "2026-05-10 01:55:09 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_3": {
+    "criteria": {
+      "warrior": "2026-05-10 01:55:09 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_2": {
+    "criteria": {
+      "warrior": "2026-05-10 01:55:09 +0000"
+    },
+    "done": true
+  },
+  "advancements:ctf/killstreak1": {
+    "criteria": {
+      "elo1": "2026-05-10 02:00:08 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/start": {
+    "criteria": {
+      "tinyt": "2026-05-10 01:57:39 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_9": {
+    "criteria": {
+      "warrior": "2026-05-10 01:55:09 +0000"
+    },
+    "done": true
+  },
+  "advancements:ctf/flag": {
+    "criteria": {
+      "tinyt": "2026-05-10 02:09:15 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/headstomp": {
+    "criteria": {
+      "tinyt": "2026-05-10 02:16:37 +0000"
+    },
+    "done": true
+  },
+  "advancements:ctf/flag_kill": {
+    "criteria": {
+      "tinyt": "2026-05-10 02:13:49 +0000"
+    },
+    "done": true
+  },
+  "advancements:ctf/flag_goalkeep": {
+    "criteria": {
+      "tinyt": "2026-05-10 02:34:08 +0000"
+    },
+    "done": true
+  },
+  "DataVersion": 4671
+}

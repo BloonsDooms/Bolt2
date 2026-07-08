@@ -1,0 +1,195 @@
+{
+  "advancements:general/kills2": {
+    "criteria": {
+      "kills2": "2026-06-20 20:21:02 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/kills1": {
+    "criteria": {
+      "kills1": "2026-06-20 19:44:12 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/play_inf": {
+    "criteria": {
+      "tinyt": "2026-06-20 19:31:36 +0000"
+    },
+    "done": true
+  },
+  "advancements:lobby/target2": {
+    "criteria": {
+      "elo1": "2026-06-20 19:54:57 +0000"
+    },
+    "done": true
+  },
+  "advancements:lobby/target1": {
+    "criteria": {
+      "elo1": "2026-06-20 19:37:38 +0000"
+    },
+    "done": true
+  },
+  "advancements:lobby/shoot_head": {
+    "criteria": {
+      "ted": "2026-06-20 19:32:48 +0000"
+    },
+    "done": true
+  },
+  "advancements:infected/overlord": {
+    "criteria": {
+      "ted": "2026-06-20 19:30:40 +0000"
+    },
+    "done": true
+  },
+  "advancements:lobby/can": {
+    "criteria": {
+      "can": "2026-06-20 19:58:54 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/antiair": {
+    "criteria": {
+      "tinyt": "2026-06-20 19:12:42 +0000"
+    },
+    "done": true
+  },
+  "advancements:ctf/ger": {
+    "criteria": {
+      "tinyt": "2026-06-20 20:15:43 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/win": {
+    "criteria": {
+      "win": "2026-06-20 19:31:36 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/die10": {
+    "criteria": {
+      "die10": "2026-06-20 19:14:59 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/play_tar": {
+    "criteria": {
+      "tinyt": "2026-06-20 19:25:15 +0000"
+    },
+    "done": true
+  },
+  "advancements:target/sniper": {
+    "criteria": {
+      "can": "2026-06-20 19:28:46 +0000"
+    },
+    "done": true
+  },
+  "advancements:tmi/jug": {
+    "criteria": {
+      "can": "2026-06-20 19:38:45 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/realtime": {
+    "criteria": {
+      "tinyt": "2026-06-20 19:15:16 +0000"
+    },
+    "done": true
+  },
+  "advancements:infected/ev3": {
+    "criteria": {
+      "ted": "2026-06-20 19:31:13 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_5": {
+    "criteria": {
+      "warrior": "2026-06-20 19:10:16 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_4": {
+    "criteria": {
+      "warrior": "2026-06-20 19:10:16 +0000"
+    },
+    "done": true
+  },
+  "advancements:ctf/wall20": {
+    "criteria": {
+      "tinyt": "2026-06-20 19:43:32 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_6": {
+    "criteria": {
+      "warrior": "2026-06-20 19:10:16 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_1": {
+    "criteria": {
+      "warrior": "2026-06-20 19:10:16 +0000"
+    },
+    "done": true
+  },
+  "advancements:ctf/height": {
+    "criteria": {
+      "tinyt": "2026-06-20 19:43:37 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_3": {
+    "criteria": {
+      "warrior": "2026-06-20 19:10:16 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_2": {
+    "criteria": {
+      "warrior": "2026-06-20 19:10:16 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/play10": {
+    "criteria": {
+      "tinyt": "2026-06-20 19:44:44 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_9": {
+    "criteria": {
+      "warrior": "2026-06-20 19:10:16 +0000"
+    },
+    "done": true
+  },
+  "advancements:infected/win_inf": {
+    "criteria": {
+      "ted": "2026-06-20 19:31:31 +0000"
+    },
+    "done": true
+  },
+  "advancements:ctf/flag": {
+    "criteria": {
+      "tinyt": "2026-06-20 19:20:24 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/headstomp": {
+    "criteria": {
+      "tinyt": "2026-06-20 19:15:34 +0000"
+    },
+    "done": true
+  },
+  "advancements:general/play_tmi": {
+    "criteria": {
+      "tinyt": "2026-06-20 19:34:58 +0000"
+    },
+    "done": true
+  },
+  "advancements:ctf/flag_kill": {
+    "criteria": {
+      "tinyt": "2026-06-20 19:15:16 +0000"
+    },
+    "done": true
+  },
+  "DataVersion": 4671
+}

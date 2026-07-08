@@ -1,0 +1,45 @@
+{
+  "stats": {
+    "minecraft:custom": {
+      "minecraft:damage_resisted": 1366756,
+      "minecraft:time_since_rest": 38269,
+      "minecraft:walk_one_cm": 38094,
+      "minecraft:leave_game": 2,
+      "minecraft:interact_with_lectern": 1,
+      "minecraft:play_time": 38269,
+      "minecraft:jump": 969,
+      "minecraft:time_since_death": 38269,
+      "minecraft:drop": 1,
+      "minecraft:target_hit": 11,
+      "minecraft:sprint_one_cm": 196213,
+      "minecraft:open_chest": 3,
+      "minecraft:fall_one_cm": 81689,
+      "minecraft:total_world_time": 38269,
+      "minecraft:fly_one_cm": 252244,
+      "minecraft:crouch_one_cm": 1381,
+      "minecraft:sneak_time": 262,
+      "minecraft:climb_one_cm": 6766
+    },
+    "minecraft:picked_up": {
+      "minecraft:creeper_spawn_egg": 10,
+      "minecraft:bat_spawn_egg": 15,
+      "minecraft:snowball": 8
+    },
+    "minecraft:used": {
+      "minecraft:bat_spawn_egg": 23,
+      "minecraft:snowball": 10,
+      "minecraft:carrot_on_a_stick": 5,
+      "minecraft:written_book": 2,
+      "minecraft:creeper_spawn_egg": 10,
+      "minecraft:bow": 189,
+      "minecraft:magma_cube_spawn_egg": 1
+    },
+    "minecraft:broken": {
+      "minecraft:chainmail_helmet": 2
+    },
+    "minecraft:dropped": {
+      "minecraft:crossbow": 1
+    }
+  },
+  "DataVersion": 4671
+}

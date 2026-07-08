@@ -1,0 +1,42 @@
+{
+  "stats": {
+    "minecraft:picked_up": {
+      "minecraft:creeper_spawn_egg": 2,
+      "minecraft:snowball": 2
+    },
+    "minecraft:broken": {
+      "minecraft:netherite_sword": 5
+    },
+    "minecraft:custom": {
+      "minecraft:damage_resisted": 441890,
+      "minecraft:time_since_rest": 29731,
+      "minecraft:walk_one_cm": 71548,
+      "minecraft:leave_game": 1,
+      "minecraft:mob_kills": 3,
+      "minecraft:damage_dealt": 0,
+      "minecraft:play_time": 29731,
+      "minecraft:jump": 515,
+      "minecraft:time_since_death": 29731,
+      "minecraft:sprint_one_cm": 163435,
+      "minecraft:fall_one_cm": 33748,
+      "minecraft:total_world_time": 29731,
+      "minecraft:fly_one_cm": 131829,
+      "minecraft:crouch_one_cm": 526,
+      "minecraft:sneak_time": 202,
+      "minecraft:climb_one_cm": 2674,
+      "minecraft:damage_dealt_resisted": 90050
+    },
+    "minecraft:used": {
+      "minecraft:bat_spawn_egg": 10,
+      "minecraft:netherite_sword": 5,
+      "minecraft:snowball": 9,
+      "minecraft:slime_spawn_egg": 3,
+      "minecraft:carrot_on_a_stick": 19,
+      "minecraft:zombie_villager_spawn_egg": 6,
+      "minecraft:written_book": 2,
+      "minecraft:creeper_spawn_egg": 3,
+      "minecraft:bow": 207
+    }
+  },
+  "DataVersion": 4671
+}

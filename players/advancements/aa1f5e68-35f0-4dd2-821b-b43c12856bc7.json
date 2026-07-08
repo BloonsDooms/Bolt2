@@ -1,0 +1,63 @@
+{
+  "advancements:root_9": {
+    "criteria": {
+      "warrior": "2026-06-10 18:04:30 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_5": {
+    "criteria": {
+      "warrior": "2026-06-10 18:04:30 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_4": {
+    "criteria": {
+      "warrior": "2026-06-10 18:04:30 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_6": {
+    "criteria": {
+      "warrior": "2026-06-10 18:04:30 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_1": {
+    "criteria": {
+      "warrior": "2026-06-10 18:04:30 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_3": {
+    "criteria": {
+      "warrior": "2026-06-10 18:04:30 +0000"
+    },
+    "done": true
+  },
+  "advancements:root_2": {
+    "criteria": {
+      "warrior": "2026-06-10 18:04:30 +0000"
+    },
+    "done": true
+  },
+  "advancements:collection/lobby_code": {
+    "criteria": {
+      "can": "2026-06-22 19:58:37 +0000"
+    },
+    "done": true
+  },
+  "advancements:lobby/chair": {
+    "criteria": {
+      "ted": "2026-06-22 19:58:37 +0000"
+    },
+    "done": true
+  },
+  "advancements:collection/lobby": {
+    "criteria": {
+      "can": "2026-06-22 19:58:37 +0000"
+    },
+    "done": true
+  },
+  "DataVersion": 4903
+}

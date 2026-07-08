@@ -1,0 +1,34 @@
+{
+  "stats": {
+    "minecraft:dropped": {
+      "minecraft:bone_meal": 1,
+      "minecraft:iron_ingot": 38,
+      "minecraft:bow": 88
+    },
+    "minecraft:used": {
+      "minecraft:carrot_on_a_stick": 4,
+      "minecraft:written_book": 1,
+      "minecraft:bow": 62
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 9843,
+      "minecraft:walk_one_cm": 15802,
+      "minecraft:leave_game": 2,
+      "minecraft:interact_with_lectern": 2,
+      "minecraft:play_time": 9843,
+      "minecraft:jump": 222,
+      "minecraft:time_since_death": 9843,
+      "minecraft:drop": 127,
+      "minecraft:target_hit": 17,
+      "minecraft:sprint_one_cm": 24645,
+      "minecraft:inspect_hopper": 4,
+      "minecraft:fall_one_cm": 12616,
+      "minecraft:total_world_time": 9843,
+      "minecraft:fly_one_cm": 52911,
+      "minecraft:crouch_one_cm": 388,
+      "minecraft:sneak_time": 215,
+      "minecraft:climb_one_cm": 1715
+    }
+  },
+  "DataVersion": 4671
+}

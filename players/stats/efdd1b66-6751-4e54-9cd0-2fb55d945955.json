@@ -1,0 +1,66 @@
+{
+  "stats": {
+    "minecraft:broken": {
+      "minecraft:chainmail_helmet": 29,
+      "minecraft:netherite_sword": 2
+    },
+    "minecraft:used": {
+      "minecraft:bat_spawn_egg": 146,
+      "minecraft:netherite_sword": 2,
+      "minecraft:lingering_potion": 6,
+      "minecraft:map": 2,
+      "minecraft:creeper_spawn_egg": 99,
+      "minecraft:magma_cube_spawn_egg": 14,
+      "minecraft:golden_apple": 24,
+      "minecraft:snowball": 143,
+      "minecraft:potion": 2,
+      "minecraft:slime_spawn_egg": 27,
+      "minecraft:crossbow": 38,
+      "minecraft:carrot_on_a_stick": 38,
+      "minecraft:egg": 1,
+      "minecraft:zombie_villager_spawn_egg": 8,
+      "minecraft:written_book": 1,
+      "minecraft:bow": 2443
+    },
+    "minecraft:killed": {
+      "minecraft:zombie_villager": 8,
+      "minecraft:magma_cube": 4
+    },
+    "minecraft:dropped": {
+      "minecraft:golden_apple": 2
+    },
+    "minecraft:picked_up": {
+      "minecraft:creeper_spawn_egg": 32,
+      "minecraft:bat_spawn_egg": 60,
+      "minecraft:snowball": 87,
+      "minecraft:golden_apple": 47
+    },
+    "minecraft:custom": {
+      "minecraft:damage_resisted": 10850034,
+      "minecraft:time_since_rest": 94334,
+      "minecraft:walk_one_cm": 574861,
+      "minecraft:leave_game": 5,
+      "minecraft:mob_kills": 27,
+      "minecraft:damage_taken": 80,
+      "minecraft:interact_with_lectern": 7,
+      "minecraft:play_time": 345921,
+      "minecraft:damage_dealt": 0,
+      "minecraft:jump": 5474,
+      "minecraft:time_since_death": 94332,
+      "minecraft:drop": 2,
+      "minecraft:bell_ring": 3,
+      "minecraft:target_hit": 134,
+      "minecraft:sprint_one_cm": 2125502,
+      "minecraft:open_chest": 1,
+      "minecraft:fall_one_cm": 448658,
+      "minecraft:total_world_time": 345921,
+      "minecraft:fly_one_cm": 1697804,
+      "minecraft:crouch_one_cm": 5499,
+      "minecraft:sneak_time": 1573,
+      "minecraft:climb_one_cm": 23587,
+      "minecraft:deaths": 2,
+      "minecraft:damage_dealt_resisted": 365690
+    }
+  },
+  "DataVersion": 4671
+}

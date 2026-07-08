@@ -1,0 +1,50 @@
+{
+  "stats": {
+    "minecraft:picked_up": {
+      "minecraft:bat_spawn_egg": 3,
+      "minecraft:golden_apple": 24
+    },
+    "minecraft:broken": {
+      "minecraft:chainmail_helmet": 1
+    },
+    "minecraft:dropped": {
+      "minecraft:bow": 1
+    },
+    "minecraft:custom": {
+      "minecraft:damage_resisted": 966690,
+      "minecraft:time_since_rest": 86845,
+      "minecraft:walk_one_cm": 78082,
+      "minecraft:leave_game": 1,
+      "minecraft:mob_kills": 1,
+      "minecraft:play_time": 86845,
+      "minecraft:jump": 1843,
+      "minecraft:time_since_death": 86845,
+      "minecraft:drop": 1,
+      "minecraft:target_hit": 174,
+      "minecraft:sprint_one_cm": 306890,
+      "minecraft:open_chest": 2,
+      "minecraft:fall_one_cm": 120480,
+      "minecraft:total_world_time": 86845,
+      "minecraft:fly_one_cm": 390020,
+      "minecraft:crouch_one_cm": 5369,
+      "minecraft:sneak_time": 1554,
+      "minecraft:climb_one_cm": 9952,
+      "minecraft:damage_dealt_resisted": 38500
+    },
+    "minecraft:used": {
+      "minecraft:golden_apple": 8,
+      "minecraft:bat_spawn_egg": 61,
+      "minecraft:snowball": 33,
+      "minecraft:slime_spawn_egg": 22,
+      "minecraft:carrot_on_a_stick": 14,
+      "minecraft:egg": 4,
+      "minecraft:zombie_villager_spawn_egg": 6,
+      "minecraft:map": 1,
+      "minecraft:written_book": 1,
+      "minecraft:creeper_spawn_egg": 16,
+      "minecraft:bow": 827,
+      "minecraft:magma_cube_spawn_egg": 1
+    }
+  },
+  "DataVersion": 4671
+}

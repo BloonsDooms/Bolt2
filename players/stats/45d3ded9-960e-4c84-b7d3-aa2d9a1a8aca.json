@@ -1,0 +1,85 @@
+{
+  "stats": {
+    "minecraft:picked_up": {
+      "minecraft:creeper_spawn_egg": 68,
+      "minecraft:bat_spawn_egg": 126,
+      "minecraft:snowball": 66,
+      "minecraft:golden_apple": 33
+    },
+    "minecraft:dropped": {
+      "minecraft:carrot_on_a_stick": 6,
+      "minecraft:bow": 39
+    },
+    "minecraft:killed_by": {
+      "minecraft:player": 1
+    },
+    "minecraft:killed": {
+      "minecraft:slime": 9,
+      "minecraft:magma_cube": 8
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 106182,
+      "minecraft:leave_game": 7,
+      "minecraft:mob_kills": 49,
+      "minecraft:damage_taken": 560,
+      "minecraft:time_since_death": 106179,
+      "minecraft:total_world_time": 422963,
+      "minecraft:crouch_one_cm": 8731,
+      "minecraft:climb_one_cm": 43521,
+      "minecraft:deaths": 16,
+      "minecraft:player_kills": 1,
+      "minecraft:damage_dealt_resisted": 665920,
+      "minecraft:damage_resisted": 12030777,
+      "minecraft:inspect_dropper": 1,
+      "minecraft:walk_one_cm": 938691,
+      "minecraft:walk_under_water_one_cm": 433,
+      "minecraft:interact_with_lectern": 1,
+      "minecraft:play_time": 422963,
+      "minecraft:damage_dealt": 0,
+      "minecraft:jump": 5217,
+      "minecraft:drop": 45,
+      "minecraft:bell_ring": 12,
+      "minecraft:open_barrel": 1,
+      "minecraft:target_hit": 47,
+      "minecraft:sprint_one_cm": 2429091,
+      "minecraft:open_chest": 8,
+      "minecraft:fall_one_cm": 1012800,
+      "minecraft:fly_one_cm": 2165694,
+      "minecraft:interact_with_anvil": 1,
+      "minecraft:walk_on_water_one_cm": 607,
+      "minecraft:sneak_time": 4648
+    },
+    "minecraft:used": {
+      "minecraft:player_head": 1,
+      "minecraft:ancient_debris": 526,
+      "minecraft:birch_sign": 1,
+      "minecraft:panda_spawn_egg": 69,
+      "minecraft:white_candle": 10,
+      "minecraft:pig_spawn_egg": 5,
+      "minecraft:creeper_spawn_egg": 63,
+      "minecraft:honey_block": 58,
+      "minecraft:blue_glazed_terracotta": 2,
+      "minecraft:sea_pickle": 25,
+      "minecraft:anvil": 1,
+      "minecraft:crossbow": 372,
+      "minecraft:carrot_on_a_stick": 17,
+      "minecraft:cyan_wool": 2,
+      "minecraft:bat_spawn_egg": 74,
+      "minecraft:magma_cube_spawn_egg": 28,
+      "minecraft:golden_apple": 24,
+      "minecraft:flint_and_steel": 5,
+      "minecraft:snowball": 108,
+      "minecraft:enchanted_golden_apple": 1,
+      "minecraft:potion": 3,
+      "minecraft:slime_spawn_egg": 24,
+      "minecraft:egg": 174,
+      "minecraft:ender_pearl": 2,
+      "minecraft:book": 2,
+      "minecraft:bow": 2852
+    },
+    "minecraft:broken": {
+      "minecraft:chainmail_helmet": 52
+    }
+  },
+  "DataVersion": 4671
+}
