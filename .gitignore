@@ -1,6 +1,9 @@
-.*
-!bleps_pack/
-!datapacks/
+**
 !.gitignore
+
+!bleps_pack/**
+
+!datapacks/**
 datapacks/map.zip
-!dimensions/minecraft/overworld/
+
+!dimensions/minecraft/overworld/**
