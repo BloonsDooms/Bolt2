@@ -20,4 +20,5 @@ title @a[tag=!lobby] times 5 15 10
 title @a[tag=!lobby] subtitle {"text":"+15 Seconds","color":"white","font":"fancy"}
 title @a[tag=!lobby] title {"text":"BLUE SCORES!","color":"aqua","font":"fancy"}
 clear @a[team=blue] red_banner
+item replace entity @a[gamemode=adventure,team=red,distance=..10,dx=1,dy=1.5,dz=1,tag=hasflag] weapon.offhand with carrot_on_a_stick[item_model=air]
 tag @a[team=blue] remove hasflag
