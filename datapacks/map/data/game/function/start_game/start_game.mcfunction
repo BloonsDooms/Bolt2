@@ -39,3 +39,9 @@
 # 200 = game running
 
 scoreboard players set .gamestate .data 10
+
+#kill balloon stuff
+execute if score .start_cd .data matches 0 as @a run function game:items/balloon/pop_all
+execute if score .start_cd .data matches 0 as @a run kill @e[tag=balloon,type=pig]
+execute if score .start_cd .data matches 0 as @a run kill @e[tag=balloon_interact]
+execute if score .start_cd .data matches 0 as @a run kill @e[tag=balloon_display]

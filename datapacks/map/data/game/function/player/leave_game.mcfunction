@@ -106,6 +106,15 @@ scoreboard players set @s drop_balloon 0
 scoreboard players set @s wall_invul -1
 scoreboard players set @s door_invul -2
 scoreboard players set @s balloon_cooldown 0
+scoreboard players set @s lowgravity 0
+scoreboard players set @s coin_cooldown 0
+scoreboard players set @s coin_use 0
+
+attribute @s minecraft:gravity base reset
+attribute @s minecraft:bounciness base reset
+attribute @s minecraft:explosion_knockback_resistance base reset
+
+function game:items/balloon/pop_all
 
 #
 stopsound @s

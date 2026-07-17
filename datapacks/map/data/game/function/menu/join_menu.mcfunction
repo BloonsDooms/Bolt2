@@ -37,3 +37,5 @@ tag @e[type=minecraft:block_display,tag=new,tag=menu_ride] remove new
 tag @a remove join_menu
 
 attribute @s minecraft:scale base set 1
+
+function game:items/balloon/tp_to_me

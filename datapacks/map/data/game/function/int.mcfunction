@@ -176,6 +176,9 @@ scoreboard objectives add balloon_cooldown dummy
 scoreboard objectives add balloon_release dummy
 scoreboard objectives add balloon_land_sound_cool dummy
 
+scoreboard objectives add coin_cooldown dummy
+scoreboard objectives add coin_use dummy
+
 scoreboard objectives add balloon_talk dummy
 scoreboard objectives add balloon_talk2 dummy
 scoreboard objectives add balloon_talk_cool dummy

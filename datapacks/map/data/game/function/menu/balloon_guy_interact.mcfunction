@@ -17,7 +17,7 @@ execute if score .rand .calc matches -1 run tellraw @s [{"text":"[Phil] "},{"tex
 execute if score .rand .calc matches 0 run tellraw @s [{"text":"[Phil] "},{"text":"Hey. I don't see any coins, so you don't see any balloons."}]
 execute if score .rand .calc matches 1 run tellraw @s [{"text":"[Phil] "},{"text":"Hey. Find a coin or find somewhere else to be."}]
 
-# banter
+# bante
 execute if score .rand .calc matches 2 run tellraw @s [{"text":"[Phil] "},{"text":"People keep trying to hand me ice cream, I'm 45. I gotta watch my heart."}]
 execute if score .rand .calc matches 3 run tellraw @s [{"text":"[Phil] "},{"text":"Huh? It's not too bad. About two grand on a good day."}]
 execute if score .rand .calc matches 4 run tellraw @s [{"text":"[Phil] "},{"text":"Yeah, sometimes a kid floats into space. You know what they say though, all publicity is good publicity."}]

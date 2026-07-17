@@ -28,6 +28,7 @@ execute as @a[tag=has_balloon,scores={balloon_count=3}] run attribute @s minecra
 execute as @a[tag=has_balloon,scores={balloon_count=4..}] run attribute @s minecraft:gravity base set 0.03
 execute as @a[tag=has_balloon] run attribute @s minecraft:jump_strength base set 0.6
 execute as @a[tag=!has_balloon] run attribute @s minecraft:jump_strength base reset
+#execute as @a[tag=!has_balloon] run attribute @s minecraft:gravity base reset
 
 scoreboard players remove @a[scores={balloon_cooldown=1..}] balloon_cooldown 1
 

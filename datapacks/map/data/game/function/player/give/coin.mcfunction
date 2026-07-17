@@ -1,1 +1,1 @@
-give @s gold_ingot[custom_name={"text":"Coin","italic":false,"color":"gray"},lore=[{"text":"Can trade for balloons","color":"white","italic":false}]] 1
+give @s gold_ingot[custom_name={"text":"Coin","italic":false,"color":"gray"},lore=[{"text":"Can trade for items","color":"white","italic":false}],consumable={consume_seconds:10000,has_consume_particles:false},use_effects={speed_multiplier:0.7,can_sprint:true}] 1
