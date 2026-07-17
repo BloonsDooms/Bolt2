@@ -384,14 +384,16 @@ clear @s[tag=!hasflag,team=blue,tag=item_head] red_dye
 item replace entity @s[tag=!hasflag,team=blue,scores={invul=..0,glowing=..0,blind=..0},tag=!is_infected,tag=item_head] armor.head with minecraft:air
 execute as @s[tag=hasflag,team=blue,scores={glowing=..0}] unless items entity @s armor.head red_banner run item replace entity @s armor.head with minecraft:red_banner
 execute as @s[tag=hasflag,team=blue] unless items entity @s weapon.offhand red_dye run clear @s minecraft:red_dye
-execute as @s[tag=hasflag,team=blue] unless items entity @s weapon.offhand red_dye run item replace entity @s weapon.offhand with minecraft:red_dye[custom_name={"text":"Red Flag"}]
+# custom model data shows offhand slot outline; "flags" named coincidentally
+execute as @s[tag=hasflag,team=blue] unless items entity @s weapon.offhand red_dye run item replace entity @s weapon.offhand with minecraft:red_dye[custom_model_data={flags:[true]},item_name="Red Flag"]
 
 clear @s[tag=!hasflag,team=red,tag=item_head] blue_banner
 clear @s[tag=!hasflag,team=red,tag=item_head] blue_dye
 item replace entity @s[tag=!hasflag,team=red,scores={invul=..0,glowing=..0,blind=..0},tag=!is_infected,tag=item_head] armor.head with minecraft:air
 execute as @s[tag=hasflag,team=red,scores={glowing=..0}] unless items entity @s armor.head blue_banner run item replace entity @s armor.head with minecraft:blue_banner
 execute as @s[tag=hasflag,team=red] unless items entity @s weapon.offhand blue_dye run clear @s minecraft:blue_dye
-execute as @s[tag=hasflag,team=red] unless items entity @s weapon.offhand blue_dye run item replace entity @s weapon.offhand with minecraft:blue_dye[custom_name={"text":"Blue Flag"}]
+# custom model data shows offhand slot outline; "flags" named coincidentally
+execute as @s[tag=hasflag,team=red] unless items entity @s weapon.offhand blue_dye run item replace entity @s weapon.offhand with minecraft:blue_dye[custom_model_data={flags:[true]},item_name="Blue Flag"]
 
 clear @s[scores={glowing=..0},tag=item_head] minecraft:carved_pumpkin
 execute as @s[tag=!is_infected,tag=hasflag,team=red,scores={glowing=1..}] unless items entity @s armor.head carved_pumpkin run item replace entity @s armor.head with minecraft:carved_pumpkin[custom_model_data={strings:["1"]}]

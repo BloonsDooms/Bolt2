@@ -10,6 +10,10 @@ $function bcm:map/load {mapName:"$(mapName)",new:false}
 # writes to bcm map
 $data modify storage bcm map set from storage bcm maps[{registry:{mapName:"$(mapName)"}}].map
 
+## get map registry data
+$data modify storage bcm registry.mapSize set from storage maps:list maps[{mapName:"$(mapName)"}].mapSize
+$data modify storage bcm registry.mapColor set from storage maps:list maps[{mapName:"$(mapName)"}].mapColor
+
 ## null absolute to relative
 data modify storage bcm abs_to_rel set value {pos:"~ ~ ~"}
 

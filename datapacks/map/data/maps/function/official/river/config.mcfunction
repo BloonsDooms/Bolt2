@@ -45,7 +45,6 @@ data merge storage maps:active {spawn:{\
 data merge storage maps:active {objectives:{\
     blueFlag: "-149 3 -415",\
     redFlag: "-105 3 -351",\
-    infectionGenerator:[0, 0, 0],\
 }}
 
 # List of item generators on the map, stored as x, y, z, facing.
