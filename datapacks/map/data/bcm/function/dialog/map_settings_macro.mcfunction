@@ -1,6 +1,6 @@
 $return run dialog show @s {\
   type: "minecraft:notice",\
-  title: "map settings",\
+  title: "Map Settings",\
   inputs: [\
     {\
       type: "minecraft:single_option",\
@@ -10,41 +10,48 @@ $return run dialog show @s {\
         {\
           id: "1",\
           display: {\
-            text: "Green",\
-            color: "green"\
+            translate: color.minecraft.green,\
+            color: green\
           },\
           initial: $(initial_green)b\
         },\
         {\
           id: "2",\
           display: {\
-            text: "Red",\
-            color: "red"\
+            translate: color.minecraft.red,\
+            color: red\
           },\
           initial: $(initial_red)b\
         },\
         {\
           id: "3",\
           display: {\
-            text: "Blue",\
-            color: "blue"\
+            translate: color.minecraft.blue,\
+            color: blue\
           },\
           initial: $(initial_blue)b\
         },\
         {\
           id: "4",\
           display: {\
-            text: "Yellow",\
-            color: "yellow"\
+            translate: color.minecraft.yellow,\
+            color: yellow\
           },\
           initial: $(initial_yellow)b\
         },\
         {\
           id: "5",\
-          display: {\
-            text: "Black & White",\
-            color: "white"\
-          },\
+          display: [\
+            {\
+              translate: color.minecraft.black,\
+              color: white\
+            },\
+            " & ",\
+            {\
+              translate: color.minecraft.white,\
+              color: white\
+            }\
+          ],\
           initial: $(initial_white)b\
         }\
       ]\
@@ -79,7 +86,7 @@ $return run dialog show @s {\
     {\
       type: "minecraft:boolean",\
       key: "disable_walls",\
-      label: "Disable walls",\
+      label: "Disable Walls",\
       initial: $(initial_disable_walls)b,\
       on_true: "1",\
       on_false: "0"\
@@ -87,7 +94,7 @@ $return run dialog show @s {\
   ],\
   action: {\
     label: {\
-      translate: "advancements.end.dragon_breath.title"\
+      translate: gui.done\
     },\
     action: {\
       type: "minecraft:dynamic/run_command",\

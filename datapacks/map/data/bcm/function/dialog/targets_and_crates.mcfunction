@@ -1,7 +1,7 @@
 scoreboard players enable @s targets_and_crates
 return run dialog show @s {\
   type: "minecraft:multi_action",\
-  title: "targets & crates menu",\
+  title: "Targets & Crates Menu",\
   inputs: [],\
   exit_action: {\
     label: {\
@@ -18,17 +18,17 @@ return run dialog show @s {\
       label: [\
         "",\
         {\
-          text: "load",\
+          text: "Load",\
           color: "yellow"\
         },\
-        " targets"\
+        " Targets"\
       ],\
       width: 200,\
       action: {\
         type: "minecraft:show_dialog",\
         dialog: {\
           type: "minecraft:confirmation",\
-          title: "are you sure?",\
+          title: "Are you sure?",\
           body: {\
             type: "minecraft:plain_message",\
             contents: [\
@@ -47,12 +47,12 @@ return run dialog show @s {\
           },\
           yes: {\
             label: [\
-              "Yes, ",\
+              "",\
               {\
-                text: "load",\
+                text: "Load",\
                 color: "yellow"\
               },\
-              " saved targets"\
+              " Saved Targets"\
             ],\
             width: 250,\
             action: {\
@@ -77,17 +77,17 @@ return run dialog show @s {\
       label: [\
         "",\
         {\
-          text: "load",\
+          text: "Load",\
           color: "yellow"\
         },\
-        " crates "\
+        " Crates "\
       ],\
       width: 200,\
       action: {\
         type: "minecraft:show_dialog",\
         dialog: {\
           type: "minecraft:confirmation",\
-          title: "are you sure?",\
+          title: "Are you sure?",\
           body: {\
             type: "minecraft:plain_message",\
             contents: [\
@@ -111,12 +111,12 @@ return run dialog show @s {\
           },\
           yes: {\
             label: [\
-              "Yes, ",\
+              "",\
               {\
-                text: "load",\
+                text: "Load",\
                 color: "yellow"\
               },\
-              " saved crates"\
+              " Saved Crates"\
             ],\
             width: 250,\
             action: {\
@@ -141,10 +141,10 @@ return run dialog show @s {\
       label: [\
         "",\
         {\
-          text: "destroy",\
+          text: "Destroy",\
           color: "red"\
         },\
-        " targets"\
+        " Targets"\
       ],\
       width: 200,\
       action: {\
@@ -170,12 +170,12 @@ return run dialog show @s {\
           },\
           yes: {\
             label: [\
-              "Yes, ",\
+              "",\
               {\
-                text: "destroy",\
+                text: "Destroy",\
                 color: "red"\
               },\
-              " placed targets"\
+              " Placed Targets"\
             ],\
             width: 250,\
             action: {\
@@ -200,17 +200,17 @@ return run dialog show @s {\
       label: [\
         "",\
         {\
-          text: "destroy",\
+          text: "Destroy",\
           color: "red"\
         },\
-        " crates"\
+        " Crates"\
       ],\
       width: 200,\
       action: {\
         type: "minecraft:show_dialog",\
         dialog: {\
           type: "minecraft:confirmation",\
-          title: "are you sure?",\
+          title: "Are you sure?",\
           body: {\
             type: "minecraft:plain_message",\
             contents: [\
@@ -229,12 +229,12 @@ return run dialog show @s {\
           },\
           yes: {\
             label: [\
-              "Yes, ",\
+              "",\
               {\
-                text: "destroy",\
+                text: "Destroy",\
                 color: "red"\
               },\
-              " placed crates"\
+              " Placed Crates"\
             ],\
             width: 250,\
             action: {\
@@ -259,10 +259,10 @@ return run dialog show @s {\
       label: [\
         "",\
         {\
-          text: "destroy",\
+          text: "Destroy",\
           color: "red"\
         },\
-        " all"\
+        " All"\
       ],\
       width: 200,\
       action: {\
@@ -288,12 +288,12 @@ return run dialog show @s {\
           },\
           yes: {\
             label: [\
-              "Yes, ",\
+              "",\
               {\
-                text: "destroy",\
+                text: "Destroy",\
                 color: "red"\
               },\
-              " placed targets and crates"\
+              " Placed Targets and Crates"\
             ],\
             width: 250,\
             action: {\
@@ -318,17 +318,17 @@ return run dialog show @s {\
       label: [\
         "",\
         {\
-          text: "save",\
+          text: "Save",\
           color: "green"\
         },\
-        " targets"\
+        " Targets"\
       ],\
       width: 200,\
       action: {\
         type: "minecraft:show_dialog",\
         dialog: {\
           type: "minecraft:confirmation",\
-          title: "are you sure?",\
+          title: "Are you sure?",\
           body: {\
             type: "minecraft:plain_message",\
             contents: [\
@@ -354,7 +354,7 @@ return run dialog show @s {\
             {\
               type: "minecraft:boolean",\
               key: "overwrite",\
-              label: "overwrite existing map",\
+              label: "Overwrite Existing Map",\
               initial: 1b,\
               on_true: "1",\
               on_false: "0"\
@@ -362,14 +362,14 @@ return run dialog show @s {\
           ],\
           yes: {\
             label: [\
-              "Yes, ",\
+              "",\
               {\
-                text: "save",\
+                text: "Save",\
                 color: "green"\
               },\
-              " targets and ",\
+              " Targets and ",\
               {\
-                text: "replace",\
+                text: "Replace",\
                 color: "yellow"\
               }\
             ],\
@@ -396,17 +396,17 @@ return run dialog show @s {\
       label: [\
         "",\
         {\
-          text: "save",\
+          text: "Save",\
           color: "green"\
         },\
-        " crates"\
+        " Crates"\
       ],\
       width: 200,\
       action: {\
         type: "minecraft:show_dialog",\
         dialog: {\
           type: "minecraft:confirmation",\
-          title: "are you sure?",\
+          title: "Are you sure?",\
           body: {\
             type: "minecraft:plain_message",\
             contents: [\
@@ -432,7 +432,7 @@ return run dialog show @s {\
             {\
               type: "minecraft:boolean",\
               key: "overwrite",\
-              label: "overwrite existing map",\
+              label: "Overwrite Existing Map",\
               initial: 1b,\
               on_true: "1",\
               on_false: "0"\
@@ -440,14 +440,14 @@ return run dialog show @s {\
           ],\
           yes: {\
             label: [\
-              "Yes, ",\
+              "",\
               {\
-                text: "save",\
+                text: "Save",\
                 color: "green"\
               },\
-              " crates and ",\
+              " Crates and ",\
               {\
-                text: "replace",\
+                text: "Replace",\
                 color: "yellow"\
               }\
             ],\

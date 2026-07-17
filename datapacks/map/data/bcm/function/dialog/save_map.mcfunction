@@ -1,13 +1,13 @@
 scoreboard players enable @s save_map
 return run dialog show @s {\
-  title: "save map",\
+  title: "Save Map",\
   type: "minecraft:confirmation",\
   inputs: [\
     {\
       initial: true,\
       type: "minecraft:boolean",\
       key: "overwrite",\
-      label: "overwrite existing map",\
+      label: "Overwrite Existing Map",\
       on_true: "1",\
       on_false: "2"\
     }\
