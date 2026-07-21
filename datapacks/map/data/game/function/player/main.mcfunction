@@ -540,6 +540,8 @@ execute if score @s custom_random_dialog matches -2147483648..2147483647 run fun
 scoreboard players set @s[tag=!using_coin] coin_use 0
 scoreboard players remove @s[scores={coin_use=0..}] coin_use 1
 
-execute as @s[scores={coin_use=0},tag=using_coin] at @s run function game:items/coin/roll
+scoreboard players remove @s[scores={coin_cooldown=0..}] coin_cooldown 1
+
+execute as @s[scores={coin_use=1},tag=using_coin] at @s run function game:items/coin/roll
 
 tag @s remove using_coin

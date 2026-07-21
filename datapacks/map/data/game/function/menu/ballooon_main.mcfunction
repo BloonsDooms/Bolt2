@@ -60,3 +60,11 @@ execute as @e[tag=coin_interact] run function game:menu/coin_interact
 
 kill @e[scores={t1=8..},tag=coin_vis]
 scoreboard players add @e[scores={t1=1..},tag=coin_vis] t1 1
+
+#
+tag @e remove balloon_extra
+
+execute as @e[tag=balloon] on passengers as @s run tag @s add balloon_extra
+
+kill @e[tag=balloon_interact,tag=!balloon_extra]
+kill @e[tag=balloon_display,tag=!balloon_extra]
