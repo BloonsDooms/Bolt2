@@ -14,7 +14,7 @@ execute unless entity @e[tag=currentTarget,type=minecraft:zombie_villager] at @e
 execute if entity @e[tag=currentTarget,type=minecraft:zombie_villager] at @e[tag=currentTarget] run playsound minecraft:entity.wither.shoot master @a ~ ~ ~ 0.5 1.1
 execute if entity @e[tag=currentTarget,type=minecraft:zombie_villager] at @e[tag=currentTarget] run playsound minecraft:entity.generic.explode master @a ~ ~ ~ 0.5 1.5
 
-damage @e[tag=currentTarget,limit=1] 1 minecraft:arrow
+damage @e[tag=currentTarget,limit=1] 1
 
 #
 function game:id/player
