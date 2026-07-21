@@ -110,6 +110,9 @@ scoreboard players set @s lowgravity 0
 scoreboard players set @s coin_cooldown 0
 scoreboard players set @s coin_use 0
 
+tag @s remove is_m_rider
+tag @s remove is_m_rider2
+
 attribute @s minecraft:gravity base reset
 attribute @s minecraft:bounciness base reset
 attribute @s minecraft:explosion_knockback_resistance base reset

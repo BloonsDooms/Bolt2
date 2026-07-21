@@ -45,3 +45,6 @@ execute if score .start_cd .data matches 0 as @a run function game:items/balloon
 execute if score .start_cd .data matches 0 as @a run kill @e[tag=balloon,type=pig]
 execute if score .start_cd .data matches 0 as @a run kill @e[tag=balloon_interact]
 execute if score .start_cd .data matches 0 as @a run kill @e[tag=balloon_display]
+
+tag @a remove is_m_rider
+tag @a remove is_m_rider2

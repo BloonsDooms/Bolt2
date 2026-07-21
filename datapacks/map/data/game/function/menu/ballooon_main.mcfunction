@@ -2,11 +2,11 @@ scoreboard players set @a balloon_count 0
 tag @a remove has_balloon
 scoreboard players add @a balloon_release 1
 execute as @a if items entity @s weapon.mainhand string run scoreboard players set @s balloon_release 0
-tag @a[scores={balloon_release=0..120}] add has_balloon
-execute as @a[scores={balloon_release=45}] run function game:items/balloon/pop_ran
-execute as @a[scores={balloon_release=80}] run function game:items/balloon/pop_ran
-execute as @a[scores={balloon_release=105}] run function game:items/balloon/pop_ran
-execute as @a[scores={balloon_release=120}] run function game:items/balloon/pop_ran
+tag @a[scores={balloon_release=0..125}] add has_balloon
+execute as @a[scores={balloon_release=50}] run function game:items/balloon/pop_ran
+execute as @a[scores={balloon_release=85}] run function game:items/balloon/pop_ran
+execute as @a[scores={balloon_release=110}] run function game:items/balloon/pop_ran
+execute as @a[scores={balloon_release=125}] run function game:items/balloon/pop_ran
 
 execute as @e[tag=balloon,type=pig,tag=!hitbox] at @s run function game:items/balloon/vis_main
 

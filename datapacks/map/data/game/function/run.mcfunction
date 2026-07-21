@@ -328,6 +328,21 @@ function game:menu/ballooon_main
 #wise guy
 execute as @e[tag=wise_guy_interact] on target run function game:menu/wise_guy_interact
 
+scoreboard players add @e[tag=wise_guy] t1 1
+execute as @e[tag=wise_guy,scores={t1=1..5}] at @s run tp @s ~ ~-0.01 ~
+execute as @e[tag=wise_guy,scores={t1=6..10}] at @s run tp @s ~ ~-0.02 ~
+execute as @e[tag=wise_guy,scores={t1=11..15}] at @s run tp @s ~ ~-0.03 ~
+execute as @e[tag=wise_guy,scores={t1=16..20}] at @s run tp @s ~ ~-0.02 ~
+execute as @e[tag=wise_guy,scores={t1=21..25}] at @s run tp @s ~ ~-0.01 ~
+
+execute as @e[tag=wise_guy,scores={t1=31..35}] at @s run tp @s ~ ~0.01 ~
+execute as @e[tag=wise_guy,scores={t1=36..40}] at @s run tp @s ~ ~0.02 ~
+execute as @e[tag=wise_guy,scores={t1=41..45}] at @s run tp @s ~ ~0.03 ~
+execute as @e[tag=wise_guy,scores={t1=46..50}] at @s run tp @s ~ ~0.02 ~
+execute as @e[tag=wise_guy,scores={t1=51..55}] at @s run tp @s ~ ~0.01 ~
+
+scoreboard players set @e[tag=wise_guy,scores={t1=61..}] t1 0
+
 execute as @e[tag=wise_guy] at @s unless entity @p[distance=..6] run tp @s ~ ~ ~ 33 0
 execute as @e[tag=wise_guy] at @s if entity @p[distance=..6] run tp @s ~ ~ ~ facing entity @p
 execute as @e[tag=wise_guy] at @s if entity @p[distance=..6] run tp @s ~ ~ ~ ~ 0
