@@ -33,7 +33,7 @@ execute if entity @p[tag=currentTarget,tag=!totem,scores={invul=..0,hurt=..1},ga
 
 #> Kill
 execute at @a[tag=hasTurret] if score @p ID = @s ID run tag @p add executioner
-damage @e[tag=currentTarget,limit=1] 982 minecraft:arrow by @a[tag=executioner,limit=1]
+damage @e[tag=currentTarget,limit=1] 982 minecraft:generic by @a[tag=executioner,limit=1]
 tag @e[tag=currentTarget,limit=1] add turretDead
 tag @e[tag=currentTarget,limit=1] add shot_by_turret
 
