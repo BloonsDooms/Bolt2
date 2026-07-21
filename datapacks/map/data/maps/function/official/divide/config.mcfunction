@@ -12,7 +12,7 @@ data merge storage maps:active {settings:{\
     loadingBox:"-146.5 1.00 389.5",\
     \
     spectatorBoundingBox:{area:"dx=-49,dy=23,dz=59",origin:"-112. -2. 354."},\
-    spectatorJoinLocation:"-115 8 -381 45 0",\
+    spectatorJoinLocation:"-142 8 382 -90 0",\
     \
     introCutscene:"-142.5 6 382 -90 0",\
     \
