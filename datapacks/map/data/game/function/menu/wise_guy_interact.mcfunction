@@ -3,7 +3,7 @@ execute store result score .rand .calc run random value 0..15
 
 # banter
 execute if score .rand .calc matches 0 run tellraw @s [{"text":"[Wise Worm] "},{"text":"I'm learning a technique to punch arrows. I expect to have it figured out by tomorrow."}]
-execute if score .rand .calc matches 1 run tellraw @s [{"text":"[Wise Worm] "},{"text":"Crouching with make you appear plant-like, making you less likely to get shot."}]
+execute if score .rand .calc matches 1 run tellraw @s [{"text":"[Wise Worm] "},{"text":"Crouching will make you appear plant-like, making you less likely to get shot."}]
 execute if score .rand .calc matches 2 run tellraw @s [{"text":"[Wise Worm] "},{"text":"Sometimes the best way to dodge an arrow is not to move."}]
 execute if score .rand .calc matches 3 run tellraw @s [{"text":"[Wise Worm] "},{"text":"A scared man puts down a turret. A confused man is the turret."}]
 execute if score .rand .calc matches 4 run tellraw @s [{"text":"[Wise Worm] "},{"text":"When losing, a great warrior will decide to win instead."}]
