@@ -16,6 +16,10 @@ data modify storage item_structures forceload.x set from storage item_structures
 data modify storage item_structures forceload.z set from storage item_structures load.size[2]
 function item_structures:zprivate/forceload with storage item_structures forceload
 
+# [bleps] sanitize sign NBT
+data remove storage item_structures load.nbts[].front_text.messages[].click_event
+data remove storage item_structures load.nbts[].back_text.messages[].click_event
+
 # [bleps] clear previous utility placement restrictors
 execute if score .place_restrictors item_structures matches 1 run function item_structures:zprivate/remove_restrictors with storage item_structures forceload
 
