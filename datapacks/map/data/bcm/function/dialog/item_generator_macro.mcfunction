@@ -41,7 +41,7 @@ $return run dialog show @s {\
   actions: [\
     {\
       label: {\
-        translate: "gui.done"\
+        translate: "gui.proceed"\
       },\
       action: {\
         type: "dynamic/run_command",\
