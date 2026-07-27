@@ -18,6 +18,9 @@ data modify storage bcm map.red_spawn.start set from storage maps:active spawn.r
 data modify storage bcm map.blue_spawn.area set from storage maps:active spawn.blueSpawnBoundingBox[0].area
 data modify storage bcm map.blue_spawn.start set from storage maps:active spawn.blueSpawnBoundingBox[0].origin
 
+data modify storage bcm map.invuln_ctf set from storage maps:active spawn.ctfInvulnTime
+data modify storage bcm map.invuln_infection set from storage maps:active spawn.infectionInvulnTime
+
 data modify storage bcm map.red_flag set from storage maps:active objectives.redFlag
 data modify storage bcm map.blue_flag set from storage maps:active objectives.blueFlag
 

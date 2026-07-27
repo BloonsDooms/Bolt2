@@ -1,5 +1,5 @@
 $return run dialog show @s {\
-  type: "minecraft:notice",\
+  type: "minecraft:multi_action",\
   title: "Map Settings",\
   inputs: [\
     {\
@@ -92,7 +92,7 @@ $return run dialog show @s {\
       on_false: "0"\
     }\
   ],\
-  action: {\
+  exit_action: {\
     label: {\
       translate: gui.done\
     },\
@@ -100,5 +100,15 @@ $return run dialog show @s {\
       type: "minecraft:dynamic/run_command",\
       template: "trigger map_settings set $(macro)"\
     }\
-  }\
+  },\
+  actions: [\
+    {\
+      label: "Set Spawn Invulnerability Times...",\
+      width: 200,\
+      action: {\
+        type: "minecraft:dynamic/run_command",\
+        template: "trigger map_settings set -$(macro)"\
+      }\
+    }\
+  ]\
 }

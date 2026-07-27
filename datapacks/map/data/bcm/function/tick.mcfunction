@@ -31,8 +31,10 @@ execute as @a[scores={master_menu=1..}] at @s run function bcm:trigger/master
 scoreboard players enable @a[gamemode=creative] export_map
 execute as @a[scores={export_map=1..}] at @s run function bcm:trigger/export
 execute as @a[scores={targets_and_crates=1..}] run function bcm:trigger/targets_and_crates
+execute as @a[scores={map_settings=..-1}] run function bcm:trigger/map_settings_open_invuln
 execute as @a[scores={map_settings=1..}] run function bcm:trigger/map_settings
-execute as @a[scores={map_settings=..-1}] run function bcm:trigger/map_settings_invuln
+execute as @a[scores={set_map_invuln=1..}] run function bcm:trigger/map_invuln
+execute as @a[scores={set_map_invuln=-1}] run function bcm:trigger/map_invuln_default
 execute as @a[scores={save_map=1..}] run function bcm:trigger/save_map
 
 # editor area boundaries

@@ -1,8 +1,10 @@
 # .value .calc = packed args
-# .max .calc = power of 10 > next arg max value
+# .max .calc = power of 10 > arg max value
 # .separator .calc = digits separating values
+
 # returns next arg value
-# .value .calc set to remaining args
+# sets .value .calc to remaining args
+
 scoreboard players set .order .calc 1
 function bcm:util/next_packed_arg_loop
 

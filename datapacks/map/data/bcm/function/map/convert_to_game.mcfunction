@@ -1,6 +1,5 @@
 ### THIS CONVERTS MAP DATA FROM SHUBA'S SYSTEM TO AIDEN'S SYSTEM
 # copies from "minecraft:bcm map" to "maps:active {}"
-# editor doesn't have invulnerability times
 
 # you can't directly set/delete root objects
 data remove storage maps:active settings
@@ -83,8 +82,8 @@ data modify storage maps:active spawn.blueSpawnBoundingBox[0].origin set from st
 data modify storage maps:active spawn.redSpawn set from storage bcm map.red_spawnpoint
 data modify storage maps:active spawn.blueSpawn set from storage bcm map.blue_spawnpoint
 
-data modify storage maps:active spawn.ctfInvulnTime set value 40
-data modify storage maps:active spawn.infectionInvulnTime set value 40
+data modify storage maps:active spawn.ctfInvulnTime set from storage bcm map.invuln_ctf
+data modify storage maps:active spawn.infectionInvulnTime set from storage bcm map.invuln_infection
 
 
 ## objectives

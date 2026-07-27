@@ -13,6 +13,7 @@ scoreboard objectives add master_menu trigger
 scoreboard objectives add export_map trigger
 scoreboard objectives add targets_and_crates trigger
 scoreboard objectives add map_settings trigger
+scoreboard objectives add set_map_invuln trigger
 scoreboard objectives add save_map trigger
 
 # save rate is very constant -> very accurate save ETA
