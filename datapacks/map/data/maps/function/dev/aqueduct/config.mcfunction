@@ -14,9 +14,9 @@ data merge storage maps:active {settings:{\
     loadingBox:"-359 -5 -902",\
     \
     spectatorBoundingBox:{area:"dx=100,dy=50,dz=100",origin:"-391. -3. -939."},\
-    spectatorJoinLocation:"-359.5 7 -902.5 -135 0",\
+    spectatorJoinLocation:"-339.5 7 -922.5 45 0",\
     \
-    introCutscene:"-359.5 7 -902.5 -135 0",\
+    introCutscene:"-339.5 7 -922.5 45 0",\
     \
     tickingScript: "",\
     \
@@ -42,13 +42,13 @@ data merge storage maps:active {spawn:{\
 
 # Flags and the infection generator
 data merge storage maps:active {objectives:{\
-    blueFlag: "-330 2 -892",\
-    redFlag: "-371 2 -933",\
+    blueFlag: "-331 4 -880",\
+    redFlag: "-381 4 -930",\
 }}
 
 # List of item generators on the map, stored as x, y, z, facing.
 # REWORK - 3rd generator needs to have "long" tag
 data merge storage maps:active {gens:[\
-    {pos:"-356 -2 -876", rotation:90, generator_duration:45, generator_warmup:5},\
-    {pos:"-387 -2 -907", rotation:0, generator_duration:45, generator_warmup:5},\
+    {pos:"-355 -2 -886", rotation:90, generator_duration:45, generator_warmup:5},\
+    {pos:"-372 -2 -906", rotation:0, generator_duration:45, generator_warmup:5},\
 ]}
