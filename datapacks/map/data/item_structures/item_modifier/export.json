@@ -30,34 +30,34 @@
     "function": "minecraft:set_lore",
     "entity": "this",
     "lore": [
+      {
+        "text": "Custom Bleps Map",
+        "italic": false,
+        "color": "dark_aqua"
+      },
+      "",
       [
         {
-          "text": "Size: ",
+          "text": "Map Size: ",
           "italic": false,
           "color": "white"
         },
         {
-          "nbt": "export.size[0]",
-          "storage": "item_structures",
-          "color": "dark_aqua"
-        },
+          "nbt": "tmp",
+          "storage": "bcm",
+          "interpret": true
+        }
+      ],
+      [
         {
-          "text": ",",
+          "text": "Dimensions: ",
+          "italic": false,
           "color": "white"
         },
         {
-          "nbt": "export.size[1]",
+          "nbt": "export.size[]",
           "storage": "item_structures",
-          "color": "dark_aqua"
-        },
-        {
-          "text": ",",
-          "color": "white"
-        },
-        {
-          "nbt": "export.size[2]",
-          "storage": "item_structures",
-          "color": "dark_aqua"
+          "separator": "x"
         }
       ]
     ],

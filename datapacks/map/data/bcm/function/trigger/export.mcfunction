@@ -3,10 +3,22 @@ scoreboard players reset @s export_map
 execute unless data storage bcm export run return run function bcm:fail/tellraw {input:'"ERROR exporting map: missing map data"'}
 execute unless data storage item_structures export run return run function bcm:fail/tellraw {input:'"ERROR exporting map: missing map structure"'}
 
+# size rating text
+execute store result score .size .calc run data get storage bcm registry_export.mapSize
+execute if score .size .calc matches 0 run data modify storage bcm tmp set value {text:"Very Small",color:"#92d9e3"}
+execute if score .size .calc matches 1 run data modify storage bcm tmp set value {text:"Small",color:"#29AEF0"}
+execute if score .size .calc matches 2 run data modify storage bcm tmp set value {text:"Medium",color:"#F08B26"}
+execute if score .size .calc matches 3 run data modify storage bcm tmp set value {text:"Large",color:"#F02B24"}
+
 data remove block 69420 0 69420 Items
 item replace block 69420 0 69420 container.0 with netherite_ingot 1
 item modify block 69420 0 69420 container.0 item_structures:export
 data remove block 69420 0 69420 Items[0].components.minecraft:custom_data.bleps_map.load_point
+
+data remove storage bcm tmp
+
+# disabled walls text
+execute if data storage bcm export{disable_walls:true} run data modify block 69420 0 69420 Items[0].components.minecraft:lore insert 4 value {text:"Walls item disabled",italic:false,color:"#8F2929"}
 
 loot give @s mine 69420 0 69420
 playsound minecraft:entity.item.pickup player @s ~ ~ ~ 0.5 2
