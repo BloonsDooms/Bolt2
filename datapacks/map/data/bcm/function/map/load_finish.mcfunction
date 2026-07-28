@@ -22,9 +22,9 @@ scoreboard players remove .r .calc 100
 execute if score .print_messages item_structures matches 1 if score .r .calc matches 0.. run tellraw @a[tag=verbose] ["loaded ",{score:{name:".r",objective:".calc"}},"% faster than estimated"]
 scoreboard players operation .r .calc *= .n1 .num
 execute if score .print_messages item_structures matches 1 if score .r .calc matches 1.. run tellraw @a[tag=verbose] ["loaded ",{score:{name:".r",objective:".calc"}},"% slower than estimated"]
-# new estimate = avg(old est., real) if >500ms
-execute if score .ms_total .calc matches 500.. run scoreboard players operation .load_entries/s .calc += .rate .calc
-execute if score .ms_total .calc matches 500.. run scoreboard players operation .load_entries/s .calc /= .2 .num
+# new estimate = avg(old est., real) if >1s
+execute if score .ms_total .calc matches 1000.. run scoreboard players operation .load_entries/s .calc += .rate .calc
+execute if score .ms_total .calc matches 1000.. run scoreboard players operation .load_entries/s .calc /= .2 .num
 
 # keep it simple - forceload the whole map editor area all the time
 function bcm:editor/forceload
