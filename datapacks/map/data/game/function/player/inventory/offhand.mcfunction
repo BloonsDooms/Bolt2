@@ -1,5 +1,5 @@
 function game:player/offhand_correct
-advancement revoke @s only advancements:offhand_detection
+advancement revoke @s only game:offhand_detection
 
 # ping location
 tellraw @s[scores={delay_ping=300..}] {text:"Ping on cooldown",color:gray}

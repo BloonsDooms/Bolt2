@@ -1,5 +1,5 @@
 # advancement that triggers the function, revoke it so it can trigger again.
-advancement revoke @s only advancements:hit_detection
+advancement revoke @s only game:hit_detection
 
 # only run the rest of the functions if the target (@s) is a viable target
 execute unless entity @s[tag=!killed,tag=!totem,scores={invul=..0}] run return 0
