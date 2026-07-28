@@ -16,8 +16,8 @@ data remove storage bcm tmp
 # announce
 execute store result score crates.save .calc run data get storage bcm map.crates
 tellraw @a ["\n",{selector:"@s"}," saved ",{score:{name:"crates.save",objective:".calc"}}," crates\n"]
-execute unless score .overwrite targets_and_crates matches 1 run tellraw @a "Crates saved only to export item (old set still loaded on server)"
-execute if score .overwrite targets_and_crates matches 1 run tellraw @a "Overwrote existing map's crate set"
+execute unless score .overwrite save_map matches 1 run tellraw @a "Crates saved only to export item (old set still loaded on server)"
+execute if score .overwrite save_map matches 1 run tellraw @a "Overwrote existing map's crate set"
 
 # copy data to export path
 data modify storage bcm export.crates set from storage bcm map.crates
@@ -26,4 +26,4 @@ data modify storage bcm export.crates set from storage bcm map.crates
 tellraw @a ["YOU'RE NOT DONE YET! Click ",{underlined:true,click_event:{action:"run_command",command:"trigger export_map set 1"},text:"here"}," or type \"/trigger export_map\" to get an item with the map's data on it, which you can save permanently."]
 
 # overwrite existing map automatically?
-execute if score .overwrite targets_and_crates matches 1 run function bcm:targets_and_crates/save/crates_overwrite with storage bcm
+execute if score .overwrite save_map matches 1 run function bcm:targets_and_crates/save/crates_overwrite with storage bcm

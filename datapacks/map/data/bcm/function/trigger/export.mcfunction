@@ -17,9 +17,6 @@ data remove block 69420 0 69420 Items[0].components.minecraft:custom_data.bleps_
 
 data remove storage bcm tmp
 
-# disabled walls text
-execute if data storage bcm export{disable_walls:true} run data modify block 69420 0 69420 Items[0].components.minecraft:lore insert 4 value {text:"Walls item disabled",italic:false,color:"#8F2929"}
-
 loot give @s mine 69420 0 69420
 playsound minecraft:entity.item.pickup player @s ~ ~ ~ 0.5 2
 

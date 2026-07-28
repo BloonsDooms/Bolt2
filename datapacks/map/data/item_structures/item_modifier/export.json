@@ -64,6 +64,29 @@
     "mode": "replace_all"
   },
   {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "text": "Walls item disabled",
+        "color": "#8F2929",
+        "italic": false
+      }
+    ],
+    "mode": "append",
+    "conditions": [
+      {
+        "condition": "minecraft:value_check",
+        "value": {
+          "type": "minecraft:storage",
+          "storage": "bcm",
+          "path": "export.disable_walls"
+        },
+        "range": 1
+      }
+    ]
+  },
+  {
     "function": "minecraft:set_name",
     "entity": "this",
     "name": {
@@ -73,6 +96,30 @@
       "bold": true
     },
     "target": "item_name"
+  },
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": {
+      "storage": "bcm",
+      "nbt": "mapNameEditing",
+      "interpret": true
+    },
+    "target": "custom_name",
+    "conditions": [
+      {
+        "condition": "minecraft:value_check",
+        "value": {
+          "type": "minecraft:score",
+          "target": {
+            "type": "minecraft:fixed",
+            "name": ".overwrite"
+          },
+          "score": "save_map"
+        },
+        "range": 1
+      }
+    ]
   },
   {
     "function": "minecraft:copy_custom_data",
