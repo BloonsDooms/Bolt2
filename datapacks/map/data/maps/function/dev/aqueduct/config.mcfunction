@@ -42,13 +42,13 @@ data merge storage maps:active {spawn:{\
 
 # Flags and the infection generator
 data merge storage maps:active {objectives:{\
-    blueFlag: "-331 4 -880",\
-    redFlag: "-381 4 -930",\
+    blueFlag: "-332 4 -881",\
+    redFlag: "-382 4 -931",\
 }}
 
 # List of item generators on the map, stored as x, y, z, facing.
 # REWORK - 3rd generator needs to have "long" tag
 data merge storage maps:active {gens:[\
-    {pos:"-355 -2 -886", rotation:90, generator_duration:45, generator_warmup:5},\
-    {pos:"-372 -2 -906", rotation:0, generator_duration:45, generator_warmup:5},\
+    {pos:"-356 -2 -887", rotation:90, generator_duration:45, generator_warmup:5},\
+    {pos:"-373 -2 -907", rotation:0, generator_duration:45, generator_warmup:5},\
 ]}
