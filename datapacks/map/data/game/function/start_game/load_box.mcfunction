@@ -9,16 +9,16 @@ execute if score .chunkload_time .timer matches 25 run function game:map/load_bo
 # if the time has surpassed 300 gameticks (15 seconds), change the gamestate to 16 to dispaly an error and do a fallback.
 execute if score .chunkload_time .timer matches 300.. run scoreboard players set .gamestate .data 16
 
-# check to see if the neighbooring chunks have loaded. This should only apply to players who are playing, not currently the case.
-# We are checking the location 4 chunks over, in each direction.
-tag @a remove south_loaded
-tag @a remove north_loaded
-tag @a remove east_loaded
-tag @a remove west_loaded
-execute as @a at @s if loaded ~ ~ ~64 run tag @s add south_loaded
-execute as @a at @s if loaded ~ ~ ~-64 run tag @s add north_loaded
-execute as @a at @s if loaded ~64 ~ ~ run tag @s add east_loaded
-execute as @a at @s if loaded ~-64 ~ ~ run tag @s add west_loaded
+# check to see if map area has loaded
+# tag @a remove south_loaded
+# tag @a remove north_loaded
+# tag @a remove east_loaded
+# tag @a remove west_loaded
+# execute as @a at @s if loaded ~ ~ ~64 run tag @s add south_loaded
+# execute as @a at @s if loaded ~ ~ ~-64 run tag @s add north_loaded
+# execute as @a at @s if loaded ~64 ~ ~ run tag @s add east_loaded
+# execute as @a at @s if loaded ~-64 ~ ~ run tag @s add west_loaded
+execute store success score .chunkloaded .data run function game:map/is_loaded with storage maps:active settings.mapSize
 
 
 # yeah.... probably shouldn't be here
@@ -43,10 +43,14 @@ execute if score .chunkload_time .timer matches 270 run tellraw @a[tag=verbose] 
 
 # if all 4 pinged chunks are loaded, progress gamestate to 20. Gamestate 20 currently runs calculate_elo, but in the future will clear map first.
 # REWORK adding a temporary fix to force it to wait an additional 15 gameticks to load the chunks... This is a weird bug in multiplayer.
-execute as @a if entity @s[tag=south_loaded,tag=north_loaded,tag=east_loaded,tag=west_loaded] if score .chunkload_time .timer matches 15.. run scoreboard players set .gamestate .data 20
+# execute as @a if entity @s[tag=south_loaded,tag=north_loaded,tag=east_loaded,tag=west_loaded] if score .chunkload_time .timer matches 15.. run scoreboard players set .gamestate .data 20
+
+# test if OK to remove the 15 tick minimum now that load check is stricter
+execute if score .chunkloaded .data matches 1 if score .chunkload_time .timer matches 15.. run scoreboard players set .gamestate .data 20
 
 # if the chunks have failed to load after 15 seconds. Gamestate 16 throws an error and falls back to spawn.
-execute as @a unless entity @s[tag=south_loaded,tag=north_loaded,tag=east_loaded,tag=west_loaded] if score .chunkload_time .timer matches 301.. run scoreboard players set .gamestate .data 16
+# execute as @a unless entity @s[tag=south_loaded,tag=north_loaded,tag=east_loaded,tag=west_loaded] if score .chunkload_time .timer matches 301.. run scoreboard players set .gamestate .data 16
+execute unless score .chunkloaded .data matches 1 if score .chunkload_time .data matches 301.. run scoreboard players set .gamestate .data 16
 
 # progress timer
 scoreboard players add .chunkload_time .timer 1
