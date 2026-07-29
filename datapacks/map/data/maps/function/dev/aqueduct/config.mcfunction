@@ -50,5 +50,5 @@ data merge storage maps:active {objectives:{\
 # REWORK - 3rd generator needs to have "long" tag
 data merge storage maps:active {gens:[\
     {pos:"-356 -2 -887", rotation:90, generator_duration:45, generator_warmup:5},\
-    {pos:"-373 -2 -907", rotation:0, generator_duration:45, generator_warmup:5},\
+    {pos:"-376 -2 -907", rotation:0, generator_duration:45, generator_warmup:5},\
 ]}
