@@ -16,5 +16,5 @@ execute store success score .success set_item_generator run function bcm:dialog/
 execute if score .success set_item_generator matches 1 run return 1
 
 # catch error
-trigger set_item_generator set 1
+trigger set_item_generator set -2
 return run function bcm:fail/tellraw {input:'"ERROR: couldn\'t show dialog; sending default input"'}

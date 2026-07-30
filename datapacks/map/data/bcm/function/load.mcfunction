@@ -15,6 +15,7 @@ scoreboard objectives add targets_and_crates trigger
 scoreboard objectives add map_settings trigger
 scoreboard objectives add set_map_invuln trigger
 scoreboard objectives add save_map trigger
+scoreboard objectives add set_gate trigger
 
 # save rate is very constant -> very accurate save ETA
 # @ 5k blocks: 12500 blocks/s

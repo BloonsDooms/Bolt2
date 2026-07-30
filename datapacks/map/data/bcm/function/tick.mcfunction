@@ -36,6 +36,8 @@ execute as @a[scores={map_settings=1..}] run function bcm:trigger/map_settings
 execute as @a[scores={set_map_invuln=1..}] run function bcm:trigger/map_invuln
 execute as @a[scores={set_map_invuln=-1}] run function bcm:trigger/map_invuln_default
 execute as @a[scores={save_map=1..}] run function bcm:trigger/save_map
+execute as @a[scores={set_gate=1..}] run function bcm:trigger/gate
+execute as @a[scores={set_gate=-1}] run function bcm:trigger/gate_cancel
 
 # editor area boundaries
 # execute as @a[gamemode=creative,tag=in_map_editor,tag=!bypass_editor_boundary] at @s run function bcm:editor/boundary
