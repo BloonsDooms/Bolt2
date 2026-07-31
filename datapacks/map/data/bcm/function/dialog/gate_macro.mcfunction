@@ -1,5 +1,5 @@
 $return run dialog show @s {\
-  type: "minecraft:multi_action",\
+  type: "minecraft:confirmation",\
   title: "Gate Setup",\
   inputs: [\
     {\
@@ -36,52 +36,25 @@ $return run dialog show @s {\
       type: "minecraft:single_option",\
       key: "sound",\
       label: "Sound",\
-      options: [\
-        {\
-          id: "1",\
-          display: "Inherit from blocks",\
-          initial: $(sound_inherit)b\
-        },\
-        {\
-          id: "2",\
-          display: "Piston",\
-          initial: $(sound_piston)b\
-        },\
-        {\
-          id: "3",\
-          display: "Inherit/Piston",\
-          initial: $(sound_inherit_piston)b\
-        }\
-      ]\
+      options: $(sound_options)\
     }\
   ],\
-  exit_action: {\
+  no: {\
     label: {\
       translate: "gui.cancel"\
     },\
     action: {\
       type: "minecraft:run_command",\
-      command: "trigger set_gate set -2"\
+      command: "trigger set_gate set -1"\
     }\
   },\
-  actions: [\
-    {\
-      label: {\
-        translate: "selectWorld.edit.save"\
-      },\
-      action: {\
-        type: "minecraft:dynamic/run_command",\
-        template: "trigger set_gate set $(macro)"\
-      }\
+  yes: {\
+    label: {\
+      translate: "gui.done"\
     },\
-    {\
-      label: {\
-        translate: "dataPack.validation.reset"\
-      },\
-      action: {\
-        type: "minecraft:run_command",\
-        command: "trigger set_gate set -1"\
-      }\
+    action: {\
+      type: "minecraft:dynamic/run_command",\
+      template: "trigger set_gate set $(macro)"\
     }\
-  ]\
+  },\
 }
