@@ -8,6 +8,13 @@ execute as @a[gamemode=creative,predicate=!bcm:pressing_sneak] at @s as @e[type=
 execute as @e[type=interaction,tag=editor_crate] at @s if data entity @s interaction run function bcm:place/crate_click
 execute as @e[type=interaction,tag=editor_crate] at @s if data entity @s attack run setblock ~ ~ ~ air destroy
 
+# editor gates
+execute as @e[type=interaction,tag=gate_interaction] at @s if data entity @s interaction on target run function bcm:dialog/gate
+execute as @e[type=interaction,tag=gate_interaction] at @s run data remove entity @s interaction
+execute as @e[type=interaction,tag=gate_interaction] at @s if data entity @s attack run function bcm:place/delete_gate
+execute as @e[type=interaction,tag=gate_interaction] at @s store result entity @s width float 1.01 if entity @a[gamemode=creative,predicate=bcm:holding_gate_item,distance=..128]
+execute as @e[type=block_display,tag=gate] at @s store result entity @s view_range float 1 if entity @a[gamemode=creative,predicate=bcm:holding_gate_item,distance=..128]
+
 # rightclick
 execute as @a[gamemode=creative] if predicate {condition:"minecraft:entity_properties",entity:"this",predicate:{effects:{"minecraft:luck":{}}}} at @s run function bcm:rightclick
 
@@ -37,7 +44,8 @@ execute as @a[scores={set_map_invuln=1..}] run function bcm:trigger/map_invuln
 execute as @a[scores={set_map_invuln=-1}] run function bcm:trigger/map_invuln_default
 execute as @a[scores={save_map=1..}] run function bcm:trigger/save_map
 execute as @a[scores={set_gate=1..}] run function bcm:trigger/gate
-execute as @a[scores={set_gate=-1}] run function bcm:trigger/gate_cancel
+execute as @a[scores={set_gate=-1}] run function bcm:trigger/gate_default
+execute as @a[scores={set_gate=-2}] run function bcm:trigger/gate_cancel
 
 # editor area boundaries
 # execute as @a[gamemode=creative,tag=in_map_editor,tag=!bypass_editor_boundary] at @s run function bcm:editor/boundary

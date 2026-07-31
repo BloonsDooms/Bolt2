@@ -1,1 +1,0 @@
-data modify entity @s data.gate set from storage bcm tmp

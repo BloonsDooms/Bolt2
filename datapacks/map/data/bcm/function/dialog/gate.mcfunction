@@ -3,11 +3,14 @@
 
 # escape sequences don't work on macros, but we can do this instead
 data modify storage bcm macro set value {\
-    macro: "$(time)$(width)$(height)$(one_way)",\
-    one_way: false,\
+    macro: "$(time)$(sound)$(width)$(height)",\
     height: 4,\
     width: 3,\
-    time: 6\
+    sound: 0,\
+    time: 6,\
+    sound_inherit: false,\
+    sound_piston: false,\
+    sound_inherit_piston: false\
 }
 
 # link player to gate block_display
@@ -22,5 +25,5 @@ execute store success score .success set_gate run function bcm:dialog/gate_macro
 execute if score .success set_gate matches 1 run return 1
 
 # catch error
-trigger set_gate set -1
+trigger set_gate set -2
 return run function bcm:fail/tellraw {input:'"ERROR: couldn\'t show dialog; sending default input"'}

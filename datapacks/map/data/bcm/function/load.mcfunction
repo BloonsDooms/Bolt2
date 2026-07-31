@@ -36,6 +36,7 @@ scoreboard objectives add place_object_egg minecraft.used:minecraft.panda_spawn_
 scoreboard objectives add bcm_generator_time dummy
 scoreboard objectives add bcm_generator_warmup dummy
 scoreboard objectives add bcm_crate_spawn_chance dummy
+scoreboard objectives add bcm_gate_id dummy
 
 # item map load point
 execute unless score #item_map_load_z .calc matches -2147483648..2147483647 run tellraw @a {text:"ERROR: Score #item_map_load_z .calc is UNSET - Adding item maps WILL NOT WORK PROPERLY!!!",color:"red"}

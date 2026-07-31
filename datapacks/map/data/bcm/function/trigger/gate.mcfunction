@@ -4,21 +4,31 @@ execute as @e[type=block_display,tag=gate,tag=editing] at @s if function bcm:uti
 
 # parse input from right to left
 scoreboard players operation .value .calc = @s set_gate
-# one way: boolean
-execute store result storage bcm tmp.one_way byte 1 run scoreboard players operation .value .calc %= .10 .num
-execute store result score .value .calc run scoreboard players operation @s set_gate /= .10 .num
 # height: [1,9]
 execute store result storage bcm tmp.height int 1 run scoreboard players operation .value .calc %= .10 .num
 execute store result score .value .calc run scoreboard players operation @s set_gate /= .10 .num
 # width: [1,9]
 execute store result storage bcm tmp.width int 1 run scoreboard players operation .value .calc %= .10 .num
+execute store result score .value .calc run scoreboard players operation @s set_gate /= .10 .num
+# sound: 1=inherit, 2=piston, 3=inherit/piston
+scoreboard players operation .value .calc %= .10 .num
+execute if score .value .calc matches 1 run data remove storage bcm tmp.sound
+execute if score .value .calc matches 2 run data modify storage bcm tmp.sound set value {\
+    open: "block.piston.contract",\
+    openPitch: 1f,\
+    close: "block.piston.extend",\
+    closePitch: 1f,\
+}
+execute if score .value .calc matches 3 run data modify storage bcm tmp.sound set value {\
+    close: "block.piston.extend",\
+    closePitch: 1f,\
+}
+
 # time: [1,100]
 execute store result storage bcm tmp.time int 1 run scoreboard players operation @s set_gate /= .10 .num
 
-# update gate preview
-execute as @n[type=block_display,tag=owned] store success score .success .calc run function bcm:place/gate_preview
-execute if score .success .calc matches 0 run kill @n[type=block_display,tag=owned]
-execute if score .success .calc matches 0 run function bcm:fail/actionbar {input:'"Not enough space for gate"'}
+# update gate
+execute as @n[type=block_display,tag=owned] at @s run function bcm:place/gate_update
 
 # cleanup
 data remove storage bcm tmp

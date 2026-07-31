@@ -9,3 +9,14 @@ execute on passengers run tag @s remove init
 
 # get current settings values
 data modify storage bcm macro merge from entity @s data.gate
+execute unless data entity @s data.gate.sound run return run data modify storage bcm macro.sound_inherit set value true
+execute if data entity @s data.gate.sound{\
+    open: "block.piston.contract",\
+    openPitch: 1f, \
+    close: "block.piston.extend",\
+    closePitch: 1f\
+} run return run data modify storage bcm macro.sound_piston set value true
+execute if data entity @s data.gate.sound{\
+    close: "block.piston.extend",\
+    closePitch: 1f\
+} run return run data modify storage bcm macro.sound_inherit_piston set value true
