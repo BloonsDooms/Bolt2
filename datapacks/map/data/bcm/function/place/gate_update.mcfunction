@@ -1,3 +1,5 @@
+function game:gate/editor/stop
+
 # copy data
 data modify entity @s data.gate set from storage bcm tmp
 execute store result score .width .calc run data get storage bcm tmp.width 100
