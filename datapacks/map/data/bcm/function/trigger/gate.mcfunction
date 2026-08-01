@@ -31,7 +31,8 @@ execute if score .value .calc matches 3 run data modify storage bcm tmp.sound se
     },\
 }
 
-# time: [1,100]
+# time: [2,100]
+# must be multiple ticks to prevent bugs when switching directions same tick as gate moves
 execute store result storage bcm tmp.time int 1 run scoreboard players operation @s set_gate /= .10 .num
 
 # update gate

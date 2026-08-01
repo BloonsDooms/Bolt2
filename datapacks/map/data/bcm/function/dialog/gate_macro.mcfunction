@@ -27,7 +27,7 @@ $return run dialog show @s {\
       key: "time",\
       label: "Opening Time",\
       label_format: "%s: %s ticks/block",\
-      start: 1,\
+      start: 2,\
       end: 100,\
       step: 1,\
       initial: $(time)\

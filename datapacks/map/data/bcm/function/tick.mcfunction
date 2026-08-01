@@ -14,6 +14,7 @@ execute as @e[type=interaction,tag=gate_interaction] at @s run data remove entit
 execute as @e[type=interaction,tag=gate_interaction] at @s if data entity @s attack run function bcm:place/delete_gate
 execute as @e[type=interaction,tag=gate_interaction] at @s store result entity @s width float 1.01 if entity @a[gamemode=creative,predicate=bcm:holding_gate_item,distance=..128]
 execute as @e[type=block_display,tag=gate] at @s store result entity @s view_range float 1 if entity @a[gamemode=creative,predicate=bcm:holding_gate_item,distance=..128]
+execute as @e[type=block_display,tag=gate] at @s if entity @a[distance=..32] run function game:gate/editor/main
 
 # rightclick
 execute as @a[gamemode=creative] if predicate {condition:"minecraft:entity_properties",entity:"this",predicate:{effects:{"minecraft:luck":{}}}} at @s run function bcm:rightclick

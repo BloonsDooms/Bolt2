@@ -1,6 +1,6 @@
-# if same spot, abort
+# if same spot, silently abort
 # interactions usually block this area, but partial blocks could put the gate here
-execute if entity @e[type=block_display,tag=gate,tag=!init,distance=..0.1] run return run kill @s
+execute at @s if entity @e[type=block_display,tag=gate,tag=!init,distance=..0.1] run return run kill @s
 
 playsound minecraft:block.fence_gate.open block @a[distance=..16] ~ ~ ~ 1 0.8
 
