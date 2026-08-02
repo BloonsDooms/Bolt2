@@ -17,6 +17,9 @@ execute as @e[tag=crate] at @s run function game:game/infected/crates/despawn
 kill @e[type=block_display,tag=survivor_generator_dis]
 execute as @e[tag=survivor_generator] at @s run function game:game/infected/generator/despawn
 
+execute as @e[type=marker,tag=!map_editor,tag=gate] at @s run function game:gate/stop
+kill @e[type=marker,tag=!map_editor,tag=gate]
+
 kill @e[tag=grenadehit]
 
 kill @e[type=minecraft:area_effect_cloud]
@@ -48,6 +51,8 @@ execute if score .mode .data = .6 .num run function game:map/spawn_crate_markers
 execute if score .mode .data = .7 .num store result score targetCount macro_counter run data get storage maps:active targets
 execute if score .mode .data = .7 .num run scoreboard players set targetCounter macro_counter 0
 execute if score .mode .data = .7 .num run function game:map/spawn_target_markers with storage maps:active targets[0]
+
+function game:map/spawn_gate_markers with storage maps:active gates[-1]
 
 
 #execute if score .map .data = .1 .num run function game:map/towers/start

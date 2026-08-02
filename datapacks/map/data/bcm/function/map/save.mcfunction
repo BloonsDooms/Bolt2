@@ -76,6 +76,10 @@ execute as @e[type=block_display,tag=generator] at @s run function bcm:map/save/
 data modify storage bcm doors set value []
 execute as @e[type=marker,tag=map_editor,tag=door] at @s run function bcm:map/save/door
 
+# gates
+data modify storage bcm map.gates set value []
+execute as @e[type=block_display,tag=map_editor,tag=gate] at @s run function bcm:map/save/gate
+
 # y offset
 execute as @e[type=marker,tag=render_box,tag=save] at @s run tp ~ ~-.9 ~
 tag @n[type=marker,tag=render_box,tag=save,tag=pos1] add start_point

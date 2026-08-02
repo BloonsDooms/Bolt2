@@ -16,6 +16,7 @@ execute as @e[type=#bcm:place,tag=intro_camera] at @s run function bcm:place/del
 execute as @e[type=#bcm:place,tag=spawnpoint] at @s run function bcm:place/delete
 execute as @e[type=#bcm:place,tag=render_box] at @s run function bcm:place/delete
 execute as @e[type=marker,tag=map_editor,tag=door] at @s run function bcm:place/delete_door
+execute as @e[type=block_display,tag=map_editor,tag=gate] at @s run function bcm:place/delete_gate
 scoreboard players set .print_messages item_structures 1
 
 # if item map, edit as is

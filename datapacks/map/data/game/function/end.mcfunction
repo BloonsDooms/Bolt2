@@ -108,6 +108,9 @@ execute as @e[tag=crate] at @s run function game:game/infected/crates/despawn
 kill @e[type=block_display,tag=survivor_generator_dis]
 execute as @e[tag=survivor_generator] at @s run function game:game/infected/generator/despawn
 
+execute as @e[type=marker,tag=!map_editor,tag=gate] at @s run function game:gate/stop
+kill @e[type=marker,tag=!map_editor,tag=gate]
+
 kill @e[tag=grenadehit]
 
 kill @e[type=minecraft:area_effect_cloud]

@@ -28,3 +28,5 @@ data modify storage bcm map.generators set from storage maps:active gens
 
 data modify storage bcm map.targets set from storage maps:active targets
 data modify storage bcm map.crates set from storage maps:active crates
+
+data modify storage bcm map.gates set from storage maps:active gates

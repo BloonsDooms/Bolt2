@@ -12,8 +12,8 @@ execute as @e[type=interaction,tag=editor_crate] at @s if data entity @s attack 
 execute as @e[type=interaction,tag=gate_interaction] at @s if data entity @s interaction on target run function bcm:dialog/gate
 execute as @e[type=interaction,tag=gate_interaction] at @s run data remove entity @s interaction
 execute as @e[type=interaction,tag=gate_interaction] at @s store result entity @s width float 1.01 if entity @a[gamemode=creative,predicate=bcm:holding_gate_item,distance=..128]
-execute as @e[type=block_display,tag=gate] at @s store result entity @s view_range float 1 if entity @a[gamemode=creative,predicate=bcm:holding_gate_item,distance=..128]
-execute as @e[type=block_display,tag=gate] at @s if entity @a[distance=..32] run function game:gate/editor/main
+execute as @e[type=block_display,tag=map_editor,tag=gate] at @s store result entity @s view_range float 1 if entity @a[gamemode=creative,predicate=bcm:holding_gate_item,distance=..128]
+execute as @e[type=block_display,tag=map_editor,tag=gate] at @s if entity @a[distance=..32] run function game:gate/editor/main
 execute as @e[type=interaction,tag=gate_interaction] at @s if data entity @s attack run function bcm:place/delete_gate
 
 # rightclick

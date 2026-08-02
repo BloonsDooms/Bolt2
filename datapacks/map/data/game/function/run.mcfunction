@@ -210,6 +210,9 @@ execute as @e[tag=cutscene] at @s run function game:cutscene/main
 # generator
 execute if score .running .data = .1 .num as @e[type=marker,tag=gen] at @s run function game:generator/main
 
+# gates
+execute if score .running .data = .1 .num as @e[type=marker,tag=!map_editor,tag=gate] at @s run function game:gate/main
+
 #placed_blocks
 execute as @e[type=marker,tag=temp_block] at @s run function game:items/temp_block/main
 

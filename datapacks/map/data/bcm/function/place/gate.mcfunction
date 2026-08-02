@@ -16,6 +16,5 @@ execute store result score .i .calc run data get entity @s data.gate.width
 execute store result score .height .calc run data get entity @s data.gate.height 100
 scoreboard players add .height .calc 1
 execute at @s positioned ^ ^ ^ run function bcm:place/gate_interaction
-tag @s add has_gate_interactions
 
 tag @s remove init

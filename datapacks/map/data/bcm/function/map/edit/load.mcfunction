@@ -95,5 +95,11 @@ data modify storage bcm macro.tag set value "blue_spawn"
 function bcm:render_box/box_from_area with storage bcm macro
 
 
+## gates
+data modify storage bcm map.tmp_gates set from storage bcm map.gates
+execute if data storage bcm map.tmp_gates[] summon block_display run function bcm:place/gate_auto with storage bcm map.tmp_gates[-1]
+data remove storage bcm map.tmp_gates
+
+
 ## players
 execute as @a[tag=!in_map_editor] run function bcm:editor/enter
