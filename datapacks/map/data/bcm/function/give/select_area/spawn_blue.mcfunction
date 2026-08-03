@@ -1,5 +1,5 @@
 give @s panda_spawn_egg[\
-  custom_model_data={strings:["3"]},\
+  item_model="editor/blue_spawn1",\
   item_name="Blue Spawn Area 1st Point",\
   lore=[\
     "Place points at opposite corners",\
@@ -14,7 +14,7 @@ give @s panda_spawn_egg[\
   }\
 ] 1
 give @s panda_spawn_egg[\
-  custom_model_data={strings:["3"]},\
+  item_model="editor/blue_spawn2",\
   item_name="Blue Spawn Area 2nd Point",\
   lore=[\
     "Place points at opposite corners",\
@@ -27,4 +27,4 @@ give @s panda_spawn_egg[\
     id:"minecraft:marker",\
     Tags:["map_editor","pos2","render_box","blue_spawn","init"]\
   }\
-] 2
+]

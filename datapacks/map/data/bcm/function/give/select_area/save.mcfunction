@@ -1,4 +1,5 @@
 give @s panda_spawn_egg[\
+  item_model="editor/save1",\
   item_name="Save Area 1st Point",\
   lore=[\
     "Place points at opposite corners",\
@@ -10,6 +11,7 @@ give @s panda_spawn_egg[\
   }\
 ] 1
 give @s panda_spawn_egg[\
+  item_model="editor/save2",\
   item_name="Save Area 2nd Point",\
   lore=[\
     "Place points at opposite corners",\
@@ -19,4 +21,4 @@ give @s panda_spawn_egg[\
     id:"minecraft:marker",\
     Tags:["map_editor","pos2","render_box","save","init"]\
   }\
-] 2
+]
