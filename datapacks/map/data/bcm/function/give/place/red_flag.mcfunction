@@ -1,5 +1,5 @@
 give @s panda_spawn_egg[\
-  item_name={text:"red flag"},\
+  item_name="Red Flag",\
   item_model="minecraft:red_banner",\
   entity_data={\
     id:"minecraft:block_display",\

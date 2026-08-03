@@ -1,6 +1,6 @@
 give @s stick[\
   item_model="minecraft:blue_bed",\
-  item_name="set blue/survivor spawn point",\
+  item_name="Set Blue Spawn Point",\
   use_cooldown={seconds:1},\
   consumable={\
     sound:{sound_id:""},\

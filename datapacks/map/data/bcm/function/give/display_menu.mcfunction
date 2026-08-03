@@ -1,5 +1,5 @@
 give @s book[\
-  item_name="open display settings menu",\
+  item_name="Open Display Settings Menu",\
   use_cooldown={seconds:1},\
   consumable={\
     sound:{sound_id:""},\

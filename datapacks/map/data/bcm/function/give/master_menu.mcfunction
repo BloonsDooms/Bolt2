@@ -1,5 +1,5 @@
 give @s book[\
-  item_name="open map editor menu",\
+  item_name="Open Map Editor Menu",\
   use_cooldown={seconds:1},\
   consumable={\
     sound:{sound_id:""},\

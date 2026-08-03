@@ -1,6 +1,6 @@
 give @s book[\
   item_model="minecraft:brown_dye",\
-  item_name="exit to lobby",\
+  item_name="Exit to Lobby",\
   use_cooldown={seconds:1},\
   consumable={\
     sound:{sound_id:""},\

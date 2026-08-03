@@ -1,6 +1,7 @@
 give @s player_head[\
   !equippable,\
-  item_name={text:"set intro camera point",color:white},\
+  item_name="Set Intro Camera Point",\
+  rarity=common,\
   profile={properties:[{value:"ewogICJ0aW1lc3RhbXAiIDogMTc1MTgzNzQ2MjAwNywKICAicHJvZmlsZUlkIiA6ICJkMzJiNzIwYjE5MTQ0MjA5YmY5YTg2NjJmMWJiN2IzMiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNSEZfQ2FtIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzM0NzgzYTkyZGI2ZjY1ZGM0NjhmYjA2ZDk4M2UxM2ZkNDJjZWYwMzFkMzIzODJiNmU0NjI0ZTQ5Y2FmNzFkZTIiCiAgICB9CiAgfQp9",name:"textures"}]},\
   lore=[\
     "Sets the angle that everyone",\

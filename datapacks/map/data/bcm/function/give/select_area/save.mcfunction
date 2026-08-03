@@ -1,7 +1,7 @@
 give @s panda_spawn_egg[\
-  item_name={text:"save selection pos 1"},\
+  item_name="Save Area 1st Point",\
   lore=[\
-    "Place pos 1 & 2 at opposite corners",\
+    "Place points at opposite corners",\
     "to select the area to save as a map"\
   ],\
   entity_data={\
@@ -10,9 +10,9 @@ give @s panda_spawn_egg[\
   }\
 ] 1
 give @s panda_spawn_egg[\
-  item_name={text:"save selection pos 2"},\
+  item_name="Save Area 2nd Point",\
   lore=[\
-    "Place pos 1 & 2 at opposite corners",\
+    "Place points at opposite corners",\
     "to select the area to save as a map"\
   ],\
   entity_data={\

@@ -1,5 +1,5 @@
 give @s panda_spawn_egg[\
-  item_name={text:"set max wall height"},\
+  item_name="Set Max Wall Height",\
   custom_model_data={strings:["1"]},\
   entity_data={\
     id:"minecraft:marker",\

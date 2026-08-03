@@ -1,8 +1,8 @@
 give @s panda_spawn_egg[\
   custom_model_data={strings:["3"]},\
-  item_name={text:"blue/survivor spawn pos 1"},\
+  item_name="Blue Spawn Area 1st Point",\
   lore=[\
-    "Place pos 1 & 2 at opposite corners",\
+    "Place points at opposite corners",\
     "to select blue team's spawn area",\
     "",\
     "Players are invulnerable until shortly",\
@@ -15,9 +15,9 @@ give @s panda_spawn_egg[\
 ] 1
 give @s panda_spawn_egg[\
   custom_model_data={strings:["3"]},\
-  item_name={text:"blue/survivor spawn pos 2"},\
+  item_name="Blue Spawn Area 2nd Point",\
   lore=[\
-    "Place pos 1 & 2 at opposite corners",\
+    "Place points at opposite corners",\
     "to select blue team's spawn area",\
     "",\
     "Players are invulnerable until shortly",\

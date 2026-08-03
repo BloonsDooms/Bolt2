@@ -1,5 +1,5 @@
 give @s panda_spawn_egg[\
-  item_name={text:"blue flag"},\
+  item_name="Blue Flag",\
   item_model="minecraft:blue_banner",\
   lore=[\
     "This is also the survivors'",\

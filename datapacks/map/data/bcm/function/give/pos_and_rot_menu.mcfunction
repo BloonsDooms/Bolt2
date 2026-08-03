@@ -1,6 +1,6 @@
 give @s book[\
   item_model="minecraft:ender_eye",\
-  item_name="adjust position & rotation",\
+  item_name="Adjust Position & Rotation",\
   use_cooldown={seconds:1},\
   consumable={\
     sound:{sound_id:""},\
