@@ -1,6 +1,6 @@
 # time
 function bcm:util/end_timer
-execute if score .print_messages item_structures matches 1 run tellraw @a ["final load time: ",{nbt:"timer.m",storage:"bcm",interpret:true},{nbt:"timer.s",storage:"bcm",interpret:true},{nbt:"timer.ms",storage:"bcm",interpret:true}]
+execute if score .print_messages item_structures matches 1 run tellraw @a ["Final Load Time: ",{nbt:"timer.m",storage:"bcm",interpret:true},{nbt:"timer.s",storage:"bcm",interpret:true},{nbt:"timer.ms",storage:"bcm",interpret:true}]
 
 execute if score .hard select_area matches 1 as @e[type=block_display,tag=red_flag] at @s run setblock ~ ~ ~ red_banner
 execute if score .hard select_area matches 1 as @e[type=block_display,tag=blue_flag] at @s run setblock ~ ~ ~ blue_banner
@@ -13,15 +13,15 @@ execute store result score .rate .calc run data get storage item_structures save
 scoreboard players operation .rate .calc *= .10 .num
 scoreboard players operation .rate .calc /= .ms_total .calc
 scoreboard players operation .rate .calc *= .100 .num
-execute if score .print_messages item_structures matches 1 run tellraw @a[tag=verbose] ["average load rate: ",{score:{name:".rate",objective:".calc"}}," entries/s"]
+execute if score .print_messages item_structures matches 1 run tellraw @a[tag=verbose] ["Average Load Rate: ",{score:{name:".rate",objective:".calc"}}," entries/s"]
 # % difference
 scoreboard players operation .r .calc = .rate .calc
 scoreboard players operation .r .calc *= .100 .num
 scoreboard players operation .r .calc /= .load_entries/s .calc
 scoreboard players remove .r .calc 100
-execute if score .print_messages item_structures matches 1 if score .r .calc matches 0.. run tellraw @a[tag=verbose] ["loaded ",{score:{name:".r",objective:".calc"}},"% faster than estimated"]
+execute if score .print_messages item_structures matches 1 if score .r .calc matches 0.. run tellraw @a[tag=verbose] ["Loaded ",{score:{name:".r",objective:".calc"}},"% Faster than Estimated"]
 scoreboard players operation .r .calc *= .n1 .num
-execute if score .print_messages item_structures matches 1 if score .r .calc matches 1.. run tellraw @a[tag=verbose] ["loaded ",{score:{name:".r",objective:".calc"}},"% slower than estimated"]
+execute if score .print_messages item_structures matches 1 if score .r .calc matches 1.. run tellraw @a[tag=verbose] ["Loaded ",{score:{name:".r",objective:".calc"}},"% Slower than Estimated"]
 # new estimate = avg(old est., real) if >1s
 execute if score .ms_total .calc matches 1000.. run scoreboard players operation .load_entries/s .calc += .rate .calc
 execute if score .ms_total .calc matches 1000.. run scoreboard players operation .load_entries/s .calc /= .2 .num
