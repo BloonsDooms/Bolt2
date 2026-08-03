@@ -52,7 +52,9 @@ execute if score .mode .data = .7 .num store result score targetCount macro_coun
 execute if score .mode .data = .7 .num run scoreboard players set targetCounter macro_counter 0
 execute if score .mode .data = .7 .num run function game:map/spawn_target_markers with storage maps:active targets[0]
 
-function game:map/spawn_gate_markers with storage maps:active gates[-1]
+data modify storage macro tmp_gates set from storage maps:active gates
+function game:map/spawn_gate_markers with storage macro tmp_gates[-1]
+data remove storage macro tmp_gates
 
 
 #execute if score .map .data = .1 .num run function game:map/towers/start
