@@ -1,5 +1,5 @@
 give @s panda_spawn_egg[\
-  item_name={translate:painting.minecraft.courbet.title},\
+  item_name="Blue Team Door",\
   item_model="minecraft:warped_door",\
   lore=[\
     "3x3 one-way automatic door",\

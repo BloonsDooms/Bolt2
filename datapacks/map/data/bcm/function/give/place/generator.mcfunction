@@ -1,5 +1,5 @@
 give @s panda_spawn_egg[\
-  item_name={translate:painting.minecraft.sea.title},\
+  item_name="Item Generator",\
   item_model="minecraft:cauldron",\
   entity_data={\
     id:"minecraft:block_display",\

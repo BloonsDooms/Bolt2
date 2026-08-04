@@ -1,6 +1,6 @@
 give @s panda_spawn_egg[\
   item_model="editor/save1",\
-  item_name={translate:painting.minecraft.alban.title},\
+  item_name="Save Area 1st Point",\
   lore=[\
     "Place points at opposite corners",\
     "to select the area to save as a map"\

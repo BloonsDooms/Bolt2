@@ -1,6 +1,6 @@
 give @s panda_spawn_egg[\
   item_model="editor/red_spawn1",\
-  item_name={translate:painting.minecraft.kebab.title},\
+  item_name="Red Spawn Area 1st Point",\
   lore=[\
     "Place points at opposite corners",\
     "to select red team's spawn area",\

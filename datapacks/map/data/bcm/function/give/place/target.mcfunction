@@ -1,5 +1,5 @@
 give @s panda_spawn_egg[\
-  item_name={translate:painting.minecraft.sunset.title},\
+  item_name="Possible Target Location",\
   item_model="minecraft:target",\
   lore=[\
     "Don't worry about this until",\
