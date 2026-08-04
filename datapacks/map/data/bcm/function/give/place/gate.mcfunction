@@ -1,5 +1,5 @@
 give @s panda_spawn_egg[\
-  item_name="Create/Edit Gates",\
+  item_name={translate:painting.minecraft.pool.title},\
   item_model=oak_fence_gate,\
   custom_data={\
     bcm_gate:true\

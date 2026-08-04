@@ -1,6 +1,6 @@
 give @s stick[\
   item_model="minecraft:blue_bed",\
-  item_name="Set Blue Spawn Point",\
+  item_name={translate:painting.minecraft.prairie_ride.title},\
   use_cooldown={seconds:1},\
   consumable={\
     sound:{sound_id:""},\

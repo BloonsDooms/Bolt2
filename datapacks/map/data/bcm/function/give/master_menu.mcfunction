@@ -1,5 +1,6 @@
 give @s book[\
-  item_name="Open Map Editor Menu",\
+  item_model=knowledge_book,\
+  item_name={translate:painting.minecraft.humble.title},\
   use_cooldown={seconds:1},\
   consumable={\
     sound:{sound_id:""},\

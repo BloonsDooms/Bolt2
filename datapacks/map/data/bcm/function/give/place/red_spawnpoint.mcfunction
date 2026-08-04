@@ -1,6 +1,6 @@
 give @s stick[\
   item_model="minecraft:red_bed",\
-  item_name="Set Red Spawn Point",\
+  item_name={translate:painting.minecraft.graham.title},\
   use_cooldown={seconds:1},\
   consumable={\
     sound:{sound_id:""},\
