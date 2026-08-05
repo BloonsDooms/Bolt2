@@ -29,7 +29,7 @@ execute summon marker run function bcm:map/edit/load_single_points
 ## flags
 # red flag (entity data copied from bcm:give/place/red_flag)
 summon block_display ~ ~ ~ {\
-  Tags:["map_editor","place","red_flag","flag","init"],\
+  Tags:["map_editor","place","red_flag","flag","init_delay"],\
   block_state:{\
     Name:"red_banner",\
     Properties:{rotation:"0"}\
@@ -46,11 +46,11 @@ summon block_display ~ ~ ~ {\
   view_range:0f\
 }
 data modify storage bcm macro.pos set from storage bcm map.red_flag
-execute as @n[type=block_display,tag=red_flag,tag=init] run function bcm:map/edit/tp_convert with storage bcm macro
+execute as @n[type=block_display,tag=red_flag,tag=init_delay] run function bcm:map/edit/tp_convert with storage bcm macro
 
 # blue flag (entity data copied from bcm:give/place/blue_flag)
 summon block_display ~ ~ ~ {\
-  Tags:["map_editor","place","blue_flag","flag","init"],\
+  Tags:["map_editor","place","blue_flag","flag","init_delay"],\
   block_state:{\
     Name:"blue_banner",\
     Properties:{rotation:"0"}\
@@ -67,16 +67,10 @@ summon block_display ~ ~ ~ {\
   view_range:0f\
 }
 data modify storage bcm macro.pos set from storage bcm map.blue_flag
-execute as @n[type=block_display,tag=blue_flag,tag=init] run function bcm:map/edit/tp_convert with storage bcm macro
+execute as @n[type=block_display,tag=blue_flag,tag=init_delay] run function bcm:map/edit/tp_convert with storage bcm macro
 
 # flags are saved 1 block below banner
-execute as @e[type=block_display,tag=flag,tag=init] at @s run tp ~ ~1 ~
-
-
-## generators
-data modify storage bcm map.tmp_generators set from storage bcm map.generators
-execute if data storage bcm map.tmp_generators[] run function bcm:place/generator_auto_loop
-data remove storage bcm map.tmp_generators
+execute as @e[type=block_display,tag=flag,tag=init_delay] at @s run tp ~ ~1 ~
 
 
 ## spawn areas

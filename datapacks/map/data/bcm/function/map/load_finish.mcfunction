@@ -2,10 +2,7 @@
 function bcm:util/end_timer
 execute if score .print_messages item_structures matches 1 run tellraw @a ["Final Load Time: ",{nbt:"timer.m",storage:"bcm",interpret:true},{nbt:"timer.s",storage:"bcm",interpret:true},{nbt:"timer.ms",storage:"bcm",interpret:true}]
 
-execute if score .hard select_area matches 1 as @e[type=block_display,tag=red_flag] at @s run setblock ~ ~ ~ red_banner
-execute if score .hard select_area matches 1 as @e[type=block_display,tag=blue_flag] at @s run setblock ~ ~ ~ blue_banner
-execute if score .hard select_area matches 1 as @e[type=block_display,tag=generator] at @s positioned ^ ^ ^1 run function bcm:place/generator_text
-scoreboard players set .hard select_area 0
+execute if score .hard select_area matches 1 run function bcm:map/load_finish_editor
 
 # improve load ETA
 # get real load rate
