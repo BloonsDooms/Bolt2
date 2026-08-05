@@ -78,5 +78,5 @@ scoreboard players set .print_messages item_structures 1
 scoreboard players set .place_restrictors item_structures 1
 data modify storage bcm macro.new set value true
 data modify storage bcm macro.mapName set from entity @s SelectedItem.components."minecraft:custom_name"
-function bcm:map/load_get_loadpoint with storage bcm macro
+function bcm:map/load/get_loadpoint with storage bcm macro
 data remove storage bcm macro.load_z

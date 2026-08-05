@@ -2,7 +2,7 @@
 $scoreboard players set .new item_structures $(new)
 
 # summon load point marker
-$execute summon marker run function bcm:map/load_marker {mapName:"$(mapName)"}
+$execute summon marker run function bcm:map/load/marker {mapName:"$(mapName)"}
 
 # time estimate
 $data modify storage item_structures save set from storage bcm maps[{registry:{mapName:"$(mapName)"}}].structure

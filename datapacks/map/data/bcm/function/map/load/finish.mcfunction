@@ -2,7 +2,7 @@
 function bcm:util/end_timer
 execute if score .print_messages item_structures matches 1 run tellraw @a ["Final Load Time: ",{nbt:"timer.m",storage:"bcm",interpret:true},{nbt:"timer.s",storage:"bcm",interpret:true},{nbt:"timer.ms",storage:"bcm",interpret:true}]
 
-execute if score .hard select_area matches 1 run function bcm:map/load_finish_editor
+execute if score .hard select_area matches 1 run function bcm:map/load/finish_editor
 
 # improve load ETA
 # get real load rate
@@ -36,7 +36,7 @@ execute if score .place_restrictors item_structures matches 1 at @s run function
 function bcm:map/max_block_modifications with storage bcm tmp
 
 # utility placement restrictors
-execute if score .place_restrictors item_structures matches 1 run function bcm:map/load_restrictors
+execute if score .place_restrictors item_structures matches 1 run function bcm:map/load/restrictors
 data remove storage bcm tmp
 data remove storage bcm macro
 scoreboard players set .place_restrictors item_structures 0

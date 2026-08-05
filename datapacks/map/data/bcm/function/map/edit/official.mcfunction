@@ -5,7 +5,7 @@ $data modify storage bcm mapNameEditing set value "$(mapName)"
 # .hard does 2 things here:
 # - it checks if this map can be loaded, and ends this function if it can't
 # - if the map can be loaded, then it prevents the new map objects from being immediately overwritten by the structure loader
-$execute store success score .hard select_area run function bcm:map/load_official {mapName:"$(mapName)"}
+$execute store success score .hard select_area run function bcm:map/load/official {mapName:"$(mapName)"}
 execute if score .hard select_area matches 0 run return fail
 
 ## get map config data
