@@ -1,6 +1,8 @@
-# .overwrite is boolean
+# .overwrite & .include_blocks are boolean
 scoreboard players operation .overwrite save_map = @s save_map
 scoreboard players operation .overwrite save_map %= .2 .num
+scoreboard players operation .include_blocks save_map = @s save_map
+scoreboard players operation .include_blocks save_map /= .10 .num
 scoreboard players reset @s save_map
 
 # save unless system busy

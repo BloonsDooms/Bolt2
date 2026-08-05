@@ -10,6 +10,14 @@ return run dialog show @s {\
       label: "Overwrite Existing Map",\
       on_true: "1",\
       on_false: "2"\
+    },\
+    {\
+      initial: true,\
+      type: "minecraft:boolean",\
+      key: "block",\
+      label: "Include Block Changes",\
+      on_true: "1",\
+      on_false: "0"\
     }\
   ],\
   yes: {\
@@ -18,7 +26,7 @@ return run dialog show @s {\
     },\
     action: {\
       type: "minecraft:dynamic/run_command",\
-      template: "trigger save_map set $(overwrite)"\
+      template: "trigger save_map set $(block)$(overwrite)"\
     }\
   },\
   no: {\
