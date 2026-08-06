@@ -3,7 +3,8 @@ execute unless entity @n[type=block_display,tag=blue_spawnpoint] run summon bloc
 execute unless entity @n[type=marker,tag=blue_spawnpoint] run summon marker ~ ~ ~ {Tags:[blue_spawnpoint,spawnpoint]}
 tp @n[type=block_display,tag=blue_spawnpoint] ~ ~1.62 ~ ~ ~
 tp @n[type=marker,tag=blue_spawnpoint] ~ ~ ~ ~ ~
-data modify entity @n[type=block_display,tag=blue_spawnpoint] transformation.translation set value [-.5f,-.25f,-.5f]
+data modify entity @n[type=block_display,tag=blue_spawnpoint] transformation.translation set value [.5f,-.25f,.5f]
+data modify entity @n[type=block_display,tag=blue_spawnpoint] transformation.left_rotation set value [0f,1f,0f,0f]
 
 # visiblity state
 execute store result entity @n[type=block_display,tag=blue_spawnpoint] view_range float 1 run scoreboard players get display.spawnpoint set_render_box
