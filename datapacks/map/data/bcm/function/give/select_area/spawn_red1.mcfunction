@@ -11,5 +11,8 @@ give @s panda_spawn_egg[\
   entity_data={\
     id:"minecraft:marker",\
     Tags:["map_editor","pos1","render_box","red_spawn","init"]\
+  },\
+  custom_data={\
+    bcm_spawn:true\
   }\
 ]

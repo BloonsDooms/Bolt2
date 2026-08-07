@@ -4,5 +4,8 @@ give @s panda_spawn_egg[\
   entity_data={\
     id:"minecraft:marker",\
     Tags:["map_editor","render_box","wall_height","y","init"]\
+  },\
+  custom_data={\
+    bcm_wall_height:true\
   }\
 ] 1

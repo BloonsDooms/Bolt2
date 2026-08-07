@@ -11,5 +11,8 @@ give @s stick[\
       type:"apply_effects",\
       effects:[{id:"minecraft:luck",amplifier:31b}]\
     }]\
+  },\
+  custom_data={\
+    bcm_spawnpoint:true\
   }\
 ]

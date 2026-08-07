@@ -16,5 +16,8 @@ give @s panda_spawn_egg[\
       translation:[-.495f,.005f,-.495f]\
     },\
     view_range:0f\
+  },\
+  custom_data={\
+    bcm_generator:true\
   }\
 ] 1

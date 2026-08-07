@@ -5,7 +5,7 @@ $return run dialog show @s {\
     {\
       type: "minecraft:boolean",\
       key: "save",\
-      label: "Show Save Area",\
+      label: "Always Show Save Area",\
       initial: $(save),\
       on_true: "2",\
       on_false: "1"\
@@ -13,7 +13,7 @@ $return run dialog show @s {\
     {\
       type: "minecraft:boolean",\
       key: "wall_height",\
-      label: "Show Max Wall Height",\
+      label: "Always Show Max Wall Height",\
       initial: $(wall_height),\
       on_true: "1",\
       on_false: "0"\
@@ -21,7 +21,7 @@ $return run dialog show @s {\
     {\
       type: "minecraft:boolean",\
       key: "spawns",\
-      label: "Show Spawn Areas",\
+      label: "Always Show Spawn Areas",\
       initial: $(spawns),\
       on_true: "1",\
       on_false: "0"\
@@ -29,7 +29,7 @@ $return run dialog show @s {\
     {\
       type: "minecraft:boolean",\
       key: "spawnpoints",\
-      label: "Show Spawn Points",\
+      label: "Always Show Spawn Points",\
       initial: $(spawnpoints),\
       on_true: "1",\
       on_false: "0"\
@@ -37,7 +37,7 @@ $return run dialog show @s {\
     {\
       type: "minecraft:boolean",\
       key: "camera",\
-      label: "Show Intro Camera",\
+      label: "Always Show Intro Camera",\
       initial: $(camera),\
       on_true: "1",\
       on_false: "0"\
@@ -45,7 +45,7 @@ $return run dialog show @s {\
     {\
       type: "minecraft:boolean",\
       key: "flags",\
-      label: "Glow Flags",\
+      label: "Always Glow Flags",\
       initial: $(flags),\
       on_true: "1",\
       on_false: "0"\
@@ -53,8 +53,16 @@ $return run dialog show @s {\
     {\
       type: "minecraft:boolean",\
       key: "gens",\
-      label: "Glow Item Generators",\
+      label: "Always Glow Item Generators",\
       initial: $(gens),\
+      on_true: "1",\
+      on_false: "0"\
+    },\
+    {\
+      type: "minecraft:boolean",\
+      key: "gates",\
+      label: "Always Show Gates",\
+      initial: $(gates),\
       on_true: "1",\
       on_false: "0"\
     }\

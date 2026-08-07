@@ -8,5 +8,8 @@ give @s panda_spawn_egg[\
   entity_data={\
     id:"minecraft:marker",\
     Tags:["map_editor","pos2","render_box","save","init"]\
+  },\
+  custom_data={\
+    bcm_save:true\
   }\
 ]

@@ -1,0 +1,25 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "minecraft:distance": {
+      "absolute": {
+        "max": 128
+      }
+    },
+    "minecraft:type_specific/player": {
+      "gamemode": [
+        "creative"
+      ]
+    },
+    "minecraft:equipment": {
+      "mainhand": {
+        "predicates": {
+          "minecraft:custom_data": {
+            "bcm_save": true
+          }
+        }
+      }
+    }
+  }
+}

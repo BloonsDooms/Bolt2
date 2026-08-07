@@ -19,5 +19,8 @@ give @s player_head[\
       type:"apply_effects",\
       effects:[{id:"minecraft:luck",amplifier:33b}]\
     }]\
+  },\
+  custom_data={\
+    bcm_camera:true\
   }\
 ]
