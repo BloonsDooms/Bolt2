@@ -536,6 +536,9 @@ scoreboard players remove @s[scores={door_invul=-1..}] door_invul 1
 # custom random dialog
 execute if score @s custom_random_dialog matches -2147483648..2147483647 run function game:menu/custom_random/check
 
+# custom map kill zone
+execute if score .running .data matches 1 if score .custom_maps_enabled .data matches 1 if predicate {condition:"minecraft:location_check",predicate:{position:{y:{max:128}}}} run damage @s 1 arrow
+
 #coin
 scoreboard players set @s[tag=!using_coin] coin_use 0
 scoreboard players remove @s[scores={coin_use=0..}] coin_use 1
