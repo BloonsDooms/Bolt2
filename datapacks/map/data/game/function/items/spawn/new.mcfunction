@@ -1,4 +1,5 @@
-execute at @s if block ~ -64 ~ redstone_block run tag @s add stuck
+execute at @s if block ~ -60 ~ redstone_block run tag @s add stuck
+execute at @s positioned ~ -60 ~ if predicate game:can_see_sky run tag @s add stuck
 
 execute as @s[type=slime,tag=!old] at @s run tag @s add new2
 execute as @s[type=magma_cube,tag=!old] at @s run tag @s add new2

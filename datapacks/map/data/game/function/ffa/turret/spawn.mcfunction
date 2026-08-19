@@ -34,6 +34,7 @@ execute at @s run tp @s ~ ~0.3 ~
 execute at @s if entity @e[type=pig,distance=..0.4,tag=old2,tag=!chair,tag=!ballon] run tag @s add cant_place
 execute at @s if block ~ -60 ~ redstone_block run tag @s add cant_place
 execute at @s if block ~ -60 ~ diamond_block run tag @s add cant_place
+execute at @s positioned ~ -60 ~ if predicate game:can_see_sky run tag @s add cant_place
 
 execute as @s[tag=cant_place] run tag @s add kill
 

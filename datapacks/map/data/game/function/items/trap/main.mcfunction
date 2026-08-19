@@ -9,7 +9,8 @@ scoreboard players add @s t4 1
 scoreboard players add @s timer 0
 
 execute as @s[scores={t4=2}] at @s if block ~ -60 ~ redstone_block run tag @s add cant_place
-#execute as @s[scores={t4=2}] at @s if block ~ -64 ~ diamond_block run tag @s add cant_place
+execute as @s[scores={t4=2}] at @s positioned ~ -60 ~ if predicate game:can_see_sky run tag @s add cant_place
+#execute as @s[scores={t4=2}] at @s if block ~ -60 ~ diamond_block run tag @s add cant_place
 execute as @s[scores={t4=2}] at @s positioned ~ ~-0.9 ~ if entity @e[type=creeper,distance=..0.2] run tag @s add cant_place
 
 execute if entity @s[scores={t4=2},tag=cant_place] at @s run function game:items/trap/return
