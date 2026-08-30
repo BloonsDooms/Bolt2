@@ -189,5 +189,7 @@ execute as @s[tag=locked_76,scores={track_total_deaths=10..}] run function game:
 #
 function game:items/crossbow/unload
 
+function game:player/offhand_correct
+
 #
 tag @s remove me
