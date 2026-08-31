@@ -19,6 +19,7 @@ execute if data entity @s interaction on target if entity @s[team=blue] run exec
 execute if data entity @s interaction on target if entity @s[team=blue] run title @s[scores={scrap_count=0}] actionbar [{"text":"Bring Scrap here!"}]
 #execute if data entity @s interaction on target if entity @s[team=blue] run clear @s minecraft:netherite_scrap 1
 execute if data entity @s interaction on target if entity @s[team=blue] run scoreboard players operation @e[tag=me] scrap_count += @s scrap_count
+execute if data entity @s interaction on target if entity @s[team=blue,scores={scrap_count=1..}] unless items entity @s weapon.offhand netherite_scrap run item replace entity @s weapon.offhand with carrot_on_a_stick[item_model=air]
 execute if data entity @s interaction on target if entity @s[team=blue,scores={scrap_count=1..}] run tag @e[tag=me] add scrap_added
 
 execute if data entity @s[tag=scrap_added] interaction on target run tag @a remove processor
