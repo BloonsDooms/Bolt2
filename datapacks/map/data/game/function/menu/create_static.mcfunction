@@ -24,15 +24,15 @@ summon minecraft:text_display 233.15 -48.4 -248.0 {Tags:["lobby_menu_static"],al
 
 #
 kill @e[tag=chain_dis]
-summon block_display 241.0 -46 -211.0 {block_state:{Name:"minecraft:chain"},Tags:["chain_dis"]}
+summon block_display 241.0 -46 -211.0 {block_state:{id:"minecraft:iron_chain"},Tags:["chain_dis"]}
 
 # balloon plats
 tag @e[tag=balloon_plat] add kill
-summon minecraft:shulker 239.5 -38.00 -225.50 {NoAI:1,Invulnerable:1,Silent:1,Tags:["balloon_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
-summon minecraft:shulker 242.5 -39.00 -228.50 {NoAI:1,Invulnerable:1,Silent:1,Tags:["balloon_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
-summon minecraft:shulker 240.5 -42.00 -227.5 {NoAI:1,Invulnerable:1,Silent:1,Tags:["balloon_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
-summon minecraft:shulker 241.54 -41.00 -223.46 {NoAI:1,Invulnerable:1,Silent:1,Tags:["balloon_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
-summon minecraft:shulker 244.5 -43.00 -226.5 {NoAI:1,Invulnerable:1,Silent:1,Tags:["balloon_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
+summon minecraft:shulker 239.5 -38.00 -225.50 {NoAI:1b,Invulnerable:1b,Silent:1b,Tags:["balloon_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
+summon minecraft:shulker 242.5 -39.00 -228.50 {NoAI:1b,Invulnerable:1b,Silent:1b,Tags:["balloon_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
+summon minecraft:shulker 240.5 -42.00 -227.5 {NoAI:1b,Invulnerable:1b,Silent:1b,Tags:["balloon_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
+summon minecraft:shulker 241.54 -41.00 -223.46 {NoAI:1b,Invulnerable:1b,Silent:1b,Tags:["balloon_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
+summon minecraft:shulker 244.5 -43.00 -226.5 {NoAI:1b,Invulnerable:1b,Silent:1b,Tags:["balloon_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
 
 kill @e[tag=balloon_plat_vis]
 summon item_display 242.5 -38.75 -228.50 {Tags:["balloon_plat_vis"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.5f,0f,-0.5f],scale:[1f,1f,1f]},item:{id:"minecraft:string",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}}}
@@ -53,8 +53,8 @@ kill @e[tag=balloon_guy_interact]
 tag @e[tag=guy_plat] add kill
 summon item_display 241.5 -50.00 -224.50 {teleport_duration:10,Tags:["balloon_guy"],transformation:{left_rotation:[0f,8.5f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0.0f,0.6f,0.0f],scale:[1.0f,1.0f,1.0f]},item:{id:"minecraft:string",count:1,components:{"minecraft:custom_model_data":{strings:["11"]}}}}
 
-summon minecraft:shulker 241.5 -50.00 -224.50 {NoAI:1,Invulnerable:1,Silent:1,Tags:["guy_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
-summon minecraft:shulker 241.5 -49.00 -224.50 {NoAI:1,Invulnerable:1,Silent:1,Tags:["guy_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
+summon minecraft:shulker 241.5 -50.00 -224.50 {NoAI:1b,Invulnerable:1b,Silent:1b,Tags:["guy_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
+summon minecraft:shulker 241.5 -49.00 -224.50 {NoAI:1b,Invulnerable:1b,Silent:1b,Tags:["guy_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
 summon interaction 241.5 -50.00 -224.50 {height:2.1,width:1.5,Tags:["balloon_guy_interact"]}
 
 #wise guy
@@ -62,15 +62,15 @@ kill @e[tag=wise_guy]
 kill @e[tag=wise_guy_interact]
 
 summon item_display 244.5 -50.00 -255.5 {teleport_duration:10,Rotation:[33F,0F],Tags:["wise_guy"],transformation:{left_rotation:[0f,0.0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0.0f,1.7,0.0f],scale:[1.0f,1.0f,1.0f]},item:{id:"minecraft:string",count:1,components:{"minecraft:custom_model_data":{strings:["12"]}}}}
-summon minecraft:shulker 244.5 -50.00 -255.5 {NoAI:1,Invulnerable:1,Silent:1,Tags:["guy_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
-summon minecraft:shulker 244.5 -49.00 -255.5 {NoAI:1,Invulnerable:1,Silent:1,Tags:["guy_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
-summon minecraft:shulker 244.5 -48.00 -255.5 {NoAI:1,Invulnerable:1,Silent:1,Tags:["guy_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
+summon minecraft:shulker 244.5 -50.00 -255.5 {NoAI:1b,Invulnerable:1b,Silent:1b,Tags:["guy_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
+summon minecraft:shulker 244.5 -49.00 -255.5 {NoAI:1b,Invulnerable:1b,Silent:1b,Tags:["guy_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
+summon minecraft:shulker 244.5 -48.00 -255.5 {NoAI:1b,Invulnerable:1b,Silent:1b,Tags:["guy_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
 summon interaction 244.5 -49.00 -255.5 {height:2.1,width:1.5,Tags:["wise_guy_interact"]}
 
 #helmet kid
 kill @e[tag=helmet_kid]
 summon item_display 247.5 -50.00 -229.5 {Rotation:[-70F,0F],teleport_duration:7,Tags:["helmet_kid"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0.0f,0.5f,0.0f],scale:[1.0f,1.0f,1.0f]},item:{id:"minecraft:string",count:1,components:{"minecraft:custom_model_data":{strings:["13"]}}}}
-summon minecraft:shulker 247.5 -50.00 -229.5 {NoAI:1,Invulnerable:1,Silent:1,Tags:["guy_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
+summon minecraft:shulker 247.5 -50.00 -229.5 {NoAI:1b,Invulnerable:1b,Silent:1b,Tags:["guy_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
 
 #sprays
 kill @e[tag=spray]
@@ -84,11 +84,11 @@ summon item_display 229.01 -34.25 -230.75 {teleport_duration:10,Rotation:[90F,0F
 #vending
 kill @e[tag=vending_vis]
 summon item_display 246.0 -49.0 -214.0 {teleport_duration:10,Rotation:[-90F,0F],Tags:["vending_vis"],transformation:{left_rotation:[0f,0.0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0.0f,0.5,0.0f],scale:[2.0f,2.0f,2.0f]},item:{id:"minecraft:flint",count:1,components:{"minecraft:custom_model_data":{strings:["7"]}}}}
-summon minecraft:shulker 245.5 -50.00 -214.50 {NoAI:1,Invulnerable:1,Silent:1,Tags:["guy_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
-summon minecraft:shulker 245.5 -50.00 -213.50 {NoAI:1,Invulnerable:1,Silent:1,Tags:["guy_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
+summon minecraft:shulker 245.5 -50.00 -214.50 {NoAI:1b,Invulnerable:1b,Silent:1b,Tags:["guy_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
+summon minecraft:shulker 245.5 -50.00 -213.50 {NoAI:1b,Invulnerable:1b,Silent:1b,Tags:["guy_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
 #summon minecraft:shulker 245.5 -49.00 -214.50 {NoAI:1,Invulnerable:1,Silent:1,Tags:["guy_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
 #summon minecraft:shulker 245.5 -49.00 -213.50 {NoAI:1,Invulnerable:1,Silent:1,Tags:["guy_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}
 
-summon armor_stand 245.5 -49.50 -214.50 {NoAI:1,NoGravity:1b,Invulnerable:1b,Invisible:1b,Tags:["guy_plat"],Passengers:[{id:"minecraft:shulker",Silent:1b,Invulnerable:1b,NoAI:1b,AttachFace:0b,Tags:["guy_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}]}
-summon armor_stand 245.5 -49.50 -213.50 {NoAI:1,NoGravity:1b,Invulnerable:1b,Invisible:1b,Tags:["guy_plat"],Passengers:[{id:"minecraft:shulker",Silent:1b,Invulnerable:1b,NoAI:1b,AttachFace:0b,Tags:["guy_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}]}
+summon armor_stand 245.5 -49.50 -214.50 {NoAI:1b,NoGravity:1b,Invulnerable:1b,Invisible:1b,Tags:["guy_plat"],Passengers:[{id:"minecraft:shulker",Silent:1b,Invulnerable:1b,NoAI:1b,AttachFace:0b,Tags:["guy_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}]}
+summon armor_stand 245.5 -49.50 -213.50 {NoAI:1b,NoGravity:1b,Invulnerable:1b,Invisible:1b,Tags:["guy_plat"],Passengers:[{id:"minecraft:shulker",Silent:1b,Invulnerable:1b,NoAI:1b,AttachFace:0b,Tags:["guy_plat"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}]}]}
 

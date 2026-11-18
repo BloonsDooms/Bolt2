@@ -29,7 +29,7 @@ execute if score .random .calc matches 21..22 run function game:player/give/zomb
 execute if score .random .calc matches 21..22 run function game:player/give/zombie
 
 #
-item modify entity @s weapon.mainhand [{function:"minecraft:set_count",count:-1,add:1b,conditions:[]}]
+item modify entity @s weapon.mainhand [{type:"minecraft:set_count",count:-1,add:1b}]
 
 #
 scoreboard players set @s coin_cooldown 3

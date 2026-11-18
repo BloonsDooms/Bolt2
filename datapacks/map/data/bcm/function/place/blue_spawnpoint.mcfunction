@@ -1,5 +1,5 @@
 # create new or move existing spawnpoint
-execute unless entity @n[type=block_display,tag=blue_spawnpoint] run summon block_display ~ ~ ~ {view_range:0f,Tags:[blue_spawnpoint,spawnpoint],block_state:{Name:"player_head"},Glowing:1b,glow_color_override:5592575}
+execute unless entity @n[type=block_display,tag=blue_spawnpoint] run summon block_display ~ ~ ~ {view_range:0f,Tags:[blue_spawnpoint,spawnpoint],block_state:{id:"player_head"},Glowing:1b,glow_color_override:5592575}
 execute unless entity @n[type=marker,tag=blue_spawnpoint] run summon marker ~ ~ ~ {Tags:[blue_spawnpoint,spawnpoint]}
 tp @n[type=block_display,tag=blue_spawnpoint] ~ ~1.62 ~ ~ ~
 tp @n[type=marker,tag=blue_spawnpoint] ~ ~ ~ ~ ~

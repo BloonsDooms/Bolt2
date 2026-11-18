@@ -5,8 +5,8 @@ give @s panda_spawn_egg[\
     id:"minecraft:block_display",\
     Tags:["map_editor","place","red_flag","flag","init"],\
     block_state:{\
-      Name:"red_banner",\
-      Properties:{rotation:"0"}\
+      id:"red_banner",\
+      properties:{rotation:"0"}\
     },\
     Glowing:1b,\
     glow_color_override:16733525,\

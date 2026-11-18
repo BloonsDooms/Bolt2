@@ -10,7 +10,7 @@
           "type": {
             "tags": [
               {
-                "id": "game:is_arrow",
+                "id": "#game:is_arrow",
                 "expected": true
               }
             ]

@@ -31,8 +31,8 @@ execute summon marker run function bcm:map/edit/load_single_points
 summon block_display ~ ~ ~ {\
   Tags:["map_editor","place","red_flag","flag","init_delay"],\
   block_state:{\
-    Name:"red_banner",\
-    Properties:{rotation:"0"}\
+    id:"red_banner",\
+    properties:{rotation:"0"}\
   },\
   Glowing:1b,\
   glow_color_override:16733525,\
@@ -52,8 +52,8 @@ execute as @n[type=block_display,tag=red_flag,tag=init_delay] run function bcm:m
 summon block_display ~ ~ ~ {\
   Tags:["map_editor","place","blue_flag","flag","init_delay"],\
   block_state:{\
-    Name:"blue_banner",\
-    Properties:{rotation:"0"}\
+    id:"blue_banner",\
+    properties:{rotation:"0"}\
   },\
   Glowing:1b,\
   glow_color_override:5592575,\

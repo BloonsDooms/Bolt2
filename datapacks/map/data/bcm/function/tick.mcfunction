@@ -18,7 +18,7 @@ execute as @e[type=interaction,tag=gate_interaction] at @s if data entity @s att
 execute if entity @a[gamemode=creative] run function bcm:editor/visibility
 
 # rightclick
-execute as @a[gamemode=creative] if predicate {condition:"minecraft:entity_properties",entity:"this",predicate:{effects:{"minecraft:luck":{}}}} at @s run function bcm:rightclick
+execute as @a[gamemode=creative] if predicate {type:"minecraft:entity_properties",entity:"this",predicate:{effects:{"minecraft:luck":{}}}} at @s run function bcm:rightclick
 
 # delete objects when their block is destroyed, if:
 # (1) we're currently ticking map editor objects (.enabled), and

@@ -45,7 +45,7 @@ execute if score .rand .calc matches -100..100 at @s run playsound minecraft:blo
 execute if score .rand .calc matches 1000 at @s unless entity @s[scores={balloon_talk_cool=1..}] run playsound minecraft:entity.villager.trade master @a ~ ~ ~ 1 2
 execute if score .rand .calc matches 1000 unless entity @s[scores={balloon_talk_cool=1..}] run tellraw @s [{"text":"[Phil] "},{"color":"gold","text":"Here you go. Pleasure doing business."}]
 execute if score .rand .calc matches 1000 run function game:player/give/balloon
-execute if score .rand .calc matches 1000 run item modify entity @s weapon.mainhand [{function:"minecraft:set_count",count:-1,add:1b,conditions:[]}]
+execute if score .rand .calc matches 1000 run item modify entity @s weapon.mainhand [{type:"minecraft:set_count",count:-1,add:1b}]
 execute if score .rand .calc matches 1000 run scoreboard players set @s balloon_talk_cool 20
 
 execute if score .rand .calc matches 1000 if score .coins .calc matches 100.. run clear @s gold_ingot 99

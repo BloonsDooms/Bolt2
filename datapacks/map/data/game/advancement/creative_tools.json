@@ -4,11 +4,14 @@
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "player": {
-          "minecraft:type_specific/player": {
-            "gamemode": [
-              "creative"
-            ]
+          "type": "entity_properties",
+          "entity": "this",
+          "predicate": {
+            "type_specific/player": {
+              "gamemode": ["creative"]
+            }
           }
+
         },
         "items": [
           {

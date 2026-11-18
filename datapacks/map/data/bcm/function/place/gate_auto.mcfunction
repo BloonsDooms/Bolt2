@@ -9,7 +9,7 @@ data merge entity @s {\
   Tags:[map_editor,gate],\
   view_range:0f,\
   block_state:{\
-    Name:"white_stained_glass"\
+    id:"white_stained_glass"\
   },\
   transformation:{\
     scale:[3.01f,4.01f,1.01f],\

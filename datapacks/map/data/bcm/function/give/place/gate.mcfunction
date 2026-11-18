@@ -14,7 +14,7 @@ give @s panda_spawn_egg[\
     Tags:[map_editor,gate,init],\
     view_range:0f,\
     block_state:{\
-      Name:"white_stained_glass"\
+      id:"white_stained_glass"\
     },\
     transformation:{\
       scale:[3.01f,4.01f,1.01f],\

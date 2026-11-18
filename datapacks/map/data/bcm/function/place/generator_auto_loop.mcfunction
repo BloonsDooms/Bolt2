@@ -1,7 +1,7 @@
 summon block_display ~ ~ ~ {\
   Tags:["map_editor","place","generator","init"],\
   block_state:{\
-    Name:"cauldron"\
+    id:"cauldron"\
   },\
   Glowing:1b,\
   Rotation:[0f,0f],\
