@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -13,11 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx _.pools[0].entries append value {type:"item",name:"cod",weight:1,functions:[{function:"set_custom_data",tag:{}}]}
-
-data modify storage bs:ctx _.pools[0].entries[-1].weight set from storage bs:data block._.entries[-1].weight
-data modify storage bs:ctx _.pools[0].entries[-1].functions[0].tag.block set from storage bs:data block._.entries[-1].block
-data modify storage bs:ctx _.pools[0].entries[-1].functions[0].tag.type set from storage bs:data block._.entries[-1].type
-
-data remove storage bs:data block._.entries[-1]
-execute if data storage bs:data block._.entries[-1] run function bs.block:utils/random/loop
+function bs.block:get/get_block
+function #bs.block:replace_type with storage bs:in block.fill_type
+function bs.block:fill/utils/set_replace with storage bs:out block
+execute if data storage bs:out block.nbt run data modify block ~ ~ ~ {} merge from storage bs:out block.nbt

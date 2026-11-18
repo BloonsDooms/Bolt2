@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -13,10 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$execute if data storage bs:ctx _{negate:0b} run data modify storage bs:ctx _.mask set value "if block ~$(x) ~$(y) ~$(z) $(block) $(mask)"
-$execute if data storage bs:ctx _{negate:1b} run data modify storage bs:ctx _.mask set value "unless block ~$(x) ~$(y) ~$(z) $(block) $(mask)"
-
-data remove storage bs:data block._.masks[-1]
-data modify storage bs:ctx _ merge value {x:0,y:0,z:0,negate:0b,block:0b}
-data modify storage bs:ctx _ merge from storage bs:data block._.masks[-1]
-execute unless data storage bs:ctx _{block:0b} run function bs.block:utils/masks/loop with storage bs:ctx _
+function bs.block:get/get_block
+function #bs.block:replace_type with storage bs:in block.fill_type
+function bs.block:fill/utils/set_keep with storage bs:out block
+execute if data storage bs:out block.nbt run data modify block ~ ~ ~ {} merge from storage bs:out block.nbt

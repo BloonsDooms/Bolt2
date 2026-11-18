@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -13,5 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$execute positioned $(to) run function bs.block:utils/tp
-data modify storage bs:data block._.to set from entity @s Pos
+scoreboard players operation #j bs.ctx = #y bs.ctx
+function bs.block:fill/type/y
+
+scoreboard players remove #i bs.ctx 1
+execute if score #i bs.ctx matches 0.. positioned ~1 ~ ~ run function bs.block:fill/type/x

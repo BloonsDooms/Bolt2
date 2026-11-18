@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -13,16 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:data block._ set value { \
-  mask: "", \
-  pos: [0d, 0d, 0d], \
-  mode: "replace", \
-  limit: 4096, \
-  masks: [], \
-  impl: "set_random", \
-}
-data modify storage bs:data block._ merge from storage bs:in block.fill_random
-
-execute if data storage bs:data block._.masks[0] run function bs.block:utils/masks/compile
-execute if data storage bs:data block._.entries[0] run function bs.block:utils/random/compile
-execute summon minecraft:marker run function bs.block:fill/recurse/init
+function bs.block:get/get_block
+function #bs.block:replace_type with storage bs:in block.fill_type
+function bs.block:fill/utils/set_destroy with storage bs:out block
+execute if data storage bs:out block.nbt run data modify block ~ ~ ~ {} merge from storage bs:out block.nbt

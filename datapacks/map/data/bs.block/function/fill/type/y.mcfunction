@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -13,6 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx _ set value {0:"",1:"",2:"",3:"",4:"",5:"",6:"",7:""}
-data modify storage bs:ctx _ merge from storage bs:out block._
-function bs.block:get/compile/concat/state with storage bs:ctx _
+scoreboard players operation #k bs.ctx = #z bs.ctx
+function bs.block:fill/type/z with storage bs:in block.fill_type
+
+scoreboard players remove #j bs.ctx 1
+execute if score #j bs.ctx matches 0.. positioned ~ ~1 ~ run function bs.block:fill/type/y

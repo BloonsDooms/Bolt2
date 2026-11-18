@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -13,9 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data remove storage bs:data block._.block
-$execute in minecraft:overworld run loot replace block -30000000 0 1606 contents loot $(entries)
-execute in minecraft:overworld run data modify storage bs:data block._ merge from block -30000000 0 1606 item.components."minecraft:custom_data"
-
-execute unless data storage bs:data block._.block run return run function bs.block:fill/strategy/set_type
-function bs.block:fill/strategy/set_block with storage bs:data block._
+$setblock ~ ~ ~ $(block)

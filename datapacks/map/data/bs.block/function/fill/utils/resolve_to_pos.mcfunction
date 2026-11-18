@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -13,6 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx _ set value {pools:[{rolls:1,entries:[]}]}
-execute if data storage bs:data block._.entries[-1] run function bs.block:utils/random/loop
-data modify storage bs:data block._.entries set from storage bs:ctx _
+$execute positioned $(to) run function bs.block:fill/utils/tp
+data modify storage bs:ctx _ set from entity @s Pos

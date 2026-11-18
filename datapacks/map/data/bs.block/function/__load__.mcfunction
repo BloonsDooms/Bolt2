@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -27,7 +27,7 @@ execute unless data storage bs:const log.messages[{namespaces:["bs.block"]}] run
   data modify storage bs:const log.messages[{namespaces:["bs"]}].namespaces append value "bs.block"
 
 
-function bs.block:import/types_table
-function bs.block:import/mapping_registry
-function bs.block:import/items_table
 function bs.block:import/groups_table
+function bs.block:import/types_table
+function bs.block:import/items_table
+function bs.block:import/mapping_registry

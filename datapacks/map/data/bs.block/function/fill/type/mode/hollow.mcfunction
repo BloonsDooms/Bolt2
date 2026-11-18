@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -13,7 +13,15 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
+execute if score #i bs.ctx matches 1.. \
+  if score #j bs.ctx matches 1.. \
+  if score #k bs.ctx matches 1.. \
+  if score #i bs.ctx < #x bs.ctx \
+  if score #j bs.ctx < #y bs.ctx \
+  if score #k bs.ctx < #z bs.ctx \
+  run return run setblock ~ ~ ~ minecraft:air
+
 function bs.block:get/get_block
-function #bs.block:replace_type with storage bs:data block._
-data modify storage bs:data block._.block set from storage bs:out block.block
-function bs.block:fill/strategy/set_block with storage bs:data block._
+function #bs.block:replace_type with storage bs:in block.fill_type
+function bs.block:fill/utils/set_replace with storage bs:out block
+execute if data storage bs:out block.nbt run data modify block ~ ~ ~ {} merge from storage bs:out block.nbt

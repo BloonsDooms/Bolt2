@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -14,7 +14,7 @@
 # ------------------------------------------------------------------------------------------------------------
 
 $execute store success score #s bs.ctx if data storage bs:ctx _{attrs:$(attrs)}
-execute if score #s bs.ctx matches 1 store result score #r bs.ctx if data storage bs:ctx _.entry.attrs[]
+execute if score #s bs.ctx matches 1 store result score #r bs.ctx run data get storage bs:ctx _.entry.attrs
 execute if score #s bs.ctx matches 1 run scoreboard players operation #a bs.ctx > #r bs.ctx
 execute if score #s bs.ctx matches 1 run data modify storage bs:ctx _.found append from storage bs:ctx _.entry
 
