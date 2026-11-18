@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:set_custom_model_data",
+  "strings": {
+    "values": [
+      "82"
+    ],
+    "mode": "replace_all"
+  }
+}

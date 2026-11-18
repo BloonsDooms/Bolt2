@@ -1,11 +1,24 @@
-[
-	{
-		"function" : "minecraft:set_name",
-		"name" : [{"text":"Graphic Design Bow","italic":false,"color":"white"}]
-	},
-	{
-		"function" : "minecraft:set_lore",
-		"lore" : [{"text":"ȹ","italic":false,"color":"white"}],
-		"mode" : "replace_all"
-	}
-]
+{
+  "type": "minecraft:sequence",
+  "functions": [
+    {
+      "type": "minecraft:set_name",
+      "name": {
+        "text": "Graphic Design Bow",
+        "color": "white",
+        "italic": false
+      }
+    },
+    {
+      "type": "minecraft:set_lore",
+      "lore": [
+        {
+          "text": "ȹ",
+          "color": "white",
+          "italic": false
+        }
+      ],
+      "mode": "replace_all"
+    }
+  ]
+}

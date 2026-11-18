@@ -1,8 +1,9 @@
 {
-	"function": "minecraft:set_components",
-	"components": {
-	  "minecraft:custom_model_data": {
-		"strings":["24"]
-	  }
-	}
+  "type": "minecraft:set_custom_model_data",
+  "strings": {
+    "values": [
+      "24"
+    ],
+    "mode": "replace_all"
+  }
 }
